@@ -1,0 +1,15 @@
+About config
+	A:/etc/gitconfig for system level git config control file
+	B:~/.gitconfig for user level git config control file
+	C:library/.git/config for library level git config control file
+
+	Note:low option overwrite high option
+
+About ignore
+	A:~/.gitignore for user level git ignore control file
+	B:library/.git/info/exclude for library level git ignore control file
+	C:library/.gitignore for dir level git ignore control file
+
+	Note:low option overwrite high option
+About bash
+	A:source /etc/bash_profile

@@ -1,0 +1,9 @@
+# Some good standards, which are not used if the user
+# creates his/her own .bashrc/.bash_profile
+
+alias less='less -r'
+# --show-control-chars: help showing Korean or accented characters
+alias ls='ls -F --color --show-control-chars'
+alias ll='ls -la'
+#alias g='/c/Program\ Files/Vim/vim73/gvim.exe'
+alias g='/c/Program\ Files/Vim/vim*/gvim.exe'

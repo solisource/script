@@ -1,0 +1,43 @@
+Spoolfiles are a special MPE filetype used to send output to printers.  The
+format of their records is documented in the "Spool File Block Format (SBF)"
+chapter of:
+
+http://jazz.external.hp.com/papers/pdfdocs/32650-90867.pdf
+
+The format is EXTREMELY unfriendly to process manually.  I once wrote a program
+to transfer spoolfiles to an IBM printing subsystem, and it was really, really
+painful to process P1, P2, and the CCTL byte correctly in order to produce
+printed output the same way it would appear if printed on an MPE printer.
+
+MPE uses special carriage control bytes (CCTL) that determine line spacing,
+page ejects, etc.  It's not simply a matter of inserting multiple NL characters
+for double or triple spacing or inserting a single FF character for a page
+eject.
+
+When MPE users ask "Can I convert my spoolfiles to PDF?" they mean they want to
+preserve the CCTL information.  I.e. if the spoolfile would print double
+spaced, they want the PDF to appear double spaced.
+
+Spoolfiles are a native MPE file format, and Perl is a POSIX program.  When
+POSIX was added to MPE, a new POSIX bytestream file format was created, and
+behaves just like it would on a Unix system.  However, you can still access
+native MPE files through POSIX I/O functions, and when you do this, the MPE
+files are emulated to look like POSIX bytestream files.  But since MPE files
+may sometimes have attributes that don't exist on POSIX, you lose the abilities
+to even see these attributes if you're using the POSIX API.
+
+Unfortunately for spoolfiles, you aren't able to see the P1, P2, and CCTL
+values while using the POSIX API that Perl uses for its I/O, and since P1, P2,
+and CCTL are required to determine line spacing and page ejects, you wouldn't
+be able to create proper PDF output.
+
+So I'm afraid that it's not possible today to use a 100% Perl program to
+convert spoolfiles into PDF in a way that preserves line spacing.
+
+Someday I want to create an MPE-specific Perl extension XS that would allow
+access to the native MPE file API.  With this it would be possible to read
+spoolfiles correctly.  But unfortunately I can't even guess at when I might be
+able to start a project like this.
+
+Mark Bixby <mbixby@power.net>
+Perl/iX for HP e3000 MPE http://www.bixby.org/mark/perlix.html

@@ -1,0 +1,29 @@
+txt2pdf Licensing
+=================
+
+o  txt2pdf is shareware.  This means that you're welcome to try it and
+   use it as much as you want for 30 days.  If after that time you like
+   txt2pdf or would like to continue using it, we ask that you please
+   purchase it or remove it from your system.
+   Remember	P.E. (Personal Edition) is only for personal use
+                     (home user, not inside a company),
+   		E.E. (Enterprise Edition) is for enterprise use.
+
+o  The txt2pdf source code is our company's core business.  WE TRUST
+   YOU.  
+
+o  You may modify and test txt2pdf, but you may only redistribute the
+   txt2pdf tool in it's original unchanged unregistered archive format
+   (exe, zip or tar.gz).
+
+o  You may not use a modified version of txt2pdf for production
+   purposes.  If you wish to use txt2pdf on an ongoing basis, please
+   see the Readme file that came with this version of txt2pdf or visit
+   out website at http://www.sanface.com/txt2pdf.html
+
+o  You may not resell txt2pdf or any modified version of txt2pdf
+   without SANFACE Software's authorization.
+
+o  You may not re-use or include any txt2pdf source code in your own
+   source code without SANFACE Software's authorization.
+

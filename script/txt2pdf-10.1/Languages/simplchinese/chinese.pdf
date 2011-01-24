@@ -1,0 +1,522 @@
+%PDF-1.2
+%‚„œ”
+1 0 obj
+<<
+/A <<
+/S /URI
+/URI (http://www.sanface.com/txt2pdf.html)
+>>
+/Type /Annot
+/Subtype /Link
+/Rect [70 230 133 235]
+/Border [0 0 0]
+/H /I
+>>
+endobj
+2 0 obj
+<<
+/Author (SANFACE Software)
+/CreationDate (D:20031004161208+02'00')
+/Producer (txt2pdf v7.0 \251 SANFACE Software 2003)
+/Title (txt2pdf test)
+/Subject (This is an extensive txt2pdf test)
+>>
+endobj
+5 0 obj
+<<
+/Type /Encoding
+/BaseEncoding /WinAnsiEncoding
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F1
+/Encoding 5 0 R
+/BaseFont /Courier
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F2
+/Encoding 5 0 R
+/BaseFont /Courier-Oblique
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F3
+/Encoding 5 0 R
+/BaseFont /Courier-Bold
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F4
+/Encoding 5 0 R
+/BaseFont /Courier-BoldOblique
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F5
+/Encoding 5 0 R
+/BaseFont /Helvetica
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F6
+/Encoding 5 0 R
+/BaseFont /Helvetica-Oblique
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F7
+/Encoding 5 0 R
+/BaseFont /Helvetica-Bold
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F8
+/Encoding 5 0 R
+/BaseFont /Helvetica-BoldOblique
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F9
+/Encoding 5 0 R
+/BaseFont /Times-Roman
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F10
+/Encoding 5 0 R
+/BaseFont /Times-Italic
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F11
+/Encoding 5 0 R
+/BaseFont /Times-Bold
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F12
+/Encoding 5 0 R
+/BaseFont /Times-BoldItalic
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F13
+/BaseFont /Symbol
+>>
+endobj
+19 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F14
+/BaseFont /ZapfDingbats
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/Subtype /Type0
+/Name /F35
+/BaseFont /STSong
+/Encoding /GB-EUC-H
+/DescendantFonts [21 0 R]
+>>
+endobj
+21 0 obj
+<<
+/Type /Font
+/Subtype /CIDFontType2
+/BaseFont /STSong
+/FontDescriptor 22 0 R
+/CIDSystemInfo <<
+/Registry (Adobe)
+/Ordering (GB1)
+/Supplement 0
+>>
+/DW 1000
+/W [ ]
+>>
+endobj
+22 0 obj
+<<
+/Type /FontDescriptor
+/FontName /STSong
+/FontBBox [ 0 -199 1000 801 ]
+/Flags 6
+/CapHeight 658
+/Ascent 801
+/Descent -199
+/StemV 56
+/XHeight 429
+/ItalicAngle 0
+>>
+endobj
+23 0 obj
+<<
+/Type /Font
+/Subtype /Type0
+/Name /F36
+/BaseFont /STSong,Italic
+/Encoding /GB-EUC-H
+/DescendantFonts [24 0 R]
+>>
+endobj
+24 0 obj
+<<
+/Type /Font
+/Subtype /CIDFontType2
+/BaseFont /STSong,Italic
+/FontDescriptor 25 0 R
+/CIDSystemInfo <<
+/Registry (Adobe)
+/Ordering (GB1)
+/Supplement 0
+>>
+/DW 1000
+/W [ ]
+>>
+endobj
+25 0 obj
+<<
+/Type /FontDescriptor
+/FontName /STSong,Italic
+/FontBBox [ 0 -199 1000 801 ]
+/Flags 6
+/CapHeight 658
+/Ascent 801
+/Descent -199
+/StemV 56
+/XHeight 429
+/ItalicAngle 0
+>>
+endobj
+26 0 obj
+<<
+/Type /Font
+/Subtype /Type0
+/Name /F37
+/BaseFont /STSong,Bold
+/Encoding /GB-EUC-H
+/DescendantFonts [27 0 R]
+>>
+endobj
+27 0 obj
+<<
+/Type /Font
+/Subtype /CIDFontType2
+/BaseFont /STSong,Bold
+/FontDescriptor 28 0 R
+/CIDSystemInfo <<
+/Registry (Adobe)
+/Ordering (GB1)
+/Supplement 0
+>>
+/DW 1000
+/W [ ]
+>>
+endobj
+28 0 obj
+<<
+/Type /FontDescriptor
+/FontName /STSong,Bold
+/FontBBox [ 0 -199 1000 801 ]
+/Flags 6
+/CapHeight 658
+/Ascent 801
+/Descent -199
+/StemV 56
+/XHeight 429
+/ItalicAngle 0
+>>
+endobj
+29 0 obj
+<<
+/Type /Font
+/Subtype /Type0
+/Name /F38
+/BaseFont /STSong,BoldItalic
+/Encoding /GB-EUC-H
+/DescendantFonts [30 0 R]
+>>
+endobj
+30 0 obj
+<<
+/Type /Font
+/Subtype /CIDFontType2
+/BaseFont /STSong,BoldItalic
+/FontDescriptor 31 0 R
+/CIDSystemInfo <<
+/Registry (Adobe)
+/Ordering (GB1)
+/Supplement 0
+>>
+/DW 1000
+/W [ ]
+>>
+endobj
+31 0 obj
+<<
+/Type /FontDescriptor
+/FontName /STSong,BoldItalic
+/FontBBox [ 0 -199 1000 801 ]
+/Flags 6
+/CapHeight 658
+/Ascent 801
+/Descent -199
+/StemV 56
+/XHeight 429
+/ItalicAngle 0
+>>
+endobj
+32 0 obj
+<<
+/Font << /F1 6 0 R /F2 7 0 R /F3 8 0 R /F4 9 0 R /F5 10 0 R /F6 11 0 R /F7 12 0 R /F8 13 0 R /F9 14 0 R /F10 15 0 R /F11 16 0 R /F12 17 0 R /F13 18 0 R /F14 19 0 R /F35 20 0 R /F36 23 0 R /F37 26 0 R /F38 29 0 R >>
+/ProcSet [ /PDF /Text ]
+/XObject << >>
+>>
+endobj
+33 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 32 0 R
+/Contents 34 0 R
+/Rotate 0
+/Annots [ 1 0 R ]
+>>
+endobj
+34 0 obj
+<<
+/Length 35 0 R
+>>
+stream
+BT
+/F35 5.5 Tf
+1 0 0 1 50 572 Tm
+10 TL
+T* (±Í◊º÷–Œƒ) Tj
+ /F1 5.5 Tf
+ (,) Tj
+ /F35 5.5 Tf
+ ( µ⁄“ªº∂) Tj
+ /F1 5.5 Tf
+ (,) Tj
+ /F35 5.5 Tf
+ ( µ⁄“ª≤·) Tj
+T* () Tj
+T* () Tj
+T* (µ⁄“ªøŒ:) Tj
+T* (ƒ„∫√) Tj
+T* (¥ÛŒ¿: ƒ„∫√!) Tj
+T* (–°‘∆: ƒ„∫√!) Tj
+T* (¥ÛŒ¿: Œ“Ω–¥ÛŒ¿.) Tj
+T* (–°‘∆: Œ“Ω––°‘∆.) Tj
+T* () Tj
+T* (¡∑œ∞:) Tj
+T* (Õ¨—ß√«∫√!) Tj
+T* (¿œ ¶∫√!) Tj
+T* (Œ“ «∞◊¿œ ¶.) Tj
+T* (Œ“ΩÃƒ„√«÷–Œƒ.) Tj
+T* (œ÷‘⁄…œøŒ.) Tj
+T* () Tj
+T* () Tj
+T* (µ⁄∂˛øŒ:) Tj
+T* (¿œ ¶∫√) Tj
+T* (¿œ ¶:Õ¨—ß√«∫√!) Tj
+T* (—ß…˙:¿œ ¶∫√!) Tj
+T* (¿œ ¶:Œ“ «∞◊¿œ ¶.Œ“ΩÃƒ„√«÷–Œƒ.œ÷‘⁄…œøŒ.) Tj
+T* () Tj
+T* (¡∑œ∞:) Tj
+T* (œ¬øŒ.) Tj
+T* (Õ¨—ß√«‘Ÿº˚!) Tj
+T* (–ª–ª¿œ ¶.) Tj
+T* (–°‘∆‘Ÿº˚!) Tj
+T* (¥ÛŒ¿√˜ÃÏº˚!) Tj
+T* () Tj
+T* () Tj
+T* () Tj
+ /F1 5.5 Tf
+ (Generated) Tj
+ /F35 5.5 Tf
+ ( ) Tj
+ /F1 5.5 Tf
+ (by) Tj
+ /F35 5.5 Tf
+ ( ) Tj
+ /F1 5.5 Tf
+ (unregistered) Tj
+ /F35 5.5 Tf
+ ( ) Tj
+ /F1 5.5 Tf
+ (txt2pdf) Tj
+ /F35 5.5 Tf
+ ( ) Tj
+ /F1 5.5 Tf
+ (v) Tj
+ /F35 5.5 Tf
+ (.) Tj
+ /F1 5.5 Tf
+ (7) Tj
+ /F35 5.5 Tf
+ (.) Tj
+ /F1 5.5 Tf
+ (0) Tj
+ /F35 5.5 Tf
+ ( © ) Tj
+ /F1 5.5 Tf
+ (SANFACE) Tj
+ /F35 5.5 Tf
+ ( ) Tj
+ /F1 5.5 Tf
+ (Software) Tj
+ /F35 5.5 Tf
+ ( ) Tj
+ /F1 5.5 Tf
+ (2003) Tj
+ /F35 5.5 Tf
+ () Tj
+T* () Tj
+ /F1 5.5 Tf
+ (Available) Tj
+ /F35 5.5 Tf
+ ( ) Tj
+ /F1 5.5 Tf
+ (at) Tj
+ /F35 5.5 Tf
+ ( ) Tj
+ /F1 5.5 Tf
+ (http) Tj
+ /F35 5.5 Tf
+ (://) Tj
+ /F1 5.5 Tf
+ (www) Tj
+ /F35 5.5 Tf
+ (.) Tj
+ /F1 5.5 Tf
+ (sanface) Tj
+ /F35 5.5 Tf
+ (.) Tj
+ /F1 5.5 Tf
+ (com) Tj
+ /F35 5.5 Tf
+ (/) Tj
+ /F1 5.5 Tf
+ (txt2pdf) Tj
+ /F35 5.5 Tf
+ (.) Tj
+ /F1 5.5 Tf
+ (html) Tj
+ /F35 5.5 Tf
+ ( ) Tj
+/F2 5.5 Tf
+1 0 0 1 396 20 Tm
+(1) Tj
+/F35 5.5 Tf
+ET
+endstream
+endobj
+35 0 obj
+1556
+endobj
+3 0 obj
+<<
+/Type /Catalog
+/Pages 4 0 R
+/OpenAction <</S /GoTo /D [0 /XYZ null null 1 ]>>
+>>
+endobj
+4 0 obj
+<<
+/Type /Pages
+/Count 1
+/MediaBox [ 0 0 792 612 ]
+/Kids [ 33 0 R ]
+>>
+endobj
+xref
+0 36
+0000000000 65535 f 
+0000000015 00000 n 
+0000000169 00000 n 
+0000005865 00000 n 
+0000005964 00000 n 
+0000000376 00000 n 
+0000000444 00000 n 
+0000000538 00000 n 
+0000000640 00000 n 
+0000000739 00000 n 
+0000000845 00000 n 
+0000000942 00000 n 
+0000001047 00000 n 
+0000001149 00000 n 
+0000001258 00000 n 
+0000001357 00000 n 
+0000001458 00000 n 
+0000001557 00000 n 
+0000001662 00000 n 
+0000001741 00000 n 
+0000001826 00000 n 
+0000001951 00000 n 
+0000002134 00000 n 
+0000002314 00000 n 
+0000002446 00000 n 
+0000002636 00000 n 
+0000002823 00000 n 
+0000002953 00000 n 
+0000003141 00000 n 
+0000003326 00000 n 
+0000003462 00000 n 
+0000003656 00000 n 
+0000003847 00000 n 
+0000004123 00000 n 
+0000004234 00000 n 
+0000005844 00000 n 
+trailer
+<<
+/Size 36
+/Root 3 0 R
+/Info 2 0 R
+>>
+startxref
+6050
+%%EOF

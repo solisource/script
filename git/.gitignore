@@ -1,0 +1,23 @@
+##############ignore define for project by dsjin 030262010
+*~
+*.log
+*.log_*
+*_log_*
+*.log.*
+##############ignore define for project by dsjin 030262010
+!.gitignore
+!.gitconfig
+
+!.bashrc_win
+!.bashrc_linux
+
+!.vimrc_win
+!.vimrc_linux
+##############ignore define for project by dsjin 030262010
+*.bak
+*.BAK
+*.bk
+*.BK
+*.swp
+*.htm
+

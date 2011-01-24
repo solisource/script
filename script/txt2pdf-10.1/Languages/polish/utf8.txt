@@ -1,0 +1,45 @@
+﻿30616_Metlex Import - Export Sandeep Karira          Data       :  20-09-2006
+Al.. Jerozolimskie 196A /1                        
+02-486  Warszawa                                                    strona:  1 of  1
+                                    Nr dostawcy.:          2
+
+                  Adres dostwacy:  20                                                
+                                      20
+                                     42-216  Częstochowa
+
+Concerning: REPAIR ORDER
+Numer naprawy        :20-0000007
+Sposób dostarczenia: Wordt opgestuurd
+Ilość        : Nie
+
+Numer artykułu     : 516273          Descr. : VIDEODOMOFON KOLOR VD58COL 1 1
+Artykuł Makro .  : Tak
+Numer artykułu: VD58COL         
+Karta gwarancyjna  : Nie             Data zakupu   : 12-12-2005
+Numer karty gwarancyjnej    :                 Dowód zakupu       : Tak
+Gwarancja     : Tak             Cena zakupu  :  459.00
+Okers gwarancji: 12 w miesiącach
+Element        : 1
+Status artykułu
+   wygląd  - bez zastrzeżeń                        
+   
+   
+Opis wady:
+   zanikają kolory na wyświtlaczu                              
+   
+   
+
+Kod wady    : 4 Kolor
+
+Naprawa jest w ramach gwarancji, natomiast jeśli będzie poza okresem gwarancji,
+Makro oczekuje reakcji z  Państwa strony przed kontynuacją.
+po tym Makro oczekuje estymacji oczekwianych kosztów.
+wyższa kwota niż PLN    0.00 .
+
+z poważaniem
+
+
+wszelką korespondecję i wysyłkę kierować do
+Makro Cash and Carry Polska S.A.
+z siedzibą w Warszawie
+z nr NIP: 522-000-28-60

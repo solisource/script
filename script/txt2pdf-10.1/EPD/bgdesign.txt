@@ -1,0 +1,10 @@
+#!epd#./sanfacelogo.epd;1;0;0;1;50;600#!/epd#
+#!epd#./sanfacelogo.epd;3;0;0;3;250;600#!/epd#
+#!epd#./sanfacelogo.epd;-0.7;0.5;0;1;450;600#!/epd#
+#!epd#./john.epd;1;0;0;1;50;400#!/epd#
+#!epd#./john.epd;3;0;0;3;250;400#!/epd#
+#!epd#./john.epd;-0.5;2;1;1.2;450;400#!/epd#
+#!epd#./test.epd;.1;0;0;.1;50;200#!/epd#
+#!epd#./test.epd;.35;0;0;.35;250;200#!/epd#
+#!epd#./test.epd;-.2;.3;.2;-.15;450;200#!/epd#
+#!epd#./tiger.epd;1;0;0;1;250;20#!/epd#

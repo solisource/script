@@ -1,0 +1,46 @@
+TXT2PDF.COM is a short DCL procedure to interface with the script
+(replacement for #!/usr/bin/perl in Unix) :
+
+	Actually, the safest TXT2PDF.COM would be like this
+
+$ INSTALL_DIR   = F$PARSE(F$ENVIRONMENT("PROCEDURE"),,,,"NO_CONCEAL")-"]["
+$ INSTALL_DIR   =F$EXTRACT(0,F$LOCATE("]",INSTALL_DIR)+1,INSTALL_DIR)-".000000"
+$ perl 'INSTALL_DIR'TXT2PDF.; 'p1' 'p2' 'p3' 'p4' 'p5' 'p6' 'p7' 'p8' !
+
+	Safest because : usage of NO_CONCEAL and -"][" prevents from 
+screw up in case of multiply chained VMS logicals definitions. Usage of 
+-".000000" is added to support installation in perl_root:[000000] a very 
+common directory for perl script installation. The ultimate would be to 
+use the wrapper I have previously sent (but that would require a make 
+file which appends to an OS-dependant wrapper the perl script.)
+
+        The POD documentation is really the best for distributing a
+        perl-based help. 
+
+        pod2man txt2pdf.pod >txt2pdf.man
+        pod2html txt2pdf.pod >txt2pdf.html
+        pod2hlp txt2pdf.pod 
+
+	The last command can be be used only if the POD2HLP.PM from Dan 
+Susgalski is installed (on the Perl module archive). pod2man usually 
+
+comes with perl distribution, perl2html has been added in recent versions 
+of perl.
+
+	User may include the generated TXT2PDF.HLP in the Help library
+(either LIBRARY/REPLACE SYS$HELP:HELPLIB.HLB TXT2PDF.HLP 
+or any suitable library for "freeware").
+
+Multiuser Features 
+
+A system manager can install txt2pdf and provide a default .cfg file for his
+users/organization
+
+define/system TXT2PDF wherever:default.cfg       VMS in SYLOGIN.COM for example
+
+A user can still overwrite the value using another setenv or define command in
+his own .cshrc/login.com if he wants to have a default file of his own.
+A user can still have a working directory with a txt2pdf.cfg file and have it
+loaded if exists. This allows him (without command line option) to setup fully
+functional working directories.
+He can also (as he wishes) use the -configure option to overwrite any defaults.

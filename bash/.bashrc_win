@@ -1,0 +1,13 @@
+#############################################################
+#config tools and alias
+alias ll="ls -lart"
+#alias vim="/c/Program\ Files/Vim/vim72/vim.exe"
+alias gvim="/c/Program\ Files/Vim/vim72/gvim.exe"
+alias g="gvim"
+#############################################################
+alias ls='ls --show-control-chars --color=auto'
+set output-meta on
+set convert-meta off
+export LESSCHARSET=iso8859
+#############################################################
+cd /f/house

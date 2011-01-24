@@ -1,0 +1,5 @@
+Feb 5 19:39:42 10.1.1.1 ns25: Netscreen device_id=00351653456 system-notification—00257(traffic): start_time="2003-02-05 19:39:04" duration=0 policy_id=320001 service=1434 proto=17 src zone=Untrust dst zone=Trust action=Deny sent=0 rcvd=40 
+Feb 5 19:39:42 10.1.1.1 ns25: Netscreen device_id=00351653456 system-notification—00257(traffic): start_time="2003-02-05 19:34:44" duration=1 policy_id=0 service=http proto=6 src zone-Trust dst zone=Untrust action=Permit sent=11903 rcvd-31454 src=10.5.5.1 dst=xxx.xxx.10.2 src_port=1254 dst_port=80 translated 
+Feb 7 14:37:30 10.1.1.1 ns25: NetScreen device_id=00351653456 system-warning-00515: duration=0 start_time="2003-02-07 14:37:04" netscreen: Admin User "netscreen" logged in for Web(https) management (port 443) from 12.146.232.2:3473. (2003-02-07 14:34:32) 
+Feb 7 14:41:33 10.1.1.1 ns25: NetScreen device_id=00351653456 system-information-00767: duration=1 start_time="2003-02-07 14:40:04" netscreen: The system configuration was saved by admin “netscreen”. (2003-02-07 14:38:30) 
+

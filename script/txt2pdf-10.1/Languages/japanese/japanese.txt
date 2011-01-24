@@ -1,0 +1,43 @@
+Cxxxx   /xxxxx  UEBERWEISUNGS-SAMMLER  BANK: XXXXXXXX BANK AG                    KONTO: xxxxxxx         xx.xx.xx xx:xx:xx SEITE    x
+------------------------------------------------------------------------------------------------------------------------------------
+
+    LIEF-NR LIEF-NAME            LKZ ORT             LIEF-BANK-NAME       LIEF-KONTO-NR                INK-ABR-NR     ZAHLUNGSBETRAG
+
+      xxxxx スターゼン株式会社   JP  港区            ﾄｳｷﾖｳﾐﾂﾋﾞｼ           xxxxxxx                     xxx xxx xxxx      x.xxx.xxx,xx
+      xxxxx エスフーズ株式会社   JP  船橋市          ﾕ-ｴﾌｼﾞｴｲ             xxxxxx                      xxx xxx xxxx        xxx.xxx,xx
+      xxxxx 株式会社　アルカン ( JP  中央区          ﾐﾂｲｽﾐﾄﾓ              xxxxxxx                     xxx xxx xxxx         xx.xxx,xx
+      xxxxx 日本食研株式会社     JP  豊島区          ﾐｽﾞﾎ                 xxxxxxx                     xxx xxx xxxx         xx.xxx,xx
+      xxxxx 殿村食品㈱           JP  藤枝市          ｼｽﾞｵｶ                xxxxxxx                     xxx xxx xxxx        xxx.xxx,xx
+      xxxxx 宇治の露製茶株式会社 JP  相楽郡          ﾐｽﾞﾎ                 xxxxxxx                     xxx xxx xxxx      x.xxx.xxx,xx
+      xxxxx 三菱文具株式会社(OFF JP  さいたま市      ﾄｳｷﾖｳﾐﾂﾋﾞｼ           xxxxxxx                     xxx xxx xxxx         xx.xxx,xx
+      xxxxx 日本酒類販売株式会社 JP  中央区          ﾐｽﾞﾎｺｰﾎﾟﾚｰﾄ          xxxxxxx                     xxx xxx xxxx      x.xxx.xxx,xx
+      xxxxx 宇利物産株式会社     JP  北区            ﾐﾂｲｽﾐﾄﾓ              xxxxxxx                     xxx xxx xxxx        xxx.xxx,xx
+      xxxxx 日和商事株式会社     JP  渋谷区          ﾕ-ｴﾌｼﾞｴｲ             xxxxxxx                     xxx xxx xxxx      x.xxx.xxx,xx
+      xxxxx モンテ物産株式会社   JP  渋谷区          ﾕ-ｴﾌｼﾞｴｲ             xxxxxx                      xxx xxx xxxx     xx.xxx.xxx,xx
+      xxxxx 株式会社アルカン     JP  中央区          ﾐﾂｲｽﾐﾄﾓ              xxxxxxx                     xxx xxx xxxx        xxx.xxx,xx
+      xxxxx ホシザキ東京株式会社 JP  港区            ﾐﾂｲｽﾐﾄﾓ              xxxxxxx                     xxx xxx xxxx     xx.xxx.xxx,xx
+      xxxxx 東京ソルト株式会社   JP  中央区          ﾐﾂｲｽﾐﾄﾓ              xxxxxxx                     xxx xxx xxxx      x.xxx.xxx,xx
+      xxxxx モンテ物産株式会社   JP  渋谷区          ﾕ-ｴﾌｼﾞｴｲ             xxxxxx                      xxx xxx xxxx        xxx.xxx,xx
+      xxxxx タイガーエスネット株 JP  足立区          ﾄｳｷﾖｳﾐﾂﾋﾞｼ           xxxxx                       xxx xxx xxxx      x.xxx.xxx,xx
+      xxxxx 株式会社サンエイ海苔 JP  相馬市          ｼﾁｼﾞﾕｳｼﾁ             xxxxxxx                     xxx xxx xxxx        xxx.xxx,xx
+      xxxxx 花王販売株式会社(DET JP  中央区          ﾕ-ｴﾌｼﾞｴｲ             xxxxxxx                     xxx xxx xxxx        xxx.xxx,xx
+      xxxxx 象印マホービン株式会 JP  港区            ﾕ-ｴﾌｼﾞｴｲ             xxxxxx                      xxx xxx xxxx        xxx.xxx,xx
+      xxxxx 丸和油脂株式会社     JP  品川区          ﾐｽﾞﾎ                 xxxxxx                      xxx xxx xxxx      x.xxx.xxx,xx
+      xxxxx 株式会社アデカクリー JP  文京区          ﾐｽﾞﾎ                 xxxxxxx                     xxx xxx xxxx          x.xxx,xx
+      xxxxx 株式会社コロナ       JP  北区            ﾀﾞｲｼ                 xxxxx                       xxx xxx xxxx         xx.xxx,xx
+      xxxxx ライオン株式会社（食 JP  墨田区          ﾄｳｷﾖｳﾐﾂﾋﾞｼ           xxxxxxx                     xxx xxx xxxx        xxx.xxx,xx
+      xxxxx 秋山産業株式会社     JP  品川区          ﾐｽﾞﾎ                 xxxxxxx                     xxx xxx xxxx      x.xxx.xxx,xx
+      xxxxx 株式会社　二東ジャパ JP  足立区          ﾐﾂｲｽﾐﾄﾓ              xxxxxxx                     xxx xxx xxxx        xxx.xxx,xx
+      xxxxx 株式会社明治屋 ﾜｲﾝ＆ JP  江東区          ﾄｳｷﾖｳﾐﾂﾋﾞｼ           xxxxxxx                     xxx xxx xxxx      x.xxx.xxx,xx
+      xxxxx 株式会社神戸屋       JP  海老名市        ﾖｺﾊﾏ                 xxxx                        xxx xxx xxxx      x.xxx.xxx,xx
+      xxxxx ﾀｶﾉﾌｰｽﾞ株式会社      JP  東茨城郡小川町  ｼﾞﾖｳﾖｳ               xxxxxxx                     xxx xxx xxxx        xxx.xxx,xx
+      xxxxx 株式会社ミツハシ     JP  横浜市港北区    ﾐｽﾞﾎ                 xxxxxxx                     xxx xxx xxxx      x.xxx.xxx,xx
+      xxxxx 備後漬物有限会社     JP  福山市          ﾋﾛｼﾏ                 xxxxxx                      xxx xxx xxxx      x.xxx.xxx,xx
+      xxxxx 栄和株式会社         JP  大阪市東住吉区  ﾐﾂｲｽﾐﾄﾓ              xxxx                        xxx xxx xxxx        xxx.xxx,xx
+      xxxxx 株式会社ﾅｯｸｽﾅｶﾑﾗ     JP  神戸市中央区    ﾄｳｷﾖｳﾐﾂﾋﾞｼ           xxxxxxx                     xxx xxx xxxx      x.xxx.xxx,xx
+      xxxxx 丸紅株式会社食糧砂糖 JP  千代田区        ﾐｽﾞﾎｺｰﾎﾟﾚｰﾄ          xxxxx                       xxx xxx xxxx      x.xxx.xxx,xx
+      xxxxx 丸紅株式会社油脂部   JP  千代田区        ﾐｽﾞﾎｺｰﾎﾟﾚｰﾄ          xxxxx                       xxx xxx xxxx        xxx.xxx,xx
+      xxxxx ケンコーマヨネーズ株 JP  世田谷区        ﾄｳｷﾖｳﾐﾂﾋﾞｼ           xxxxxxx                     xxx xxx xxxx      x.xxx.xxx,xx
+      xxxxx 東京明治ﾌｰｽﾞ株式会社 JP  戸田市          ｻｲﾀﾏﾘｿﾅ              xxxxxxx                     xxx xxx xxxx        xxx.xxx,xx
+      xxxxx 株式会社角屋米穀     JP  川崎市川崎区    ﾐｽﾞﾎ                 xxxxxxx                     xxx xxx xxxx        xxx.xxx,xx
+      xxxxx 西海食品株式会社     JP  板橋区          ﾄｳｷﾖｳﾐﾂﾋﾞｼ           xxxxxxx                     xxx xxx xxxx        xxx.xxx,xx
