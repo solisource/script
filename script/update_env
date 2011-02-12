@@ -1,11 +1,13 @@
 #! /bin/bash
 if [ $1 = -w ] ; then
+  echo "update -w for windows env"
   \cp -f ../git/.gitconfig /etc/gitconfig 
   \cp -f ../git/bash_profile ~/.bashrc
   
   \cp -f ../vim/.vimrc_win /c/Program\ Files/Vim/_vimrc
   #echo "-w"
 elif [ $1 = -l ] ; then
+  echo "update -l for linux env"
   #\mv  ~/.bashrc ~/.bashrc.`date +%y%m%d%H%M`
   \cp -f ../bash/.bashrc_linux ~/.bashrc
   
