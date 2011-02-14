@@ -3,6 +3,7 @@
 #if (($ARGV[0] eq "-f") || ($ARGV[2] eq "-c") || ($ARGV[4] eq "-v") || ($ARGV[6] eq "-r")){
 if (($ARGV[0] eq "-f") and ($ARGV[2] eq "-c") and ($ARGV[4] eq "-v") and ($ARGV[6] eq "-r")){
 print "************************************\n";
+print "For RC DC Power                     \n";
 print "*  f default unit is HZ            *\n";
 print "*  c default unit is uF            *\n";
 print "*  v default unit is  V            *\n";
@@ -17,6 +18,8 @@ print "current_80=$current_80 mA\n";
 print "************************************\n";
 }
 else {
+print "************************************************************\n";
+print "*                    For RC DC Power                       *\n";
 print "************************************************************\n";
 print "* calcurrent -f frenqucy -c C_value -v Voltage -r Resistor *\n";
 print "************************************************************\n";
