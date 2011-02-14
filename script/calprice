@@ -1,7 +1,7 @@
 #! /bin/perl  -w
 if (($ARGV[0] ne "-bom") or ($ARGV[2] ne "-price")){
   $note="*";
-  $note x=42;
+  $note x=43;
   $note .="\n";
 
   print $note;
@@ -11,7 +11,7 @@ if (($ARGV[0] ne "-bom") or ($ARGV[2] ne "-price")){
 }
 else {
   $note="*";
-  $note x=80;
+  $note x=85;
   $note .="\n";
 
   $note1="-";
@@ -74,23 +74,23 @@ else {
       $pin_number=2;
     }
     elsif($_[0]=~m/^RD\d+/){
-      $type="D Std DIP R";
+      $type="D Std DIP R(Carbon film R)";
       $pin_number=2;
     }
     elsif($_[0]=~m/^RDN\d+/){
-      $type="D Std DIP R";
+      $type="D Std DIP R(Carbon film R)";
       $pin_number=2;
     }
     elsif($_[0]=~m/^RN\d+/){
-      $type="D Std DIP R";
+      $type="D Std DIP R(High Precision & Metal oxide film R)";
       $pin_number=2;
     }
     elsif($_[0]=~m/^RSN\d+/){
-      $type="D Std DIP R";
+      $type="D Std DIP R(General Precision & Metal oxide film R)";
       $pin_number=2;
     }
     elsif($_[0]=~m/^RT\d+/){
-      $type="D Std DIP R";
+      $type="D Std DIP R(High Voltage R)";
       $pin_number=2;
     }
     elsif($_[0]=~m/^(\w)(\d+)\//){
@@ -152,7 +152,7 @@ else {
       if($part_type_price=~m/non_price_error/){
           print $note;
           print "No.$number\n";
-          print "   Part Type                   = $part_type #Price note:non_pirce_error\n";
+          print "   Part Type                   = $part_type #Error:non_pirce_error\n";
           print "   Part Type DIP(D)/SMT(S)     = $part_type_info[0]\n";
           print "   Part Type Pin Number        = $part_type_info[1]\n";
           print $note1;
