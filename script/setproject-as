@@ -22,18 +22,18 @@ mkdir ./board
 mkdir ./board/allegro
 mkdir ./board/allegro/ver1.0
 mkdir ./board/allegro/ver1.0/rpt
-mkdir ./board/allegro/ver1.0/GodenBom
-mkdir ./board/allegro/ver1.0/2foundary
+mkdir ./board/allegro/ver1.0/bom
+mkdir ./board/allegro/ver1.0/gerber
 mkdir ./board/protel
 mkdir ./board/protel/ver1.0
 mkdir ./board/protel/ver1.0/rpt
-mkdir ./board/protel/ver1.0/GodenBom
-mkdir ./board/protel/ver1.0/2foundary
+mkdir ./board/protel/ver1.0/bom
+mkdir ./board/protel/ver1.0/gerber
 mkdir ./board/mentor
 mkdir ./board/mentor/ver1.0
 mkdir ./board/mentor/ver1.0/rpt
-mkdir ./board/mentor/ver1.0/GodenBom
-mkdir ./board/mentor/ver1.0/2foundary
+mkdir ./board/mentor/ver1.0/bom
+mkdir ./board/mentor/ver1.0/gerber
 ###########################################
 mkdir ./test 
 mkdir ./test/hot
