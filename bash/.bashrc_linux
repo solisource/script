@@ -234,3 +234,5 @@ alias  lic_read='$SICANVAS/bin/lmreread  -c $SC_LICENSE_FILE'
 ##source /ecad/ise11.1/ChipScope/settings64.csh
 ##source /ecad/ise11.1/ChipScope/settings32.csh
 ################################################################################
+# Start DDNS for Oray
+/usr/local/phlinux/phlinux &
