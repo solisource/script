@@ -81,4 +81,4 @@
 
 	go-non-net = "! bash -c \"git add .;git commit -am \\\"$COMPUTERNAME,$USERNAME,$PWD,`date +%y/%m/%d-%H/%M/%S`\\\"\""
 	go-non-net-message = "! bash -c \"git add .;git commit -a\""
-        gitlog = git log --pretty=oneline
+        lpo = log --pretty=oneline
