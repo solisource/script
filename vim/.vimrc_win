@@ -861,6 +861,7 @@ endfunction
 """"""""""""
 "set syntax=on
 "set cinoptions+={2,0,p0,t0
+set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
 "set nobackup
 "set cindent
 "set syntax=cpp
@@ -1052,3 +1053,12 @@ highlight Comment ctermfg=green guifg=green
         "而不是我想要的缩进功能, 不知道有没有快捷键可以暂时关闭和激活SuperTab键的功能. 如果哪位朋友知道,
          
         "想用tab的话貌似按 Ctrl-Tab就可以了。。"
+        "
+ctags -R --c-kinds=+p --fields=+S 
+
+if &term=="xterm"
+    set t_Co=8
+    set t_Sb=^[[4%dm
+    set t_Sf=^[[3%dm
+endif
+
