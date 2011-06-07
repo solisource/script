@@ -6,6 +6,7 @@ if [ $1 = -w ] ; then
   
   \cp -f ../vim/.vimrc_win /c/Program\ Files/Vim/_vimrc
   \cp -f ../vim/supertab.vim /c/Program\ Files/Vim/vim7*/plugin
+  \cp -f ../vim/code_complete.vim /c/Program\ Files/Vim/vim7*/plugin
   #echo "-w"
 elif [ $1 = -l ] ; then
   echo "update -l for linux env"
