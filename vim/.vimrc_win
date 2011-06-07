@@ -1033,3 +1033,22 @@ highlight Comment ctermfg=green guifg=green
 "$VIMRUNTIME----->Running DIR
 "set runtimepath---->
 
+
+"////////////////////////////////////////////////////////////////////////
+"add by dsjin at xxx
+
+"let g:SuperTabRetainCompletionType=2
+        " 设置按下<Tab>后默认的补全方式, 默认是<C-P>, 
+        " 现在改为<C-X><C-O>. 关于<C-P>的补全方式, 
+        " 还有其他的补全方式, 你可以看看下面的一些帮助:
+        " :help ins-completion
+        " :help compl-omni
+"let g:SuperTabDefaultCompletionType="<C-X><C-O>"
+        " 0 - 不记录上次的补全方式
+        " 1 - 记住上次的补全方式,直到用其他的补全命令改变它
+        " 2 - 记住上次的补全方式,直到按ESC退出插入模式为止
+
+        "但是现在我的<Tab>键不好用了, 我以前爱用<Tab>进行缩进, 如果前面有字符按下<Tab>键后就会进行补全,
+        "而不是我想要的缩进功能, 不知道有没有快捷键可以暂时关闭和激活SuperTab键的功能. 如果哪位朋友知道,
+         
+        "想用tab的话貌似按 Ctrl-Tab就可以了。。"
