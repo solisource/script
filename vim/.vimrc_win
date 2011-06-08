@@ -1065,3 +1065,4 @@ set tags=tags;
 set autochdir
 "set TERM=xterm-color
 let Tlist_Auto_Open=1
+set tags=tags,~/.vim/tags/usr/ctags/tags,~/.vim/tags/linux/ctags/tags
