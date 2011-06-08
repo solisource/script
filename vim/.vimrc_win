@@ -473,7 +473,7 @@ set fdl=0
 " => Text options
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
 
 map <leader>t2 :set shiftwidth=2<cr>
 map <leader>t4 :set shiftwidth=4<cr>
@@ -863,7 +863,7 @@ endfunction
 "set cinoptions+={2,0,p0,t0
 set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
 "set nobackup
-"set cindent
+set cindent
 "set syntax=cpp
 "set formatoptions=tcqr
 
@@ -875,7 +875,6 @@ set autoindent
 set smartindent
 "set indentexpr
 "=set ai
-"set cindent
 
 "set tabstop=4
 "set softtabstop=4
@@ -893,11 +892,11 @@ set smartindent
 "nmap gF ^Wf
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set expandtab
-"set shiftwidth=4
-"set tabstop=4
-"set softtabstop=4
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 "set nobackup
-"set cindent
+set cindent
 "set showcmd
 "set helplang=Cn
 "set nofoldenable
@@ -1054,7 +1053,7 @@ highlight Comment ctermfg=green guifg=green
          
         "想用tab的话貌似按 Ctrl-Tab就可以了。。"
         "
-ctags -R --c-kinds=+p --fields=+S 
+"ctags -R --c-kinds=+p --fields=+S 
 
 if &term=="xterm"
     set t_Co=8
