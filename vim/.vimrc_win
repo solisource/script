@@ -1080,3 +1080,14 @@ let Tlist_Use_Right_Window = 1        "在右侧窗口中显示taglist窗口
 
 "安装文档，把*.doc拷贝到DOC目录中，然后执行下面的命令，让Gvim获取DOC中的文档标签（Tag）
 "用 :helptags ~/.vim/doc来获取DOC中的tags//文档的位置，
+
+"下载的是一个zip包，把它放在 ~/.vim 目录下，然后
+"$unzip filename.zip
+"它已经自动把taglist.vim和taglist.txt分别放到plugin、doc文件夹下了。
+"这个时候，taglist的help文档已经在 ~/.vim/doc 目录下了,但是你在vim下敲
+":help Tlist
+"却没有任何反应，那是因为vim还没有获取帮助文档里面的tag，解决方法是在vim下
+":helptags ~/.vim/doc
+"现在，你再
+":help Tlist
+"看看有没有反应？
