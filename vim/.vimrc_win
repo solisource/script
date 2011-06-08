@@ -1061,3 +1061,7 @@ if &term=="xterm"
     set t_Sf=^[[3%dm
 endif
 
+set tags=tags;
+set autochdir
+"set TERM=xterm-color
+let Tlist_Auto_Open=1
