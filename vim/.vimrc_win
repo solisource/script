@@ -1035,7 +1035,7 @@ highlight Comment ctermfg=green guifg=green
 
 
 "////////////////////////////////////////////////////////////////////////
-"add by dsjin at xxx
+"add by dsjin  //taglist and ctags//
 
 "let g:SuperTabRetainCompletionType=2
         " 设置按下<Tab>后默认的补全方式, 默认是<C-P>, 
@@ -1066,3 +1066,4 @@ set autochdir
 "set TERM=xterm-color
 let Tlist_Auto_Open=1
 set tags=tags,~/.vim/tags/usr/ctags/tags,~/.vim/tags/linux/ctags/tags
+au BufWritePost *.cpp,*.h,*.c,*.rl,*.def call system("ctags --tag-relative -a -o ~/.vim/tags/usr/ctags/tags --extra=+q " . expand("%:p"))
