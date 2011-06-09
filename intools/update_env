@@ -32,6 +32,9 @@ if [ $1 = -w ] ; then
   echo "#update verilog_plugin_1 "
   \cp -f ../vim/verilog_plugin_1.vim /c/Program\ Files/Vim/vim7*/plugin
 
+  echo "#update c-support for C/C++ code "
+  \cp -fr ../vim/cvim/* /c/Program\ Files/Vim/vimfiles
+
 elif [ $1 = -l ] ; then
 
   echo "update -l for linux env"
