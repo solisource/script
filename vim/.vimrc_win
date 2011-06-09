@@ -1034,19 +1034,24 @@ highlight Comment ctermfg=green guifg=green
 "set runtimepath---->
 
 
-"////////////////////////////////////////////////////////////////////////
-"add by dsjin  //taglist and ctags//
+"--------------------------SuperTab----------------------------------------
+"SuperTab 依赖于ctags
+"如果下拉菜单弹出，回车映射为接受当前所选项目，否则，仍映射为回车；
+inoremap <expr> <CR>       pumvisible()?"\<C-Y>":"\<CR>"
 
-"let g:SuperTabRetainCompletionType=2
-        " 设置按下<Tab>后默认的补全方式, 默认是<C-P>, 
-        " 现在改为<C-X><C-O>. 关于<C-P>的补全方式, 
-        " 还有其他的补全方式, 你可以看看下面的一些帮助:
-        " :help ins-completion
-        " :help compl-omni
-"let g:SuperTabDefaultCompletionType="<C-X><C-O>"
+let g:SuperTabRetainCompletionType=2
+let g:SuperTabDefaultCompletionType="<C-X><C-O>" 
         " 0 - 不记录上次的补全方式
         " 1 - 记住上次的补全方式,直到用其他的补全命令改变它
         " 2 - 记住上次的补全方式,直到按ESC退出插入模式为止
+        
+        " (智能补全)按下<Tab>后现在改为<C-X><C-O>) //注意智能补全不能局部补全关键字
+        " (<C-P> <C-N> 向上选择和向下选择)
+        
+        " 设置按下<Tab>后默认的补全方式, 默认是<C-P>, 
+        " 还有其他的补全方式, 你可以看看下面的一些帮助:
+        " :help ins-completion
+        " :help compl-omni
 
         "但是现在我的<Tab>键不好用了, 我以前爱用<Tab>进行缩进, 如果前面有字符按下<Tab>键后就会进行补全,
         "而不是我想要的缩进功能, 不知道有没有快捷键可以暂时关闭和激活SuperTab键的功能. 如果哪位朋友知道,
@@ -1055,26 +1060,28 @@ highlight Comment ctermfg=green guifg=green
         "
 "ctags -R --c-kinds=+p --fields=+S 
 
+
 if &term=="xterm"
     set t_Co=8
     set t_Sb=^[[4%dm
     set t_Sf=^[[3%dm
 endif
 
-set tags=tags;
+
+"--------------------------------------Tag---------------------------------------
 set autochdir
-"set TERM=xterm-color
-let Tlist_Auto_Open=1
-set tags=tags,~/.vim/tags/usr/ctags/tags,~/.vim/tags/linux/ctags/tags
-au BufWritePost *.cpp,*.h,*.c,*.rl,*.def call system("ctags --tag-relative -a -o ~/.vim/tags/usr/ctags/tags --extra=+q " . expand("%:p"))
-
-
 "if MySys == "windows"              "设定windows系统中ctags程序的位置//默认情况下去Vim中可执行目录中区找的，
    let Tlist_Ctags_Cmd = 'ctags'
 "elseif MySys == "linux"            "设定windows系统中ctags程序的位置
 "   let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 "endif
+set tags=tags,~/.vim/tags/usr/ctags/tags,~/.vim/tags/linux/ctags/tags  "设置tags的搜索路径
+au BufWritePost *.cpp,*.h,*.c,*.rl,*.def call system("ctags --tag-relative -a -o ~/.vim/tags/usr/ctags/tags --extra=+q " . expand("%:p"))
 
+"--------------------------------------Tlist-------------------------------------
+"taglist 依赖于ctags //她的作用是把tags的内用在窗口中显示出来
+
+let Tlist_Auto_Open=1
 let Tlist_Show_One_File = 10          "不同时显示多个文件的tag，只显示当前文件的
 let Tlist_Exit_OnlyWindow = 1         "如果taglist窗口是最后一个窗口，则退出vim
 let Tlist_Use_Right_Window = 1        "在右侧窗口中显示taglist窗口
@@ -1082,6 +1089,7 @@ let Tlist_Use_Right_Window = 1        "在右侧窗口中显示taglist窗口
 "安装文档，把*.doc拷贝到DOC目录中，然后执行下面的命令，让Gvim获取DOC中的文档标签（Tag）
 "用 :helptags ~/.vim/doc来获取DOC中的tags//文档的位置，
 
+"--------------------------------------------------------------------------------
 "下载的是一个zip包，把它放在 ~/.vim 目录下，然后
 "$unzip filename.zip
 "它已经自动把taglist.vim和taglist.txt分别放到plugin、doc文件夹下了。
@@ -1092,5 +1100,41 @@ let Tlist_Use_Right_Window = 1        "在右侧窗口中显示taglist窗口
 "现在，你再
 ":help Tlist
 "看看有没有反应？
-"
-"so _vimrc  "用Windows的路径方式
+"--------------------------------------------------------------------------------
+":help Tlist
+":Tlist打开 tags窗口，再次:Tlist关闭窗口
+"Ctrl+w来回在Tlist窗口和工作区切换
+"F1 for taglist help windows
+"鼠标左键双击taglist中的分类项目，可以追踪定位//或者选中后 回车
+"--------------------------------------------------------------------------------
+
+"so _vimrc  "用Windows的路径方式 //source file name 
+
+"--------------------------------------------------------------------------------
+"Vim中的补全命令
+
+"整行补全                        CTRL-X CTRL-L
+"根据当前文件里关键字补全        CTRL-X CTRL-N
+"根据当前文件里关键字补全        CTRL-X CTRL-P
+"根据字典补全                    CTRL-X CTRL-K
+"根据同义词字典补全              CTRL-X CTRL-T
+"根据头文件内关键字补全          CTRL-X CTRL-I
+"根据标签补全                    CTRL-X CTRL-]
+"补全文件名                      CTRL-X CTRL-F
+"补全宏定义                      CTRL-X CTRL-D
+"补全vim命令                     CTRL-X CTRL-V
+"用户自定义补全方式              CTRL-X CTRL-U
+"拼写建议                        CTRL-X CTRL-S
+
+"--------------------------------------------------------------------------------
+"Vim中快捷键的映射Mapping for Hotkey! Example following!
+
+"inoremap <C-]>             <C-X><C-]>
+"inoremap <C-F>             <C-X><C-F>
+"inoremap <C-D>             <C-X><C-D>
+"inoremap <C-L>             <C-X><C-L> 
+"inoremap <C-> <C-X><C-N>
+"inoremap <C-> <C-X><C-P>
+"--------------------------------------------------------------------------------
+
+
