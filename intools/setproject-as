@@ -1,0 +1,70 @@
+#! /bin/bash
+echo "********************************"
+echo "* Smart Systems Setproject ENV *"
+echo "********************************"
+echo "please Project Name for AS:"
+read NAME1
+#Base on Branch using GIT Version Control Syste add by dsjin 06/25/2010
+###########################################
+#mkdir .
+###########################################
+#git init $NAME1
+
+#cd $NAME1
+###########################################
+mkdir ./syn
+mkdir ./syn/mcu
+mkdir ./syn/fpga
+mkdir ./syn/dsp
+mkdir ./syn/arm
+###########################################
+mkdir ./board
+mkdir ./board/allegro
+mkdir ./board/allegro/ver1.0
+mkdir ./board/allegro/ver1.0/rpt
+mkdir ./board/allegro/ver1.0/bom
+mkdir ./board/allegro/ver1.0/gerber
+mkdir ./board/protel
+mkdir ./board/protel/ver1.0
+mkdir ./board/protel/ver1.0/rpt
+mkdir ./board/protel/ver1.0/bom
+mkdir ./board/protel/ver1.0/gerber
+mkdir ./board/mentor
+mkdir ./board/mentor/ver1.0
+mkdir ./board/mentor/ver1.0/rpt
+mkdir ./board/mentor/ver1.0/bom
+mkdir ./board/mentor/ver1.0/gerber
+###########################################
+mkdir ./test 
+mkdir ./test/hot
+mkdir ./test/consumption
+mkdir ./test/emc-emi
+mkdir ./test/esd
+mkdir ./test/reliability
+mkdir ./test/si
+mkdir ./test/other
+###########################################
+mkdir ./pmanger
+mkdir ./pmanger/spec
+mkdir ./pmanger/spec/auth
+mkdir ./pmanger/schedule
+###########################################
+mkdir ./doc 
+mkdir ./doc/datasheet
+mkdir ./doc/tref
+mkdir ./doc/2custom
+###########################################
+mkdir ./signoff
+mkdir ./signoff/verA
+###########################################
+mkdir ./materiel
+###########################################
+echo "Project Name:$NAME1">Readme.txt
+#find path -option [ -print ] [ -exec -ok command ] {} \;
+find ./ -path "./.git" -prune -or -empty -exec cp Readme.txt {} \;
+#rm Readme.txt ./.git/Readme.txt
+###########################################
+#git add .
+#git commit -am "Init Project:$NAME1"
+###########################################
+echo "Make proejct dir successfully!^_^"

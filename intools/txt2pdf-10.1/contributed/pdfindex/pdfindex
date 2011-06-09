@@ -1,0 +1,190 @@
+#!/usr/bin/perl
+# Require Perl5
+#
+# pdfindex -- PDFs to index.txt
+#
+# by SANFACE Software <sanface@sanface.com> 25 February 2001
+#
+#
+# This is version 3.0
+#
+use strict;
+use Getopt::Long;
+use File::Basename;
+use File::Find;
+use File::DosGlob 'glob';
+# You can find PDF.pm module at CPAN or at http://www.sanface.com/PDF-lib/
+use PDF;
+
+my $version="3.0";
+my $producer="pdfindex";
+my $configure="pdfindex.cfg";
+my $help=0; my $verbose=0;
+my $match=""; my $recursive="";
+my $companyname="SANFACE Software";
+my $pdfindexHome="http://www.sanface.com/pdfindex.html";
+my $PDFinfo=""; my $PDFrules=""; my $output=""; my $i;
+my $SANFACEmail="mailto:sanface\@sanface.com";
+&GetOptions("configure=s"  => \$configure,
+            "help"         => \$help,
+            "output=s"     => \$output,
+            "recursive=s"  => \$recursive,
+            "match=s"      => \$match,
+            "verbose"      => \$verbose) || usage() ;
+my @elem=("tmpdir", "output");
+my %option=(tmpdir       => './',
+            output       => 'index.txt');
+my $elem=""; my $input="";
+
+$help and usage();
+
+open (CNF, "$configure") || die "pdfindex: couldn't open configuration file $configure\n";
+while (<CNF>) {
+  if(/#\+Begin Variables\+/../#\+End Variables\+/)
+    {
+    s/\t/ /g;        #replace tabs by space
+    next if /^ *\#/; #ignore comment lines
+    next if /^ *$/;  #ignore empty lines
+    foreach $elem (@elem) {if (/ *$elem *: *(.*)/i) {$option{$elem}=$1;}}
+    }
+  if(/#\+Begin PDF rules\+/../#\+End PDF rules\+/)
+    {
+    next if /^ *\#/; #ignore comment lines
+    $PDFrules.=$_;
+    }
+  if(/#\+Begin PDF information\+/../#\+End PDF information\+/)
+    {
+    next if /^ *\#/; #ignore comment lines
+    $PDFinfo.=$_;
+    }
+  }
+close(CNF);
+
+$output and $option{'output'}=$output;
+
+sub wanted {
+  if ($File::Find::name=~/$match/) {
+    push @ARGV,$File::Find::name;
+    }
+  }
+
+if ($match && !$recursive) {
+   print "You can use -match option only with -recursive option\n";
+   exit;
+   }
+
+if ($recursive) {
+  $match=~s/\./\\./g;
+  $match=~s/\*/.*/g;
+  $match=~s/\?/./g;
+  $match=~s/$/\$/;
+  find (\&wanted,"$recursive");
+  }
+
+my $tmpfile = $option{'tmpdir'} . "pdfindex$$"; 
+
+if (@ARGV) {
+  my @files;
+  if ($^O =~ /^MSWin32$/i && !$recursive) {
+    foreach $i (@ARGV) {
+      if($i=~/\*|\?/) {push @files,glob($i)}
+      else {push @files,$i}
+      }
+    }
+  else {@files = @ARGV}
+  open (OUT, ">$option{'output'}") || die "pdfinfo: couldn't open output file $option{'output'}\n"; 
+  foreach $input (@files) {
+    my $pdf_file= PDF->new($input);
+    if($pdf_file->IsaPDF) {
+      my ($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,$atime,$mtime,$ctime,$blksize,$blocks) = stat($input); 
+      my $title=$pdf_file->GetInfo("Title");
+      my $author=$pdf_file->GetInfo("Author");
+      my $creationdate=$pdf_file->GetInfo("CreationDate");
+      my $moddate=$pdf_file->GetInfo("ModDate");
+      my $subject=$pdf_file->GetInfo("Subject");
+      my $creator=$pdf_file->GetInfo("Creator");
+      my $producer=$pdf_file->GetInfo("Producer");
+      my $keywords=$pdf_file->GetInfo("Keywords");
+      my $filename=basename($input,"");
+      my $PDFinfocopy = $PDFinfo;
+      if ($PDFrules =~ /\+title=(.*)\+/) {
+        if ($title !~ /$1/) {next}
+        }
+      if ($PDFrules =~ /\+author=(.*)\+/) {
+        if ($author !~ /$1/) {next}
+        }
+      if ($PDFrules =~ /\+filename=(.*)\+/) {
+        if ($filename !~ /$1/) {next}
+        }
+      $PDFinfocopy =~ s/\+title\+/$title/g;
+      $PDFinfocopy =~ s/\+author\+/$author/g;
+      $PDFinfocopy =~ s/\+creationdate\+/$creationdate/g;
+      $PDFinfocopy =~ s/\+moddate\+/$moddate/g;
+      $PDFinfocopy =~ s/\+subject\+/$subject/g;
+      $PDFinfocopy =~ s/\+creator\+/$creator/g;
+      $PDFinfocopy =~ s/\+producer\+/$producer/g;
+      $PDFinfocopy =~ s/\+keywords\+/$keywords/g;
+      $PDFinfocopy =~ s/\+filename\+/$filename/g;
+      $PDFinfocopy =~ s/\+filepath\+/$input/g;
+      $PDFinfocopy =~ s/\+dev\+/$dev/g;
+      $PDFinfocopy =~ s/\+ino\+/$ino/g;
+      $PDFinfocopy =~ s/\+mode\+/$mode/g;
+      $PDFinfocopy =~ s/\+nlink\+/$nlink/g;
+      $PDFinfocopy =~ s/\+uid\+/$uid/g;
+      $PDFinfocopy =~ s/\+gid\+/$gid/g;
+      $PDFinfocopy =~ s/\+rdev\+/$rdev/g;
+      $PDFinfocopy =~ s/\+size\+/$size/g;
+      $PDFinfocopy =~ s/\+atime\+/$atime/g;
+      $PDFinfocopy =~ s/\+mtime\+/$mtime/g;
+      $PDFinfocopy =~ s/\+ctime\+/$ctime/g;
+      $PDFinfocopy =~ s/\+blksize\+/$blksize/g;
+      $PDFinfocopy =~ s/\+blocks\+/$blocks/g;
+      print OUT $PDFinfocopy;
+      }
+    else {print "$input is not a PDF\n"}
+    }
+  close (OUT)
+  &txt2pdf($option{'output'});
+  unlink($option{'output'});
+  } else {usage();}
+
+sub usage {
+    print <<USAGEDESC;
+
+usage:
+        pdfindex [-options ...] list
+
+where options include:
+    -help                        print out this message
+    -configure file              default pdfindex.cfg
+    -output    file              default index.txt
+    -recursive directory         scan recursively the directory
+    -match     files             match different files ex. *.pdf, a?.*
+                                 (require -recursive option)
+    -verbose                     verbose
+
+list:
+    with list you can use metacharacters and relative and absolute path name
+
+example:
+    pdfindex *.pdf
+    pdfindex -m a*.pdf -r my_directory
+
+
+If you want to know more about this tool, you might want
+to read the docs. They came together with PDFindex!
+
+Home: $pdfindexHome
+
+USAGEDESC
+    exit(1);
+}
+
+
+
+sub txt2pdf {
+my @ARGV=shift(@_);
+
+## Put here the txt2pdf perl code
+
+}

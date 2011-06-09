@@ -1,0 +1,8 @@
+#! /bin/bash
+
+###########################################
+mv ~/.bashrc ~/.bashrc.bk
+ln -s /house/inhouse-tools/bash/.bashrc_linux ~/.bashrc
+ln -s /house/inhouse-tools/vim/.vimrc_linux ~/.vimrc
+###########################################
+

@@ -1,0 +1,78 @@
+:
+# PDF printer for SCO / TRACS requires /txt2pdf from www.sanface.com to work
+# Install as pdfmail into /usr/spool/lp/model and configure as a "local"
+printer.
+#Set up some global variables.
+: ${SPOOLDIR:=/usr/spool/lp}
+: ${LOCALPATH:=${SPOOLDIR}/bin}
+: ${PATH:=/bin:/usr/bin/:/usr/local/bin:/txt2pdf:/files}
+: ${DIR="/tmp"}
+: ${FILE="FILE$$"}
+#Set up the default filter.
+
+LPCAT="cat"
+
+#If we are not using a filter, use the default one.
+if [ -z "${FILTER}" ]
+then
+FILTER="${LPCAT}"
+fi
+
+if [ -x "${LOCALPATH}/drain.output" ]
+then
+DRAIN="${LOCALPATH}/drain.output 1"
+else
+DRAIN=
+fi
+
+nobanner="yes"
+
+for i in $5
+do
+case "${i}" in
+nobanner )
+nobanner="yes"
+;;
+esac
+done
+
+job=$1
+user=$2
+title=$3
+copies=$4
+cmd=$5
+email=$title
+echo
+"##########################################################################
+###############" > /tmp/$HEADERFILE.txt
+echo "Title: $title " >> /tmp/$HEADERFILE.txt
+echo "Printed by $user at `date` via print spool job $job" >>
+/tmp/$HEADERFILE.t
+xt
+echo "############################
+echo
+"##########################################################################
+###############" >> /tmp/$HEADERFILE.txt
+shift; shift; shift; shift; shift
+i=1
+files="$*"
+
+while [ $i -le $copies ]
+do
+for file in $files
+do
+cd /txt2pdf
+cat ${file} | /txt2pdf/txt2pdf.pl - -c /txt2pdf/txt2pdf.cfg >>
+$DIR/$FILE.pdf
+done
+i=`expr $i + 1`
+done
+# You can find mpack at
+# ftp://ftp2.caldera.com/pub/skunkware/osr5/vols/mpack-1.5-VOLS.tar 
+ [ "$title" ] &&  /usr/bin/mpack -s TRACSPDF_output -d /tmp/$HEADERFILE.txt
+$DI
+R/$FILE.pdf $email && sleep 30 && rm $DIR/$FILE.*
+#Draining characters might be necessary.
+${DRAIN}
+exit 0
+

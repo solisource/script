@@ -1,0 +1,68 @@
+WinAnsiEncoding Test
+ΰαβγδεζηθικλμνξοπρςστυφ
+Tab Test
+qqqqqqq	qqqqqq	qqqqq	qqqq	qqq	qq	q
+p	pp	ppp	pppp	ppppp	pppppp	ppppppp
+Colour test
+red frase, green frase, blue frase
+Font mark test
+bold frase, italic frase, boldit frase
+Link test with Reader 7.0 (no linkuse)
+www.sanface.com sanface@sanface.com
+This is another link test with Courier font, pointSize 10: https://www.sanface.com
+File test
+Euro test (Note that in the WinAnsiEncoding, character code 128 is used for Euro.) 
+"euro"-Symbol €€€€€€€€€€€€€€€€€€€€€
+
+
+
+    This is an underline line#!underline#    _________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A new page
+The txt2pdf PRO page link http://www.sanface.com/txt2pdfPRO.html
+The txt2pdf PRO + crypt page link http://www.sanface.com/txt2pdfPROcrypt.html

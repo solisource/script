@@ -1,0 +1,4 @@
+Feb 4 23:57:54 gw.foobar.com %PIX-4-106023: Deny udp src outside:xxx.xxx.146.12/2523 dst inside:xxx.xxx.10.2/1434 by access-group "outside_acl" 
+Feb 5 07:38:50 10.87.62.40 %PIX-5-304001: 10.5.5.1 Accessed URL xxx.xxx.10.2:/aharrison@awod.com?on_url=http://xxx.xxx.10.2/scripts/..%%35c../winnt/system32/cmd.exe?/c+ 
+%PIX-5-111001: Begin configuration: console writing to memory 
+Dec 19 04:40:54 gw.foobar.com %PIX-4-400027: IDS:3041 TCP SYN+FIN flags from xxx.xxx.146.23 to xxx.xxx.10.2 on interface outside 

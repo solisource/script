@@ -1,0 +1,188 @@
+#! /bin/perl  -w
+if (($ARGV[0] ne "-bom") or ($ARGV[2] ne "-price")){
+  $note="*";
+  $note x=43;
+  $note .="\n";
+
+  print $note;
+  print "*allprice -bom bom_file -price price_file*\n";
+  print $note;
+  exit;
+}
+else {
+  $note="*";
+  $note x=85;
+  $note .="\n";
+
+  $note1="-";
+  $note1 x=38;
+  $note1 .="\n";
+
+  open(F1,"<$ARGV[1]") or die;
+  open(F2,"<$ARGV[3]") or die;
+  @bom_file=<F1>;
+  @price_file=<F2>;
+  close F2;
+  close F1;
+
+  #print @bom_file;
+  #print @price_file;
+
+  #foreach (@bom_file){
+  #}
+
+  # $jin=D1/J1;
+  # sub get_price {
+  #   foreach (@price_file){
+  #     if (m/$_[0]/){
+  #       m/price:(.*)/;
+  #       print "Price of $_[0] is $1\n";
+  #     }
+  #   }
+  # }
+  #sub test {
+  #print @_;
+  #}
+  #&test(@bom_file,@price_file);
+
+  #$a1="D2/1N4007/DO42";
+  #$b1="RC";
+  #if ($a1=~m/$b1/){
+  #print "OK\n";
+  #}
+  #print "$a1\n";
+
+  sub get_part_type_price {
+    foreach my $var (@price_file){
+      if (($var=~m/$_[0]/) and ($var=~m/price:([\d\.]+)/)){
+      return $1;
+      }
+    }
+      return "non_price_error";
+  }
+
+  sub get_part_type_info {
+    my $type;
+    my $pin_number;
+
+    if   ($_[0]=~m/^CC/){
+      $type="S Std SMT C";
+      $pin_number=2;
+    }
+    elsif($_[0]=~m/^RC/){
+      $type="S Std SMT R";
+      $pin_number=2;
+    }
+    elsif($_[0]=~m/^RD\d+/){
+      $type="D Std DIP R(Carbon film R)";
+      $pin_number=2;
+    }
+    elsif($_[0]=~m/^RDN\d+/){
+      $type="D Std DIP R(Carbon film R)";
+      $pin_number=2;
+    }
+    elsif($_[0]=~m/^RN\d+/){
+      $type="D Std DIP R(High Precision & Metal oxide film R)";
+      $pin_number=2;
+    }
+    elsif($_[0]=~m/^RSN\d+/){
+      $type="D Std DIP R(General Precision & Metal oxide film R)";
+      $pin_number=2;
+    }
+    elsif($_[0]=~m/^RT\d+/){
+      $type="D Std DIP R(High Voltage R)";
+      $pin_number=2;
+    }
+    elsif($_[0]=~m/^(\w)(\d+)\//){
+      $type=$1;
+      $pin_number=$2;
+    }
+    my @info=($type,$pin_number);
+    #return @info;
+  }
+
+  #my@array=("tom","dick","harry");
+  #@arry[0..9]=((0)x10);//重复10次0
+  #my@new_array=@array[1,3,5];
+  #@array[1,0]=@array[0,1];
+  #@user3=("zk",@user1); #合并数组变量
+  
+  ################################################################################
+  #print ++$#bom_file."\n";#==>$#bom_file+1 =>22
+  #print $#bom_file++;     #=================>21
+  #for ($var=0,$var<(++$#bom_file),$var++){}
+
+  #Init total_price == 0 value
+  $total_price=0;
+  $part_type_total_price=0;
+
+  #Init DIP and SMT type part
+  $total_dip_part_type=0;
+  $total_smt_part_type=0;
+
+  #Init DIP and SMT pin number
+  $total_dip_pin_number=0;
+  $total_smt_pin_number=0;
+
+  #Get Information for Follow
+  #part_type_number part_type part_type_price part_type_total_price 
+  #part_type_info[0]=type 
+  #part_type_info[1]=pin_number
+  foreach (@bom_file){
+
+    #Match part type line get "part_type_number,part_type,part_type_price,part_type_total_price"
+    if (m/^\|(\d+)\s+\|(\d+)\s+\|[\w\d\_\-,\s]+\s+\|([\w\d\_\-\/]+)\s+/){
+
+      $number=$1;
+      $part_type_number=$2;
+      $part_type=$3;
+      $part_type_price=&get_part_type_price($part_type);
+      @part_type_info=&get_part_type_info($part_type);
+
+      if ($part_type_info[0]=~m/^D/){
+        $total_dip_part_type+=$part_type_number;
+        $total_dip_pin_number+=$part_type_number*$part_type_info[1];
+      }
+      if ($part_type_info[0]=~m/^S/){
+        $total_smt_part_type+=$part_type_number;
+        $total_smt_pin_number+=$part_type_number*$part_type_info[1];
+      }
+      
+      #If non_price_error Print for follow
+      if($part_type_price=~m/non_price_error/){
+          print $note;
+          print "No.$number\n";
+          print "   Part Type                   = $part_type #Error:non_pirce_error\n";
+          print "   Part Type DIP(D)/SMT(S)     = $part_type_info[0]\n";
+          print "   Part Type Pin Number        = $part_type_info[1]\n";
+          print $note1;
+          print "   Part Type Number            = $part_type_number\n";
+          print "   Part Type Price             = $part_type_price\n\n";
+        }
+      #If have price information Print for follow
+      else{
+          $part_type_total_price=$part_type_number*$part_type_price;
+          $total_price+=$part_type_total_price;
+
+          print $note; 
+          print "No.$number\n";
+          print "   Part Type                   = $part_type\n";
+          print "   Part Type DIP(D)/SMT(S)     = $part_type_info[0]\n";
+          print "   Part Type Pin Number        = $part_type_info[1]\n";
+          print $note1;
+          print "   Part Type Number            = $part_type_number\n";
+          print "   Part Type Price             = $part_type_price\n";
+          print "   Part Type Total Price       = $part_type_total_price\n\n";
+        }
+     }
+  }
+  #Report Information
+  print $note;
+  print "Total DIP Part Type number     = $total_dip_part_type\n";
+  print "Total DIP Part Type pin number = $total_dip_pin_number\n";
+  print $note;
+  print "Total SMT Part Type number     = $total_smt_part_type\n";
+  print "Total SMT Part Type pin number = $total_smt_pin_number\n";
+  print $note;
+  print "Total price = $total_price\n";
+}

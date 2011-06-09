@@ -1,0 +1,14 @@
+      test.pdf : size 7867
+      http://www.sanface.com/test.pdf
+      mime:test.pdf
+      txt2pdf test
+      SANFACE Software
+      D:20000301115802
+      
+      flowchart.pdf : size 5220
+      http://www.sanface.com/flowchart.pdf
+      mime:flowchart.pdf
+      txt2pdf test
+      SANFACE Software
+      D:20000110133025
+      

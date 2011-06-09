@@ -1,0 +1,54 @@
+#! /usr/bin/bash.exe
+
+#set $jin=<>
+#echo $jin
+#SCMS_AS0001_0A01
+#SCMS_VX0001_0A01
+#Base on Branch using GIT Version Control System add by dsjin 06/25/2010
+###########################################
+mkdir system
+mkdir digital
+mkdir digital/system
+mkdir digital/interface
+mkdir digital/2analog
+mkdir digital/memory
+mkdir digital/model
+mkdir digital/model/io
+mkdir digital/model/macro
+mkdir digital/model/memory
+mkdir digital/model/stdcell
+mkdir digital/bench
+###########################################
+mkdir digital/asic
+mkdir digital/asic/rtl_sim
+mkdir digital/asic/gate_sim
+mkdir digital/asic/post_sim
+mkdir digital/asic/dc
+mkdir digital/asic/pc
+mkdir digital/asic/fc
+mkdir digital/asic/dftc
+mkdir digital/asic/dftc-mentor
+mkdir digital/asic/atpg
+mkdir digital/asic/lec
+mkdir digital/asic/rtl
+mkdir digital/asic/lib
+mkdir digital/asic/gate_sta
+mkdir digital/asic/post_sta
+mkdir digital/fpga
+mkdir digital/fpga/modelsim
+mkdir digital/fpga/ise
+mkdir digital/fpga/syplify
+mkdir digital/fpga/rtl
+
+mkdir testing
+mkdir ip 
+mkdir git-release
+mkdir pmanger
+mkdir spec
+mkdir doc
+mkdir bonding
+mkdir analog
+mkdir layout 
+###########################################
+echo "Make proejct dir successfully!^_^"
+

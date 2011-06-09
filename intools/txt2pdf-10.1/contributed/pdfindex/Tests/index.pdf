@@ -1,0 +1,252 @@
+%PDF-1.2
+%‚„œ”
+1 0 obj
+<<
+/A <<
+/S /URI
+/URI (http://www.sanface.com/flowchart.pdf)
+>>
+/Type /Annot
+/Subtype /Link
+/Rect [84 764 303 774]
+/Border [0 0 0]
+/H /I
+>>
+endobj
+2 0 obj
+<<
+/A <<
+/S /Launch
+/F (flowchart.pdf)
+>>
+/Type /Annot
+/Subtype /Link
+/Rect [84 752 195 762]
+/Border [0 0 0]
+/H /I
+>>
+endobj
+3 0 obj
+<<
+/A <<
+/S /URI
+/URI (http://www.sanface.com/test.pdf)
+>>
+/Type /Annot
+/Subtype /Link
+/Rect [84 680 273 690]
+/Border [0 0 0]
+/H /I
+>>
+endobj
+4 0 obj
+<<
+/A <<
+/S /Launch
+/F (test.pdf)
+>>
+/Type /Annot
+/Subtype /Link
+/Rect [84 668 165 678]
+/Border [0 0 0]
+/H /I
+>>
+endobj
+5 0 obj
+<<
+/Author (SANFACE Software)
+/CreationDate (D:20010423131452+0200)
+/Producer (txt2pdf v4.5 \251 SANFACE Software 2001)
+/Title (txt2pdf test)
+/Subject (This is an extensive txt2pdf test)
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F1
+/Encoding 12 0 R
+/BaseFont /Courier
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F2
+/Encoding 12 0 R
+/BaseFont /Courier-Oblique
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F3
+/Encoding 12 0 R
+/BaseFont /Courier-Bold
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F4
+/Encoding 12 0 R
+/BaseFont /Courier-BoldOblique
+>>
+endobj
+12 0 obj
+<<
+/Type /Encoding
+/BaseEncoding /WinAnsiEncoding
+>>
+endobj
+13 0 obj
+<<
+  /Font << /F1 8 0 R /F2 9 0 R /F3 10 0 R /F4 11 0 R >>
+  /ProcSet [ /PDF /Text ]
+  /XObject << >>
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 7 0 R
+/Resources 13 0 R
+/Contents 15 0 R
+/Rotate 90
+/Annots [ 1 0 R 2 0 R 3 0 R 4 0 R ]
+>>
+endobj
+15 0 obj
+<<
+/Length 16 0 R
+>>
+stream
+.9 g
+0 G
+3 w
+25 25 545 792 re
+B
+0 G
+0 g
+
+BT
+/F1 10 Tf
+1 0 0 1 50 802 Tm
+12 TL
+T* (txt2pdf test) Tj
+T* (      ) Tj
+ /F3 10 Tf
+ (flowchart.pdf) Tj
+ /F1 10 Tf
+ ( : size 5220) Tj
+T* (      ) Tj
+ 0 0 1 rg
+ (http://www.sanface.com/) Tj
+ /F3 10 Tf
+ (flowchart.pdf) Tj
+ /F1 10 Tf
+ () Tj
+ 0 0 0 rg
+ () Tj
+T* (      ) Tj
+ 0 0 1 rg
+ (mime:) Tj
+ /F3 10 Tf
+ (flowchart.pdf) Tj
+ /F1 10 Tf
+ () Tj
+ 0 0 0 rg
+ () Tj
+T* (      txt2pdf test) Tj
+T* (      SANFACE Software) Tj
+T* (      D:20000110133025) Tj
+T* (      ) Tj
+T* (      ) Tj
+ /F3 10 Tf
+ (test.pdf) Tj
+ /F1 10 Tf
+ ( : size 7867) Tj
+T* (      ) Tj
+ 0 0 1 rg
+ (http://www.sanface.com/) Tj
+ /F3 10 Tf
+ (test.pdf) Tj
+ /F1 10 Tf
+ () Tj
+ 0 0 0 rg
+ () Tj
+T* (      ) Tj
+ 0 0 1 rg
+ (mime:) Tj
+ /F3 10 Tf
+ (test.pdf) Tj
+ /F1 10 Tf
+ () Tj
+ 0 0 0 rg
+ () Tj
+T* (      txt2pdf test) Tj
+T* (      SANFACE Software) Tj
+T* (      D:20000301115802) Tj
+T* (      ) Tj
+/F2 10 Tf
+1 0 0 1 297.5 20 Tm
+(1) Tj
+/F1 10 Tf
+ET
+BT
+/F3 55 Tf
+.5 .5 -.5 .5 150 455 Tm
+(DRAFT) Tj
+ET
+
+endstream
+endobj
+16 0 obj
+994
+endobj
+6 0 obj
+<<
+/Type /Catalog
+/Pages 7 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Pages
+/Count 1
+/MediaBox [ 0 0 595 842 ]
+/Kids [ 14 0 R ]
+>>
+endobj
+xref
+0 17
+0000000000 65535 f 
+0000000015 00000 n 
+0000000170 00000 n 
+0000000303 00000 n 
+0000000453 00000 n 
+0000000581 00000 n 
+0000002581 00000 n 
+0000002630 00000 n 
+0000000786 00000 n 
+0000000881 00000 n 
+0000000984 00000 n 
+0000001085 00000 n 
+0000001193 00000 n 
+0000001262 00000 n 
+0000001383 00000 n 
+0000001513 00000 n 
+0000002561 00000 n 
+trailer
+<<
+/Size 17
+/Root 6 0 R
+/Info 5 0 R
+>>
+startxref
+2716
+%%EOF

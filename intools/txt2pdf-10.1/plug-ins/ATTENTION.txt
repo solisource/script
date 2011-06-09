@@ -1,0 +1,14 @@
+ If you are using the source code version, please be aware of thefollowing:
+  o  In order to use txt2pdf.pl you will need to install the Zlib module
+     and the Zlib libraries.
+  o  If you plan to use txt2pdf-mail.pl then you also need to install the
+     MIME::Lite modules.  If your SMTP gateway is on a different computer
+     then you will also need to install LIBnet.
+  o  You can find links to the modules in the Modules directory or from   CPAN.
+  o  If you don't want or need to use compression, then you can simply use
+     txt2pdf-no_zlib.pl
+  o  Note that in this new version, the -c option has been replaced with
+     -conf.  This is because there are two similiar options that -c might
+     be confused with.  (-configure and -compress)
+
+  Thanks for purcashing txt2pdf 5.x PRO

@@ -1,0 +1,42 @@
+#! /bin/perl
+#if (($ARGV[0] eq "-f") or ($ARGV[2] eq "-c") or ($ARGV[4] eq "-v") or ($ARGV[6] eq "-r")){
+#if (($ARGV[0] eq "-f") || ($ARGV[2] eq "-c") || ($ARGV[4] eq "-v") || ($ARGV[6] eq "-r")){
+if (($ARGV[0] eq "-f") and ($ARGV[2] eq "-c") and ($ARGV[4] eq "-v") and ($ARGV[6] eq "-r")){
+print "************************************\n";
+print "For RC DC Power                     \n";
+print "*  f default unit is HZ            *\n";
+print "*  c default unit is uF            *\n";
+print "*  v default unit is  V            *\n";
+print "*  r default unit is  O            *\n";
+print "************************************\n";
+$current = 1000*$ARGV[5]/(1000000/(2*3.14*$ARGV[1]*$ARGV[3]) + $ARGV[7]);
+$current_90=$current*0.9;
+$current_80=$current*0.8;
+print "current   =$current mA\n";
+print "current_90=$current_90 mA\n";
+print "current_80=$current_80 mA\n";
+print "************************************\n";
+}
+else {
+print "************************************************************\n";
+print "*                    For RC DC Power                       *\n";
+print "************************************************************\n";
+print "* calcurrent -f frenqucy -c C_value -v Voltage -r Resistor *\n";
+print "************************************************************\n";
+exit;
+}
+
+#$jin=jin;
+#$jin = $jin x 5;
+#print "$jin\n";
+
+#not(!) and(&&) or(||)
+#=,+=,-=,*=,/=,**=,%=,.=,x=(重复 $str 字符串 $y 次，并反结果指派给 $str 这个字符串->$str x=$y;　$str=$str x $y;)
+#+,-,*,/,%,**,++,--,.
+#>,>=,<,<=,==,!=,
+#gt,ge,lt,le,eq,ne,cmp(比较元算符，$str1 cmp $str2，
+#                      如果 $str1 大于 $str2，返回 1， 
+#                      如果 $str1 等于 $str2，返回 0，
+#                      如果 $str1 小于 $str2，则返回 -1)
+#
+#
