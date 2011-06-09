@@ -26,6 +26,11 @@ if [ $1 = -w ] ; then
   echo "#update taglist.txt for doc (common ctags)"
   \cp -f ../vim/taglist_45/doc/taglist.txt /c/Program\ Files/Vim/vim7*/doc
 
+  echo "#update verilog_plugin "
+  \cp -f ../vim/verilog_plugin.vim /c/Program\ Files/Vim/vim7*/plugin
+
+  echo "#update verilog_plugin_1 "
+  \cp -f ../vim/verilog_plugin_1.vim /c/Program\ Files/Vim/vim7*/plugin
 
 elif [ $1 = -l ] ; then
 
