@@ -473,7 +473,7 @@ set fdl=0
 " => Text options
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
 
 map <leader>t2 :set shiftwidth=2<cr>
 map <leader>t4 :set shiftwidth=4<cr>
@@ -861,8 +861,9 @@ endfunction
 """"""""""""
 "set syntax=on
 "set cinoptions+={2,0,p0,t0
+set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
 "set nobackup
-"set cindent
+set cindent
 "set syntax=cpp
 "set formatoptions=tcqr
 
@@ -874,7 +875,6 @@ set autoindent
 set smartindent
 "set indentexpr
 "=set ai
-"set cindent
 
 "set tabstop=4
 "set softtabstop=4
@@ -892,11 +892,11 @@ set smartindent
 "nmap gF ^Wf
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set expandtab
-"set shiftwidth=4
-"set tabstop=4
-"set softtabstop=4
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 "set nobackup
-"set cindent
+set cindent
 "set showcmd
 "set helplang=Cn
 "set nofoldenable
@@ -1032,4 +1032,142 @@ highlight Comment ctermfg=green guifg=green
 
 "$VIMRUNTIME----->Running DIR
 "set runtimepath---->
+
+
+"--------------------------SuperTab----------------------------------------
+"SuperTab 依赖于ctags
+"如果下拉菜单弹出，回车映射为接受当前所选项目，否则，仍映射为回车；
+inoremap <expr> <CR>       pumvisible()?"\<C-Y>":"\<CR>"
+
+let g:SuperTabRetainCompletionType=2
+let g:SuperTabDefaultCompletionType="<C-X><C-O>" 
+        " 0 - 不记录上次的补全方式
+        " 1 - 记住上次的补全方式,直到用其他的补全命令改变它
+        " 2 - 记住上次的补全方式,直到按ESC退出插入模式为止
+        
+        " (智能补全)按下<Tab>后现在改为<C-X><C-O>) //注意智能补全不能局部补全关键字
+        " (<C-P> <C-N> 向上选择和向下选择)
+        
+        " 设置按下<Tab>后默认的补全方式, 默认是<C-P>, 
+        " 还有其他的补全方式, 你可以看看下面的一些帮助:
+        " :help ins-completion
+        " :help compl-omni
+
+        "但是现在我的<Tab>键不好用了, 我以前爱用<Tab>进行缩进, 如果前面有字符按下<Tab>键后就会进行补全,
+        "而不是我想要的缩进功能, 不知道有没有快捷键可以暂时关闭和激活SuperTab键的功能. 如果哪位朋友知道,
+         
+        "想用tab的话貌似按 Ctrl-Tab就可以了。。"
+        "
+"ctags -R --c-kinds=+p --fields=+S 
+
+
+if &term=="xterm"
+    set t_Co=8
+    set t_Sb=^[[4%dm
+    set t_Sf=^[[3%dm
+endif
+
+
+"--------------------------------------Tag---------------------------------------
+set autochdir
+"if MySys == "windows"              "设定windows系统中ctags程序的位置//默认情况下去Vim中可执行目录中区找的，
+   let Tlist_Ctags_Cmd = 'ctags'
+"elseif MySys == "linux"            "设定windows系统中ctags程序的位置
+"   let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+"endif
+set tags=tags,~/.vim/tags/usr/ctags/tags,~/.vim/tags/linux/ctags/tags  "设置tags的搜索路径
+au BufWritePost *.cpp,*.h,*.c,*.rl,*.def call system("ctags --tag-relative -a -o ~/.vim/tags/usr/ctags/tags --extra=+q " . expand("%:p"))
+
+"熟练的使用ctags仅需记住下面七条命令：（很简单吧，呵呵）
+"1． $ ctags –R *      ($ 为Linux系统Shell提示符)
+"2.  $ vi –t tag       (请把tag替换为您欲查找的变量或函数名)
+"3． ：ts              (ts 助记字：tags list
+"4． ：tp              (tp 助记字：tags preview)
+"5． ：tn              (tn 助记字：tags next)
+"6． Ctrl + ]          (前进，跟踪查询)
+"7． Ctrl + T          (返回)
+"$ ctags –R *
+
+"[{ 转到上一个位于第一列的"{"
+"}]  转到下一个位于第一列的"{"
+"{   转到上一个空行
+"}   转到下一个空行
+"gd  转到当前光标所指的局部变量的定义
+"*   转到当前光标所指的单词下一次出现的地方
+"#   转到当前光标所指的单词上一次出现的地方
+
+"表示递归创建，也就包括源代码根目录（当前目录）下的所有子目录。
+"表示所有文件。这条命令会在当前目录下产生一个“tags”文件，
+"当用户在当前目录中运行vi时，会自动载入此tags文件。Tags文件中包括这些对象的列表：
+"用#define定义的宏
+"枚举型变量的值
+"函数的定义、原型和声明
+"名字空间（namespace）
+"类型定义（typedefs）
+"变量（包括定义和声明）
+"类（class）、结构（struct）、枚举类型（enum）和联合（union）
+"类、结构和联合中成员变量或函数
+"VIM用这个“tags”文件来定位上面这些做了标记的对象。
+
+"--------------------------------------Tlist-------------------------------------
+"taglist 依赖于ctags //她的作用是把tags的内用在窗口中显示出来
+
+let Tlist_Auto_Open=1
+let Tlist_Show_One_File = 10          "不同时显示多个文件的tag，只显示当前文件的
+let Tlist_Exit_OnlyWindow = 1         "如果taglist窗口是最后一个窗口，则退出vim
+let Tlist_Use_Right_Window = 1        "在右侧窗口中显示taglist窗口
+
+"安装文档，把*.doc拷贝到DOC目录中，然后执行下面的命令，让Gvim获取DOC中的文档标签（Tag）
+"用 :helptags ~/.vim/doc来获取DOC中的tags//文档的位置，
+
+"--------------------------------------------------------------------------------
+"下载的是一个zip包，把它放在 ~/.vim 目录下，然后
+"$unzip filename.zip
+"它已经自动把taglist.vim和taglist.txt分别放到plugin、doc文件夹下了。
+"这个时候，taglist的help文档已经在 ~/.vim/doc 目录下了,但是你在vim下敲
+":help Tlist
+"却没有任何反应，那是因为vim还没有获取帮助文档里面的tag，解决方法是在vim下
+":helptags ~/.vim/doc
+"现在，你再
+":help Tlist
+"看看有没有反应？
+"--------------------------------------------------------------------------------
+":help Tlist
+":Tlist打开 tags窗口，再次:Tlist关闭窗口
+"Ctrl+w来回在Tlist窗口和工作区切换
+"Ctrl+]
+"Ctrl+o
+"F1 for taglist help windows
+"鼠标左键双击taglist中的分类项目，可以追踪定位//或者选中后 回车
+"--------------------------------------------------------------------------------
+
+"so _vimrc  "用Windows的路径方式 //source file name 
+
+"--------------------------------------------------------------------------------
+"Vim中的补全命令
+
+"整行补全                        CTRL-X CTRL-L
+"根据当前文件里关键字补全        CTRL-X CTRL-N
+"根据当前文件里关键字补全        CTRL-X CTRL-P
+"根据字典补全                    CTRL-X CTRL-K
+"根据同义词字典补全              CTRL-X CTRL-T
+"根据头文件内关键字补全          CTRL-X CTRL-I
+"根据标签补全                    CTRL-X CTRL-]
+"补全文件名                      CTRL-X CTRL-F
+"补全宏定义                      CTRL-X CTRL-D
+"补全vim命令                     CTRL-X CTRL-V
+"用户自定义补全方式              CTRL-X CTRL-U
+"拼写建议                        CTRL-X CTRL-S
+
+"--------------------------------------------------------------------------------
+"Vim中快捷键的映射Mapping for Hotkey! Example following!
+
+"inoremap <C-]>             <C-X><C-]>
+"inoremap <C-F>             <C-X><C-F>
+"inoremap <C-D>             <C-X><C-D>
+"inoremap <C-L>             <C-X><C-L> 
+"inoremap <C-> <C-X><C-N>
+"inoremap <C-> <C-X><C-P>
+"--------------------------------------------------------------------------------
+
 
