@@ -13,15 +13,15 @@
 "
 " Usage:
 "           hotkey:
-"               "<C-j>" (default value of g:completekey)
+"               "<tab>" (default value of g:completekey)
 "               Do all the jobs with this key, see
 "           example:
-"               press <C-j> after function name and (
-"                 foo ( <C-j>
+"               press <tab> after function name and (
+"                 foo ( <tab>
 "               becomes:
 "                 foo ( `<first param>`,`<second param>` )
-"               press <C-j> after code template
-"                 if <C-j>
+"               press <tab> after code template
+"                 if <tab>
 "               becomes:
 "                 if( `<...>` )
 "                 {
@@ -53,7 +53,7 @@ endif
 " Variable Definitions: {{{1
 " options, define them as you like in vimrc:
 if !exists("g:completekey")
-    let g:completekey = "<C-j>"   "hotkey
+    let g:completekey = "<tab>"   "hotkey
 endif
 
 if !exists("g:rs")
@@ -186,8 +186,8 @@ function! SwitchRegion()
         return "\<c-\>\<c-n>gvo\<c-g>"
     else
         if s:doappend == 1
-            if g:completekey == "<C-j>"
-                return "\<C-j>"
+            if g:completekey == "<tab>"
+                return "\<tab>"
             endif
         endif
         return ''
