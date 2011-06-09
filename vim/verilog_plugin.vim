@@ -125,4 +125,4 @@ map          <A-z>  :Aheader<CR>
 map          <A-l>  :Acontent<CR>
 
 "就是按下保存会自动修改Last Modifited的时间
-autocmd BufWritePre,FileWritePre *.v   ks|call LastModified()|'s
+autocmd BufWritePre,FileWritePre * ks|call LastModified()|'s
