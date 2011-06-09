@@ -2,18 +2,30 @@
 if [ $1 = -w ] ; then
 
   echo "update -w for windows env"
-  #update git config file for git vcs
+  echo "#update git config file for git vcs"
   \cp -f ../git/.gitconfig /etc/gitconfig 
-  #update .bashrc
+
+  echo "#update .bashrc"
   \cp -f ../git/bash_profile ~/.bashrc
-  #update _vimrc 
+
+  echo "#update _vimrc"
   \cp -f ../vim/.vimrc_win /c/Program\ Files/Vim/_vimrc
-  #update supertab.vim for All language
+
+  echo "#update supertab.vim for All language"
   \cp -f ../vim/supertab.vim /c/Program\ Files/Vim/vim7*/plugin
-  #update code_complete.vim for C language
+
+  echo "#update code_complete.vim for C language"
   \cp -f ../vim/code_complete.vim /c/Program\ Files/Vim/vim7*/plugin
-  #update ctags ver5.8 for C language --> vim.exe dir
+
+  echo "#update ctags ver5.8 for C language --> vim.exe dir"
   \cp -f ../vim/ctags58/ctags58/ctags.exe /c/Program\ Files/Vim/vim7*
+
+  echo "#update taglist.vim (common ctags)"
+  \cp -f ../vim/taglist_45/plugin/taglist.vim /c/Program\ Files/Vim/vim7*/plugin
+
+  echo "#update taglist.txt for doc (common ctags)"
+  \cp -f ../vim/taglist_45/doc/taglist.txt /c/Program\ Files/Vim/vim7*/doc
+
 
 elif [ $1 = -l ] ; then
 
