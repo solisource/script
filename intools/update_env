@@ -1,14 +1,22 @@
 #! /bin/bash
 if [ $1 = -w ] ; then
+
   echo "update -w for windows env"
+  #update git config file for git vcs
   \cp -f ../git/.gitconfig /etc/gitconfig 
+  #update .bashrc
   \cp -f ../git/bash_profile ~/.bashrc
-  
+  #update _vimrc 
   \cp -f ../vim/.vimrc_win /c/Program\ Files/Vim/_vimrc
+  #update supertab.vim for All language
   \cp -f ../vim/supertab.vim /c/Program\ Files/Vim/vim7*/plugin
+  #update code_complete.vim for C language
   \cp -f ../vim/code_complete.vim /c/Program\ Files/Vim/vim7*/plugin
-  #echo "-w"
+  #update ctags ver5.8 for C language --> vim.exe dir
+  \cp -f ../vim/ctags58/ctags58/ctags.exe /c/Program\ Files/Vim/vim7*
+
 elif [ $1 = -l ] ; then
+
   echo "update -l for linux env"
   #\mv  ~/.bashrc ~/.bashrc.`date +%y%m%d%H%M`
   \cp -f ../bash/.bashrc_linux ~/.bashrc
@@ -16,6 +24,7 @@ elif [ $1 = -l ] ; then
   #\mv  ~/.vimrc ~/.vimrc.`date +%y%m%d%H%M`
   \cp -f ../vim/.vimrc_linux ~/.vimrc
   #echo "-l"
+
 else
   echo "Error option /-w for Window,-l for Linux/"
 fi
