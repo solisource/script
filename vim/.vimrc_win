@@ -1208,3 +1208,4 @@ syn sync fromstart
 set foldmethod=syntax  " 设置实用语法方式折叠 
 set foldnestmax=1      " 设置最大折叠深度
 
+"color  murphy
