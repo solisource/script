@@ -265,7 +265,7 @@ let s:C_TemplateJumpTarget2    = '<-'.s:C_TJT.'->\|{-'.s:C_TJT.'-}'
 let s:C_Macro                  = {'|AUTHOR|'         : 'first name surname',
 											\						'|AUTHORREF|'      : '',
 											\						'|EMAIL|'          : '',
-											\						'|COMPANY|'        : 'Smart Systems Ltd..',
+											\						'|COMPANY|'        : 'Smart Systems Ltd...',
 											\						'|PROJECT|'        : '',
 											\						'|COPYRIGHTHOLDER|': '',
 											\						'|STYLE|'          : ''

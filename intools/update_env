@@ -41,6 +41,9 @@ if [ $1 = -w ] ; then
   echo "#update ctags.exe for windows -->/bin/"
   \cp -fr ./ctags.exe /bin/
 
+  echo "#update softbluev2 Color"
+  \cp -fr ../vim/softbluev2.vim /c/Program\ Files/Vim/vim7*/plugin
+
 elif [ $1 = -l ] ; then
 
   echo "update -l for linux env"
