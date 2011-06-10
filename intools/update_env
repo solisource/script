@@ -35,6 +35,12 @@ if [ $1 = -w ] ; then
   echo "#update c-support for C/C++ code "
   \cp -fr ../vim/cvim/* /c/Program\ Files/Vim/vimfiles
 
+  echo "#update make.exe for windows -->/bin/"
+  \cp -fr ./make.exe /bin/
+
+  echo "#update ctags.exe for windows -->/bin/"
+  \cp -fr ./ctags.exe /bin/
+
 elif [ $1 = -l ] ; then
 
   echo "update -l for linux env"
