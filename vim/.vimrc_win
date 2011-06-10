@@ -472,7 +472,7 @@ set fdl=0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text options
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set expandtab
+"set expandtab
 set shiftwidth=4
 
 map <leader>t2 :set shiftwidth=2<cr>
