@@ -2,7 +2,7 @@
         # --- Database Configuration ---
 	$g_hostname = 'localhost';
 	$g_db_type = 'mysql';
-	$g_database_name = 'bugtracker';
+	$g_database_name = 'mantisbt';
 	$g_db_username = 'root';
         $g_db_password = '524400';
 
@@ -31,7 +31,7 @@
 
         # --- Set jpgraph Configuration ---
         $g_use_jpgraph=ON; #Enable JPGraph
-        $g_jpgraph_path = '/opt/lampp/htdocs/bugtracker/core/jpgraph-3.5.0b1/src/';
+        $g_jpgraph_path = '/opt/lampp/htdocs/mantisbt/core/jpgraph-3.5.0b1/src/';
         $g_jpgraph_path = './core/jpgraph-3.5.0b1/src/'; #JPGraph cmd path
 
         # --- Email Configuration ---
@@ -55,7 +55,7 @@
         $g_smtp_password        = '524400';
         $g_phpMailer_method	= 2;
         $g_use_phpMailer        = ON;
-        $g_phpMailer_path       = '/opt/lampp/htdocs/bugtracker/core/PHPMailer_v5.1/';
+        $g_phpMailer_path       = '/opt/lampp/htdocs/mantisbt/core/PHPMailer_v5.1/';
         $g_phpMailer_path       = './core/PHPMailer_v5.1/';
         
 
@@ -65,7 +65,7 @@
         $g_file_upload_method   = DISK; #save server disk space
         $g_max_file_size        = 5000000; #Mantis enable file size is 5000000 and <= php.ini
         $g_absolute_path_default_upload_folder = ''; # used with DISK, must contain trailing \ or /.
-        $g_absolute_path_default_upload_folder = '/opt/lampp/htdocs/bugtracker/upload/';
+        $g_absolute_path_default_upload_folder = '/opt/lampp/htdocs/mantisbt/upload/';
         $g_absolute_path_default_upload_folder = './core/upload/';
         $g_preview_attachments_inline_max_size = 256 * 1024;
         $g_allowed_files	= '';	# extensions comma separated, e.g. 'php,html,java,exe,pl'
