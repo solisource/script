@@ -45,3 +45,4 @@ print "SV18_typIR = $SV18_typIR %\n";
 print "SV18_maxV  = $SV18_maxV mV\n";
 print "SV18_maxIR = $SV18_maxIR %\n";
 print "-------------------------------------------------\n";
+

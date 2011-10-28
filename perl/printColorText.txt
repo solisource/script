@@ -1,0 +1,19 @@
+#! /usr/bin/perl
+
+&printColorText(40,31,"TextToTest Color");
+
+sub printColorText{
+	if(@_!=3){
+		print "WARNING! &printColorText should get exactly three arguments!\n";
+	} else {
+		$fc=$_[0];
+		$bg=$_[1];
+		$text="$_[2]";
+		$color="\\033[$fc;$bg"."m";
+		$endstyle="\\033[0m";
+		$content = "\"".$color.$text.$endstyle."\"";
+		system "echo -e $content\n";
+	}
+
+}
+

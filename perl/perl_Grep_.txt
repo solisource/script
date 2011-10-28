@@ -1,0 +1,73 @@
+perl中grep用法总结
+grep, perl, 用法
+一） Grep函数
+grep有2种表达方式：
+grep BLOCK LIST
+grep EXPR, LIST
+BLOCK表示一个code块，通常用{}表示；EXPR表示一个表达式，通常是正则表达式。原文说EXPR可是任何东西，包括一个或多个变量，操作符，文字，函数，或子函数调用。
+LIST是要匹配的列表。
+grep对列表里的每个元素进行BLOCK或EXPR匹配，它遍历列表，并临时设置元素为$_。在列表上下文里，grep返回匹配命中的所有元素，结果也是个列表。在标量上下文里，grep返回匹配命中的元素个数。
+（二） Grep vs. loops
+open FILE "<myfile" or die "Can't open myfile: $!";
+print grep /terrorism|nuclear/i, <FILE>;;
+这里打开一个文件myfile，然后查找包含terrorism或nuclear的行。<FILE>;返回一个列表，它包含了文件的完整内容。
+可能你已发现，如果文件很大的话，这种方式很耗费内存，因为文件的所有内容都拷贝到内存里了。
+代替的方式是使用loop（循环）来完成：
+while ($line = <FILE>;) {
+if ($line =~ /terrorism|nuclear/i) { print $line }
+}
+上述code显示，loop可以完成grep能做的任何事情。那为什么还要用grep呢？答案是grep更具perl风格，而loop是C风格的。
+更好的解释是：（1）grep让读者更显然的知道，你在从列表里选择某元素；（2）grep比loop简洁。
+一点建议：如果你是perl新手，那就规矩的使用loop比较好；等你熟悉perl了，就可使用grep这个有力的工具。
+（三） 几个grep的示例
+1. 统计匹配表达式的列表元素个数
+$num_apple = grep /^apple$/i, @fruits;
+在标量上下文里，grep返回匹配中的元素个数；在列表上下文里，grep返回匹配中的元素的一个列表。
+所以，上述code返回apple单词在@fruits数组中存在的个数。因为$num_apple是个标量，它强迫grep结果位于标量上下文里。
+2. 从列表里抽取唯一元素
+@unique = grep { ++$count{$_} < 2 }
+          qw(a b a c d d e f g f h h);
+print "@unique\n";
+上述code运行后会返回：a b c d e f g h
+即qw(a b a c d d e f g f h h)这个列表里的唯一元素被返回了。为什么会这样呀？让我们看看：
+%count是个hash结构，它的key是遍历qw()列表时，逐个抽取的列表元素。++$count{$_}表示$_对应的hash值自增。在这个比较上下文里，++$count{$_}与$count{$_}++的意义是不一样的哦，前者表示在比较之前，就将自身值自增1；后者表示在比较之后，才将自身值自增1。所以，++$count{$_} < 2 表示将$count{$_}加1，然后与2进行比较。$count{$_}值默认是undef或0。所以当某个元素a第一次被当作hash的关键字时，它自增后对应的hash值就是1，当它第二次当作hash关键字时，对应的hash值就变成2了。变成2后，就不满足比较条件了，所以a不会第2次出现。
+所以上述code就能从列表里唯一1次的抽取元素了。
+2. 抽取列表里精确出现2次的元素
+@crops = qw(wheat corn barley rice corn soybean hay
+        alfalfa rice hay beets corn hay);
+@duplicates = grep { $count{$_} == 2 }
+        grep { ++$count{$_} >; 1 } @crops;
+print "@duplicates\n";
+运行结果是：rice
+这里grep了2次哦，顺序是从右至左。首先grep { ++$count{$_} >; 1 } @crops;返回一个列表，列表的结果是@crops里出现次数大于1的元素。
+然后再对产生的临时列表进行grep { $count{$_} == 2 }计算，这里的意思你也该明白了，就是临时列表里，元素出现次数等于2的被返回。
+所以上述code就返回rice了，rice出现次数大于1，并且精确等于2，明白了吧？ :-)
+3. 在当前目录里列出文本文件
+@files = grep { -f and -T } glob '* .*';
+print "@files\n";
+这个就很容易理解哦。glob返回一个列表，它的内容是当前目录里的任何文件，除了以'.'开头的。{}是个code块，它包含了匹配它后面的列表的条件。这只是grep的另一种用法，其实与 grep EXPR,LIST 这种用法差不多了。-f and -T 匹配列表里的元素，首先它必须是个普通文件，接着它必须是个文本文件。据说这样写效率高点哦，因为-T开销更大，所以在判断-T前，先判断-f了。
+4. 选择数组元素并消除重复
+@array = qw(To be or not to be that is the question);
+@found_words =
+grep { $_ =~ /b|o/i and ++$counts{$_} < 2; } @array;
+print "@found_words\n";
+运行结果是：To be or not to question
+{}里的意思就是，对@array里的每个元素，先匹配它是否包含b或o字符（不分大小写），然后每个元素出现的次数，必须小于2（也就是1次啦）。
+grep返回一个列表，包含了@array里满足上述2个条件的元素。
+5. 从二维数组里选择元素，并且x<y
+# An array of references to anonymous arrays
+@data_points = ( [ 5, 12 ], [ 20, -3 ],
+          [ 2, 2 ], [ 13, 20 ] );
+@y_gt_x = grep { $_->;[0] < $_->;[1] } @data_points;
+foreach $xy (@y_gt_x) { print "$xy->;[0], $xy->;[1]\n" }
+运行结果是：
+5, 12
+13, 20
+这里，你应该理解匿名数组哦，[]是个匿名数组，它实际上是个数组的引用（类似于C里面的指针）。
+@data_points的元素就是匿名数组。例如：
+foreach (@data_points){
+print $_->;[0];}
+这样访问到匿名数组里的第1个元素，把0替换成1就是第2个元素了。
+所以{ $_->;[0] < $_->;[1] }就很明白了哦，它表示每个匿名数组的第一个元素的值，小于第二个元素的值。
+而grep { $_->;[0] < $_->;[1] } @data_points; 就会返回满足上述条件的匿名数组列表。
+所以，就得到你要的结果啦！ 

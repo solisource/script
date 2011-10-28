@@ -17,3 +17,6 @@ my %hash;
 my @out = grep (!$hash{$_}++, @array);
 print @out;
 
+
+#perl -e 'my @array=(1..10,5,22,57);my %hash;my @new=grep { ++$hash{$_} < 2 } @array;print join " ",@new;'
+#uniq @array;
