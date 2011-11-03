@@ -283,3 +283,5 @@ alias  lic_read='$SICANVAS/bin/lmreread  -c $SC_LICENSE_FILE'
 ################################################################################
 
 #source ~/jin.bashrc
+
+
