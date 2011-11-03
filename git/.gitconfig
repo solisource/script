@@ -74,10 +74,10 @@
         email = ds_jin@realsil.com.cn
 [alias]
         co = checkout
-        cia = commit -a
-        cim = commit -m
-        cis = commit -s
-        ciam = commit -am
+        ci = commit -m
+        cia = commit -am
+        cis = commit -sm
+        cias = commit -asm
         st = status
         br = branch
         oneline = log --pretty=oneline --since='2 days ago'
