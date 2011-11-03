@@ -1,0 +1,49 @@
+这个配置是根据网上“最N vim配置“修正了一些错误和增加了一些我认为方便的设置，功能确实很强,感谢Amix，本人保留他（她）的说明,里面的配置都有说明，很容易就懂，建议大家好好去看一遍，包你有长进。
+
+运行环境
+ubuntu 9.04 i686(8.10 64位也OK）
+vim 7.2
+
+部分功能说明：
+1。打开的文件列在右边窗口
+2。通过方向键切换打开的文档，
+    相当于:bn,:bp
+3。底端有个mini窗口，类似emacs
+4。支持tab自动补全
+    包括用：e打开文件是的文件名补全和关键字的自动补全
+5。显示行号
+6。指定字体
+7。F11全屏
+  windows下才有效，因为我使用Linux,所以给注释掉,如果你使用的是windows请取消.vimrc 148行的注释 然后复制gvimfullscreen.dll到windows/system32或者winnt/system32下。
+8。html标签自动完成
+  比如输入<html>自动完成</html>并且自动缩进
+9。php的调试。（windows下有效）
+  编写好php以后，：make 运行PHP程序
+  ：cl 显示错误提示包括行号，enter以后还会定位到出错行
+  :cl! 显示执行结果
+  嘿嘿，很不错吧。我用起来很不错
+10。对从c／c＋＋文件自动生成说明文档
+11。空格（space)为查找相当于/
+12. 自动加载vim配置文件
+。。。还有很多自己可以去看里面的.vimrc内容，当然也建议你去读一遍里面的内容，有新大陆的发现记得留言告诉我和大家
+
+安装步骤
+Linux：
+1。备份自己的配置
+   $ tar cjvf vim_bk.tar.bz2 ~/.vimrc ~/.vim   #备份自己原有的配置，万一我的配置在你的系统上水土不服也好恢复嘛
+2。请解压指自己的主目录
+   $ tar jxvf vim.tar.bz2 -C ~/         #解压缩到主目录
+   $ ls -al ~                          #查看
+3。建议浏览一下配置文件
+   vim ~/.vimrc
+4。运行gvim就看看效果吧
+   gvim
+
+Windows:
+1。备份原有的设置，怎么备份就自己去弄吧
+2。解压vim.tar.bz2(怎么解压，当然安装winrar，然后就双击）
+3。压缩包里面.vim 对应$VIMRUNTIME/vimfiles,$VIMRUNTIME,就是vim的安装目录啦,默认安装在c:\program files/Vim
+4。改.vimrc 为_vimrc
+
+
+有任何指教，意见，批评等请发伊妹儿 michael.yang2000#gmail.com
