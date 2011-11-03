@@ -54,15 +54,17 @@
 
 [core]
         excludesfile = /c/Documents and Settings/user/.gitignore
-	symlinks = false
-	autocrlf = true
+		symlinks = false
+		autocrlf = true
+		
+		quotepath = false #add by dsjin for UTF-8 Chaniese
 #	pager = less ;default = less
 [color]
         ui = true ;false always true-->defaule color option
-	diff = auto
+		diff = auto
         status = auto
         branch = auto
-	interactive = auto
+		interactive = auto
 [user]
         name = dsjin
         email = dsjin@realsil.com.cn
