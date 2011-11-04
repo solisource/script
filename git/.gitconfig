@@ -75,9 +75,9 @@
 [alias]
         co = checkout
         ci = commit -m
-        cia = commit -am
+		#cia = commit -am
         cis = commit -sm
-        cias = commit -asm
+		#cias = commit -asm
         st = status
         br = branch
         oneline = log --pretty=oneline --since='2 days ago'
