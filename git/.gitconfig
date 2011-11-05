@@ -16,7 +16,11 @@
 [gui]
 	encoding = utf-8
 [i18n]
-	commitencoding = GB2312
+	commitEncoding = GB2312
+	#logOutputEncoding = gbk
+	#commitEncoding = gbk
+	#logOutputEncoding = utf-8
+	#commitEncoding = utf-8
 
 #Note Defaule mergetool and difftool ---> vimdiff
 #Define Three tools for merge and diff-->kdiff3/p3merge/WinMergeU
@@ -54,23 +58,26 @@
 
 [core]
         excludesfile = /c/Documents and Settings/user/.gitignore
-	symlinks = false
-	autocrlf = true
+		symlinks = false
+		autocrlf = true
+		
+		quotepath = false #add by ds_jin for UTF-8 Chaniese
 #	pager = less ;default = less
 [color]
         ui = true ;false always true-->defaule color option
-	diff = auto
+		diff = auto
         status = auto
         branch = auto
-	interactive = auto
+		interactive = auto
 [user]
-        name = dsjin
-        email = dsjin@realsil.com.cn
+        name = ds_jin
+        email = ds_jin@realsil.com.cn
 [alias]
         co = checkout
-        ca = commit -a
-        cm = commit -m
-        cam = commit -am
+        ci = commit -m
+        cia = commit -am
+        cis = commit -sm
+        cias = commit -asm
         st = status
         br = branch
         oneline = log --pretty=oneline --since='2 days ago'
@@ -81,4 +88,7 @@
 
 	go-non-net = "! bash -c \"git add .;git commit -am \\\"$COMPUTERNAME,$USERNAME,$PWD,`date +%y/%m/%d-%H/%M/%S`\\\"\""
 	go-non-net-message = "! bash -c \"git add .;git commit -a\""
-        lpo = log --pretty=oneline
+	lpo = log --pretty=oneline
+
+
+
