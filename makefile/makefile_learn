@@ -23,4 +23,25 @@
 
 7, ; && || 三个shell命令连接符（顺序，短路，断路）
 
-8,
+8, Makefile 的一个规则，执行一个Makefile就是执行一系列定义好的规则
+  target:prerequisites
+	command1
+	command2
+	command3
+
+taget 规则的目标
+    1,通常是最后需要生成的文件名
+    2,为了实现某个目的而必需的中间过程文件名
+    3,make执行的动作的名称 如：clean
+
+prerequisites 规则的依赖
+    1,生成规则目标所需要的文件名列表
+    2,生成规则目标所需要的其它规则目标的列表
+
+command 规则的命令行
+    1,规则所要执行的动作
+
+当在shell提示符下输入make命令以后。
+make读取当前目录下的Makefile文件，
+并将Makefile文件中的第一个目标作为其执行的终极目标，
+开始处理第一个规则（终极目标所在的规则）
