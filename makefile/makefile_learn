@@ -1,0 +1,22 @@
+
+1,make 当执行完一个命令后就回到当前目录（执行Makefile的目录）
+
+2,要切换目录执行命令必须使用cd xxx;\的方式把命令连接起来（用";"连接命令）
+	cd calibre/LVS;\
+		bkend lvs_script.bkend
+	cd calibre/DRC;\
+		bkend drc_script.bkend
+
+3,"#"开头的行为注释
+	# File name : Makefile by Created dsjin
+
+4,"=" or "=:" 为定义变量如：CC = gcc
+	${cc} or $(cc)
+
+5,Makefile中写shell程序段以"@"开头并用"\" "（长行程序换行)
+	@if []; then \
+		echo "Error";\
+		exit 1;\
+	fi
+
+6,

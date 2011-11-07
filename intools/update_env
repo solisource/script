@@ -3,7 +3,8 @@ if [ $1 = -w ] ; then
 
   echo "update -w for windows env"
   echo "#update git config file for git vcs"
-  \cp -f ../git/.gitconfig /etc/gitconfig 
+  #\cp -f ../git/.gitconfig /etc/gitconfig 
+  \cp -f ../git/.gitconfig ~
 
   echo "#update .bashrc"
   \cp -f ../git/bash_profile ~/.bashrc
