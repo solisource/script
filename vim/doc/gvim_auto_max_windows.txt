@@ -1,0 +1,27 @@
+gvim打开文件时会按照设置的line和column来显示。
+
+当然，可以改变line和column的值来设置gvim窗口的大小，但是这样并不能达到最大化的效果。
+
+比如设置如下：
+
+set line=999
+
+set column=999
+
+在windows下的效果是：
+
+宽度达到最大，但是高度离任务栏还有一行。即达不到真正最大化的效果。
+
+那么有效的办法是：
+
+在vimrc中加入如下设置：
+
+au GUIENTER * simalt ~x
+
+即可实现gvim打开文件自动最大化的效果。
+
+请查阅：
+
+help au
+
+help simalt

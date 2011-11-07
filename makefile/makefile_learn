@@ -13,10 +13,10 @@
 4,"=" or "=:" 为定义变量如：CC = gcc
 	${cc} or $(cc)
 
-5,Makefile中写shell程序段以"@"开头并用"\" "（长行程序换行)
+5,Makefile中写shell程序段以"@"开头并用"\ "（长行程序换行)
 	@if []; then \
 		echo "Error";\
 		exit 1;\
 	fi
 
-6,
+6,"\ "
