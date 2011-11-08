@@ -13,7 +13,7 @@
 4,"=" or "=:" 为定义变量如：CC = gcc
 	${cc} or $(cc)
 
-5,Makefile中写shell程序段以"@"开头并用"\ "（长行程序换行)
+5,Makefile中写shell程序段用"\ "（长行程序换行)
 	@if []; then \
 		echo "Error";\
 		exit 1;\
@@ -164,7 +164,7 @@ echo $$SHELL  #作为Shell变量调用
 
 
 ###################################################################################################
-多行定义 // define endef
+多行定义 // define endef 定义成程序包
 
 定义变量的另外一种方式是使用define指示符。它定义一个包含多行字符串的变量，
 我们就是利用它的这个特点实现了一个完整命令包的定义。使用define定义的命令包可以作为eval函数的参数来使用。
@@ -193,16 +193,72 @@ test:
 											  #$(call VARIABLE,PARAM,PARAM,...)
 
 $make test
-$echo test_1
+echo test_1
 test_1
-$echo test_2
+echo test_2
 test_2
-$echo test_3
+echo test_3
 test_3
-$echo test_4
+echo test_4
 test_4
 
+define JIN
+	@echo $(1)
+	@echo $(2)
+	@echo $(3)
+	@echo $(4)
+endef
+
+test:
+	$(call JIN,test_1,test_2,test_3,test_4)   #$(call VAR,para1,para2...)
+											  #$(call VARIABLE,PARAM,PARAM,...)
+$make test
+test_1
+test_2
+test_3
+test_4
+
+#shell命令之前添加@表示不输出命令本身
 
 
+test:
+	-cd jin
+	-cd xie
+	-cd test
 
+那么为什么在命令前面加一个"-"呢？
+就是为了防止有些命令Fail导致Make退出，有"-"就不会因为一些命令的Fail而退出
+
+
+###################################################################################################
+Makefile的条件执行
+
+libs_for_gcc = -lgnu
+normal_libs =
+ 
+foo: $(objects)
+ 
+ifeq ($(CC),gcc)
+	$(CC) -o foo $(objects) $(libs_for_gcc)
+else
+	$(CC) -o foo $(objects) $(normal_libs)
+endif
+
+ifneq
+else
+endif
+
+#对变量CC进行判断，其值如果是gcc那么在程序连接时使用库libgnu.so或者libgnu.a，否则不链接任何库
+
+set = 
+JIN = $(set)
+ifdef JIN
+test = OK
+else
+test = NO
+endif
+
+ifndef
+else
+endif
 
