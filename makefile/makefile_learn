@@ -181,7 +181,8 @@ endef
 如果将变量two-lines作为命令包执行时，其相当于：
 two-lines = echo foo; echo $(bar)
 
-define JIN
+#----需要参数的define
+define JIN  
 	echo $(1)
 	echo $(2)
 	echo $(3)
@@ -217,6 +218,23 @@ test_1
 test_2
 test_3
 test_4
+
+#----------------不需要参数的define
+abc = S0278
+abcd = $(abc)/Version/lib
+
+define test
+	@echo JIN+++
+endef
+
+test_1:
+	@echo $(abcd)
+	$(test)
+#----------------
+#Output
+$make test_1
+S0278/Version/lib
+JIN+++
 
 #shell命令之前添加@表示不输出命令本身
 
