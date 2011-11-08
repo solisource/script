@@ -6,6 +6,15 @@ if [ $1 = -w ] ; then
   #\cp -f ../git/.gitconfig /etc/gitconfig 
   \cp -f ../git/.gitconfig ~
 
+	echo "############">>/etc/profile
+  	echo "Add by dsjin">>/etc/profile
+  	echo "export LESSCHARSET=utf-8">>/etc/profile
+
+	echo "############">>/etc/inputrc
+  	echo "Add by dsjin">>/etc/inputrc
+  	echo "set output-meta on">>/etc/inputrc
+  	echo "set convert-meta off">>/etc/inputrc
+
   echo "#update .bashrc"
   \cp -f ../git/bash_profile ~/.bashrc
 
