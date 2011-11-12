@@ -16,7 +16,7 @@
 [gui]
 	encoding = utf-8
 [i18n]
-	commitEncoding = GB2312
+	commitencoding = GB2312
 	#logOutputEncoding = gbk
 	#commitEncoding = gbk
 	#logOutputEncoding = utf-8
@@ -75,20 +75,22 @@
 [alias]
         co = checkout
         ci = commit -m
-        cia = commit -am
+		#cia = commit -am
         cis = commit -sm
-        cias = commit -asm
+		#cias = commit -asm
         st = status
-        br = branch
+		br = branch
+
         oneline = log --pretty=oneline --since='2 days ago'
         onelog = log -p -1
+		lpo = log --pretty=oneline
+
         go = "! bash -c \"git pull;git add .;if [ \\\"$*\\\" == \\\"\\\" ];then git commit -a;else git commit -avm \\\"$*\\\";fi;git push origin master:xxx;\""
-	go = "! bash -c \"git pull;git add .;git commit -am \\\"$COMPUTERNAME,$USERNAME,$PWD,`date +%y/%m/%d-%H/%M/%S`\\\";git push origin master\""
+		go = "! bash -c \"git pull;git add .;git commit -am \\\"$COMPUTERNAME,$USERNAME,$PWD,`date +%y/%m/%d-%H/%M/%S`\\\";git push origin master\""
         go-message = "! bash -c \"git pull;git add .;git commit -a;git push origin master\""
 
-	go-non-net = "! bash -c \"git add .;git commit -am \\\"$COMPUTERNAME,$USERNAME,$PWD,`date +%y/%m/%d-%H/%M/%S`\\\"\""
-	go-non-net-message = "! bash -c \"git add .;git commit -a\""
-	lpo = log --pretty=oneline
+		go-non-net = "! bash -c \"git add .;git commit -am \\\"$COMPUTERNAME,$USERNAME,$PWD,`date +%y/%m/%d-%H/%M/%S`\\\"\""
+		go-non-net-message = "! bash -c \"git add .;git commit -a\""
 
 
 
