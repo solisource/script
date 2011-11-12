@@ -27,15 +27,15 @@
 #        path = /c/Program Files/KDiff3/kdiff3.exe
 #        path = /usr/local/bin/kdiff3
 
-#[merge]
-#        tool = p4merge
-#[mergetool "p4merge"]
-#        path = /c/Program Files/Perforce/p4merge.exe
+[merge]
+        tool = p4merge
+[mergetool "p4merge"]
+        path = /c/Program Files/Perforce/p4merge.exe
 #        path = /usr/local/bin/p4merge
-#[diff]
-#        tool = p4merge
-#[difftool "p4merge"]
-#        path = /c/Program Files/Perforce/p4merge.exe
+[diff]
+        tool = p4merge
+[difftool "p4merge"]
+        path = /c/Program Files/Perforce/p4merge.exe
 #        path = /usr/local/bin/p4merge
 
 #[merge]
