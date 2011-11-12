@@ -3,10 +3,6 @@ if [ $1 = -w ] ; then
 
   echo "update -w for windows env"
   echo "#update git config file for git vcs"
-<<<<<<< HEAD
-  #mv  -f /etc/gitconfig /etc/gitconfig`date +%H_%M_%S_%Y_%m_%j`
-  \cp -f ../git/.gitconfig /etc/gitconfig 
-=======
   #\cp -f ../git/.gitconfig /etc/gitconfig 
   \cp -f ../git/.gitconfig ~
 
@@ -18,7 +14,6 @@ if [ $1 = -w ] ; then
   	echo "Add by dsjin">>/etc/inputrc
   	echo "set output-meta on">>/etc/inputrc
   	echo "set convert-meta off">>/etc/inputrc
->>>>>>> 7ac028fb1f997594722a81ea6eb95bf167bbca8f
 
   echo "#update .bashrc"
   #mv  -f ~/.bashrc ~/.bashrc`date +%H_%M_%S_%Y_%m_%j`
