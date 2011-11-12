@@ -63,14 +63,14 @@
 #[merge]
 #        tool = bc3
 #[mergetool "bc3"]
-#        path = /c/Program Files/Beyond Compare 3/BCompare.exe
-#        path = /usr/local/bin/BCompare
+#        path = /c/Program Files/Beyond Compare 3/BComp.exe
+#        path = /usr/local/bin/BComp
 #        trustExitCode = false
 #[diff]
 #        tool = bc3
 #[difftool "bc3"]
-#        path = /c/Program Files/Beyond Compare 3/BCompare.exe
-#        path = /usr/local/bin/BCompare
+#        path = /c/Program Files/Beyond Compare 3/BComp.exe
+#        path = /usr/local/bin/BComp
 #        prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
