@@ -3,9 +3,9 @@ if [ $1 = -w ] ; then
 
   echo "update -w for windows env"
   echo "#update git config file for git vcs"
-  #\cp -f ../git/.gitconfig /etc/gitconfig 
-  \cp -f ../git/.gitconfig ~
-
+  \cp -f ../git/.gitconfig_win ~/.gitconfig
+	
+	#By include bash_profile
 	#echo "############">>/etc/profile
   	#echo "Add by dsjin">>/etc/profile
   	#echo "export LESSCHARSET=utf-8">>/etc/profile
@@ -17,7 +17,13 @@ if [ $1 = -w ] ; then
 
   echo "#update .bashrc"
   #mv  -f ~/.bashrc ~/.bashrc`date +%H_%M_%S_%Y_%m_%j`
-  \cp -f ../git/bash_profile ~/.bashrc
+  \cp -f ../git/bash_profile_win ~/.bashrc
+
+  echo "#update extDiff_win -> /bin/extDiff"
+  \cp -f ../git/extDiff_win /bin/extDiff
+
+  echo "#update extDiffMerge_win -> /bin/extDiffMerge"
+  \cp -f ../git/extDiffMerge_win /bin/extDiffMerge
 
   echo "#update _vimrc"
   \cp -f ../vim/.vimrc_win /c/Program\ Files/Vim/_vimrc
