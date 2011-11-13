@@ -13,122 +13,119 @@
 	#logOutputEncoding = utf-8
 	#commitEncoding = utf-8
 
-#Note Defaule mergetool and difftool ---> vimdiff
-#Define Three tools for merge and diff-->kdiff3/p3merge/WinMergeU
-
 #/////////////////////////////////////////////////////////////////////////
 #[merge]
-#        tool = kdiff3
+	#tool = kdiff3
 #[mergetool "kdiff3"]
-#        path = /c/Program Files/KDiff3/kdiff3.exe
-#        path = /usr/local/bin/kdiff3
-#        trustExitCode = false
+	#path = /c/Program Files/KDiff3/kdiff3.exe
+	#path = /usr/local/bin/kdiff3
+	#trustExitCode = false
 #[diff]
-#        tool = kdiff3
+	#tool = kdiff3
 #[difftool "kdiff3"]
-#        path = /c/Program Files/KDiff3/kdiff3.exe
-#        path = /usr/local/bin/kdiff3
-#        prompt = false
+	#path = /c/Program Files/KDiff3/kdiff3.exe
+	#path = /usr/local/bin/kdiff3
+	#prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
 [merge]
-        tool = p4merge
+    tool = p4merge
 [mergetool "p4merge"]
 	path = /c/Program Files/Perforce/p4merge.exe
-#        path = /usr/local/bin/p4merge
+	#path = /usr/local/bin/p4merge
 	trustExitCode = false
 [diff]
-        tool = p4merge
+    tool = p4merge
 [difftool "p4merge"]
-        path = /c/Program Files/Perforce/p4merge.exe
-#        path = /usr/local/bin/p4merge
-        prompt = false
+    path = /c/Program Files/Perforce/p4merge.exe
+	#path = /usr/local/bin/p4merge
+    prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
 #[merge]
-#        tool = gvimdiff
+	#tool = gvimdiff
 #[mergetool "gvimdiff"]
-#        path = /c/Program Files/Vim/vim73/gvim.exe
-#        path = /usr/local/bin/gvim
-#        trustExitCode = false
+	#path = /c/Program Files/Vim/vim73/gvim.exe
+	#path = /usr/local/bin/gvim
+	#trustExitCode = false
 #[diff]
-#        tool = gvimdiff
+	#tool = gvimdiff
 #[difftool "gvimdiff"]
-#        path = /c/Program Files/Vim/vim73/gvim.exe
-#        path = /usr/local/bin/gvim
-#        prompt = false
+	#path = /c/Program Files/Vim/vim73/gvim.exe
+	#path = /usr/local/bin/gvim
+	#prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
 #Git 1.7.6 laster version
 #[merge]
-#        tool = bc3
+	#tool = bc3
 #[mergetool "bc3"]
-#        path = /c/Program Files/Beyond Compare 3/BComp.exe
-#        path = /usr/local/bin/BComp
-#        trustExitCode = false
+	#path = /c/Program Files/Beyond Compare 3/BComp.exe
+	#path = /usr/local/bin/BComp
+	#trustExitCode = false
 #[diff]
-#        tool = bc3
+	#tool = bc3
 #[difftool "bc3"]
-#        path = /c/Program Files/Beyond Compare 3/BComp.exe
-#        path = /usr/local/bin/BComp
-#        prompt = false
+	#path = /c/Program Files/Beyond Compare 3/BComp.exe
+	#path = /usr/local/bin/BComp
+	#prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
 #[merge]
-#        tool = diffuse
+	#tool = diffuse
 #[mergetool "diffuse"]
-#        path = /c/Program Files/Diffuse/diffuse.exe
-#        path = /usr/local/bin/diffuse
-#        trustExitCode = false
+	#path = /c/Program Files/Diffuse/diffuse.exe
+	#path = /usr/local/bin/diffuse
+	#trustExitCode = false
 #[diff]
-#        tool = diffuse
+	#tool = diffuse
 #[difftool "diffuse"]
-#        path = /c/Program Files/Diffuse/diffuse.exe
-#        path = /usr/local/bin/diffuse
-#        prompt = false
+	#path = /c/Program Files/Diffuse/diffuse.exe
+	#path = /usr/local/bin/diffuse
+	#prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
 #[merge]
-#        tool = ecmerge
+	#tool = ecmerge
 #[mergetool "ecmerge"]
-#        path = /c/Program Files/Elli¨¦ Computing/Merge/ecmerge.exe
-#        path = /usr/local/bin/ecmerge
-#        trustExitCode = false
+	#path = /c/Program Files/Elli¨¦ Computing/Merge/ecmerge.exe
+	#path = /usr/local/bin/ecmerge
+	#trustExitCode = false
 #[diff]
-#        tool = ecmerge
+	#tool = ecmerge
 #[difftool "ecmerge"]
-#        path = /c/Program Files/Elli¨¦ Computing/Merge/ecmerge.exe
-#        path = /usr/local/bin/ecmerge
-#        prompt = false
+	#path = /c/Program Files/Elli¨¦ Computing/Merge/ecmerge.exe
+	#path = /usr/local/bin/ecmerge
+	#prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
 # Test now don`t pass, be base on WinXP
 #[merge]
 	#tool = sgdm
 #[mergetool "sgdm"]
-#	path = /c/Program Files/SourceGear/Common/DiffMerge/sgdm.exe
-#	path = /usr/local/bin/sgdm
-#	trustExitCode = false
+	#path = /c/Program Files/SourceGear/Common/DiffMerge/sgdm.exe
+	#path = /usr/local/bin/sgdm
+	#trustExitCode = false
 #[diff]
 	#tool = sgdm
 #[difftool "sgdm"]
-#	path = /c/Program Files/SourceGear/Common/DiffMerge/sgdm.exe
-#	path = /usr/local/bin/sgdm
-#	prompt = false
+	#path = /c/Program Files/SourceGear/Common/DiffMerge/sgdm.exe
+	#path = /usr/local/bin/sgdm
+	#prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
 #[merge]
-#        tool = tkdiff
+	#tool = tkdiff
 #[mergetool "tkdiff"]
-#        path = /c/Program Files/TkDiff/tkdiff.exe
-#        path = /usr/local/bin/tkdiff
-#        trustExitCode = false
+	#path = /c/Program Files/TkDiff/tkdiff.exe
+	#path = /usr/local/bin/tkdiff
+	#trustExitCode = false
 #[diff]
-#        tool = tkdiff
+	#tool = tkdiff
 #[difftool "tkdiff"]
-#        path = /c/Program Files/TkDiff/tkdiff.exe
-#        path = /usr/local/bin/tkdiff
-#        prompt = false
+	#path = /c/Program Files/TkDiff/tkdiff.exe
+	#path = /usr/local/bin/tkdiff
+	#prompt = false
 
 #commit.template ~/test.txt -->temp for commit
 #[commit]
@@ -136,40 +133,38 @@
 
 [core]
 	#excludesfile = /c/Documents and Settings/user/.gitignore
-        excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore
 	symlinks = false
 	autocrlf = true
-		
+	
 	quotepath = false #add by ds_jin for UTF-8 Chaniese
-#	pager = less ;default = less
+	#pager = less ;default = less
 [color]
-        ui = true ;false always true-->defaule color option
+	ui = true ;false always true-->defaule color option
 	diff = auto
-        status = auto
-        branch = auto
+	status = auto
+	branch = auto
 	interactive = auto
 [user]
-        name = master
-        email = master@126.com
+    name = master
+    email = master@126.com
 [alias]
-        co = checkout
-        ci = commit -m
+    co = checkout
+    ci = commit -m
 	#cia = commit -am
-        cis = commit -sm
+    cis = commit -sm
 	#cias = commit -asm
-        st = status
+    st = status
 	br = branch
 
-        oneline = log --pretty=oneline --since='2 days ago'
+    oneline = log --pretty=oneline --since='2 days ago'
 	onelog = log -p -1
 	lpo = log --pretty=oneline
 
-        go = "! bash -c \"git pull;git add .;if [ \\\"$*\\\" == \\\"\\\" ];then git commit -a;else git commit -avm \\\"$*\\\";fi;git push origin master:xxx;\""
+    go = "! bash -c \"git pull;git add .;if [ \\\"$*\\\" == \\\"\\\" ];then git commit -a;else git commit -avm \\\"$*\\\";fi;git push origin master:xxx;\""
 	go = "! bash -c \"git pull;git add .;git commit -am \\\"$COMPUTERNAME,$USERNAME,$PWD,`date +%y/%m/%d-%H/%M/%S`\\\";git push origin master\""
-        go-message = "! bash -c \"git pull;git add .;git commit -a;git push origin master\""
+    go-message = "! bash -c \"git pull;git add .;git commit -a;git push origin master\""
 
 	go-non-net = "! bash -c \"git add .;git commit -am \\\"$COMPUTERNAME,$USERNAME,$PWD,`date +%y/%m/%d-%H/%M/%S`\\\"\""
 	go-non-net-message = "! bash -c \"git add .;git commit -a\""
-
-
 
