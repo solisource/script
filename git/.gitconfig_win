@@ -1,0 +1,196 @@
+#
+# This is the config file, and
+# a '#' or ';' character indicates
+# a comment
+#
+
+[gui]
+	encoding = utf-8
+[i18n]
+	commitEncoding = GB2312
+	#logOutputEncoding = gbk
+	#commitEncoding = gbk
+	#logOutputEncoding = utf-8
+	#commitEncoding = utf-8
+
+#/////////////////////////////////////////////////////For All external tool
+#Define diff for Graph view tool (non default tool text view only)
+#[diff]
+#	external = extDiff 
+
+	# file -> /bin/extDiff
+		##! /bin/sh
+		#1,/c/Program\ Files/KDiff3/kdiff3.exe "$2" "$5"
+		#2,/c/Program\ Files/Perforce/p4merge.exe "$2" "$5"
+		#3,/c/Program\ Files/Vim/vim73/gvim.exe "-d" "$2" "$5"
+		#4,/c/Program\ Files/Beyond\ Compare\ 3/BComp.exe "$2" "$5"
+		#5,/c/Program\ Files/Diffuse/diffuse.exe "$2" "$5"
+		#6,/c/Program\ Files/ElliE\ Computing/Merge/ecmerge.exe "$2" "$5"
+		#7,/c/Program\ Files/TkDiff/tkdiff.exe "$2" "$5"
+
+#/////////////////////////////////////////////////////For All external tool
+#Define mergetool and dIfftool for way A only
+[merge]
+	tool = extDiffMerge
+[mergetool "extDiffMerge"]
+	cmd = extDiffMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	trustExitCode = false
+[diff]
+	tool = extDiffMerge
+[difftool "extDiffMerge"]
+	cmd = extDiffMerge \"$LOCAL\" \"$REMOTE\"
+	prompt = false
+
+	# All tools test pass kdiff3 p4merge gvim -d BComp diffuse ecmerge tkdiff
+	# file -> /bin/extDiffMerge
+		##! /bin/sh
+		#/c/Program\ Files/KDiff3/kdiff3.exe $*
+		#/c/Program\ Files/Perforce/p4merge.exe $*
+		#/c/Program\ Files/Vim/vim73/gvim.exe "-d" $*
+		#/c/Program\ Files/Beyond\ Compare\ 3/BComp.exe $*
+		#/c/Program\ Files/Diffuse/diffuse.exe $*
+		#/c/Program\ Files/ElliE\ Computing/Merge/ecmerge.exe $*
+		#/c/Program\ Files/TkDiff/tkdiff.exe $*
+
+#Define mergetool and dIfftool for way B only
+#/////////////////////////////////////////////////////////////////////////
+#[merge]
+#	tool = kdiff3
+#[mergetool "kdiff3"]
+#	path = /c/Program Files/KDiff3/kdiff3.exe
+#	#path = /usr/local/bin/kdiff3
+#	trustExitCode = false
+#[diff]
+#	tool = kdiff3
+#[difftool "kdiff3"]
+#	path = /c/Program Files/KDiff3/kdiff3.exe
+#	#path = /usr/local/bin/kdiff3
+#	prompt = false
+
+#/////////////////////////////////////////////////////////////////////////
+#[merge]
+#    tool = p4merge
+#[mergetool "p4merge"]
+#	path = /c/Program Files/Perforce/p4merge.exe
+#	#path = /usr/local/bin/p4merge
+#	trustExitCode = false
+#[diff]
+#	tool = p4merge
+#[difftool "p4merge"]
+#	path = /c/Program Files/Perforce/p4merge.exe
+#	#path = /usr/local/bin/p4merge
+#	prompt = false
+
+#/////////////////////////////////////////////////////////////////////////
+#[merge]
+#	tool = gvimdiff
+#[mergetool "gvimdiff"]
+#	path = /c/Program Files/Vim/vim73/gvim.exe
+#	#path = /usr/local/bin/gvim
+#	trustExitCode = false
+#[diff]
+#	tool = gvimdiff
+#[difftool "gvimdiff"]
+#	path = /c/Program Files/Vim/vim73/gvim.exe
+#	#path = /usr/local/bin/gvim
+#	prompt = false
+
+#/////////////////////////////////////////////////////////////////////////
+#Git 1.7.6 laster version can be used
+#[merge]
+#	tool = bc3
+#[mergetool "bc3"]
+#	path = /c/Program Files/Beyond Compare 3/BComp.exe
+#	#path = /usr/local/bin/BComp
+#	trustExitCode = false
+#[diff]
+#	tool = bc3
+#[difftool "bc3"]
+#	path = /c/Program Files/Beyond Compare 3/BComp.exe
+#	#path = /usr/local/bin/BComp
+#	prompt = false
+
+#/////////////////////////////////////////////////////////////////////////
+#[merge]
+#	tool = diffuse
+#[mergetool "diffuse"]
+#	path = /c/Program Files/Diffuse/diffuse.exe
+#	#path = /usr/local/bin/diffuse
+#	trustExitCode = false
+#[diff]
+#	tool = diffuse
+#[difftool "diffuse"]
+#	path = /c/Program Files/Diffuse/diffuse.exe
+#	#path = /usr/local/bin/diffuse
+#	prompt = false
+
+#/////////////////////////////////////////////////////////////////////////
+#иж-->e
+#[merge]
+#	tool = ecmerge
+#[mergetool "ecmerge"]
+#	path = /c/Program Files/Ellie Computing/Merge/ecmerge.exe
+#	#path = /usr/local/bin/ecmerge
+#	trustExitCode = false
+#[diff]
+#	tool = ecmerge
+#[difftool "ecmerge"]
+#	path = /c/Program Files/Ellie Computing/Merge/ecmerge.exe
+#	#path = /usr/local/bin/ecmerge
+#	prompt = false
+
+#/////////////////////////////////////////////////////////////////////////
+#[merge]
+#	tool = tkdiff
+#[mergetool "tkdiff"]
+#	path = /c/Program Files/TkDiff/tkdiff.exe
+#	#path = /usr/local/bin/tkdiff
+#	trustExitCode = false
+#[diff]
+#	tool = tkdiff
+#[difftool "tkdiff"]
+#	path = /c/Program Files/TkDiff/tkdiff.exe
+#	#path = /usr/local/bin/tkdiff
+#	prompt = false
+
+#commit.template ~/test.txt -->temp for commit
+#[commit]
+#	template = ~/test.txt
+
+[core]
+	#excludesfile = /c/Documents and Settings/user/.gitignore
+	excludesfile = ~/.gitignore
+	symlinks = false
+	autocrlf = true
+	
+	quotepath = false #add by ds_jin for UTF-8 Chaniese
+	#pager = less ;default = less
+[color]
+	ui = true ;false always true-->defaule color option
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+[user]
+    name = master
+    email = master@126.com
+[alias]
+    co = checkout
+    ci = commit -m
+	#cia = commit -am
+    cis = commit -sm
+	#cias = commit -asm
+    st = status
+	br = branch
+
+    oneline = log --pretty=oneline --since='2 days ago'
+	onelog = log -p -1
+	lpo = log --pretty=oneline
+
+    go = "! bash -c \"git pull;git add .;if [ \\\"$*\\\" == \\\"\\\" ];then git commit -a;else git commit -avm \\\"$*\\\";fi;git push origin master:xxx;\""
+	go = "! bash -c \"git pull;git add .;git commit -am \\\"$COMPUTERNAME,$USERNAME,$PWD,`date +%y/%m/%d-%H/%M/%S`\\\";git push origin master\""
+    go-message = "! bash -c \"git pull;git add .;git commit -a;git push origin master\""
+
+	go-non-net = "! bash -c \"git add .;git commit -am \\\"$COMPUTERNAME,$USERNAME,$PWD,`date +%y/%m/%d-%H/%M/%S`\\\"\""
+	go-non-net-message = "! bash -c \"git add .;git commit -a\""
+

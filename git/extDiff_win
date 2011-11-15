@@ -1,0 +1,8 @@
+#! /bin/sh
+/c/Program\ Files/KDiff3/kdiff3.exe "$2" "$5"
+#/c/Program\ Files/Perforce/p4merge.exe "$2" "$5"
+#/c/Program\ Files/Vim/vim73/gvim.exe "-d" "$2" "$5"
+#/c/Program\ Files/Beyond\ Compare\ 3/BComp.exe "$2" "$5"
+#/c/Program\ Files/Diffuse/diffuse.exe "$2" "$5"
+#/c/Program\ Files/ElliE\ Computing/Merge/ecmerge.exe "$2" "$5"
+#/c/Program\ Files/TkDiff/tkdiff.exe "$2" "$5"
