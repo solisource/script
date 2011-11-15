@@ -23,7 +23,7 @@
 	#commitEncoding = utf-8
 
 #Note Defaule mergetool and difftool ---> vimdiff
-#Define Three tools for merge and diff-->kdiff3/p3merge/WinMergeU
+#Define Three tools for merge and diff-->kdiff3/p4merge/WinMergeU
 
 #[merge]
 #        tool = kdiff3
