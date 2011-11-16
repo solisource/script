@@ -34,12 +34,12 @@
 [merge]
 	tool = extDiffMerge
 [mergetool "extDiffMerge"]
-	cmd = extDiffMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	cmd = extDiffMerge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
 	trustExitCode = false
 [diff]
 	tool = extDiffMerge
 [difftool "extDiffMerge"]
-	cmd = extDiffMerge \"$LOCAL\" \"$REMOTE\"
+	cmd = extDiffMerge "$LOCAL" "$REMOTE"
 	prompt = false
 
 	# All tools test pass kdiff3 p4merge gvim -d BComp diffuse ecmerge tkdiff
@@ -188,6 +188,8 @@
     oneline = log --pretty=oneline --since='2 days ago'
 	onelog = log -p -1
 	lpo = log --pretty=oneline
+
+	difftool = difftool --no-prompt
 
     go = "! bash -c \"git pull;git add .;if [ \\\"$*\\\" == \\\"\\\" ];then git commit -a;else git commit -avm \\\"$*\\\";fi;git push origin master:xxx;\""
 	go = "! bash -c \"git pull;git add .;git commit -am \\\"$COMPUTERNAME,$USERNAME,$PWD,`date +%y/%m/%d-%H/%M/%S`\\\";git push origin master\""

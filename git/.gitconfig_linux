@@ -189,6 +189,8 @@
 	onelog = log -p -1
 	lpo = log --pretty=oneline
 
+	difftool = difftool --no-prompt
+
     go = "! bash -c \"git pull;git add .;if [ \\\"$*\\\" == \\\"\\\" ];then git commit -a;else git commit -avm \\\"$*\\\";fi;git push origin master:xxx;\""
 	go = "! bash -c \"git pull;git add .;git commit -am \\\"$COMPUTERNAME,$USERNAME,$PWD,`date +%y/%m/%d-%H/%M/%S`\\\";git push origin master\""
     go-message = "! bash -c \"git pull;git add .;git commit -a;git push origin master\""

@@ -11,9 +11,10 @@ if [ $1 = -w ] ; then
   	#echo "export LESSCHARSET=utf-8">>/etc/profile
 
 	echo "############">>/etc/inputrc
-  	echo "Add by dsjin">>/etc/inputrc
+  	echo "#Add by dsjin">>/etc/inputrc
   	echo "set output-meta on">>/etc/inputrc
   	echo "set convert-meta off">>/etc/inputrc
+	dos2unix /etc/inputrc
 
   echo "#update .bashrc"
   #mv  -f ~/.bashrc ~/.bashrc`date +%H_%M_%S_%Y_%m_%j`
