@@ -6,8 +6,8 @@
 
 [gui]
 	encoding = utf-8
-[i18n]
-	commitEncoding = GB2312
+#[i18n]
+	#commitEncoding = GB2312
 	#logOutputEncoding = gbk
 	#commitEncoding = gbk
 	#logOutputEncoding = utf-8
@@ -18,83 +18,83 @@
 #[diff]
 #	external = extDiff 
 
-	# file -> git/extDiff_win
-	# file -> /bin/extDiff
-		##! /bin/sh
-		#1,/c/Program\ Files/KDiff3/kdiff3.exe "$2" "$5"
-		#2,/c/Program\ Files/Perforce/p4merge.exe "$2" "$5"
-		#3,/c/Program\ Files/Vim/vim73/gvim.exe "-d" "$2" "$5"
-		#4,/c/Program\ Files/Beyond\ Compare\ 3/BComp.exe "$2" "$5"
-		#5,/c/Program\ Files/Diffuse/diffuse.exe "$2" "$5"
-		#6,/c/Program\ Files/ElliE\ Computing/Merge/ecmerge.exe "$2" "$5"
-		#7,/c/Program\ Files/TkDiff/tkdiff.exe "$2" "$5"
+	# file -> git/extDiff_linux
+	# file -> /usr/local/bin/extDiff
+		#! /bin/sh
+		#[ $# -eq 7 ] /usr/local/bin/kdiff3 "$2" "$5"
+		#[ $# -eq 7 ] /usr/local/bin/p4merge "$2" "$5"
+		#[ $# -eq 7 ] /usr/local/bin/gvim "-d" "$2" "$5"
+		#[ $# -eq 7 ] /usr/local/bin/BComp "$2" "$5"
+		#[ $# -eq 7 ] /usr/local/bin/diffuse "$2" "$5"
+		#[ $# -eq 7 ] /usr/local/bin/ecmerge "$2" "$5"
+		#[ $# -eq 7 ] /usr/local/bin/tkdiff "$2" "$5"
 
 #/////////////////////////////////////////////////////For All external tool
 #Define mergetool and dIfftool for way A only
 [merge]
 	tool = extDiffMerge
 [mergetool "extDiffMerge"]
-	cmd = extDiffMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	cmd = extDiffMerge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
 	trustExitCode = false
 [diff]
 	tool = extDiffMerge
 [difftool "extDiffMerge"]
-	cmd = extDiffMerge \"$LOCAL\" \"$REMOTE\"
+	cmd = extDiffMerge "$LOCAL" "$REMOTE"
 	prompt = false
 
 	# All tools test pass kdiff3 p4merge gvim -d BComp diffuse ecmerge tkdiff
-	# file -> git/extDiffMerge_win
-	# file -> /bin/extDiffMerge
-		##! /bin/sh
-		#/c/Program\ Files/KDiff3/kdiff3.exe $*
-		#/c/Program\ Files/Perforce/p4merge.exe $*
-		#/c/Program\ Files/Vim/vim73/gvim.exe "-d" $*
-		#/c/Program\ Files/Beyond\ Compare\ 3/BComp.exe $*
-		#/c/Program\ Files/Diffuse/diffuse.exe $*
-		#/c/Program\ Files/ElliE\ Computing/Merge/ecmerge.exe $*
-		#/c/Program\ Files/TkDiff/tkdiff.exe $*
+	# file -> git/extDiffMerge_linux 
+	# file -> /usr/local/bin/extDiffMerge
+			#! /bin/sh
+			#/usr/local/bin/kdiff3 $*
+			#/usr/local/bin/p4merge $*
+			#/usr/local/bin/gvim "-d" $*
+			#/usr/local/bin/BComp $*
+			#/usr/local/bin/diffuse $*
+			#/usr/local/bin/ecmerge $*
+			#/usr/local/bin/tkdiff $*
 
 #Define mergetool and dIfftool for way B only
 #/////////////////////////////////////////////////////////////////////////
 #[merge]
 #	tool = kdiff3
 #[mergetool "kdiff3"]
-#	path = /c/Program Files/KDiff3/kdiff3.exe
-#	#path = /usr/local/bin/kdiff3
+#	#path = /c/Program Files/KDiff3/kdiff3.exe
+#	path = /usr/local/bin/kdiff3
 #	trustExitCode = false
 #[diff]
 #	tool = kdiff3
 #[difftool "kdiff3"]
-#	path = /c/Program Files/KDiff3/kdiff3.exe
-#	#path = /usr/local/bin/kdiff3
+#	#path = /c/Program Files/KDiff3/kdiff3.exe
+#	path = /usr/local/bin/kdiff3
 #	prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
 #[merge]
 #    tool = p4merge
 #[mergetool "p4merge"]
-#	path = /c/Program Files/Perforce/p4merge.exe
-#	#path = /usr/local/bin/p4merge
+#	#path = /c/Program Files/Perforce/p4merge.exe
+#	path = /usr/local/bin/p4merge
 #	trustExitCode = false
 #[diff]
 #	tool = p4merge
 #[difftool "p4merge"]
-#	path = /c/Program Files/Perforce/p4merge.exe
-#	#path = /usr/local/bin/p4merge
+#	#path = /c/Program Files/Perforce/p4merge.exe
+#	path = /usr/local/bin/p4merge
 #	prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
 #[merge]
 #	tool = gvimdiff
 #[mergetool "gvimdiff"]
-#	path = /c/Program Files/Vim/vim73/gvim.exe
-#	#path = /usr/local/bin/gvim
+#	#path = /c/Program Files/Vim/vim73/gvim.exe
+#	path = /usr/local/bin/gvim
 #	trustExitCode = false
 #[diff]
 #	tool = gvimdiff
 #[difftool "gvimdiff"]
-#	path = /c/Program Files/Vim/vim73/gvim.exe
-#	#path = /usr/local/bin/gvim
+#	#path = /c/Program Files/Vim/vim73/gvim.exe
+#	path = /usr/local/bin/gvim
 #	prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
@@ -102,28 +102,28 @@
 #[merge]
 #	tool = bc3
 #[mergetool "bc3"]
-#	path = /c/Program Files/Beyond Compare 3/BComp.exe
-#	#path = /usr/local/bin/BComp
+#	#path = /c/Program Files/Beyond Compare 3/BComp.exe
+#	path = /usr/local/bin/BComp
 #	trustExitCode = false
 #[diff]
 #	tool = bc3
 #[difftool "bc3"]
-#	path = /c/Program Files/Beyond Compare 3/BComp.exe
-#	#path = /usr/local/bin/BComp
+#	#path = /c/Program Files/Beyond Compare 3/BComp.exe
+#	path = /usr/local/bin/BComp
 #	prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
 #[merge]
 #	tool = diffuse
 #[mergetool "diffuse"]
-#	path = /c/Program Files/Diffuse/diffuse.exe
-#	#path = /usr/local/bin/diffuse
+#	#path = /c/Program Files/Diffuse/diffuse.exe
+#	path = /usr/local/bin/diffuse
 #	trustExitCode = false
 #[diff]
 #	tool = diffuse
 #[difftool "diffuse"]
-#	path = /c/Program Files/Diffuse/diffuse.exe
-#	#path = /usr/local/bin/diffuse
+#	#path = /c/Program Files/Diffuse/diffuse.exe
+#	path = /usr/local/bin/diffuse
 #	prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
@@ -131,28 +131,28 @@
 #[merge]
 #	tool = ecmerge
 #[mergetool "ecmerge"]
-#	path = /c/Program Files/Ellie Computing/Merge/ecmerge.exe
-#	#path = /usr/local/bin/ecmerge
+#	#path = /c/Program Files/Ellie Computing/Merge/ecmerge.exe
+#	path = /usr/local/bin/ecmerge
 #	trustExitCode = false
 #[diff]
 #	tool = ecmerge
 #[difftool "ecmerge"]
-#	path = /c/Program Files/Ellie Computing/Merge/ecmerge.exe
-#	#path = /usr/local/bin/ecmerge
+#	#path = /c/Program Files/Ellie Computing/Merge/ecmerge.exe
+#	path = /usr/local/bin/ecmerge
 #	prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
 #[merge]
 #	tool = tkdiff
 #[mergetool "tkdiff"]
-#	path = /c/Program Files/TkDiff/tkdiff.exe
-#	#path = /usr/local/bin/tkdiff
+#	#path = /c/Program Files/TkDiff/tkdiff.exe
+#	path = /usr/local/bin/tkdiff
 #	trustExitCode = false
 #[diff]
 #	tool = tkdiff
 #[difftool "tkdiff"]
-#	path = /c/Program Files/TkDiff/tkdiff.exe
-#	#path = /usr/local/bin/tkdiff
+#	#path = /c/Program Files/TkDiff/tkdiff.exe
+#	path = /usr/local/bin/tkdiff
 #	prompt = false
 
 #commit.template ~/test.txt -->temp for commit
