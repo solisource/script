@@ -3,9 +3,11 @@ if [ $1 = -w ] ; then
 
   echo "update -w for windows env"
   echo "#update git config file for git vcs"
+  #mv  -f /etc/gitconfig /etc/gitconfig`date +%H_%M_%S_%Y_%m_%j`
   \cp -f ../git/.gitconfig /etc/gitconfig 
 
   echo "#update .bashrc"
+  #mv  -f ~/.bashrc ~/.bashrc`date +%H_%M_%S_%Y_%m_%j`
   \cp -f ../git/bash_profile ~/.bashrc
 
   echo "#update _vimrc"
