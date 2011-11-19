@@ -13,8 +13,8 @@
 *.rar
 *.tgz
 ###############################
-!.gitignore
-!.gitconfig
+!.gitignore*
+!.gitconfig*
 ###############################
 !.bashrc_win
 !.bashrc_linux

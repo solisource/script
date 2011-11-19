@@ -2,6 +2,7 @@
 if [ $1 = -w ] ; then
 
   echo "update -w for windows env"
+<<<<<<< HEAD
   echo "#update git config file for git vcs"
   #mv  -f /etc/gitconfig /etc/gitconfig`date +%H_%M_%S_%Y_%m_%j`
   \cp -f ../git/.gitconfig /etc/gitconfig 
@@ -9,8 +10,37 @@ if [ $1 = -w ] ; then
   echo "#update .bashrc"
   #mv  -f ~/.bashrc ~/.bashrc`date +%H_%M_%S_%Y_%m_%j`
   \cp -f ../git/bash_profile ~/.bashrc
+=======
 
-  echo "#update _vimrc"
+  echo "#update cp -f ../git/.gitconfig_win ~/.gitconfig"
+  \cp -f ../git/.gitconfig_win ~/.gitconfig
+	
+  echo "update cp ../git/.gitignore ~"
+  \cp -f ../git/.gitignore ~
+>>>>>>> f0008afb7553b9b4ec0f7936ba2722c4b66cc93b
+
+  #By include bash_profile
+  #echo "############">>/etc/profile
+  #echo "Add by dsjin">>/etc/profile
+  #echo "export LESSCHARSET=utf-8">>/etc/profile
+
+  echo "############">>/etc/inputrc
+  echo "#Add by dsjin">>/etc/inputrc
+  echo "set output-meta on">>/etc/inputrc
+  echo "set convert-meta off">>/etc/inputrc
+  dos2unix /etc/inputrc
+
+  echo "#update cp -f ../git/extDiff_win /bin/extDiff"
+  \cp -f ../git/extDiff_win /bin/extDiff
+
+  echo "#update cp -f ../git/extDiffMerge_win /bin/extDiffMerge"
+  \cp -f ../git/extDiffMerge_win /bin/extDiffMerge
+
+  echo "#update cp -f ../git/bash_profile_win ~/.bashrc"
+  \cp -f ../git/bash_profile_win ~/.bashrc
+
+
+  echo "#update cp -f ../vim/.vimrc_win /c/Program\ Files/Vim/_vimrc"
   \cp -f ../vim/.vimrc_win /c/Program\ Files/Vim/_vimrc
 
   echo "#update supertab.vim for All language"
@@ -49,12 +79,25 @@ if [ $1 = -w ] ; then
 elif [ $1 = -l ] ; then
 
   echo "update -l for linux env"
-  #\mv  ~/.bashrc ~/.bashrc.`date +%y%m%d%H%M`
+
+  echo "update cp ../bash/.bashrc_linux ~/.bashrc"
   \cp -f ../bash/.bashrc_linux ~/.bashrc
   
-  #\mv  ~/.vimrc ~/.vimrc.`date +%y%m%d%H%M`
+  echo "update cp ../vim/.vimrc_linux ~/.vimrc"
   \cp -f ../vim/.vimrc_linux ~/.vimrc
-  #echo "-l"
+
+
+  echo "update cp ../git/.gitconfig_linux ~/.gitconfig"
+  \cp -f ../git/.gitconfig_linux ~/.gitconfig
+
+  echo "update cp ../git/.gitignore ~"
+  \cp -f ../git/.gitignore ~
+
+  echo "update cp ../git/extDiff_linux /usr/local/bin"
+  \cp -f ../git/extDiff_linux /usr/local/bin/extDiff
+
+  echo "update cp ../git/extDiffMerge_linux /usr/local/bin/extDiffMerge"
+  \cp -f ../git/extDiffMerge_linux /usr/local/bin/extDiffMerge
 
 else
   echo "Error option /-w for Window,-l for Linux/"

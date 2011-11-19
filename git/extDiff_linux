@@ -1,0 +1,8 @@
+#! /bin/sh
+#[ $# -eq 7 ] /usr/local/bin/kdiff3 "$2" "$5"
+[ $# -eq 7 ] /usr/local/bin/p4merge "$2" "$5"
+#[ $# -eq 7 ] /usr/local/bin/gvim "-d" "$2" "$5"
+#[ $# -eq 7 ] /usr/local/bin/BComp "$2" "$5"
+#[ $# -eq 7 ] /usr/local/bin/diffuse "$2" "$5"
+#[ $# -eq 7 ] /usr/local/bin/ecmerge "$2" "$5"
+#[ $# -eq 7 ] /usr/local/bin/tkdiff "$2" "$5"

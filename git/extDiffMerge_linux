@@ -1,0 +1,8 @@
+#! /bin/sh
+#/usr/local/bin/kdiff3 $*
+/usr/local/bin/p4merge $*
+#/usr/local/bin/gvim "-d" $*
+#/usr/local/bin/BComp $*
+#/usr/local/bin/diffuse $*
+#/usr/local/bin/ecmerge $*
+#/usr/local/bin/tkdiff $*
