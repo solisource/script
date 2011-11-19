@@ -174,26 +174,26 @@
 	branch = auto
 	interactive = auto
 [user]
-    name = master
-    email = master@126.com
+	name = master
+	email = master@126.com
 [alias]
-    co = checkout
-    ci = commit -m
+	co = checkout
+	ci = commit -m
 	#cia = commit -am
-    cis = commit -sm
+	cis = commit -sm
 	#cias = commit -asm
-    st = status
+	st = status
 	br = branch
 
-    oneline = log --pretty=oneline --since='2 days ago'
+	oneline = log --pretty=oneline --since='2 days ago'
 	onelog = log -p -1
 	lpo = log --pretty=oneline
 
 	difftool = difftool --no-prompt
 
-    go = "! bash -c \"git pull;git add .;if [ \\\"$*\\\" == \\\"\\\" ];then git commit -a;else git commit -avm \\\"$*\\\";fi;git push origin master:xxx;\""
+	go = "! bash -c \"git pull;git add .;if [ \\\"$*\\\" == \\\"\\\" ];then git commit -a;else git commit -avm \\\"$*\\\";fi;git push origin master:xxx;\""
 	go = "! bash -c \"git pull;git add .;git commit -am \\\"$COMPUTERNAME,$USERNAME,$PWD,`date +%y/%m/%d-%H/%M/%S`\\\";git push origin master\""
-    go-message = "! bash -c \"git pull;git add .;git commit -a;git push origin master\""
+	go-message = "! bash -c \"git pull;git add .;git commit -a;git push origin master\""
 
 	go-non-net = "! bash -c \"git add .;git commit -am \\\"$COMPUTERNAME,$USERNAME,$PWD,`date +%y/%m/%d-%H/%M/%S`\\\"\""
 	go-non-net-message = "! bash -c \"git add .;git commit -a\""
