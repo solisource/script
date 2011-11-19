@@ -2,22 +2,16 @@
 if [ $1 = -w ] ; then
 
   echo "update -w for windows env"
-<<<<<<< HEAD
-  echo "#update git config file for git vcs"
-  #mv  -f /etc/gitconfig /etc/gitconfig`date +%H_%M_%S_%Y_%m_%j`
-  \cp -f ../git/.gitconfig /etc/gitconfig 
 
   echo "#update .bashrc"
   #mv  -f ~/.bashrc ~/.bashrc`date +%H_%M_%S_%Y_%m_%j`
   \cp -f ../git/bash_profile ~/.bashrc
-=======
 
   echo "#update cp -f ../git/.gitconfig_win ~/.gitconfig"
   \cp -f ../git/.gitconfig_win ~/.gitconfig
 	
   echo "update cp ../git/.gitignore ~"
   \cp -f ../git/.gitignore ~
->>>>>>> f0008afb7553b9b4ec0f7936ba2722c4b66cc93b
 
   #By include bash_profile
   #echo "############">>/etc/profile
