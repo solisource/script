@@ -6,5 +6,5 @@
 #/usr/local/bin/diffuse $*
 #/usr/local/bin/ecmerge $*
 #/usr/local/bin/tkdiff $*
-#/usr/local/bin/meld $*
-#/usr/local/bin/kompare $*
+#/usr/bin/meld $*
+#/usr/bin/kompare $*

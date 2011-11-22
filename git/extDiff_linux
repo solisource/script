@@ -6,5 +6,5 @@
 #[ $# -eq 7 ] /usr/local/bin/diffuse "$2" "$5"
 #[ $# -eq 7 ] /usr/local/bin/ecmerge "$2" "$5"
 #[ $# -eq 7 ] /usr/local/bin/tkdiff "$2" "$5"
-#[ $# -eq 7 ] /usr/local/bin/meld "$2" "$5"
-#[ $# -eq 7 ] /usr/local/bin/kompare "$2" "$5"
+#[ $# -eq 7 ] /usr/bin/meld "$2" "$5"
+#[ $# -eq 7 ] /usr/bin/kompare "$2" "$5"
