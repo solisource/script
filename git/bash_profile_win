@@ -7,6 +7,7 @@ alias ls='ls -F --color --show-control-chars'
 alias ll='ls -la'
 #alias g='/c/Program\ Files/Vim/vim73/gvim.exe'
 alias g='/c/Program\ Files/Vim/vim*/gvim.exe'
+alias qgit='/c/Program\ Files/QGit/qgit.exe'
 
 # -- log show for ch commit
 export LESSCHARSET=utf-8
