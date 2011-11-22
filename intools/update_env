@@ -3,6 +3,10 @@ if [ $1 = -w ] ; then
 
   echo "update -w for windows env"
 
+  echo "#update .bashrc"
+  #mv  -f ~/.bashrc ~/.bashrc`date +%H_%M_%S_%Y_%m_%j`
+  \cp -f ../git/bash_profile ~/.bashrc
+
   echo "#update cp -f ../git/.gitconfig_win ~/.gitconfig"
   \cp -f ../git/.gitconfig_win ~/.gitconfig
 	
