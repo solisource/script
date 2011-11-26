@@ -14,7 +14,7 @@ for test in jin da shi xie shu yan jin zi wei ; do #list for var
 	echo "test --> $test"
 done
 
-for test in test.sh; do #list for var
+for test in ./test.sh ./jin.v; do #list for var
 	cat $test
 done
 
@@ -191,4 +191,6 @@ elif [ $jin -ne $xie ] ;then
 else
 	echo non++++
 fi
+
+
 
