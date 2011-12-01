@@ -284,14 +284,14 @@ echo $factorial
 #A file read
 FILE=$2
 # read $FILE using the file descriptors
-exec 3<&0
-exec 0<$FILE
+exec 3<&0  #把标准输入重定向到3
+exec 0<$FILE #把FILE重定向到0，也就是把FILE重定向到3
 while read line
 do
 	# use $line variable to process line
 	echo $line
 done
-exec 0<&3
+exec 0<&3 #把3重定向到0
 
 #有空格时不能使用
 for i in `cat jin.v`
