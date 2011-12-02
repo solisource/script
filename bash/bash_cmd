@@ -34,3 +34,64 @@ bash命令解释套装程序包含了一些内部命令。内部命令在目录列表时是看不见的，
 　　10．“.”（点）
 　　   命令格式：. Shell程序文件名
 　　   功能：使Shell读入指定的Shell程序文件并依次执行文件中的所有语句。
+
+
+
+POSIX特殊内建命令是：:, ., break, continue, eval, exec, exit, export, readonly, return, set, shift, trap and unset.
+
+简单的对应关系简单描述如下：
+* .: 把SHELL脚本当作当前进程的一部分执行.
+* :: 返回0或者true.
+* [: Bourne Shell Builtins.
+* alias: 别名.
+* bg: 在后台放置一个挂起的任务.
+* bind: Bash Builtins.
+* break: 从一个循环控制结构中退出.
+* builtin: Bash Builtins.
+* cd: 改变到其它的工作目录.
+* command: Bash Builtins.
+* compgen: Programmable Completion Builtins.
+* complete: Programmable Completion Builtins.
+* continue: 直接转到循环的下一次迭代的开始处.
+* declare: 声名变量.
+* dirs: Directory Stack Builtins.
+* disown: Job Control Builtins.
+* echo: 显示出它后边的参数.
+* enable: Bash Builtins.
+* eval: 扫描并计算命令行.
+* exec: 执行一个shell脚本或者程序并替换掉当前进程.
+* exit: 从当前的shell中退出.
+* export: 把一个变量的值放在被调用的环境中（输出变量）.
+* fc: Bash History Builtins.
+* fg: 把一个在后台执行的程序提交到前台.
+* getopts: 分析一个shell脚本的参数.
+* hash: Bourne Shell Builtins.
+* help: Bash Builtins.
+* history: 查看执行命令的历史记录.
+* jobs: 显示后台任务的列表.
+* kill: 给一个进程或者作业发送一个信号.
+* let: 数学计算后面的表达式的值.
+* local: 声明局部变量.
+* logout: 登出shell.
+* popd: 目录栈出栈.
+* printf: Bash Builtins.
+* pushd: 目录栈入栈.
+* pwd: 显示工作目录.
+* read: 从标准输入中读入一行.
+* readonly: 把一个变量名为只读.
+* return: 返回值.
+* set: 设置shell标志或命令行参数变量，如不加参数则列出所有变量.
+* shift: 提升每个命令行参数.
+* shopt: Bash Builtins.
+* source: Bash Builtins.
+* suspend: Job Control Builtins.
+* test: 参数比较.
+* times: 显示当前shell以及其子进程的运行时间.
+* trap: 捕获一个信号.
+* type: 显示出每个参数怎样被解释为一个命令.
+* typeset: 声名变量同declare.
+* ulimit: Bash Builtins.
+* umask: 返回文件创建时的掩码值.
+* unalias: 删除别名.
+* unset: 删除一个变量或者函数.
+* wait: 等待后台进程的结束.
