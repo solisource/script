@@ -291,7 +291,7 @@ do
 	# use $line variable to process line
 	echo $line
 done
-exec 0<&3 #把3重定向到0
+exec 0<&3 #把3重定向到0，也可以写成exec 3>&0
 
 #有空格时不能使用
 for i in `cat jin.v`
@@ -424,6 +424,5 @@ done
 
 ###################################################################################
 #正则表达式
-
 
 exit

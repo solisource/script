@@ -8,7 +8,7 @@
 2.shell命令解析过程中，在实际执行命令前，IO重定向先设置好
 
 Example:
-1.’echo 1 a1 >a2′ 与 ‘echo 1 >a2 a1′
+1.echo 1 a1 >a2 与 ‘echo 1 >a2 a1
 	igi@igi-debian:~$ echo 1 a1 >a2
 	igi@igi-debian:~$ cat a2
 	1 a1
@@ -39,7 +39,8 @@ Example:
 #############################################################################
 #简单重定向
 	cmd > file
-	把cmd命令的输出重定向到文件file中。如果file已经存在，则清空原有文件，使用bash的noclobber选项可以防止覆盖原有文件。
+	把cmd命令的输出重定向到文件file中。如果file已经存在，则清空原有文件，
+	使用bash的noclobber选项可以防止覆盖原有文件。
 
 	cmd >> file
 	把cmd命令的输出重定向到文件file中，如果file已经存在，则把信息加在原有文件后面。
