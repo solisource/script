@@ -1,0 +1,12 @@
+update #用版本仓库刷新当前工作区 别名up checkout co，后面不跟参数表示用（最新提交即tip）的提交刷新工作区
+pull   #拉远程仓库的更新到本仓库（但不刷新当前工作区）(git pull包含merge动作，冲突后手动merge后要Commit)
+      （冲突后手动merge后要Commit)
+
+push   #推本地更新到远程仓库（但不刷新当前工作区）
+merge  #合并提交
+
+tip #表示做上面的提交（最顶端的提交或最新的提交）
+identify #查看当前指针所在的提交
+
+revert #[ri'v:t, 'ri:v:t],恢复原状，使回复原状
+resolve #解决
