@@ -12,3 +12,4 @@ revert #[ri'v:t, 'ri:v:t],恢复原状，使回复原状
 resolve #解决,解析，分析
 
 http://mercurial.selenic.com/wiki/MergeProgram //About hg Merge and diff tool
+http://mercurial.selenic.com/wiki/ExtdiffExtension
