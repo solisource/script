@@ -80,7 +80,7 @@ filetype indent on
 set autoread
 
 "Have the mouse enabled all the time:
-set mouse=a
+"set mouse=a
 
 "Set mapleader
 let mapleader = ","
@@ -124,8 +124,8 @@ syntax enable
 if has("gui_running")
   "
   autocmd! bufwritepost .vimrc source %
-  set guioptions-=T
-  " set guioptions-=m
+  "set guioptions-=T
+  "set guioptions-=m
   " au GUIEnter * simalt ~x
 
   let psc_style='cool'
@@ -289,8 +289,8 @@ map <leader>te :tabedit
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove 
 try
-  set switchbuf=usetab
-  set stal=2
+  "set switchbuf=usetab
+  "set stal=2
 catch
 endtry
 
@@ -467,8 +467,8 @@ set noswapfile
 " => Folding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Enable folding, I find it very useful
-set nofen
-set fdl=0
+"set nofen
+"set fdl=0
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -686,15 +686,15 @@ map <leader>s? z=
 
    "Folding
    function! JavaFold() 
-     setl foldmethod=syntax
-     setl foldlevelstart=1
+     "setl foldmethod=syntax
+     "setl foldlevelstart=1
      syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
      syn match foldImports /\(\n\?import.\+;\n\)\+/ transparent fold
 
      function! FoldText()
        return substitute(getline(v:foldstart), '{.*', '{...}', '')
      endfunction
-     setl foldtext=FoldText()
+     "setl foldtext=FoldText()
    endfunction
    au FileType java call JavaFold()
    au FileType java setl fen
@@ -706,14 +706,14 @@ map <leader>s? z=
    """""""""""""""""""""""""""""""
    au FileType javascript so ~/.vim/plugin/javascript.vim
    function! JavaScriptFold() 
-     setl foldmethod=syntax
-     setl foldlevelstart=1
+     "setl foldmethod=syntax
+     "setl foldlevelstart=1
      syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
 
      function! FoldText()
        return substitute(getline(v:foldstart), '{.*', '{...}', '')
      endfunction
-     setl foldtext=FoldText()
+     "setl foldtext=FoldText()
    endfunction
    au FileType javascript call JavaScriptFold()
    au FileType javascript setl fen
@@ -843,17 +843,17 @@ inoremap <C-v> <esc>:set paste<cr>mui<C-R>+<esc>mv'uV'v=:set nopaste<cr>
 " Syntax used is:
 "   *> Link
 "   => Anchor
-function! SmartTOHtml()
-   TOhtml
-   try
-    %s/&quot;\s\+\*&gt; \(.\+\)</" <a href="#\1" style="color: cyan">\1<\/a></g
-    %s/&quot;\(-\|\s\)\+\*&gt; \(.\+\)</" \&nbsp;\&nbsp; <a href="#\2" style="color: cyan;">\2<\/a></g
-    %s/&quot;\s\+=&gt; \(.\+\)</" <a name="\1" style="color: #fff">\1<\/a></g
-   catch
-   endtry
-   exe ":write!"
-   exe ":bd"
-endfunction
+"function! SmartTOHtml()
+"   TOhtml
+"   try
+"    %s/&quot;\s\+\*&gt; \(.\+\)</" <a href="#\1" style="color: cyan">\1<\/a></g
+"    %s/&quot;\(-\|\s\)\+\*&gt; \(.\+\)</" \&nbsp;\&nbsp; <a href="#\2" style="color: cyan;">\2<\/a></g
+"    %s/&quot;\s\+=&gt; \(.\+\)</" <a name="\1" style="color: #fff">\1<\/a></g
+"   catch
+"   endtry
+"   exe ":write!"
+"   exe ":bd"
+"endfunction
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -947,8 +947,8 @@ endfunction
 "vim7.1 in the windows code setting for chinese Menu!
 "add by dsjin 06262010
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-winpos 255 30
-set lines=45 columns=118 
+"winpos 255 30
+"set lines=45 columns=118 
 
 
 "add by dsjin 06262010
