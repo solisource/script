@@ -1,0 +1,66 @@
+
+PERL 语言中的q,qw,qr,qx,qq......符号用法总结
+在perl语言中，有两个特殊而常用的符号qq qw,分别解释如下：
+qq{foobar}的意思为意思为双引号字符串，可内插变量
+相当于 "foobar"
+qw{foo bar}的意思为用空格分解字符串，得到列表，相当于如下语句
+split(' ','foo bar') 得到的结果是'foo','bar'
+
+字符串比较等于用 eq
+
+q运算符对'号转义的方式
+$someword = 'i \'ve some money';
+可以等价于:
+$someword = q~i 've some money~;
+
+qq运算符对"号转义的方式
+$someword = "i say \"ok!\".";
+可以等价于:
+$someword = qq~i say "ok!".~;
+
+qw代表用空格来分隔元素,得到列表
+@list = ("perl","Regular","network","web");
+可以等价于:
+@list = qw(perl Regular network web);
+
+qr代表创建正则
+$myword = "catcat";
+$replaceword = qr(catcat);
+$finalword = "ok" if ($myword =~ $replaceword);
+
+引号执行运算符(quoted execution operator)，qx//
+qx/uname -p -r/
+
+q 和 qq 运算符的特点：
+※ q 和 qq 必须是一个标识符，而不是标识符的部分。例如：
+q (abc)      用 () 作为分界符
+q(abc)       用 () 作为分界符
+q xabcx      用 x 作为分界符
+都是合法的，而
+qxabcx 就会被当作是一个标识符来处理，有谁会想到 qxabcx 居然是一个 q 运算式呢？
+
+※ q 和 qq 后面的空格并不会影响语法，但是任何非空字符(不是空格、不是 TAB 字符、
+   不是换行符)则会被当作界限符来使用。
+
+※ 如果 q 和 qq 使用一些特殊的符号的时候，则必须配对。比如：< 只能和 >; 在一起
+   用来当作界限符，而不能只用两个 < 作为界限符。而 | 则只能和它自己作为一对界
+   限符。这些特殊的符号有：()、{}、[]、<>;
+
+$myword = "catcat";
+$replaceword = qr(catcat);
+$finalword = "ok" if ($myword =~ $replaceword);
+
+@list = ("perl","Regular","network","web");
+可以等价于:
+@list = qw(perl Regular network web);
+
+$someword = 'i \'v some money';
+可以等价于:
+$someword = q~i 'v some money~;
+
+q// is generally the same thing as using single quotes - meaning it doesn't interpolate values inside the delimiters.
+qq// is the same as double quoting a string. It interpolates.
+qw// return a list of white space delimited words. @q = qw/this is a test/ is functionally the same as @q = ('this', 'is', 'a', 'test')
+qx// is the same thing as using the backtick operators.
+I've never used qr//, but it's got something to do with compiling regex's for later use.
+

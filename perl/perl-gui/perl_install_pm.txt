@@ -1,0 +1,63 @@
+active perl :Use PPM GUI Install for a PM Package!
+
+#############################################################################
+5、模块安装 
+　　gunzip Module.tar.gz 
+　　tar xvf Moudle.tar 
+　　转到相应目录 
+　　perl Makefile.PL 
+　　make 
+　　make test 
+　　make install 
+　　安装完成后模块在 /usr/local/lib/perl5/site_perl 目录中， . html 
+　　文件不能自动安装，需使用前面介绍方法进行安装。(王朝网络 wangchao.net.cn)
+#############################################################################
+
+
+#############################################################################
+		Perl语言的强大源自于其开源、免费和灵活自由的编程环境，另外成千上万的免费perl模块功不可没。
+		Perl模块安装方式（一）
+		下载后安装：http://search.cpan.org/，这里有最新更新的perl模块。
+		下载之后，如果你电脑是有C++编译器（安装了VC++,C语言编程软件等）的系统，则将下载的模块解压缩后，在该文件夹内，使用如下dos命令就可安装该模块了。  
+		perl   Makefile.PL  
+		nmake  
+		nmake   test  
+		nmake   install   
+
+		Perl模块安装方式（二）：命令行方式，我个人倾向于这种方式。
+		只要你电脑上安装了perl软件，在任意目录下的dos提示窗口中均可以通过ppm命令安装perl模块，比如“tie::file”模块，用“ppm install tie::file”命令安装，如下图所示，如果电脑上已经安装了该模块，则会有下图的提示，否则，会提示该模块下载的进度和总计下载的文件个数，使用此方法非常方便快捷。
+
+Perl模块安装方式（三）：下载pm文件，拷贝到有关目录
+perl模块的主文件就是.pm为后缀名的文件，比如上述tie::file文件在我电脑上安装路径为
+c:\Perl\lib\Tie\File.pm
+c:\Perl\site\lib\Tie\File.pm
+所以，如果有些模块没有及时更新到cpan网站上，你可以搜索相应的pm文件，然后将其拷贝到c:\Perl\lib\和c:\Perl\site\lib\两个文件夹中就可以了。
+#############################################################################
+ 
+Perl模块应用举例：tie::file
+tie::file 这个模块可以将一个文本文件逐行绑定为一个数组，你对数组的任何操作均即时反映到文件中，使用此模块可以不必使用“open”语句对文件进行操作。比如我们有一个文件“1.txt”，内容如下
+hello
+China
+hello
+World
+
+#############################################################################
+我们编写下面的程序语句，将该文件进行修改，使World变为China
+# This file documents Tie::File version 0.96
+use Tie::File; #perl模块名称
+use strict;
+use warnings;
+my $file="1.txt";  #欲操作的文件名，使用strict之后，所有的变量第一次出现时前
+                   #面都要添加my，这是perl#语法的特殊之处
+my @array;
+tie @array, 'Tie::File', $file or die $!; #tie file语句格式，die为错误提示
+print "@array\n";        #打印出 hello China hello World
+$array[3] = 'China';     # 修改第四行 从World 为China
+print "$array[3]\n";     # 打印出第四行
+print "@array\n";        #打印出修改后的文本文件内容
+hello
+China
+hello
+China 
+#############################################################################
+
