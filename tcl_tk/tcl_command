@@ -1,0 +1,128 @@
+TCL内建命令
+
+字符串操作
+	append - 在变量后添加变量
+	binary - 从二进制字符串中插入或释放数值
+	format - 使用sprintf的风格格式化一个字符串
+	re_syntax - Tcl正则表达式语法
+	regexp - 对正则表达式匹配器直接存取字符串
+	regsub - 基于正则表达式的模式匹配完成替换
+	scan - 使用指定的sscanf风格转换解析字符串
+	string - 操作字符串
+	subst - 完成反斜线、命令和变量替换
+
+列表操作
+	concat - 将多个列表合并成一个列表
+	join - 把列表元素合并成一个字符串
+	lappend - 将元素添加到列表末尾
+	lassign - 将列表元素赋值给变量
+	lindex - 从列表中获得一个元素
+	linsert - 向列表插入一个元素
+	list - 创建一个列表
+	llength - 计算列表的元素个数
+	lrange - 返回列表中的一个或者多个临近的元素
+	lrepeat - 使用重复的元素构造一个列表
+	lreplace - 在一个列表中使用新的元素替代其它元素
+	lreverse - 反转列表元素的顺序
+	lsearch - 在列表中寻找特定元素
+	lset - 修改列表中的一个元素
+	lsort - 给列表中的元素排序
+	split - 将字符串分解成Tcl列表
+
+字典操作
+	dict - 操作字典
+
+数学
+	expr - 求一个数学表达式的值
+	mathfunc - Tcl数学表达式的数学函数
+	mathop - Tcl命令的数学操作符
+
+控制结构
+	after - 设置将来执行的命令
+	break - 中断循环
+	catch - 返回异常错误
+	continue - 进入下一个循环
+	error - 产生一个错误
+	eval - 调用一个Tcl脚本
+	for - 'For' 循环
+	foreach - 反复循环操作一个或多个列表的每个元素
+	if - 执行一个条件脚本
+	return - 从进程中返回或者返回一个值
+	switch - 根据一个特定的值，指定几个脚本中的一个
+	update - 处理挂起的时间和空闲回调
+	uplevel - 在不同的堆栈层中执行一个脚本
+	vwait - 一直等待直到一个变量被修改为止
+	while - 重复的执行脚本直到条件不匹配
+
+变量和过程
+	apply - 申请一个匿名函数
+	array - 处理数组变量
+	global - 存取全局变量
+	incr - 增加变量的值
+	namespace - 创建和操作命令和变量的上下文
+	proc - 创建一个Tcl过程
+	rename - 重新命名或者删除一个命令
+	set - 读写变量
+	trace - 监视变量存取、命令用法和执行
+	unset - 删除变量
+	upvar - 在不同的堆栈层中创建一个变量的链接
+	variable - 创建和初始化一个名字空间变量
+
+输入和输出
+	chan - 读写和操作I/O通道
+	close - 关闭一个打开的I/O通道
+	eof - 检查文件是否结束
+	fblocked - 测试I/O通道是否将数据准备好
+	fconfigure - 设置和查询I/O通道的属性
+	fcopy - 把一个I/O通道数据复制到另外一个I/O通道
+	file - 操作文件名和属性
+	fileevent - 在I/O通道准备好处理读写事件时执行一个脚本
+	flush - 清空缓存输出I/O通道数据
+	gets - 从I/O通道中读取一行
+	open - 打开一个文件或命令管道
+	puts - 向I/O通道写入数据
+	read - 从I/O通道读出数据
+	refchan - 反射I/O通道的命令句柄API，版本1
+	seek - 设置I/O通道的存取偏移量
+	socket - 打开一条TCP网络连接
+	tell - 返回I/O通道的当前存取偏移量
+
+软件包和源文件
+	load - 装载机器代码和初始化新命令
+	loadTk - 装载TK到一个安全解释器
+	package - 装载包和包的版本控制
+	pkg::create - 为给出包描述构造是个适当的'package ifneeded'命令
+	pkg_mkIndex - 为自动装载的包创建一个索引
+	source - 将一个文件或者资源作为Tcl脚本运行
+	tm - 方便的查找和装载Tcl模块
+	unload - 卸载机器代码
+
+解释器
+	bgerror - 调用命令处理后台错误
+	history - 操作历史命令列表
+	info - 返回Tcl解释器的状态信息
+	interp - 创建并操作Tcl解释器
+	memory - 控制Tcl内存调试能力
+	unknown - 处理未知命令
+
+库程序
+	encoding - 编码处理
+	http - 客户端执行的HTTP/1.0协议
+	msgcat - Tcl消息目录
+	platform - 系统支持的编码和相关应用程序
+	platform::shell - 系统支持的编码和相关应用程序
+
+系统相关
+	cd - 改变工作目录
+	clock - 获取和操作日期与时间
+	exec - 调用子过程
+	exit - 退出应用程序
+	glob - 返回模式匹配的文件名
+	pid - 获得进程ID
+	pwd - 返回当前工作目录的绝对路径
+	time - 计算一个脚本的执行时间
+
+特定平台
+	dde - 执行一个动态数据交换命令
+	registry - 操作windows注册表
+
