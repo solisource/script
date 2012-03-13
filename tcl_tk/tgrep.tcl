@@ -1,3 +1,4 @@
+#! /bin/tclsh85.exe
 
 proc tgrep {pattern filename} { 
 	set f [open $filename r] 
