@@ -80,3 +80,8 @@ close $a_fid
 exec cat test
 source file.tcl
 
+set jin 5
+puts $jin
+incr a 5
+puts $jin
+
