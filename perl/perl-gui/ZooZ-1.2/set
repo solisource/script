@@ -1,0 +1,161 @@
+ @ 566 not utf8
+SV = PV(0x2553694) at 0x25b6654
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x25cb6c4 "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+SV = PV(0x2553694) at 0x25b6654
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x25cb6c4 "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+ @ 566 not utf8
+SV = PV(0x266e4e4) at 0x2672f7c
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x25fdecc "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+SV = PV(0x266e4e4) at 0x2672f7c
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x25fdecc "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+ @ 566 not utf8
+SV = PV(0x266e42c) at 0x25d16cc
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x260d9ec "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+SV = PV(0x266e42c) at 0x25d16cc
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x260d9ec "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+ @ 566 not utf8
+SV = PV(0x266e1ec) at 0x266a0f4
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x2615d5c "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+SV = PV(0x266e1ec) at 0x266a0f4
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x2615d5c "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+ @ 566 not utf8
+SV = PV(0x266e294) at 0x266a254
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x2664964 "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+SV = PV(0x266e294) at 0x266a254
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x2664964 "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+ @ 566 not utf8
+SV = PV(0x266deb4) at 0x263fc24
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x262063c "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+SV = PV(0x266deb4) at 0x263fc24
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x262063c "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+ @ 566 not utf8
+SV = PV(0x266ddb4) at 0x2642534
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x265af34 "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+SV = PV(0x266ddb4) at 0x2642534
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x265af34 "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+ @ 566 not utf8
+SV = PV(0x266dbe4) at 0x2633ebc
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x267646c "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+SV = PV(0x266dbe4) at 0x2633ebc
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x267646c "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+ @ 566 not utf8
+SV = PV(0x2665b0c) at 0x2638b1c
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x260c6bc "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+SV = PV(0x2665b0c) at 0x2638b1c
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x260c6bc "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+ @ 566 not utf8
+SV = PV(0x266593c) at 0x262d3d4
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x25f7374 "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+SV = PV(0x266593c) at 0x262d3d4
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x25f7374 "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+ @ 566 not utf8
+SV = PV(0x2665834) at 0x262d9d4
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x262e0fc "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+SV = PV(0x2665834) at 0x262d9d4
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x262e0fc "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+ @ 566 not utf8
+SV = PV(0x266563c) at 0x26281c4
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x2676f1c "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+SV = PV(0x266563c) at 0x26281c4
+  REFCNT = 2
+  FLAGS = (POK,pPOK,UTF8)
+  PV = 0x2676f1c "\313\316\314\345 9"\0 [UTF8 "\x{2ce}\x{325} 9"]
+  CUR = 6
+  LEN = 12
+WARNING: can not find tkIcons. Your installation of Tk::ToolBar is broken.
+         No icons will be loaded.
+ at ZooZ.pl line 566
+image "filenew22" doesn't exist at c:/Perl/site/lib/Tk/Widget.pm line 205.
+ at ZooZ.pl line 567
