@@ -188,6 +188,7 @@
 	oneline = log --pretty=oneline --since='2 days ago'
 	onelog = log -p -1
 	lpo = log --pretty=oneline
+	lp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 
 	difftool = difftool --no-prompt
 
