@@ -40,7 +40,6 @@
 	tool = extDiffMerge
 [difftool "extDiffMerge"]
 	cmd = extDiffMerge "$LOCAL" "$REMOTE"
-	prompt = false
 
 	# All tools test pass kdiff3 p4merge gvim -d BComp diffuse ecmerge tkdiff
 	# file -> git/extDiffMerge_linux 
@@ -67,7 +66,6 @@
 #[difftool "kdiff3"]
 #	#path = /c/Program Files/KDiff3/kdiff3.exe
 #	path = /usr/local/bin/kdiff3
-#	prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
 #[merge]
@@ -81,7 +79,6 @@
 #[difftool "p4merge"]
 #	#path = /c/Program Files/Perforce/p4merge.exe
 #	path = /usr/local/bin/p4merge
-#	prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
 #[merge]
@@ -95,7 +92,6 @@
 #[difftool "gvimdiff"]
 #	#path = /c/Program Files/Vim/vim73/gvim.exe
 #	path = /usr/local/bin/gvim
-#	prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
 #Git 1.7.6 laster version can be used
@@ -110,7 +106,6 @@
 #[difftool "bc3"]
 #	#path = /c/Program Files/Beyond Compare 3/BComp.exe
 #	path = /usr/local/bin/BComp
-#	prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
 #[merge]
@@ -124,7 +119,6 @@
 #[difftool "diffuse"]
 #	#path = /c/Program Files/Diffuse/diffuse.exe
 #	path = /usr/local/bin/diffuse
-#	prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
 #иж-->e
@@ -139,7 +133,6 @@
 #[difftool "ecmerge"]
 #	#path = /c/Program Files/Ellie Computing/Merge/ecmerge.exe
 #	path = /usr/local/bin/ecmerge
-#	prompt = false
 
 #/////////////////////////////////////////////////////////////////////////
 #[merge]
@@ -153,11 +146,12 @@
 #[difftool "tkdiff"]
 #	#path = /c/Program Files/TkDiff/tkdiff.exe
 #	path = /usr/local/bin/tkdiff
-#	prompt = false
 
-#commit.template ~/test.txt -->temp for commit
-#[commit]
-#	template = ~/test.txt
+# Why git difftool does not open the tool automatically?
+# http://stackoverflow.com/questions/7897517/why-git-difftool-does-not-open-the-tool-automatically
+# or git difftool -y file_name
+[difftool]
+	prompt = false
 
 [core]
 	#excludesfile = /c/Documents and Settings/user/.gitignore
