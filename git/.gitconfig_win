@@ -40,12 +40,9 @@
 	tool = extDiffMerge
 [difftool "extDiffMerge"]
 	cmd = extDiffMerge "$LOCAL" "$REMOTE"
-<<<<<<< HEAD
 
 [difftool]
 	prompt = false
-=======
->>>>>>> 593b74fd741b080a7af6d7814abf08134544a751
 
 	# All tools test pass kdiff3 p4merge gvim -d BComp diffuse ecmerge tkdiff
 	# file -> git/extDiffMerge_win
