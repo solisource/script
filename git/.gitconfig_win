@@ -40,9 +40,12 @@
 	tool = extDiffMerge
 [difftool "extDiffMerge"]
 	cmd = extDiffMerge "$LOCAL" "$REMOTE"
+<<<<<<< HEAD
 
 [difftool]
 	prompt = false
+=======
+>>>>>>> 593b74fd741b080a7af6d7814abf08134544a751
 
 	# All tools test pass kdiff3 p4merge gvim -d BComp diffuse ecmerge tkdiff
 	# file -> git/extDiffMerge_win
@@ -149,9 +152,11 @@
 #	path = /c/Program Files/TkDiff/tkdiff.exe
 #	#path = /usr/local/bin/tkdiff
 
-#commit.template ~/test.txt -->temp for commit
-#[commit]
-#	template = ~/test.txt
+# Why git difftool does not open the tool automatically?
+# http://stackoverflow.com/questions/7897517/why-git-difftool-does-not-open-the-tool-automatically
+# or git difftool -y file_name
+[difftool]
+	prompt = false
 
 [core]
 	#excludesfile = /c/Documents and Settings/user/.gitignore
@@ -182,6 +187,7 @@
 	oneline = log --pretty=oneline --since='2 days ago'
 	onelog = log -p -1
 	lpo = log --pretty=oneline
+	lp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 
 	difftool = difftool --no-prompt
 
