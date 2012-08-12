@@ -149,6 +149,20 @@
 #	path = /c/Program Files/TkDiff/tkdiff.exe
 #	#path = /usr/local/bin/tkdiff
 
+#/////////////////////////////////////////////////////////////////////////
+#[merge]
+#      tool = meld
+#[mergetool "meld"]
+#      path = /c/Program Files/meld/meld ## For windows
+#      #path = /usr/local/bin/meld ## For linux
+#      trustExitCode = false
+#[diff]
+#      tool = meld
+#[difftool "meld"]
+#      path = /c/Program Files/meld/meld ## For windows
+#      #path = /usr/local/bin/meld ## For linux
+
+
 # Why git difftool does not open the tool automatically?
 # http://stackoverflow.com/questions/7897517/why-git-difftool-does-not-open-the-tool-automatically
 # or git difftool -y file_name
