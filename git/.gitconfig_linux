@@ -152,6 +152,9 @@
 # or git difftool -y file_name
 [difftool]
 	prompt = false
+[mergetool]
+	prompt = false
+	keepBackup = false
 
 [core]
 	#excludesfile = /c/Documents and Settings/user/.gitignore

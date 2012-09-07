@@ -41,9 +41,6 @@
 [difftool "extDiffMerge"]
 	cmd = extDiffMerge "$LOCAL" "$REMOTE"
 
-[difftool]
-	prompt = false
-
 	# All tools test pass kdiff3 p4merge gvim -d BComp diffuse ecmerge tkdiff
 	# file -> git/extDiffMerge_win
 	# file -> /bin/extDiffMerge
@@ -168,6 +165,9 @@
 # or git difftool -y file_name
 [difftool]
 	prompt = false
+[mergetool]
+	prompt = false
+	keepBackup = false
 
 [core]
 	#excludesfile = /c/Documents and Settings/user/.gitignore
