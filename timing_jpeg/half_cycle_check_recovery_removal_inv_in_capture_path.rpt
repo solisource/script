@@ -1,0 +1,142 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+Design : ipcam_asic
+Version: D-2010.06-SP3-4
+Date   : Wed Apr  3 11:46:27 2013
+****************************************
+
+
+  Startpoint: ipcam_fpga/Ucore_sw_top/sysctl/jpgclk_mcu_rst_n_s2_reg
+               (rising edge-triggered flip-flop clocked by RJPG_CLK)
+  Endpoint: ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/async_jpgin_line_start_d1_reg
+               (recovery check against rising-edge clock RJPG_CLK')
+  Path Group: **async_default**
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.0000
+  Min Clock Paths Derating Factor : 1.0000
+  Max Clock Paths Derating Factor : 1.0300
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock RJPG_CLK (rise edge)                            0.0000     0.0000
+  clock network delay (propagated)                      1.3131     1.3131
+  ipcam_fpga/Ucore_sw_top/sysctl/jpgclk_mcu_rst_n_s2_reg/CK (SDFQRM1LM)
+                                                        0.0000     1.3131 r
+  ipcam_fpga/Ucore_sw_top/sysctl/jpgclk_mcu_rst_n_s2_reg/Q (SDFQRM1LM)
+                                                        0.3475 &   1.6606 r
+  ipcam_fpga/Ucore_sw_top/sysctl/_icc_place_opt_148/Z (BUFM10LM)
+                                                        0.3352 &   1.9958 r
+  ipcam_fpga/Ucore_sw_top/sysctl/dont_touch_mux_jpgclk_mcu_rst_n/A (STD_MUX2_59_uni_top)
+                                                        0.0000 *   1.9958 r
+  ipcam_fpga/Ucore_sw_top/sysctl/dont_touch_mux_jpgclk_mcu_rst_n/dont_touch_MUX2/Z (CKMUX2M2LM)
+                                                        0.9796 H   2.9754 r
+  ipcam_fpga/Ucore_sw_top/sysctl/dont_touch_mux_jpgclk_mcu_rst_n/O (STD_MUX2_59_uni_top)
+                                                        0.0000 &   2.9754 r
+  ipcam_fpga/Ucore_sw_top/sysctl/jpgclk_mcu_rst_n (sysctl)
+                                                        0.0000 &   2.9754 r
+  ipcam_fpga/Ucore_sw_top/isp_top/jpgclk_mcu_rst_n (isp_top)
+                                                        0.0000 &   2.9754 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/rst_n (jenc_hdr)
+                                                        0.0000 &   2.9754 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/_icc_place_opt_40/Z (BUFM2LM)
+                                                        0.1952 &   3.1707 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/_icc_place_opt_78/Z (BUFM18LM)
+                                                        0.1432 &   3.3138 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/_icc_place_opt_28/Z (BUFM48LM)
+                                                        0.1598 &   3.4737 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/_icc_place_opt_22/Z (BUFM48LM)
+                                                        0.1190 &   3.5926 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/async_jpgin_line_start_d1_reg/RB (SDFQRM1LM)
+                                                        0.0052 &   3.5978 r
+  data arrival time                                                3.5978
+
+  clock RJPG_CLK' (rise edge)                           2.7500     2.7500
+  clock network delay (propagated)                      1.2893     4.0393
+  clock reconvergence pessimism                         0.0333     4.0725
+  clock uncertainty                                    -0.2000     3.8725
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/async_jpgin_line_start_d1_reg/CK (SDFQRM1LM)
+                                                                   3.8725 r
+  library recovery time                                 0.0000 *   3.8725
+  data required time                                               3.8725
+  ------------------------------------------------------------------------------
+  data required time                                               3.8725
+  data arrival time                                               -3.5978
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      0.2747
+
+
+1
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-max_paths 1
+Design : ipcam_asic
+Version: D-2010.06-SP3-4
+Date   : Wed Apr  3 11:46:37 2013
+****************************************
+
+
+  Startpoint: ipcam_fpga/Ucore_sw_top/sysctl/jpgclk_mcu_rst_n_s2_reg
+               (rising edge-triggered flip-flop clocked by RJPG_CLK)
+  Endpoint: ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/async_jpgin_line_start_d1_reg
+               (removal check against rising-edge clock RJPG_CLK')
+  Path Group: **async_default**
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.0000
+  Min Clock Paths Derating Factor : 1.0000
+  Max Clock Paths Derating Factor : 1.0300
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock RJPG_CLK (rise edge)                            5.5000     5.5000
+  clock network delay (propagated)                      1.2600     6.7600
+  ipcam_fpga/Ucore_sw_top/sysctl/jpgclk_mcu_rst_n_s2_reg/CK (SDFQRM1LM)
+                                                        0.0000     6.7600 r
+  ipcam_fpga/Ucore_sw_top/sysctl/jpgclk_mcu_rst_n_s2_reg/Q (SDFQRM1LM)
+                                                        0.3475 &   7.1076 r
+  ipcam_fpga/Ucore_sw_top/sysctl/_icc_place_opt_148/Z (BUFM10LM)
+                                                        0.3352 &   7.4428 r
+  ipcam_fpga/Ucore_sw_top/sysctl/dont_touch_mux_jpgclk_mcu_rst_n/A (STD_MUX2_59_uni_top)
+                                                        0.0000 *   7.4428 r
+  ipcam_fpga/Ucore_sw_top/sysctl/dont_touch_mux_jpgclk_mcu_rst_n/dont_touch_MUX2/Z (CKMUX2M2LM)
+                                                        0.3935 H   7.8364 r
+  ipcam_fpga/Ucore_sw_top/sysctl/dont_touch_mux_jpgclk_mcu_rst_n/O (STD_MUX2_59_uni_top)
+                                                        0.0000 &   7.8364 r
+  ipcam_fpga/Ucore_sw_top/sysctl/jpgclk_mcu_rst_n (sysctl)
+                                                        0.0000 &   7.8364 r
+  ipcam_fpga/Ucore_sw_top/isp_top/jpgclk_mcu_rst_n (isp_top)
+                                                        0.0000 &   7.8364 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/rst_n (jenc_hdr)
+                                                        0.0000 &   7.8364 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/_icc_place_opt_40/Z (BUFM2LM)
+                                                        0.1952 &   8.0316 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/_icc_place_opt_78/Z (BUFM18LM)
+                                                        0.1432 &   8.1748 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/_icc_place_opt_28/Z (BUFM48LM)
+                                                        0.1598 &   8.3346 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/_icc_place_opt_22/Z (BUFM48LM)
+                                                        0.1190 &   8.4535 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/async_jpgin_line_start_d1_reg/RB (SDFQRM1LM)
+                                                        0.0052 &   8.4587 r
+  data arrival time                                                8.4587
+
+  clock RJPG_CLK' (rise edge)                           2.7500     2.7500
+  clock network delay (propagated)                      1.3568     4.1068
+  clock reconvergence pessimism                        -0.0333     4.0735
+  clock uncertainty                                     0.2000     4.2735
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/async_jpgin_line_start_d1_reg/CK (SDFQRM1LM)
+                                                                   4.2735 r
+  library removal time                                  0.0000 *   4.2735
+  data required time                                               4.2735
+  ------------------------------------------------------------------------------
+  data required time                                               4.2735
+  data arrival time                                               -8.4587
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      4.1852
+
+
+1

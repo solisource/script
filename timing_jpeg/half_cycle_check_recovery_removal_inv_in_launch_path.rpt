@@ -1,0 +1,158 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+Design : ipcam_asic
+Version: D-2010.06-SP3-4
+Date   : Mon Apr 22 09:58:34 2013
+****************************************
+
+
+  Startpoint: ipcam_fpga/Ucore_sw_top/sysctl/jpgclk_mcu_rst_n_s2_reg
+               (rising edge-triggered flip-flop clocked by RJPG_CLK')
+  Endpoint: ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/jpeg_codec_hdr/jpeg_codec_ecs/ctrl/r4_reg_6_
+               (recovery check against rising-edge clock RJPG_CLK)
+  Path Group: **async_default**
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.0000
+  Min Clock Paths Derating Factor : 1.0000
+  Max Clock Paths Derating Factor : 1.0300
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock RJPG_CLK' (rise edge)                           2.7500     2.7500
+  clock network delay (propagated)                      1.2130     3.9630
+  ipcam_fpga/Ucore_sw_top/sysctl/jpgclk_mcu_rst_n_s2_reg/CK (SDFQRM1LM)
+                                                        0.0000     3.9630 r
+  ipcam_fpga/Ucore_sw_top/sysctl/jpgclk_mcu_rst_n_s2_reg/Q (SDFQRM1LM)
+                                                        0.3458 &   4.3089 r
+  ipcam_fpga/Ucore_sw_top/sysctl/_icc_place_opt_148/Z (BUFM10LM)
+                                                        0.3372 &   4.6461 r
+  ipcam_fpga/Ucore_sw_top/sysctl/dont_touch_mux_jpgclk_mcu_rst_n/A (STD_MUX2_59_uni_top)
+                                                        0.0000 *   4.6461 r
+  ipcam_fpga/Ucore_sw_top/sysctl/dont_touch_mux_jpgclk_mcu_rst_n/dont_touch_MUX2/Z (CKMUX2M2LM)
+                                                        0.9732 H   5.6193 r
+  ipcam_fpga/Ucore_sw_top/sysctl/dont_touch_mux_jpgclk_mcu_rst_n/O (STD_MUX2_59_uni_top)
+                                                        0.0000 &   5.6193 r
+  ipcam_fpga/Ucore_sw_top/sysctl/jpgclk_mcu_rst_n (sysctl)
+                                                        0.0000 &   5.6193 r
+  ipcam_fpga/Ucore_sw_top/isp_top/jpgclk_mcu_rst_n (isp_top)
+                                                        0.0000 &   5.6193 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/rst_n (jenc_hdr)
+                                                        0.0000 &   5.6193 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/_icc_place_opt_40/Z (BUFM2LM)
+                                                        0.1950 &   5.8143 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/_icc_place_opt_78/Z (BUFM18LM)
+                                                        0.1439 &   5.9581 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/_icc_place_opt_28/Z (BUFM48LM)
+                                                        0.1610 &   6.1192 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/jpeg_codec_hdr/rst_n_hfs_netlink_844 (jpeg_codec_hdr)
+                                                        0.0000 &   6.1192 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/jpeg_codec_hdr/jpeg_codec_ecs/reset_hfs_netlink_898 (jcodec)
+                                                        0.0000 &   6.1192 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/jpeg_codec_hdr/jpeg_codec_ecs/ctrl/reset (regctrl)
+                                                        0.0000 &   6.1192 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/jpeg_codec_hdr/jpeg_codec_ecs/ctrl/_clock_opt_psyn_icc_2/Z (INVM24LM)
+                                                        0.0376 &   6.1568 f
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/jpeg_codec_hdr/jpeg_codec_ecs/ctrl/_clock_opt_psyn_icc_1/Z (CKINVM48LM)
+                                                        0.0356 &   6.1923 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/jpeg_codec_hdr/jpeg_codec_ecs/ctrl/r4_reg_6_/RB (SDFQRM1LM)
+                                                        0.0011 &   6.1935 r
+  data arrival time                                                6.1935
+
+  clock RJPG_CLK (rise edge)                            5.5000     5.5000
+  clock network delay (propagated)                      1.2696     6.7696
+  clock reconvergence pessimism                         0.0334     6.8030
+  clock uncertainty                                    -0.2000     6.6030
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/jpeg_codec_hdr/jpeg_codec_ecs/ctrl/r4_reg_6_/CK (SDFQRM1LM)
+                                                                   6.6030 r
+  library recovery time                                 0.2382     6.8412
+  data required time                                               6.8412
+  ------------------------------------------------------------------------------
+  data required time                                               6.8412
+  data arrival time                                               -6.1935
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      0.6477
+
+
+1
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-max_paths 1
+Design : ipcam_asic
+Version: D-2010.06-SP3-4
+Date   : Mon Apr 22 09:58:44 2013
+****************************************
+
+
+  Startpoint: ipcam_fpga/Ucore_sw_top/sysctl/jpgclk_mcu_rst_n_s2_reg
+               (rising edge-triggered flip-flop clocked by RJPG_CLK')
+  Endpoint: ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/jpeg_codec_hdr/jpeg_codec_ecs/ctrl/r4_reg_6_
+               (removal check against rising-edge clock RJPG_CLK)
+  Path Group: **async_default**
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.0000
+  Min Clock Paths Derating Factor : 1.0000
+  Max Clock Paths Derating Factor : 1.0300
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock RJPG_CLK' (rise edge)                           2.7500     2.7500
+  clock network delay (propagated)                      1.1543     3.9043
+  ipcam_fpga/Ucore_sw_top/sysctl/jpgclk_mcu_rst_n_s2_reg/CK (SDFQRM1LM)
+                                                        0.0000     3.9043 r
+  ipcam_fpga/Ucore_sw_top/sysctl/jpgclk_mcu_rst_n_s2_reg/Q (SDFQRM1LM)
+                                                        0.3458 &   4.2500 r
+  ipcam_fpga/Ucore_sw_top/sysctl/_icc_place_opt_148/Z (BUFM10LM)
+                                                        0.3372 &   4.5873 r
+  ipcam_fpga/Ucore_sw_top/sysctl/dont_touch_mux_jpgclk_mcu_rst_n/A (STD_MUX2_59_uni_top)
+                                                        0.0000 *   4.5873 r
+  ipcam_fpga/Ucore_sw_top/sysctl/dont_touch_mux_jpgclk_mcu_rst_n/dont_touch_MUX2/Z (CKMUX2M2LM)
+                                                        0.4011 H   4.9883 r
+  ipcam_fpga/Ucore_sw_top/sysctl/dont_touch_mux_jpgclk_mcu_rst_n/O (STD_MUX2_59_uni_top)
+                                                        0.0000 &   4.9883 r
+  ipcam_fpga/Ucore_sw_top/sysctl/jpgclk_mcu_rst_n (sysctl)
+                                                        0.0000 &   4.9883 r
+  ipcam_fpga/Ucore_sw_top/isp_top/jpgclk_mcu_rst_n (isp_top)
+                                                        0.0000 &   4.9883 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/rst_n (jenc_hdr)
+                                                        0.0000 &   4.9883 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/_icc_place_opt_40/Z (BUFM2LM)
+                                                        0.1949 &   5.1833 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/_icc_place_opt_78/Z (BUFM18LM)
+                                                        0.1439 &   5.3272 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/_icc_place_opt_28/Z (BUFM48LM)
+                                                        0.1610 &   5.4882 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/jpeg_codec_hdr/rst_n_hfs_netlink_844 (jpeg_codec_hdr)
+                                                        0.0000 &   5.4882 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/jpeg_codec_hdr/jpeg_codec_ecs/reset_hfs_netlink_898 (jcodec)
+                                                        0.0000 &   5.4882 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/jpeg_codec_hdr/jpeg_codec_ecs/ctrl/reset (regctrl)
+                                                        0.0000 &   5.4882 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/jpeg_codec_hdr/jpeg_codec_ecs/ctrl/_clock_opt_psyn_icc_2/Z (INVM24LM)
+                                                        0.0376 &   5.5258 f
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/jpeg_codec_hdr/jpeg_codec_ecs/ctrl/_clock_opt_psyn_icc_1/Z (CKINVM48LM)
+                                                        0.0356 &   5.5614 r
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/jpeg_codec_hdr/jpeg_codec_ecs/ctrl/r4_reg_6_/RB (SDFQRM1LM)
+                                                        0.0011 &   5.5625 r
+  data arrival time                                                5.5625
+
+  clock RJPG_CLK (rise edge)                            0.0000     0.0000
+  clock network delay (propagated)                      1.3297     1.3297
+  clock reconvergence pessimism                        -0.0334     1.2962
+  clock uncertainty                                     0.2000     1.4962
+  ipcam_fpga/Ucore_sw_top/isp_top/Ujpeg_code/jpeg_codec_hdr/jpeg_codec_ecs/ctrl/r4_reg_6_/CK (SDFQRM1LM)
+                                                                   1.4962 r
+  library removal time                                  0.3025     1.7988
+  data required time                                               1.7988
+  ------------------------------------------------------------------------------
+  data required time                                               1.7988
+  data arrival time                                               -5.5625
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      3.7637
+
+
+1

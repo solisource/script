@@ -1,0 +1,142 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+Design : enc_dma_ahb_top
+Version: F-2011.06-SP3
+Date   : Fri Apr 19 15:20:46 2013
+****************************************
+
+Warning: There is 1 invalid end point for constrained paths. (UITE-416)
+
+  Startpoint: U_H264ENC_Unit_FME_FME_Ctrl_FSM_Decide_sub_decide_state_r_reg_0_
+               (rising edge-triggered flip-flop clocked by h264clk)
+  Endpoint: U_H264ENC_Unit_FME_FME_Ctrl_FSM_Engine_sel_center_ref0_r_reg
+               (rising edge-triggered flip-flop clocked by h264clk)
+  Path Group: h264clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock h264clk (rise edge)                             0.0000     0.0000
+  clock network delay (propagated)                      1.1383     1.1383
+  U_H264ENC_Unit_FME_FME_Ctrl_FSM_Decide_sub_decide_state_r_reg_0_/CK (SDFQRM8LP)
+                                                        0.0000     1.1383 r
+  U_H264ENC_Unit_FME_FME_Ctrl_FSM_Decide_sub_decide_state_r_reg_0_/Q (SDFQRM8LP)
+                                                        0.2607 &   1.3990 r
+  U116227/Z (INVM2LP)                                   0.0509 &   1.4500 f
+  U128994/Z (ND2B1M8LP)                                 0.0639 &   1.5138 r
+  _icc_place_opt_6095/Z (NR2B1M8LP)                     0.0369 &   1.5507 f
+  U109537/Z (OAI21M2LP)                                 0.1239 &   1.6746 r
+  U127968/Z (ND3M8LP)                                   0.0803 &   1.7549 f
+  _icc_place_opt_26101/Z (INVM1LP)                      0.0537 &   1.8086 r
+  _icc_place_opt_26100/Z (INVM2LP)                      0.0388 &   1.8474 f
+  _icc_place_opt_3168/Z (INVM4LP)                       0.0307 &   1.8781 r
+  _icc_place_opt_3167/Z (INVM4LP)                       0.0368 &   1.9149 f
+  U130172/Z (AOI21B01M4LP)                              0.0695 &   1.9844 r
+  U111091/Z (BUFM3LP)                                   0.2000 &   2.1844 r
+  U130898/Z (ND2M2LP) <-                                0.0669 &   2.2513 f
+  U128551/Z (OAI21M3LP) <-                              0.1626 &   2.4139 r
+  U128550/Z (OR2M2LP)                                   0.1922 &   2.6061 r
+  U128269/Z (NR2B1M2LP)                                 0.1976 &   2.8037 r
+  U128548/Z (INVM2LP)                                   0.0998 &   2.9035 f
+  U129514/Z (NR3M4LP)                                   0.1820 &   3.0855 r
+  U128013/Z (OR2M2LP)                                   0.2576 &   3.3431 r
+  U162492/Z (NR2M2LP)                                   0.1067 &   3.4498 f
+  U162491/Z (ND2M2LP)                                   0.1249 &   3.5747 r
+  U109293/Z (NR2M2LP) <-                                0.0661 &   3.6408 f
+  U122872/Z (BUFM4LP) <-                                0.1750 &   3.8159 f
+  U162339/Z (ND2M2LP) <-                                0.0961 &   3.9120 r
+  U162338/D (ND4M2LP) <-                                0.0001 &   3.9121 r
+  U162338/Z (ND4M2LP) <-                                0.1117 &   4.0238 f
+  U162334/Z (NR2M4LP) <-                                0.1713 &   4.1950 r
+  U162333/Z (ND4B1M8LP) <-                              0.1133 &   4.3083 f
+  U112686/Z (ND3B1M4LP) <-                              0.2087 &   4.5171 f
+  U111314/Z (INVM2LP)                                   0.1168 &   4.6339 r
+  U161942/Z (AOI22M2LP)                                 0.0829 &   4.7168 f
+  U161941/Z (ND4M2LP)                                   0.1041 &   4.8209 r
+  U161937/Z (MOAI22M2LP)                                0.1071 &   4.9280 f
+  U152136/Z (AOI211M8LP)                                0.2367 &   5.1648 r
+  U151670/Z (OAI21M8LP)                                 0.0841 &   5.2489 f
+  U_H264ENC_Unit_FME_FME_Ctrl_FSM_Engine_sel_center_ref0_r_reg/D (SDFRM2LP)
+                                                        0.0021 &   5.2510 f
+  data arrival time                                                5.2510
+
+  clock h264clk (rise edge)                             5.1800     5.1800
+  clock network delay (propagated)                      1.1053     6.2853
+  clock reconvergence pessimism                         0.0046     6.2899
+  clock uncertainty                                    -0.1000     6.1899
+  U_H264ENC_Unit_FME_FME_Ctrl_FSM_Engine_sel_center_ref0_r_reg/CK (SDFRM2LP)
+                                                                   6.1899 r
+  library setup time                                   -0.0804     6.1095
+  data required time                                               6.1095
+  ------------------------------------------------------------------------------
+  data required time                                               6.1095
+  data arrival time                                               -5.2510
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      0.8586
+
+
+1
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-max_paths 1
+Design : enc_dma_ahb_top
+Version: F-2011.06-SP3
+Date   : Fri Apr 19 15:20:56 2013
+****************************************
+
+Warning: There is 1 invalid end point for constrained paths. (UITE-416)
+
+  Startpoint: U_H264ENC_Unit_FME_FME_Ctrl_FSM_Decide_sub_decide_state_r_reg_0_
+               (rising edge-triggered flip-flop clocked by h264clk)
+  Endpoint: U_H264ENC_Unit_FME_FME_Core_Block_Cost_Ref0_Unit_fmvx_for_mc_pipeline_r_reg_7_
+               (rising edge-triggered flip-flop clocked by h264clk)
+  Path Group: h264clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock h264clk (rise edge)                             0.0000     0.0000
+  clock network delay (propagated)                      1.1260     1.1260
+  U_H264ENC_Unit_FME_FME_Ctrl_FSM_Decide_sub_decide_state_r_reg_0_/CK (SDFQRM8LP)
+                                                        0.0000     1.1260 r
+  U_H264ENC_Unit_FME_FME_Ctrl_FSM_Decide_sub_decide_state_r_reg_0_/Q (SDFQRM8LP)
+                                                        0.2294 &   1.3554 f
+  U132136/Z (ND2B1M2LP) <-                              0.1343 &   1.4897 f
+  U130171/Z (ND2B1M2LP) <-                              0.1971 &   1.6868 r
+  U130898/Z (ND2M2LP) <-                                0.0699 &   1.7568 f
+  U128551/Z (OAI21M3LP) <-                              0.1593 &   1.9161 r
+  U162499/Z (INVM2LP) <-                                0.0472 &   1.9633 f
+  U129513/Z (OR2M2LP) <-                                0.2217 &   2.1849 f
+  U109293/Z (NR2M2LP) <-                                0.0832 &   2.2681 r
+  U122872/Z (BUFM4LP) <-                                0.2029 &   2.4710 r
+  U162339/Z (ND2M2LP) <-                                0.0811 &   2.5521 f
+  U162338/D (ND4M2LP) <-                                0.0001 &   2.5522 f
+  U162338/Z (ND4M2LP) <-                                0.1210 &   2.6732 r
+  U162334/Z (NR2M4LP) <-                                0.1143 &   2.7874 f
+  U162333/Z (ND4B1M8LP) <-                              0.1053 &   2.8927 r
+  U112686/Z (ND3B1M4LP) <-                              0.1959 &   3.0886 r
+  U_H264ENC_Unit_FME_FME_Core_Block_Cost_Ref0_Unit_fmvx_for_mc_pipeline_r_reg_7_/D (SDFQRM1LP)
+                                                        0.0032 &   3.0919 r
+  data arrival time                                                3.0919
+
+  clock h264clk (rise edge)                             0.0000     0.0000
+  clock network delay (propagated)                      1.1422     1.1422
+  clock reconvergence pessimism                        -0.0046     1.1376
+  clock uncertainty                                     0.2000     1.3376
+  U_H264ENC_Unit_FME_FME_Core_Block_Cost_Ref0_Unit_fmvx_for_mc_pipeline_r_reg_7_/CK (SDFQRM1LP)
+                                                                   1.3376 r
+  library hold time                                    -0.0401     1.2975
+  data required time                                               1.2975
+  ------------------------------------------------------------------------------
+  data required time                                               1.2975
+  data arrival time                                               -3.0919
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      1.7944
+
+
+1

@@ -1,0 +1,135 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+Design : enc_dma_ahb_top
+Version: F-2011.06-SP3
+Date   : Wed Apr  3 16:22:49 2013
+****************************************
+
+
+  Startpoint: U_H264ENC_Unit_INTRA_Intra_Register_i4_mb_up_07_r_reg_7_
+               (rising edge-triggered flip-flop clocked by h264clk)
+  Endpoint: U_H264ENC_Unit_INTRA_Intra_Core_Intra_Pred_Luma_reg_pe3_r_reg_10_
+               (rising edge-triggered flip-flop clocked by h264clk')
+  Path Group: h264clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock h264clk (rise edge)                             0.0000     0.0000
+  clock network delay (propagated)                      1.1643     1.1643
+  U_H264ENC_Unit_INTRA_Intra_Register_i4_mb_up_07_r_reg_7_/CK (SDFQRM1LP)
+                                                        0.0000     1.1643 r
+  U_H264ENC_Unit_INTRA_Intra_Register_i4_mb_up_07_r_reg_7_/Q (SDFQRM1LP)
+                                                        0.2997 &   1.4640 f
+  U154962/Z (ND2M2LP)                                   0.0974 &   1.5613 r
+  U154961/Z (AOI21B01M4LP)                              0.1408 &   1.7021 r
+  _icc_place_opt_25872/Z (INVM3LP)                      0.0438 &   1.7459 f
+  _icc_place_opt_25873/Z (INVM6LP)                      0.0431 &   1.7890 r
+  _icc_place_opt_4867/Z (ND2M3LP)                       0.0499 &   1.8390 f
+  _icc_place_opt_4869/Z (INVM4LP)                       0.0567 &   1.8957 r
+  _icc_place_opt_4868/Z (ND2M12LP)                      0.0602 &   1.9559 f
+  U154273/Z (AOI22M2LP)                                 0.1586 &   2.1145 r
+  U154270/Z (ND4M4LP)                                   0.0901 &   2.2046 f
+  _icc_place_opt_6934/Z (INVM4LP)                       0.0732 &   2.2778 r
+  _icc_place_opt_6933/Z (ND3M16LP)                      0.0603 &   2.3380 f
+  _icc_place_opt_20311/Z (AO21M8LP)                     0.1816 &   2.5196 f
+  _icc_place_opt_20312/Z (NR2M16LP)                     0.0783 &   2.5979 r
+  _icc_place_opt_3548/Z (ND2M16LP)                      0.0441 &   2.6420 f
+  DP_OP_23993J1_284_4045_U206/S (ADFM2LP)               0.2702 &   2.9122 r
+  DP_OP_23993J1_284_4045_U205/S (ADFM2LP)               0.2479 &   3.1601 f
+  DP_OP_23993J1_284_4045_U122/Z (ND2M2LP)               0.0956 &   3.2557 r
+  DP_OP_23993J1_284_4045_U106/Z (OAI21M1LP)             0.0670 &   3.3226 f
+  _icc_place_opt_25793/Z (INVM2LP)                      0.0578 &   3.3804 r
+  _icc_place_opt_25794/Z (AN2M8LP)                      0.0900 &   3.4704 r
+  _icc_place_opt_5165/Z (ND2M12LP)                      0.0378 &   3.5082 f
+  DP_OP_23993J1_284_4045_U94/Z (AOI21M8LP)              0.0758 &   3.5840 r
+  _icc_place_opt_17157/Z (XNR2M2LP)                     0.1055 &   3.6896 r
+  _icc_place_opt_17158/Z (INVM4LP)                      0.0626 &   3.7521 f
+  U141650/Z (INVM1LP)                                   0.0564 &   3.8086 r
+  U128335/Z (MOAI22M2LP)                                0.0551 &   3.8636 f
+  U_H264ENC_Unit_INTRA_Intra_Core_Intra_Pred_Luma_reg_pe3_r_reg_10_/D (SDFQRM1LP)
+                                                        0.0001 &   3.8638 f
+  data arrival time                                                3.8638
+
+  clock h264clk' (rise edge)                            2.5900     2.5900
+  clock network delay (propagated)                      1.1071     3.6971
+  clock reconvergence pessimism                         0.0000     3.6971
+  clock uncertainty                                    -0.1000     3.5971
+  U_H264ENC_Unit_INTRA_Intra_Core_Intra_Pred_Luma_reg_pe3_r_reg_10_/CK (SDFQRM1LP)
+                                                                   3.5971 r
+  library setup time                                   -0.1572     3.4399
+  data required time                                               3.4399
+  ------------------------------------------------------------------------------
+  data required time                                               3.4399
+  data arrival time                                               -3.8638
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.4239
+
+
+1
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-max_paths 1
+Design : enc_dma_ahb_top
+Version: F-2011.06-SP3
+Date   : Wed Apr  3 16:22:59 2013
+****************************************
+
+
+  Startpoint: U_H264ENC_Unit_INTRA_Intra_Register_i4_mb_up_07_r_reg_7_
+               (rising edge-triggered flip-flop clocked by h264clk)
+  Endpoint: U_H264ENC_Unit_INTRA_Intra_Core_Intra_Pred_Luma_reg_pe3_r_reg_10_
+               (rising edge-triggered flip-flop clocked by h264clk')
+  Path Group: h264clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock h264clk (rise edge)                             5.1800     5.1800
+  clock network delay (propagated)                      1.1551     6.3351
+  U_H264ENC_Unit_INTRA_Intra_Register_i4_mb_up_07_r_reg_7_/CK (SDFQRM1LP)
+                                                        0.0000     6.3351 r
+  U_H264ENC_Unit_INTRA_Intra_Register_i4_mb_up_07_r_reg_7_/Q (SDFQRM1LP)
+                                                        0.3445 &   6.6797 r
+  U154962/Z (ND2M2LP)                                   0.0784 &   6.7580 f
+  _icc_place_opt_6004/Z (AOI21B01M4LP)                  0.1362 &   6.8942 f
+  U154956/Z (INVM10LP)                                  0.0565 &   6.9507 r
+  _icc_place_opt_3876/Z (NR2M12LP)                      0.0624 &   7.0131 f
+  U154906/Z (INVM14LP)                                  0.0531 &   7.0662 r
+  _icc_place_opt_20311/Z (AO21M8LP)                     0.1143 &   7.1805 r
+  _icc_place_opt_20312/Z (NR2M16LP)                     0.0500 &   7.2305 f
+  _icc_place_opt_3548/Z (ND2M16LP)                      0.0503 &   7.2807 r
+  DP_OP_23993J1_284_4045_U206/CO (ADFM2LP)              0.1358 &   7.4166 r
+  DP_OP_23993J1_284_4045_U203/CO (ADFM2LP)              0.1259 &   7.5425 r
+  DP_OP_23993J1_284_4045_U100/Z (ND2M2LP)               0.0590 &   7.6015 f
+  U125548/Z (INVM2LP)                                   0.0687 &   7.6703 r
+  DP_OP_23993J1_284_4045_U94/Z (AOI21M8LP)              0.0579 &   7.7282 f
+  _icc_place_opt_17157/Z (XNR2M2LP)                     0.0827 &   7.8108 r
+  _icc_place_opt_17158/Z (INVM4LP)                      0.0555 &   7.8663 f
+  U141650/Z (INVM1LP)                                   0.0541 &   7.9204 r
+  U128335/Z (MOAI22M2LP)                                0.0546 &   7.9750 f
+  U_H264ENC_Unit_INTRA_Intra_Core_Intra_Pred_Luma_reg_pe3_r_reg_10_/D (SDFQRM1LP)
+                                                        0.0001 &   7.9751 f
+  data arrival time                                                7.9751
+
+  clock h264clk' (rise edge)                            2.5900     2.5900
+  clock network delay (propagated)                      1.1153     3.7053
+  clock reconvergence pessimism                         0.0000     3.7053
+  clock uncertainty                                     0.2000     3.9053
+  U_H264ENC_Unit_INTRA_Intra_Core_Intra_Pred_Luma_reg_pe3_r_reg_10_/CK (SDFQRM1LP)
+                                                                   3.9053 r
+  library hold time                                    -0.0403     3.8651
+  data required time                                               3.8651
+  ------------------------------------------------------------------------------
+  data required time                                               3.8651
+  data arrival time                                               -7.9751
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      4.1101
+
+
+1

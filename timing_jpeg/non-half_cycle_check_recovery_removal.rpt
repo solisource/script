@@ -1,0 +1,114 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+Design : ipcam_asic
+Version: D-2010.06-SP3-4
+Date   : Wed Apr  3 12:27:43 2013
+****************************************
+
+
+  Startpoint: ipcam_fpga/Ucore_al_top/rcclk_rst_n_s2_reg
+               (rising edge-triggered flip-flop clocked by RRC_CLK)
+  Endpoint: ipcam_fpga/Ucore_al_top/Usysctl_al/pre_isolate_d1_reg
+               (recovery check against rising-edge clock RRC_CLK)
+  Path Group: **async_default**
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.0000
+  Min Clock Paths Derating Factor : 1.0000
+  Max Clock Paths Derating Factor : 1.0300
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock RRC_CLK (rise edge)                             0.0000     0.0000
+  clock network delay (propagated)                      0.5703     0.5703
+  ipcam_fpga/Ucore_al_top/rcclk_rst_n_s2_reg/CK (SDFQRM1LM)
+                                                        0.0000     0.5703 r
+  ipcam_fpga/Ucore_al_top/rcclk_rst_n_s2_reg/Q (SDFQRM1LM)
+                                                        0.3639 &   0.9342 r
+  ipcam_fpga/Ucore_al_top/dont_touch_mux_rcclk_rst_n/A (STD_MUX2_64_uni_top)
+                                                        0.0000 &   0.9342 r
+  ipcam_fpga/Ucore_al_top/dont_touch_mux_rcclk_rst_n/dont_touch_MUX2/Z (CKMUX2M2LM)
+                                                        0.5023 &   1.4365 r
+  ipcam_fpga/Ucore_al_top/dont_touch_mux_rcclk_rst_n/O (STD_MUX2_64_uni_top)
+                                                        0.0000 &   1.4365 r
+  ipcam_fpga/Ucore_al_top/Usysctl_al/rcclk_rst_n (sysctl_al)
+                                                        0.0000 &   1.4365 r
+  ipcam_fpga/Ucore_al_top/Usysctl_al/pre_isolate_d1_reg/RB (DFQRM2NM)
+                                                        0.0015 &   1.4380 r
+  data arrival time                                                1.4380
+
+  clock RRC_CLK (rise edge)                            44.0000    44.0000
+  clock network delay (propagated)                      0.5547    44.5547
+  clock reconvergence pessimism                         0.0066    44.5613
+  clock uncertainty                                    -0.2000    44.3613
+  ipcam_fpga/Ucore_al_top/Usysctl_al/pre_isolate_d1_reg/CK (DFQRM2NM)
+                                                                  44.3613 r
+  library recovery time                                 0.2303    44.5916
+  data required time                                              44.5916
+  ------------------------------------------------------------------------------
+  data required time                                              44.5916
+  data arrival time                                               -1.4380
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     43.1536
+
+
+1
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-max_paths 1
+Design : ipcam_asic
+Version: D-2010.06-SP3-4
+Date   : Wed Apr  3 12:28:01 2013
+****************************************
+
+
+  Startpoint: ipcam_fpga/Ucore_al_top/rcclk_rst_n_s2_reg
+               (rising edge-triggered flip-flop clocked by RRC_CLK)
+  Endpoint: ipcam_fpga/Ucore_al_top/Usysctl_al/pre_isolate_d1_reg
+               (removal check against rising-edge clock RRC_CLK)
+  Path Group: **async_default**
+  Path Type: min
+  Min Data Paths Derating Factor  : 1.0000
+  Min Clock Paths Derating Factor : 1.0000
+  Max Clock Paths Derating Factor : 1.0300
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock RRC_CLK (rise edge)                             0.0000     0.0000
+  clock network delay (propagated)                      0.5537     0.5537
+  ipcam_fpga/Ucore_al_top/rcclk_rst_n_s2_reg/CK (SDFQRM1LM)
+                                                        0.0000     0.5537 r
+  ipcam_fpga/Ucore_al_top/rcclk_rst_n_s2_reg/Q (SDFQRM1LM)
+                                                        0.3639 &   0.9176 r
+  ipcam_fpga/Ucore_al_top/dont_touch_mux_rcclk_rst_n/A (STD_MUX2_64_uni_top)
+                                                        0.0000 &   0.9176 r
+  ipcam_fpga/Ucore_al_top/dont_touch_mux_rcclk_rst_n/dont_touch_MUX2/Z (CKMUX2M2LM)
+                                                        0.5023 &   1.4199 r
+  ipcam_fpga/Ucore_al_top/dont_touch_mux_rcclk_rst_n/O (STD_MUX2_64_uni_top)
+                                                        0.0000 &   1.4199 r
+  ipcam_fpga/Ucore_al_top/Usysctl_al/rcclk_rst_n (sysctl_al)
+                                                        0.0000 &   1.4199 r
+  ipcam_fpga/Ucore_al_top/Usysctl_al/pre_isolate_d1_reg/RB (DFQRM2NM)
+                                                        0.0015 &   1.4214 r
+  data arrival time                                                1.4214
+
+  clock RRC_CLK (rise edge)                             0.0000     0.0000
+  clock network delay (propagated)                      0.5714     0.5714
+  clock reconvergence pessimism                        -0.0066     0.5648
+  clock uncertainty                                     0.2000     0.7648
+  ipcam_fpga/Ucore_al_top/Usysctl_al/pre_isolate_d1_reg/CK (DFQRM2NM)
+                                                                   0.7648 r
+  library removal time                                  0.7179     1.4827
+  data required time                                               1.4827
+  ------------------------------------------------------------------------------
+  data required time                                               1.4827
+  data arrival time                                               -1.4214
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                -0.0613
+
+
+1
