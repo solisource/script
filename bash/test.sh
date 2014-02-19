@@ -1,18 +1,15 @@
 #! /bin/bash
 
+#####################################################################
+# bash study
 #Bash 设置变量的时候都带"="包括一般的变量和环境变量
 	#变量名=变量值
 	#export 环境变量名=环境变量值
 	#export 环境变量名=环境变量值1:环境变量值2 (通常定义PATH变量这么用)
 #####################################################################
-#source a bash script
-#source ./time.sh or ../time.sh
 
-#echo "JIN" >>jin.v
-#jin='date'
-#echo $jin>>jin.v
-
-#Bash shell for loop
+##--------------------------------------------------------------------------------------------------
+##Bash shell for loop
 for test in jin da shi xie shu yan jin zi wei #list for var
 do
 	echo "test --> $test"
@@ -26,113 +23,294 @@ for test in ./test.sh ./jin.v; do #list for var
 	cat $test
 done
 
-#Define a var for csh set a=b or a="b"
-#Define a var for bash
+## define a array and for loop
+arr=("a" "b" "c")  
+echo "arr is (${arr[@]})"  
+echo "item in array:"  
+
+for i in ${arr[@]}  
+do 
+	echo "$i"  
+done
+
+## 脚本输入的所有参数 $*
+echo "参数,/$*表示脚本输入的所有参数："  
+for i in $*
+do  
+	echo $i  
+done
+
+for thing in $@
+do
+    echo you typed $thing.
+done
+
+# 指定批处理文件 * 去匹配
+echo '处理文件 /proc/sys/net/ipv4/conf/*/accept_redirects：'  
+for File in /proc/sys/net/ipv4/conf/*/accept_redirects
+do
+	echo $File  
+done
+
+# 直接指定循环内容
+echo "直接指定循环内容"  
+for i in f1 f2 f3 
+do
+	echo $i  
+done
+
+# 用 C语言的方法去循环
+echo "C 语法for 循环:"  
+#for (( i=0; i<10; ++i))
+for (( i=0; i<10; i++))
+do  
+	echo $i  
+done
+
+for x in ../* mystuff/*
+do
+	echo $x is a silly file
+done
+
+for x in /var/log/*
+do
+    echo `basename $x` is a file living in /var/log
+done
+
+##--------------------------------------------------------------------------------------------------
+## While and Until
+#while [ condition ]
+#do
+#   command1
+#   command2
+#   command3
+#done
+x=1
+while [ $x -le 5 ]
+do
+	echo "Welcome $x times"
+	x=$(( $x + 1 )) #算术运算
+done
+
+counter=5
+factorial=1
+while [ $counter -gt 0 ]
+do
+   factorial=$(( $factorial * $counter )) #算术运算
+   counter=$(( $counter - 1 )) #算术运算
+done
+echo $factorial
+
+x=1
+while [ $x -le 30 ]
+do
+  echo "Welcome $x times"
+  #x=$(( ( ($x + 1) * 3 ) / 2 - 1 ))
+  x=$(( ($x + 1) * 3 / 2 - 1 ))
+done
+
+##格式一
+#while 条件;
+#do
+#    语句
+#done
+
+##格式二 死循环
+#while true
+#do
+#    语句
+#done
+
+##格式三 死循环
+#while :
+#do
+#    语句
+#done
+
+##格式四 死循环
+#while [ 1 ]
+#do
+#    语句
+#done
+
+##格式五 死循环
+#while [ 0 ]
+#do
+#    语句
+#done
+
+##--------------------------------------------------------------------------------------------------
+## Case
+jin=gz
+#case "${x##*.}" in
+case $jin in
+      gz)
+            echo "gz"
+            ;;
+      bz2)
+            echo "bz2"
+            ;;
+      *)
+            echo "Archive format not recognized."
+            exit
+            ;;
+esac
+
+jin=jin
+case $jin in
+	jin)
+		echo jin++
+		;;
+	xie)
+		echo xie
+		;;
+	zi)
+		echo zi
+		;;
+	wei)
+		echo wei
+		;;
+	*)
+		echo non
+		;;
+esac
+
+##--------------------------------------------------------------------------------------------------
+## 循环控制命令 break, continue, exit
+#break [n] 强制退出循环体
+#continue [n] 退出本次循环继续下一次循环
+#exit [n] 退出脚本
+
+##--------------------------------------------------------------------------------------------------
+##条件运算 if
+jin=jin
+xie=jinfe
+
+if [ $jin != $xie ] ; then
+	echo "!="
+else
+	echo "="
+fi
+
+if [ $jin != $xie ] ; then
+	echo "!="
+else
+	echo "="
+fi
+
+jin=2
+xie=2
+if [ $jin -lt $xie ] ;then
+	echo jin
+elif [ $jin -ge $xie ] ;then
+	echo NO
+fi
+
+jin=0
+xie=0
+if [ $jin -gt $xie ] ;then
+	echo "JIN>xie"
+elif [ $jin -eq $xie ] ;then
+	echo "JIN=xie"
+elif [ $jin -ne $xie ] ;then
+	echo "jin!=xie"
+else
+	echo non++++
+fi
+
+##--------------------------------------------------------------------------------------------------
+##sleep [n] 暂停脚本执行
+sleep 1
+
+##--------------------------------------------------------------------------------------------------
+##获取随即数字
+#echo $RANDOM
+jin=`echo $RANDOM`
+echo $jin
+xie=$RANDOM
+echo $xie
+
+##--------------------------------------------------------------------------------------------------
+## bash设置环境变量
+#export JIN=XIE #设置环境变量
+
+##--------------------------------------------------------------------------------------------------
+##1, 变量定义
+jin=xie
+xie=jin
+jin="xie"
+xie="jin"
 a="jin da shi "
 jin1=xie
 jin2='date'
 jin3=`date`
-echo 
-echo $jin1
-echo $jin2
-echo $jin3
+arr=("a" "b" "c") #定义数组
 
-jin=1
-xie=2
+##--------------------------------------------------------------------------------------------------
+##2,变量比较（字符串比较，数字比较）
+#字符串比较运算符 （请注意引号的使用，这是防止空格扰乱代码的好方法）
+#-z string	        如果 string长度为零，则为真	        [ -z "$myvar" ]
+#-n string	        如果 string长度非零，则为真	        [ -n "$myvar" ]
+#string1 = string2	如果 string1与 string2相同，则为真	[ "$myvar" = "one two three" ]
+#string1 != string2	如果 string1与 string2不同，则为真	[ "$myvar" != "one two three" ]
 
-#整数比较运算符
-#let or ((expr)) 不需要空格，并且支持算术表达式
-#expr=>  > >= < <= == !=
+#算术比较运算符
+#num1 -eq num2	等于	    [ 3 -eq $mynum ] 
+#num1 -ne num2	不等于	    [ 3 -ne $mynum ] 
+#num1 -lt num2	小于	    [ 3 -lt $mynum ] 
+#num1 -le num2	小于或等于	[ 3 -le $mynum ] 
+#num1 -gt num2	大于	    [ 3 -gt $mynum ] 
+#num1 -ge num2	大于或等于	[ 3 -ge $mynum ] 
 
-#[ expr ] 需要空格，且不支持算术表达式
-#expr=>  -gt -ge -le -le -eq -ne
+##--------------------------------------------------------------------------------------------------
+##3，文件测试运算符号
+#-d file file存在并且是一个目录
+#-e file file存在
+#-f file file存在并且是普通文件
+#-r file file有读权限
+#-s file file存在且不为空
+#-w file file写权限
+#-x file file有执行权限
+#-a FILE ] 如果 FILE 存在则为真。
+#[ -b FILE ] 如果 FILE 存在且是一个块特殊文件则为真。
+#[ -c FILE ] 如果 FILE 存在且是一个字特殊文件则为真。
+#[ -d FILE ] 如果 FILE 存在且是一个目录则为真。
+#[ -e FILE ] 如果 FILE 存在则为真。
+#[ -f FILE ] 如果 FILE 存在且是一个普通文件则为真。
+#[ -g FILE ] 如果 FILE 存在且已经设置了SGID则为真。
+#[ -h FILE ] 如果 FILE 存在且是一个符号连接则为真。
+#[ -k FILE ] 如果 FILE 存在且已经设置了粘制位则为真。
+#[ -p FILE ] 如果 FILE 存在且是一个名字管道(F如果O)则为真。
+#[ -r FILE ] 如果 FILE 存在且是可读的则为真。
+#[ -s FILE ] 如果 FILE 存在且大小不为0则为真。
+#[ -t FD ] 如果文件描述符 FD 打开且指向一个终端则为真。
+#[ -u FILE ] 如果 FILE 存在且设置了SUID (set user ID)则为真。
+#[ -w FILE ] 如果 FILE 如果 FILE 存在且是可写的则为真。
+#[ -x FILE ] 如果 FILE 存在且是可执行的则为真。
+#[ -O FILE ] 如果 FILE 存在且属有效用户ID则为真。
+#[ -G FILE ] 如果 FILE 存在且属有效用户组则为真。
+#[ -L FILE ] 如果 FILE 存在且是一个符号连接则为真。
+#[ -N FILE ] 如果 FILE 存在 and has been mod如果ied since it was last read则为真。
+#[ -S FILE ] 如果 FILE 存在且是一个套接字则为真。
 
-#例子的用法如下：
+##--------------------------------------------------------------------------------------------------
+##4.1，命令行变量
+#$0 $1 $2 ...
+#./jin.sh jin xie da ---> $0=./jin.sh $1=jin $2=xie $3=da ...
 
-if (($jin > $xie)) ;then
-	echo "jin>xie"
-else
-	echo "jin<xie"
-fi
+##4.2，命令行变量(数组)
+#./jin.sh jin xie da ---> $0=./jin.sh $1=jin $2=xie $3=da ...
+#$# = 3 ：命令行输入的所有变量的数量
+#$* = jin xie da : 输入的所有变量(数组)
+#$@ = jin xie da : 输入的所有变量(数组)
 
-if let "$jin > $xie" ;then
-	echo "jin>xie"
-else
-	echo "jin<xie"
-fi
+##--------------------------------------------------------------------------------------------------
+##5，逻辑运算符
+#&& ==> [[ && ]]
+#|| ==> [[ || ]]
+#-a 双方都成立（and） 逻辑表达式 –a 逻辑表达式 // [ A -a B ] 相当于 && = [[ && ]]
+#-o 单方成立（or） 逻辑表达式 –o 逻辑表达式    // [ A -o B ] 相当于 || = [[ || ]]
 
-if [ $jin -gt $xie ] ;then
-	echo "jin>xie"
-else
-	echo "jin<xie"
-fi
-
-if (($jin==$xie)) ;then
-	echo "jin==xie"
-else
-	echo "jin!=xie"
-fi
-
-if let "$jin==$xie" ;then
-	echo "jin==xie"
-else
-	echo "jin!=xie"
-fi
-
-if (($jin!=$xie)) ;then
-	echo "jin!=xie"
-else
-	echo "jin==xie"
-fi
-
-if let "$jin!=$xie" ;then
-	echo "jin!=xie"
-else
-	echo "jin==xie"
-fi
-
-#字符串测试运算符
-#[ -z str] 判断是否为零
-#[ -n str] 判断是否为非零
-#[ str = str ]
-#[ str != str ]
-
-jin=jin
-xie=jinfe
-if [ -z $jin ] ; then
-	echo "is zero"
-else
-	echo "non zero"
-fi
-
-if [ -n $jin ] ; then
-	echo "non zero"
-else
-	echo "is zero"
-fi
-
-if [ $jin = $xie ] ; then
-	echo "="
-else
-	echo "!="
-fi
-
-if [ $jin != $xie ] ; then
-	echo "!="
-else
-	echo "="
-fi
-
-if [ $jin != $xie ] ; then
-	echo "!="
-else
-	echo "="
-fi
-
-#逻辑运算符
-#[ A -a B ] 相当于&& = [[ && ]]
-#[ A -o B ] 相当于|| = [[ || ]]
-# ! str           =  ! 
 jin=1
 xie=2
 wei=3
@@ -160,71 +338,18 @@ else
 	echo "+++"
 fi
 
-if ! [ $jin -gt $xie ] ;then
-	echo JIN
+##--------------------------------------------------------------------------------------------------
+##6，变量是否存在
+jin=1
+if [ $jin ] 
+then
+	echo "Var jin = $jin"
 else
-	echo XIE
+	echo "non var jin exist"
 fi
 
-#case 
-jin=jin
-case $jin in
-	jin)
-		echo jin++
-		;;
-	xie)
-		echo xie
-		;;
-	zi)
-		echo zi
-		;;
-	wei)
-		echo wei
-		;;
-	*)
-		echo non
-		;;
-esac
-
-#if
-jin=0
-xie=0
-
-if [ $jin -gt $xie ] ;then
-	echo "JIN>xie"
-elif [ $jin -eq $xie ] ;then
-	echo "JIN=xie"
-elif [ $jin -ne $xie ] ;then
-	echo "jin!=xie"
-else
-	echo non++++
-fi
-
-###################################################################################
-#while
-#while 
-#do
-#	echo
-#done
-
-###################################################################################
-#unitil
-#until
-#do
-#	echo
-#done
-
-###################################################################################
-#break [n] 强制退出循环体
-#continue [n] 退出本次循环继续下一次循环
-#exit [n] 退出脚本
-
-###################################################################################
-#sleep [n] 暂停脚本执行
-sleep 1 
-
-###################################################################################
-#shift [n] 
+##--------------------------------------------------------------------------------------------------
+##shift [n]，mv location var n bit
 #shift可以用来向左移动[位置参数]-->$@(数组) or $*(字符串)。./test.sh 1 2 3 4 5 6 7 8 #位置参数是指命令后的参数
 #Shell脚本的名字 $0 
 #第一个参数      $1 | ${1}  数组$@的第1个分量
@@ -233,58 +358,19 @@ sleep 1
 #所有参数 $@ 或 $*
 #参数个数 $# #位置参数的个数
 #shift默认是shift 1
+
 #以下边为例：
-	#until [ -z "$3" ]  # Until all parameters used up
-	#do
-	#  echo "$@"
-	#  echo "$*"
-	#  echo "$0"
-	#  echo ${11} #2位数字的变量名要用{}
-	#  echo "------------------------------->$#"
-	#  shift 2
-	#  echo $#
-	#done
-
-###################################################################################
-#获取随即数字
-#echo $RANDOM
-jin=`echo $RANDOM`
-echo $jin
-xie=$RANDOM
-echo $xie
-
-###################################################################################
-#sh -x script_name
-#export JIN=XIE #设置环境变量
-
-###################################################################################
-#While define
-#while [ condition ]
-#do
-#   command1
-#   command2
-#   command3
-#done
-x=1
-while [ $x -le 30 ]
+until [ -z "$*" ]  # Until all parameters used up
 do
-  echo "Welcome $x times"
-  #x=$(( ( ($x + 1) * 3 ) / 2 - 1 ))
-  x=$(( ($x + 1) * 3 / 2 - 1 ))
+  echo "$@"
+  echo "$*"
+  echo "$0"
+  shift 1
+  echo $#
 done
 
-counter=$1
-factorial=2
-echo $counter
-while [ $counter -gt 0 ]
-do
-   factorial=$(( $factorial * $counter ))
-   counter=$(( $counter - 1 ))
-done
-
-echo $factorial
-###################################################################################
-#Bash 处理文本文件 line by line A,B,C
+##--------------------------------------------------------------------------------------------------
+##Bash 处理文本文件 line by line A,B,C
 #A file read
 FILE=$2
 # read $FILE using the file descriptors
@@ -329,21 +415,18 @@ done<jin.v
 				#写内容到文件中
 				#echo $filecontent >> test.txt
 
-###################################################################################
-#Alias for bashrc and cshrc
+
+##--------------------------------------------------------------------------------------------------
+##Alias for bashrc and cshrc
 alias qgit='/c/Program\ Files/QGit/qgit.exe'
 #alias qgit "/c/Program\ Files/QGit/qgit.exe" #Cshrc
 
-###################################################################################
-#Define a var for bashrc and cshrc
+##Define a var for bashrc and cshrc
 alias qgit='/c/Program\ Files/QGit/qgit.exe'
 export LESSCHARSET=utf-8
-JIN="xie"
-JIN=xie
-#set jin = xie #Cshrc
 
-###################################################################################
-#从标准输入中读入输入
+##--------------------------------------------------------------------------------------------------
+##从标准输入中读入输入
 #read [option] A B C D #A,B,C,D为变量名称，输入以空格分开一次存入变量中
 #A Way
 read NAME1 NAME2 NAME3  #从标准输入中读入输入,此方式是以空格分开存入变量中
@@ -361,8 +444,8 @@ echo ${NAME[0]}
 echo ${NAME[1]}
 echo ${NAME[2]}
 
-###################################################################################
-#Bash 定义子函数 ,函数必须先定义后调用
+##--------------------------------------------------------------------------------------------------
+##Bash 定义子函数 ,函数必须先定义后调用
 #function_name () or function function_name #如果不加function关键字则要加() (他们两个必须有一个出现)
 #{
 #command
@@ -383,50 +466,5 @@ JIN_test () {
 	#var=$(echo $var | sed 's/./\\&/g')
 	echo "$JIN Google"
 }
-
-JIN_test JIN XIE_SET #JIN-->$1 XIE-->$2 #调用定义的函数
-###################################################################################
-until [ -z "$1" ]  # Until all parameters used up
-do
-  echo "$@"
-  echo "$*"
-  echo "$0"
-  echo ${11} #2位数字的变量名要用{}
-  echo "------------------------------->$#"
-  shift 2
-  echo $#
-done
-
-	echo $? #返回值0代表成功
-
-###################################################################################
-#运算符	描述	示例
-#文件比较运算符
-# -e filename	如果 filename存在，则为真	[ -e /var/log/syslog ]
-# -d filename	如果 filename为目录，则为真	[ -d /tmp/mydir ]
-# -f filename	如果 filename为常规文件，则为真	[ -f /usr/bin/grep ]
-# -L filename	如果 filename为符号链接，则为真	[ -L /usr/bin/grep ]
-# -r filename	如果 filename可读，则为真	[ -r /var/log/syslog ]
-# -w filename	如果 filename可写，则为真	[ -w /var/mytmp.txt ]
-# -x filename	如果 filename可执行，则为真	[ -L /usr/bin/grep ]
-# filename1 -nt filename2	如果 filename1比 filename2新，则为真	[ /tmp/install/etc/services -nt /etc/services ]
-# filename1 -ot filename2	如果 filename1比 filename2旧，则为真	[ /boot/bzImage -ot arch/i386/boot/bzImage ]
-
-#字符串比较运算符 （请注意引号的使用，这是防止空格扰乱代码的好方法）
-# -z string	如果 string长度为零，则为真	[ -z "$myvar" ]
-# -n string	如果 string长度非零，则为真	[ -n "$myvar" ]
-# string1 = string2	如果 string1与 string2相同，则为真	[ "$myvar" = "one two three" ]
-# string1 != string2	如果 string1与 string2不同，则为真	[ "$myvar" != "one two three" ]
-
-#算术比较运算符
-#num1 -eq num2	等于	    [ 3 -eq $mynum ]
-#num1 -ne num2	不等于	    [ 3 -ne $mynum ]
-#num1 -lt num2	小于	    [ 3 -lt $mynum ]
-#num1 -le num2	小于或等于	[ 3 -le $mynum ]
-#num1 -gt num2	大于	    [ 3 -gt $mynum ]
-#num1 -ge num2	大于或等于	[ 3 -ge $mynum ]
-
-###################################################################################
-#正则表达式
 
 exit
