@@ -1,5 +1,6 @@
 ##############ignore define for project by dsjin 030262010
 *~
+.gitignore\~
 *.log
 *.log_*
 *_log_*
