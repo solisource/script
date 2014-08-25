@@ -33,5 +33,8 @@ sda7   8:7    0  93.1G  0 part /data
 sda8   8:8    0  89.2G  0 part /personal
 sr0   11:0    1  1024M  0 rom
 
-6, 
+6, sha1sum, sha1hmac, md5sum 
+
+7,
+
 	
