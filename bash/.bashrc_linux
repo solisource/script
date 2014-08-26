@@ -1,6 +1,10 @@
 # .bashrc
 
-################################################################################
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
 #Alias define
 #User specific aliases and functions
 alias al='alias'
@@ -17,13 +21,8 @@ alias python='python3.2'
 alias python='python2.7' 
 alias findrm='find . -name "*.lock" | xargs rm -rf' #8.1.7 linux Redhat 4.8 pass
 alias date='date +%y%m%d%H%M'
-################################################################################
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
-################################################################################
 
+## Define colors
 txtblk=$'\[\e[0;30m\]' # Black - Regular
 txtred=$'\[\e[0;31m\]' # Red
 txtgrn=$'\[\e[0;32m\]' # Green
@@ -61,7 +60,7 @@ bakcyn=$'\[\e[46m\]'   # Cyan
 bakwht=$'\[\e[47m\]'   # White
 
 txtrst=$'\[\e[0m\]'    # Text Reset
-################################################################################
+
 #Bash allows these prompt strings to be customized by inserting a
 #number of backslash-escaped special characters that are
 #decoded as follows:
@@ -99,9 +98,9 @@ txtrst=$'\[\e[0m\]'    # Text Reset
 #  \[         begin a sequence of non-printing characters, which could be used
 #             to embed a terminal control sequence into the prompt
 #  \]         end a sequence of non-printing characters
-################################################################################
-#Seup PS for promp
 
+
+## Seup PS for promp
 #PS1="[\u@\h:\w]" 
 #PS1="\[\e[31;5m\][\u@\H:\w]#"
 case `id -u` in
@@ -154,13 +153,11 @@ get_vcs_branch () {
     branch='non-vcs-rep'
 }
 
-#Bash script PROMPT_COMMAND before PS1
+## Bash script PROMPT_COMMAND before PS1
 PROMPT_COMMAND="get_vcs_branch; $PROMPT_COMMAND"
-
 PS1="$bldpur\u$bldcyn@$bldgrn\h$bldcyn:$bldblu\w$bldcyn->$txtrst($bldpur\$branch$txtrst$txtrst)\$"
 
-################################################################################
-#for ecad Tools setting configuration
+## for ecad Tools setting configuration
 alias xyzhu='/ecad/IC5141_lnx86/IC5141/tools/bin/lmgrd -c /ecad/IC5141_lnx86/IC5141/share/license/license.dat'
 alias xyzhu2='/ecad/syn/linux/linux/bin/lmgrd  -c /home/syn/license.dat'
 alias xyzhu1='/ecad/calibre/ixl_cal_2004.4_8.14/bin/lmgrd  -c /home/calibre/ixl_cal_2004.4_8.14/license/lic_cal.dat'
@@ -246,41 +243,38 @@ alias  lic_read='$SICANVAS/bin/lmreread  -c $SC_LICENSE_FILE'
 #limit coredumpsize 0k
 #limit descriptors unlimited
 #limit filesize unlimited
-################################################################################
-#Xilinx ISE 11.1
 
-#source /ecad/ise11.1/settings64.sh
-##source /ecad/ise11.1/settings32.sh
-##source /ecad/ise11.1/settings64.csh
-##source /ecad/ise11.1/settings32.csh
-#
-#source /ecad/ise11.1/common/settings64.sh
-##source /ecad/ise11.1/common/settings32.sh
-##source /ecad/ise11.1/common/settings64.csh
-##source /ecad/ise11.1/common/settings32.csh
-#
-#source /ecad/ise11.1/ISE/settings64.sh  #for sh bash
-##source /ecad/ise11.1/ISE/settings32.sh  #for sh bash
-##source /ecad/ise11.1/ISE/settings64.csh  #for csh tcsh
-##source /ecad/ise11.1/ISE/settings32.csh  #for csh tcsh
-#
-#source /ecad/ise11.1/PlanAhead/settings64.sh
-##source /ecad/ise11.1/PlanAhead/settings32.sh
-##source /ecad/ise11.1/PlanAhead/settings64.csh
-##source /ecad/ise11.1/PlanAhead/settings32.csh
-#
-#source /ecad/ise11.1/EDK/settings64.sh
-##source /ecad/ise11.1/EDK/settings64.csh
-#
-#source /ecad/ise11.1/DSP_Tools/settings64.sh
-##source /ecad/ise11.1/DSP_Tools/settings64.csh
-#
-#source /ecad/ise11.1/ChipScope/settings64.sh
-##source /ecad/ise11.1/ChipScope/settings32.sh
-##source /ecad/ise11.1/ChipScope/settings64.csh
-##source /ecad/ise11.1/ChipScope/settings32.csh
-################################################################################
+#####################
+## Xilinx ISE 11.1 ##
+#####################
+source /ecad/ise11.1/settings64.sh
+#source /ecad/ise11.1/settings32.sh
+#source /ecad/ise11.1/settings64.csh
+#source /ecad/ise11.1/settings32.csh
 
-#source ~/jin.bashrc
+source /ecad/ise11.1/common/settings64.sh
+#source /ecad/ise11.1/common/settings32.sh
+#source /ecad/ise11.1/common/settings64.csh
+#source /ecad/ise11.1/common/settings32.csh
 
+source /ecad/ise11.1/ISE/settings64.sh  #for sh bash
+#source /ecad/ise11.1/ISE/settings32.sh  #for sh bash
+#source /ecad/ise11.1/ISE/settings64.csh  #for csh tcsh
+#source /ecad/ise11.1/ISE/settings32.csh  #for csh tcsh
+
+source /ecad/ise11.1/PlanAhead/settings64.sh
+#source /ecad/ise11.1/PlanAhead/settings32.sh
+#source /ecad/ise11.1/PlanAhead/settings64.csh
+#source /ecad/ise11.1/PlanAhead/settings32.csh
+
+source /ecad/ise11.1/EDK/settings64.sh
+#source /ecad/ise11.1/EDK/settings64.csh
+
+source /ecad/ise11.1/DSP_Tools/settings64.sh
+#source /ecad/ise11.1/DSP_Tools/settings64.csh
+
+source /ecad/ise11.1/ChipScope/settings64.sh
+#source /ecad/ise11.1/ChipScope/settings32.sh
+#source /ecad/ise11.1/ChipScope/settings64.csh
+#source /ecad/ise11.1/ChipScope/settings32.csh
 
