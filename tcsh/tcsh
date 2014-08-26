@@ -1,0 +1,25 @@
+
+alias a 'alias'
+a cd 'cd \!*;set prompt="`hostname`:`pwd`>"'
+a h history
+a rm rm -i
+a cp cp -i
+a mv mv -i
+a ls 'ls -sF'
+a ll 'ls -lasF|more'
+a la 'ls -aF'
+a lm 'ls -lasf|more'
+a lam 'ls -a|more'
+a sc 'source ~/.cshrc'
+a rm 'rm -f'
+a date 'date +%y%m%d%H%M'
+a findlock 'find -name "*.cdslck" -exec rm {} \;'
+a findlck 'find . -name "*.lock" | xargs \rm -rf'
+a findlayout 'find . -type f -name "layout.cd%" | xargs \rm -rf'
+a g 'gvim -p'
+
+umask 022
+source ~/get_vcs_branch_tcsh
+set prompt="%{\e[31m%}`hostname`%{\e[0m%}:%{\e[35m%}`pwd`%{\e[0m%}->{%{\e[33m%}$branch%{\e[0m%}}"
+alias cd 'cd \!*;source ~/get_vcs_branch_tcsh;set prompt="%{\e[31m%}`hostname`%{\e[0m%}:%{\e[35m%}`pwd`%{\e[0m%}->{%{\e[33m%}$branch%{\e[0m%}}"'
+

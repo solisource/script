@@ -1,0 +1,24 @@
+#!/bin/tcsh
+
+set dir=`pwd`
+set branch="non-vcs-rep"
+while ("$dir" != "")
+	if (-ef $dir/.git/HEAD) then
+		set branch=`cat $dir/.git/HEAD | sed -e "s/ref: refs\/heads\///"`
+		set branch="Git.branch->$branch"
+		break
+	endif
+	if (-ef $dir/.hg/requires) then
+		set branch="Hg.branch->empty"
+		if (-ef $dir/.hg/undo.branch) then
+			set branch=`cat $dir/.hg/undo.branch`
+			set branch="Hg.branch->$branch"
+		endif
+		if (-ef $dir/.hg/branch) then
+			set branch=`cat $dir/.hg/branch`
+			set branch="Hg.branch->$branch"
+		endif
+		break
+	endif
+	set dir=`echo $dir | perl -i -p -e "s/\/[\w-\.]+\n//"`
+end
