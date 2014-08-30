@@ -1,0 +1,23 @@
+#! /bin/bash
+
+#Alias define
+#User specific aliases and functions
+alias al='alias'
+alias rm='rm -f'
+alias cp='cp -f'
+alias mv='mv -f'
+alias g='gvim -p'
+alias ls='ls -sF --color=auto'
+alias ll='ls -lrF --color=auto'
+alias la='ls -lraF --color=auto'
+alias readx='xpdf'
+alias read='acroread' #8.1.7 linux Redhat 4.8 pass
+alias python='python3.2' 
+alias python='python2.7' 
+alias so='source'
+alias sb='source ~/.bashrc'
+alias sc='source ~/.cshrc'
+alias findrm='find . -name "*.lock" | xargs rm -rf' #8.1.7 linux Redhat 4.8 pass
+alias date='date +%y%m%d%H%M'
+alias h='history'
+

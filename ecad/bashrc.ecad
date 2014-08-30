@@ -1,0 +1,14 @@
+#!/bin/bash
+
+## Set ic5141 config
+  source /ecad/cadence/IC5141_lnx86.bashrc
+
+## Set calibre 2011 config x86|64 and start licence
+  ## Source config bashrc
+  source /ecad/mentor/ixl_cal_2011.2_34.26.bashrc
+  #source /ecad/mentor/x86_cal_2011.2_34.26.bashrc
+  ## Start lic auto --> move to /etc/rc.local
+  #lmlim1 > /ecad/mentor/.lic.log
+  #lmlim2 >> /ecad/mentor/.lic.log
+
+## Set synopsys ...
