@@ -136,6 +136,6 @@ esac
 PROMPT_COMMAND="get_vcs_branch; $PROMPT_COMMAND"
 case `id -u` in
   0) export PS1="$bldpur\u$bldcyn@$bldgrn\h$bldcyn:$bldblu\w$bldcyn->$txtrst($bldpur\$branch$txtrst$txtrst)\$";;
-  *) export PS1="$bldpur\u$bldcyn@$bldgrn\h$bldcyn:$bldblu\w$bldcyn->$txtrst($bldpur\$branch$txtrst$txtrst)\>";;
+  *) export PS1="$bldpur\u$bldcyn@$bldgrn\h$bldcyn:$bldblu\w$bldcyn->$txtrst($bldpur\$branch$txtrst$txtrst)>";;
 esac
 

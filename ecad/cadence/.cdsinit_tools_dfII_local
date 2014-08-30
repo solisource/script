@@ -1,0 +1,8 @@
+;setSkillPath("/ecad/mentor/x86_cal_2011.2_34.26/shared/pkgs/icv/tools/queryskl")
+;load("calibre.skl")
+setSkillPath("/ecad/mentor/ixl_cal_2011.2_34.26/shared/pkgs/icv/tools/queryskl")
+load("calibre.skl")
+;setSkillPath("/ecad/mentor/ixl_cal_2012.1_19.13/shared/pkgs/icv/tools/queryskl")
+;load("calibre.skl")
+;setSkillPath("/ecad/mentor/ixl_cal_2013.2_35.25/shared/pkgs/icv/tools/queryskl")
+;load("calibre.skl")
