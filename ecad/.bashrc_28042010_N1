@@ -1,0 +1,78 @@
+# .bashrc
+
+# User specific aliases and functions
+alias al='alias'
+alias rm='rm -f'
+alias cp='cp -f'
+alias mv='mv -f'
+
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+#export PROMPT_COMMAND='pwd'
+
+# set prompt: ``username@hostname:/directory $ ''
+PS1="[\u@\h:\w] " 
+#case `id -u` in
+#      0) PS1="${PS1}# ";;
+#      *) PS1="${PS1}$ ";;
+#esac
+################################################################################
+#for ecad Tools setting configuration
+alias xyzhu='/ecad/IC5141_lnx86/IC5141/tools/bin/lmgrd -c /ecad/IC5141_lnx86/IC5141/share/license/license.dat'
+alias xyzhu2='/ecad/syn/linux/linux/bin/lmgrd  -c /home/syn/license.dat'
+alias xyzhu1='/ecad/calibre/ixl_cal_2004.4_8.14/bin/lmgrd  -c /home/calibre/ixl_cal_2004.4_8.14/license/lic_cal.dat'
+################################################################################
+
+##########Cadence setup#########################################################
+#cadence IC5141 Config
+export CDS_ROOT=/ecad/IC5141_lnx86/IC5141
+export CDS_LIC_FILE=5280@localhost
+export LM_LICENSE_FILE=$CDS_ROOT/share/license/license.dat
+export CDS_Netlisting_Mode=Analog
+export PATH=$CDS_ROOT/tools/spectre/bin:$CDS_ROOT/tools/bin:$CDS_ROOT/tools/dfII/bin:$PATH
+export LD_LIBRARY_PATH=$CDS_ROOT/tools/lib:$CDS_ROOT/tools/dfII/lib:$LD_LIBRARY_PATH
+##########Cadence setup#########################################################
+#cadence LDV Config
+export LDV=/ecad/LDV50
+export ver_install=$LDV/tools/bin/verilog
+export PATH=$LDV/tools/verilog/bin:$LDV/tools/bin:$LDV/tools/dfII/bin:$LDV/tools/simvision/bin:$PATH
+export LD_LIBRARY_PATH=$LDV/tools/dfII/lib:$LDV/tools/verilog/lib:$LDV/tools/lib:$LD_LIBRARY_PATH
+##########Cadence setup#########################################################
+
+##########Calibre setting config################################################
+export MGC_HOME=/ecad/calibre/ixl_cal_2004.4_8.14
+export MGLS_HOME=$MGC_HOME/pkgs/mgls
+export LM_LICENSE_FILE=$MGC_HOME/license/lic_cal.dat
+export PATH=$MGC_HOME/bin:$PATH
+##########Calibre setting config################################################
+
+##########synopsys setting config###############################################
+export LM_LICENSE_FILE=27000@localhost:1717@localhost
+export SYNOPSYS=/ecad/syn/linux/syn
+export PATH=$SYNOPSYS/bin:$PATH
+export PATH=/ecad/pt/linux/syn/bin:$PATH
+export PATH=/ecad/astro/bin/IA.32:$PATH
+export PATH=/ecad/formality/linux/fm/bin:$PATH
+export PATH=/usr/local/SOC/bin:$PATH
+##########synopsys setting config###############################################
+export LD_ASSUME_KERNEL=2.4.1
+
+##########cadence allegro15.5 config############################################
+# Cadence PSD15.5 environment icq 111290069
+export _POSIX2_VERSION=199209
+# set up spb15.5 environment
+export CDS_INST_DIR=/ecad/SPB155_lnx86
+export CDS_LIC_FILE=$CDS_INST_DIR/share/cadence.license
+export CDS_DIR=$CDS_INST_DIR
+export CONCEPT_INST_DIR=$CDS_DIR
+export CDS_SITE=$CDS_DIR/share/local/
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONCEPT_INST_DIR/tools/lib:/lib
+#export LD_LIBRARY_PATH=$CONCEPT_INST_DIR/tools/lib:/lib:/lib64
+export LD_LIBRARY_PATH=/lib:$CONCEPT_INST_DIR/tools/lib:$LD_LIBRARY_PATH
+export CDSDOC_PROJECT=$CDS_INST_DIR/doc
+export PATH=$CONCEPT_INST_DIR/tools/jre/bin:$CONCEPT_INST_DIR/tools/bin:$CONCEPT_INST_DIR/tools/pcb/bin:$CONCEPT_INST_DIR/tools/fet/bin:$PATH
+##########cadence allegro15.5 config############################################
