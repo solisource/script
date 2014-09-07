@@ -35,6 +35,14 @@ sr0   11:0    1  1024M  0 rom
 
 6, sha1sum, sha1hmac, md5sum 
 
-7,
+7, cat /etc/hosts ## hostname
+8, hostname ## hostname
+9, cat /etc/rc.local ## start system auto script bash
+10, cat /etc/fstab ## auto mount disk
+11, cat /etc/inittab  ## Start level
+12, /sbin/mount
+13, /sbin/fdisk -l
+14, /sbin/fdisk /dev/sdb  ## fenqu
+15, mkfs -t ext3 /dev/sdb1 
 
 	

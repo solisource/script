@@ -1,0 +1,7 @@
+1,
+	.bashrc* ## ~ 
+2,
+	/ecad/bashrc.alias ## alias
+	/ecad/bashrc.ecad ## ecad config bash
+3,
+	rc.local ## auto start license server mach restart!

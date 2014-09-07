@@ -1,0 +1,6 @@
+## config cadence ic5141
+1,
+	\cp -rf .cdsinit ~
+	\cp -rf .cdsenv ~
+2,
+	\cp -rf .cdsinit_tools_dfII_local  /ecad/cadence/IC5141_lnx86/tools/dfII/local/
