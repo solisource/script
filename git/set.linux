@@ -1,0 +1,5 @@
+#! /bin/bash
+
+cp .gitconfig_linux ~/.gitconfig
+cp .gitignore ~/.gitignore
+

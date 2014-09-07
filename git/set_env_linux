@@ -1,9 +1,0 @@
-#! /bin/bash
-
-pwd_=`pwd`
-#cp bash_profile_linux ~/.bashrc
-echo "source $pwd_/bash_profile_linux" >> ~/.bashrc
-cp .gitconfig_linux ~/.gitconfig
-cp .gitignore ~/.gitignore
-
-

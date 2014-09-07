@@ -10,5 +10,4 @@ set output-meta on
 set convert-meta off
 export LESSCHARSET=iso8859
 #############################################################
-cd /f/house
 
