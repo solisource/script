@@ -7,6 +7,12 @@
 touch /var/lock/subsys/local
 
 ## Start mentor calibre lic auto
-/ecad/mentor/ixl_cal_2011.2_34.26/bin/lmgrd -c /ecad/mentor/ixl_cal_2011.2_34.26/lic/license.dat > /ecad/mentor/.lic.log
-/ecad/mentor/ixl_cal_2011.2_34.26/bin/lmstat -c /ecad/mentor/ixl_cal_2011.2_34.26/lic/license.dat >> /ecad/mentor/.lic.log
+#rm /ecad/mentor/.lic.log
+#/ecad/mentor/ixl_cal_2011.2_34.26/bin/lmgrd -c /ecad/mentor/ixl_cal_2011.2_34.26/lic/license.dat > /ecad/mentor/.lic.log
+#/ecad/mentor/ixl_cal_2011.2_34.26/bin/lmstat -c /ecad/mentor/ixl_cal_2011.2_34.26/lic/license.dat >> /ecad/mentor/.lic.log
+
+## Start synopsys calibre lic auto
+rm /ecad/synopsys/.lic.log
+/ecad/synopsys/scl_v10.9.3/linux/bin/lmgrd -c /ecad/synopsys/lic/synopsys.dat > /ecad/synopsys/lic/.lic.log
+/ecad/synopsys/scl_v10.9.3/linux/bin/lmstat -c /ecad/synopsys/lic/synopsys.dat >> /ecad/synopsys/lic/.lic.log
 
