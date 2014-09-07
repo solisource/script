@@ -7,11 +7,14 @@
   ## Source config bashrc
   #source /ecad/mentor/x86_cal_2011.2_34.26.bashrc
   #source /ecad/mentor/ixl_cal_2011.2_34.26.bashrc
-  #source /ecad/mentor/ixl_cal_2012.1_19.13.bashrc
-  source /ecad/mentor/ixl_cal_2013.2_35.25.bashrc
+  source /ecad/mentor/ixl_cal_2012.1_19.13.bashrc
+  #source /ecad/mentor/ixl_cal_2013.2_35.25.bashrc
 
   ## Start lic auto --> move to /etc/rc.local
-  #lmlim1 > /ecad/mentor/.lic.log
-  #lmlim2 >> /ecad/mentor/.lic.log
+  #lmlim1
+  #lmlim
 
 ## Set synopsys ...
+  ## Start synopsys lic alias  
+  source /ecad/synopsys/synopsys.bashrc
+
