@@ -4,12 +4,9 @@
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
-if [ -f /ecad/bashrc.alias ]; then
-	. /ecad/bashrc.alias
-fi
-if [ -f /ecad/bashrc.ecad ]; then
-	. /ecad/bashrc.ecad
-fi
+
+source /ecad/bashrc.alias
+source /ecad/bashrc.ecad
 
 ## Define colors
 txtblk=$'\[\e[0;30m\]' # Black - Regular
