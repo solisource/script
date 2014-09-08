@@ -1,7 +1,0 @@
-#! /bin/bash
-
-pwd_=`pwd`
-echo "source $pwd_/.bashrc_win" >> ~/.bashrc
-cp .gitconfig_win ~/.gitconfig
-cp .gitignore ~/.gitignore
-
