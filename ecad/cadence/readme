@@ -1,8 +1,0 @@
-## config cadence ic5141
-1,
-	\cp -rf IC5141_lnx86.cdsinit ~/.cdsinit
-	\cp -rf IC5141_lnx86.cdsenv ~/.cdsenv
-2,
-	\cp -rf IC5141_lnx86.cdsinit.calibre  /ecad/cadence/IC5141_lnx86/tools/dfII/local/.cdsinit
-3,
-	IC5141_lnx86.bashrc ## config bash

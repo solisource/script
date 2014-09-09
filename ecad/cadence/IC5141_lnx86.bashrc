@@ -5,7 +5,7 @@
 ##############################################################################
 
 ## LD Number
-export LD_ASSUME_KERNEL=2.4.1
+#export LD_ASSUME_KERNEL=2.4.1
 
 ## Cadence IC5141_lnx86 Config
 export CDS_ROOT=/ecad/cadence/IC5141_lnx86
