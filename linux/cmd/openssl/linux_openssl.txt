@@ -1,0 +1,15 @@
+	
+
+1、下载openssl源代码包
+
+2、解压缩进入目录，修改apps/openssl.c，加入
+
+    #define _LARGEFILE_SOURCE   //for LFS support
+
+    #define _FILE_OFFSET_BITS 64 //for LFS support
+
+3、编译二进制包，问题FIX
+
+
+
+注：多次遇到不支持2G文件问题，此方法屡试不爽。欧了欧了！

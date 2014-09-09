@@ -1,0 +1,39 @@
+ISO
+--------------------------------------------------------------------------------------
+ISO文件一般以iso为扩展名，是复制光盘上全部信息而形成的镜像文件，其文件格式为iso9660。
+
+许多Linux操作系统的安装包都是以ISO文件的形式发布的。
+在得到相应的ISO文件后，可以将其内容烧录到光盘上。
+这样做出来的光盘与购买的安装光盘基本上是相同的。
+用这个光盘启动计算机，就可以安装Linux操作系统了。
+本章所讨论的是硬盘安装法，是不需要烧录光盘的。但我们需要读取ISO文件中的信息。
+--------------------------------------------------------------------------------------
+Linux下操作ISO文件
+
+在Linux下，以root身份执行以下格式的命令就可以从/path目录中读到xxx.iso这个文件中的内容。
+mount point -->/path
+ISO file -->xxx.iso
+
+mount -t iso9660 -o loop xxx.iso /path
+mount            -o loop xxx.iso /path
+
+如果想制作ISO文件，把光盘放到光驱中，
+然后执行如下的拷贝命令就可以把光盘上的内容拷贝到一个ISO文件中去。
+
+From cdrom
+     A,#dd if=/dev/cdrom of=/home/sunky/mydisk.iso
+     B,#cp /dev/cdrom /home/sunky/mydisk.iso
+     C,#mkisofs -r -o /home/sunky/mydisk.iso /dev/cdrom
+
+From dir or file
+     A,#mkisofs -r -J -V mydisk -o /home/sunky/mydisk.iso /home/sunky/mydir
+     B,#mkisofs -r -J -R -V mydisk -o /home/sunky/mydisk.iso /home/sunky/mydir
+     C,#mkisofs -r -o /home/sunky/mydisk.iso /home/sunky/mydir
+
+--------------------------------------------------------------------------------------
+Loop device
+
+在Linux中，有一种特殊的块设备叫loop device,
+这种loop device设备是通过影射操作系统上的正常的文件而形成的虚拟块设备。因为这种设备的存在，
+就为我们提供了一种创建一个存在于其他文件中的虚拟文件系统的机制
+

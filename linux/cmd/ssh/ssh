@@ -1,0 +1,130 @@
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+SSH登录的几种方法
+上篇中介绍Expect方式自动SSH登陆，本篇将讲解另二种方式。
+
+1.SSH密钥认证方式
+例：A.B两Linux服务器，假如ip分别为192.168.1.2/3；用户皆root，现实现从A无需密码登陆B。
+登陆A，运行：
+
+#ssh-keygen -t rsa (在本地生成了公钥和私钥,可连续回车，不设置密码)
+   //此命令在用户目录的.ssh/下生成公钥和私钥：id_rsa.pub id_rsa
+#cat /root/.ssh/id_rsa.pub | ssh root@192.168.1.3 "cat >>/root/.ssh/authorized_keys"
+   //注：此步需要输入B的root用户密码并确认B上root目录下存在.ssh文件夹
+#ssh root@192.168.1.3 此时无须输入密码即可登陆成功。
+   //此方式产生的公钥密钥可以指定不同的名称，使用时亦可指定用哪对公钥密钥。如下：
+# ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): /root/.ssh/id_rsa_192.168.1.3
+
+在A用ssh命令的 -i 参数指定本地密钥, 并登录:
+# ssh -i /root/.ssh/id_rsa_192.168.1.3 root@192.168.1.3
+# scp -i /root/.ssh/id_rsa_192.168.1.3 filename root@192.168.1.3:/root/
+ 
+2.SSH/SCP通道
+例：服务器A.B.C 从A可以ssh到B，从B可以ssh到C，但是A不能直接ssh到C 密码分别为PWDA/B/C
+利用ssh通道技术从A直接传输文件到C
+登陆A：
+#ssh -L2345:C:22 root@B 此步需输入B的root口令
+  注：此命令在本机2345端口建立了一个通道,需root用户权限。
+打开一个新的console进入A，键入：
+#scp -P2345 ssh_test.txt root@localhost:此步需输入C的root口令
+  注意命令后的":"号。文件ssh_test.txt则通过A.B间通道传至C。
+ 
+此二种方法也是工作中常用到的...无论哪种方法都经过SSH加密处理...
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+一、配置/etc/ssh/sshd_config文件
+
+(1)、修改禁止root用户直接登录
+将PermitRootLoginPermitRootLogin参数"yes"修改为"no"
+
+(2)、设置基于密钥登录方式
+
+将#AuthorizedKeysFile .ssh/authorized_keys的#注释去掉，
+用于设置用户公钥文件存储位置，系统默认位置在用户目录下的.ssh/authorized_keys
+
+(3)、取消密码验证方式
+
+将#PasswordAuthentication yes 的#去掉，并将"yes"改成"no"
+
+系统默认使用基于密码的验证方式，现改为基于密钥的验证方式，从而提高了系统的安全性。
+
+二、密钥制作的方法：
+
+密钥生成有2种方法，1,是通过命令行方式实现；2,是通过SecureCRT生成；这讲第一种方法。
+
+(1)、生成密钥 
+
+假设我们为普通用户forever生成KEY，执行下面的命令：
+
+# su –l forever
+
+# ssh-keygen -t rsa 
+
+Generating public/private rsa key pair. 
+Enter file in which to save the key (/home/forever/.ssh/id_rsa): //密钥保存的路径 
+Created directory '/home/forever/.ssh'. //注意:.ssh目录为隐藏目录
+Enter passphrase (empty for no passphrase): //输入密钥密码,在此我设为123456
+Enter same passphrase again: 
+Your identification has been saved in /home/forever/.ssh/id_rsa. //私钥密码保存径 
+Your public key has been saved in /home/forever/.ssh/id_rsa.pub. //公钥密码保存路径 
+The key fingerprint is: 
+f1:80:a6:95:5d:43:1b:96:21:e2:f1:8c:7b:ca:95:e8 forever@bjf 密码指纹
+
+(2)、重命名公钥 
+
+进入/home/forever/目录下的.ssh目录，.ssh为隐藏目录
+# cd /home/forever/.ssh
+# mv id_rsa.pub authorized_keys //将其名修改为/etc/ssh/sshd_config配置的AuthorizedKeysFile文件名相同
+
+(3)、客户端配置并登录
+
+将forever的私有密钥文件id_rsa下载到本地。步骤如下：
+
+1、在SecureCRT建立连新connect，选择连接协议为ssh1；输入远程LINUX的IP地址和ssh监听端口(默认22);
+2、设置认证方式(Authentication)->RSA，注意只选择此种方式。
+3、选择"Use session indentity"，并选择下载的密钥文件;
+
+配置完毕后，可使用foerver用户登录。
+
+-----------------------------------------------------------------------------
+自动ssh登录的几种方法
+1. 自动ssh/scp方法==
+
+A为本地主机(即用于控制其他主机的机器) ;
+B为远程主机(即被控制的机器Server), 假如ip为192.168.60.110;
+A和B的系统都是Linux
+
+在A上运行命令:
+# ssh-keygen -t rsa (连续三次回车,即在本地生成了公钥和私钥,不设置密码)
+# ssh root@192.168.60.110 "mkdir .ssh" (需要输入密码)
+# scp ~/.ssh/id_rsa.pub root@192.168.60.110:.ssh/id_rsa.pub (需要输入密码)
+
+在B上的命令:
+# touch /root/.ssh/authorized_keys (如果已经存在这个文件, 跳过这条)
+# cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys (将id_rsa.pub的内容追加到authorized_keys 中)
+
+回到A机器:
+# ssh root@192.168.60.110 (不需要密码, 登录成功) 
+
+2. 控制n个机器如上所述自动登录
+   //那就需要n对钥匙(密钥和公钥), ssh-keygen 命令可以随意更改钥匙对的名字, 比如:
+# ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): /root/.ssh/id_rsa_192.168.60.110
+
+   //这样私钥和公钥的名字分别就是: id_rsa_192.168.60.110和 id_rsa_192.168.60.110.pub;
+   //然后将 id_rsa_192.168.60.110.pub 文件的内容, 追加到sever的 ~/.ssh/authorized_keys文件中,
+   //最后, 在本地用ssh命令的 -i 参数指定本地密钥, 并登录:
+# ssh -i /root/.ssh/id_rsa_192.168.60.110 someone@192.168.60.110
+# scp -i /root/.ssh/id_rsa_192.168.60.110 filename someone@192.168.60.110:/home/someone
+
+   //在文件.bashrc中加下两行，每次做同样的操作就不用敲入这样长的命令了：
+alias sshcell='ssh -i /root/.ssh/id_rsa_192.168.60.110 someone@192.168.60.110'
+alias scpcell='scp -i /root/.ssh/id_rsa_192.168.60.110 filename someone@192.168.60.110:/home/someone'
+

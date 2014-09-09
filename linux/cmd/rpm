@@ -1,0 +1,40 @@
+Bit by Bit about linux (Redhat,Ubuntu,CentOS)
+***************************************************************************
+rpm -qa | grep * //view all rpm beed install in your systems
+
+-a  --all  //all rpm package information
+-q  --query //view information
+-i  //显示软件包的名称，描述，发行，大小，编译日期，安装日期，开发人员等信息。
+-l  //显示软件包包含的文件
+-s  //显示软件包包含的文件目前的状态，只有两种状态：normal和missing
+-d  //显示软件包中的文档（如man,info,README等）
+-c  //显示软件包中的配置文件，
+***************************************************************************
+rpm -ivh *.rpm //install rpm
+
+-i --install    //install rpm package
+-v --verbose   //view verbose information for log
+-h --hash
+***************************************************************************
+rpm -e foo  //uninstall rpm
+***************************************************************************
+//update rpm
+
+# rpm -Uvh foo-2.0-l.i386.rpm
+
+用户要注意的是：rpm会自动反安装相应软件包的老版本。
+如果老版本软件的配置文件通新版本的不兼容，
+rpm会自动将其保存为另外一个文件，用户会看到下面的信息：
+
+saving /etc/foo.conf as /etc/foo.conf.rpmsave
+
+这样用户就可以自己手工去更改相应的配置文件。
+另外如果用户要安装老版本的软件，用户就会看到下面的出错信息：
+
+# rpm -Uvh foo-1.0-l.i386.rpm
+foo packag foo-2.0-l(which is newer) is already installed
+error:foo-1.0-l.i386.rpm cannot be installed
+
+如果用户要抢行安装就使用-oldpackage参数。
+***************************************************************************
+rpm -i ftp.linuxsir.com/pub/linux/redhat/RPMS/foo-1.0-1.i386.rpm

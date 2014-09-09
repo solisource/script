@@ -1,0 +1,20 @@
+ifconfig //view network information
+ifconfig interface option
+
+ifconifg //view all net device information
+
+ifconfig eth0 address 192.168.1.99 netmask 255.255.255.0  //Set net interface umask and IPaddress
+ifconfig eth0 192.168.1.99 netmask 255.255.255.0 //Set net interface umask and IPaddress
+ifconfig eth0:0 192.168.1.98 netmask 255.255.255.0 // add a IP address for eth0 net device
+ifconfig eth0:1 192.168.1.97 netmask 255.255.255.0 // add a IP address for eth0 net device again
+ifconfig eth0:2 192.168.1.96 netmask 255.255.255.0 // add a IP address for eth0 net device again so on
+                           .
+                           .
+                           .
+ifconfig eth0 up //start eth0 net device
+ifconfig eth0 down //down eth0 net device
+
+ifconfig eth0 hw ether xx£ºxx£ºxx£ºxx£ºxx£ºxx //config net device MAC address(device type=hw)
+
+ifconfig eth0 add <addr>  //add a IPv6 IP address
+ifconfig eth0 del <addr>  //del a IPV6 IP address

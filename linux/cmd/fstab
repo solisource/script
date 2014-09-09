@@ -1,0 +1,48 @@
+LABEL=/1                /                       ext3    defaults        1 1
+none                    /dev/pts                devpts  gid=5,mode=620  0 0
+none                    /proc                   proc    defaults        0 0
+none                    /dev/shm                tmpfs   defaults        0 0
+/dev/hda3               swap                    swap    defaults        0 0
+/dev/cdrom              /mnt/cdrom              udf,iso9660 noauto,owner,kudzu,ro 0 0
+/dev/cdrom1             /mnt/cdrom1             udf,iso9660 noauto,owner,kudzu,ro 0 0
+
+/dev/hda1             /mnt/hda1                 vfat  auto,umask=0 0 0
+/dev/hda5             /mnt/hda5                 ext3  defaults 1 1 
+
+/dev/hdb5             /mnt/hdb5                 ntfs  auto,umask=0 0 0
+/dev/hdb6             /mnt/hdb6                 vfat  auto,umask=0 0 0
+
+
+--------------------------------------------------------
+#fs_spec fs_file fs_type fs_options fs_dump fs_pass
+
+#fstab中存放了与分区有关的重要信息，其中每一行为一个分区记录，每一行又可分为六个部份
+
+#1. 第一项是您想要mount的储存装置的实体位置，如hdb或如上例的/dev/hda7
+
+#2. 第二项就是您想要将其加入至哪个目录位置，如/home或如上例的/,这其实就是在安装时提示的挂入点
+
+#3. 第三项就是所谓的fs，其包含了以下格式：如ext、ext2、msdos、iso9660、nfs、swap等，或如上例的ext2，可以参见/prco/filesystems
+
+#4. 第四项mount时，所要设定的状态，如ro（只读）或如上例的defaults（包括了其它参数如rw、suid、exec、auto、nouser、async）
+
+#5. 第五项是提供dump功能，在系统dump时是否需要backup的标志位，其内定值是0。
+	#该选项被"dump"命令使用来检查一个文件系统应该以多快频率进行转储，若不需要转储就设置该字段为0
+
+#6. 第六项是设定此filesystem是否要在开机时做check的动作，除了root的filesystem其必要的check为1之外，其它皆可视需要设定，内定值是0。
+	#该字段被fsck命令用来决定在启动时需要被扫描的文件系统的顺序，
+    #根文件系统"/"对应该字段的值应该为1，其他文件系统应该为2。若该文件系统无需在启动时扫描则设置该字段为0
+--------------------------------------------------------
+
+LABEL=/ / ext3 defaults 1 1
+LABEL=/boot /boot ext3 defaults 1 2
+none /dev/pts devpts gid=5,mode=620 0 0
+none /proc proc defaults 0 0
+none /dev/shm tmpfs defaults 0 0
+/dev/hda11 swap swap defaults 0 0
+/dev/hda5 /mnt/d vfat suid,exec,dev,rw,iocharset=gb2312,umask=0 0 0
+/dev/hda6 /mnt/e vfat suid,exec,dev,rw,iocharset=gb2312,umask=0 0 0
+/dev/hda7 /mnt/f vfat suid,exec,dev,rw,iocharset=gb2312,umask=0 0 0
+/dev/hda8 /mnt/g vfat suid,exec,dev,rw,iocharset=gb2312,umask=0 0 0
+
+#其中iocharset可以设置成utf8 umask=0，任何用户都可以读windows的分区

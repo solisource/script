@@ -1,0 +1,6 @@
+uniq
+
+ -c  //prefix line number for dumplicate
+ -d  //print dumplicate line only
+ -u  //print unique line only
+ -i  //ignore case

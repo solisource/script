@@ -1,0 +1,31 @@
+
+Gvim command:
+    1,find a file and open it,Ref:usr_22.txt find file
+      cmd:gf
+      exit:bd
+    2,set path
+      cmd:set path+=./example (add a search location path)
+      cmd:set path   (view path var...)
+    3,
+      cmd:e (open a file)
+      cmd:sp (split and open a file)
+      cmd:tabnew (new a tab and open a file)
+    4,
+      cmd:edit ./** (tap key and select a file,open it and edit it)
+    5,
+      cmd:tab (key auto match a vim command )
+    6,
+"--------------------------------------------------------------------------------------------
+"ctrl+tab switch many file tab for Gvim,add follow command to your .vimrc
+"ctrl+tab可以在两个文件之间交替切换
+if has("gui_running")
+   let g:previous_tab = 1
+   autocmd TabLeave * let g:previous_tab = tabpagenr()
+   map <c-tab> :tabnext <c-r>=g:previous_tab<cr><cr>
+endif
+"--------------------------------------------------------------------------------------------
+ctrl + PgUp or 
+ctrl + PgDn 
+for switch different tab
+    7,
+      
