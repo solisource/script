@@ -1,0 +1,6 @@
+#a2ps 
+    Convert FILE(s) or standard input to PostScript
+	a2ps - format files for printing on a PostScript printer
+
+a2ps -1 *.txt -o *.ps
+ps2pdf *.ps

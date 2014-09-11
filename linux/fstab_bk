@@ -1,0 +1,14 @@
+LABEL=/1                /                       ext3    defaults        1 1
+none                    /dev/pts                devpts  gid=5,mode=620  0 0
+none                    /proc                   proc    defaults        0 0
+none                    /dev/shm                tmpfs   defaults        0 0
+/dev/hda3               swap                    swap    defaults        0 0
+/dev/cdrom              /mnt/cdrom              udf,iso9660 noauto,owner,kudzu,ro 0 0
+/dev/cdrom1             /mnt/cdrom1             udf,iso9660 noauto,owner,kudzu,ro 0 0
+
+/dev/hda1             /mnt/hda1                 vfat  auto,umask=0 0 0
+/dev/hda5             /mnt/hda5                 ext3  auto,umask=0 0 0
+
+/dev/hdb5             /mnt/hdb5                 ntfs  auto,umask=0 0 0
+/dev/hdb6             /mnt/hdb6                 vfat  auto,umask=0 0 0
+ 

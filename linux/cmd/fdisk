@@ -1,0 +1,97 @@
+fdisk
+-------------------------------------------------------------------------------------
+disk:
+		IDE          -->hd*x *=a-z x=0-9  *-->disk number x-->partition
+		SCSI SATA USB-->sd*x *=a-z x=0-9  *-->disk number x-->partition
+
+**********************************************************************
+* 主分区-->扩展分区-->(逻辑分区) //注意:要在扩展分区下面见了逻辑分区 *
+*                                                                    *
+*		硬盘总容量=主分区容量+扩展分区容量                           *
+*		扩展分区容量=所有逻辑分区容量                                *
+**********************************************************************
+
+file system (fs):
+		linux fs:
+					ext ext2 ext3 ext4(news)  //称为扩展文件系统
+					swap //swap文件系统用于Linux的交换分区
+		windows fs:
+					vfat //是Linux对DOS,Windows系统下的FAT(fat16 andFat32)文件系统的一个统称
+					ntfs //nt fs
+					msdos //msdos
+					dosfs //dosfs
+		network fs:
+					nfs  //即网络文件系统
+		ISO fs:
+					iso  //ISO9660文件系统
+
+
+--------------------------------------------------------------------------
+Step1,先创建分区(Partition) ---->fdisk  //m p n d t l q w
+Step2,然后再把分区格式化为不同的文件系统(File System) -->mkfs -t fs-type /dev/sda1
+      //mkfs -t ext =mkfs.ext
+      //mkfs -t ext2=mkfs.ext2
+      //mkfs -t ext3=mkfs.ext3
+
+	  //mkfs -t reiserfs=mkfs.reiserfs
+      //mkfs -t dosfs=mkfs.dosfs
+      //mkfs -t msdos=mkfs.msdos
+
+      //mkfs -t vfat=mkfs.vfat
+      //mkfs -t ntfs=mkfs.ntfs
+
+	  //mkswap  /dev/sda6 //注：创建此分区为swap 交换分区
+      //swapon  /dev/sda6 //注：加载交换分区 //swapon -s //view all swap partition
+	  //swapoff /dev/sda6 //注：关闭交换分区
+
+Step3,加载文件系统(mount)
+-------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------
+$fdisk -l
+$fdisk -l /dev/sda1
+
+Disk /dev/hda: 80.0 GB, 80026361856 bytes
+255 heads, 63 sectors/track, 9729 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+Device         Boot      Start    End      Blocks       Id              System
+/dev/hda1     *          1        765     6144831        7              HPFS/NTFS
+/dev/hda2              766        2805   16386300        c              W95 FAT32 (LBA)
+/dev/hda3             2806        9729   55617030        5              Extended
+/dev/hda5             2806        3825    8193118+       83             Linux
+/dev/hda6             3826        5100   10241406        83             Linux
+/dev/hda7             5101        5198     787153+       82             Linux swap / Solaris
+/dev/hda8             5199        6657   11719386        83             Linux
+/dev/hda9             6658        7751    8787523+       83             Linux
+/dev/hda10            7752        9729   15888253+       83             Linux
+
+1,Start --> End  //代表cylinders磁柱的意思
+2,ID //代表文件系统的类型
+3,System //=ID
+4,Blocks = （相应分区End数值 - 相应分区Start数值）x 单位cylinder（磁柱）的容量
+-------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------
+[root@localhost beinan]# fdisk /dev/sda
+Command (m for help):                         //在这里按m ，就会输出帮助；
+Command action
+   a   toggle a bootable flag
+   b   edit bsd disklabel
+   c   toggle the dos compatibility flag
+   d   delete a partition                     //注：这是删除一个分区的动作；
+   l   list known partition types             //注：l是列出分区类型，以供我们设置相应分区的类型；
+   m   print this menu                        //注：m 是列出帮助信息；
+   n   add a new partition                    //注：添加一个分区；
+   o   create a new empty DOS partition table 
+   p   print the partition table              //注：p列出分区表；
+   q   quit without saving changes            //注：不保存退出；
+   s   create a new empty Sun disklabel    
+   t   change a partition's system id         //注：t 改变分区类型；
+   u   change display/entry units  
+   v   verify the partition table
+   w   write table to disk and exit           //注：把分区表写入硬盘并退出；
+   x   extra functionality (experts only)     //注：扩展应用，专家功能；
+
+//m p d n t l q w
+
