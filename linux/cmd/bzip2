@@ -1,0 +1,84 @@
+------------------------------------------------------------------------------
+bzip2   [ -cdfkqstvzVL123456789 ] [ filenames ...  ]   //filenames=source file
+bunzip2 [ -fkvsVL ] [ filenames ...  ]
+bzcat   [ -s ] [ filenames ...  ]
+bzip2recover filename
+------------------------------------------------------------------------------
+OPTIONS
+       -c --stdout
+              Compress or decompress to standard output.
+       -d --decompress
+              Force  decompression.  bzip2, bunzip2 and bzcat are
+              really the same program,  and  the  decision  about
+              what  actions to take is done on the basis of which
+              name is used.  This flag overrides that  mechanism,
+              and forces bzip2 to decompress.
+       -z --compress
+              The   complement   to   -d:   forces   compression,
+              regardless of the invocation name.
+       -t --test
+              Check integrity of the specified file(s), but don't
+              decompress  them.   This  really  performs  a trial
+              decompression and throws away the result.
+       -f --force
+              Force overwrite of output files.   Normally,  bzip2
+              will  not  overwrite  existing  output files.  Also
+              forces bzip2 to break hard links to files, which it
+              otherwise wouldn't do.
+
+              bzip2  normally  declines to decompress files which
+              don't have the  correct  magic  header  bytes.   If
+              forced  (-f),  however,  it  will  pass  such files
+              through unmodified.  This is how GNU gzip  behaves.
+       -k --keep //keep source file (YES or NO)
+              Keep  (don't delete) input files during compression
+              or decompression.
+       -s --small
+              Reduce memory usage, for compression, decompression
+              and  testing.   Files  are  decompressed and tested
+              using a modified algorithm which only requires  2.5
+              bytes  per  block byte.  This means any file can be
+              decompressed in 2300k of memory,  albeit  at  about
+              half the normal speed.
+
+              During  compression,  -s  selects  a  block size of
+              200k, which limits memory use to  around  the  same
+              figure,  at  the expense of your compression ratio.
+              In short, if your  machine  is  low  on  memory  (8
+              megabytes  or  less),  use  -s for everything.  See
+              MEMORY MANAGEMENT below.
+       -q --quiet
+              Suppress non-essential warning messages.   Messages
+              pertaining  to I/O errors and other critical events
+              will not be suppressed.
+       -v --verbose
+              Verbose mode -- show the compression ratio for each
+              file  processed.   Further  -v's  increase the ver-
+              bosity level, spewing out lots of information which
+              is primarily of interest for diagnostic purposes.
+       -L --license -V --version
+              Display  the  software  version,  license terms and
+              conditions.
+       -1 (or --fast) to -9 (or --best)
+              Set the block size to 100 k, 200 k ..  900  k  when
+              compressing.   Has  no  effect  when decompressing.
+              See MEMORY MANAGEMENT below.  The --fast and --best
+              aliases  are  primarily for GNU gzip compatibility.
+              In particular, --fast doesn't make things  signifi-
+              cantly  faster.   And  --best  merely  selects  the
+              default behaviour.
+
+1,exam: for compress(bzip2 "-z" option don`t a must option)
+tar cvf rpt.tar ./rpt 
+
+bzip2     rpt.tar    --->rpt.tar.bz2(delete source file) 
+bzip2 -k  rpt.tar    --->rpt.tar.bz2(don't delete source file) 
+bzip2 -kv rpt.tar    --->rpt.tar.bz2(don't delete source file,view detail information) 
+bzip2 -kv -9 rpt.tar --->rpt.tar.bz2(don't delete source file,tar,view detail information,for best) 
+
+
+2,exam: for uncompress(bunzip2 "-d" option don`t a must option)
+
+bzip2   -kvd rpt.tar --->rpt.tar.bz2(don't delete source file,view detail information) 
+bunzip2 -kv  rpt.tar --->rpt.tar.bz2(don't delete source file,view detail information) 
+

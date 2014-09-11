@@ -1,0 +1,89 @@
+yum:
+------------------------------------------------------------------------------------------------------------------
+Redhat
+Fedora
+CentOs
+------------------------------------------------------------------------------------------------------------------
+yum 命令工具
+
+yum check-update              //检查可更新的软件包
+yum update                    //下载更新系统已安装的所有软件把
+yum upgrade                   //大规模的升级，不同于上面的是,连旧的淘汰的包也升级
+yum install <packages>        //安装指定的软件包
+yum update <packages>         //更新指定的软件包
+yum remove <packages>         //卸载指定的软件包
+yum groupinstall <packages>   //安装指定的软件组中的软件包
+yum groupupdate <packages>    //更新 ... ...
+yum groupremove <packages>    //卸载 ... ...
+yum grouplist                 //查看系统中已经安装的和可以用的软件组
+yum list                      //列出资源库中所有可以安装or 更新以及已经安装的的rpm包
+yum list <regex>              //列出资源库中与正则表达式匹配的可以安装或更新以及已经安装的rpm包
+yum list available            //列出资源库中所有可以安装的rpm包
+yum list available <regex>    //列出资源库中与正则表达式匹配的所有可以安装的rpm包
+yum list updates              //列出资源库中所有可以更新的rpm包
+yum list updates <regex>      //列出资源库中与正则表达式匹配的所有可以更新的rpm包
+yum list installed            //列出资源库中所有已经安装的rpm包
+yum list installed <regex>    //列出资源库中与正则表达式匹配的所有已经安装的rpm包
+yum list extras               //列出已经安装的但是不包含在资源库中的rpm包
+yum list extras <regex>       //列出与正则表达式匹配的已经安装的但是不包含在资源库中的rpm包
+yum list recent               //列出最近被添加到资源库中的软件包
+yum search <regex>            //检测所有可用的软件的名称、描述、概述和已列出的维护者，查找与正则表达式匹配的值
+yum provides <regex>          //检测软件包中包含的文件以及软件提供的功能，查找与正则表达式匹配的值
+yum clean headers             //清除缓存中的rpm头文件
+yum clean packages            //清除缓存中rpm包文件
+yum clean all                 //清除缓存中的rpm头文件和包文件
+yum deplist <packages>        //显示软件包的依赖信息
+------------------------------------------------------------------------------------------------------------------
+第一次使用yum或者yum资源库有更新时.yum会自动下载所有需要的headers 放置于/var/cache/yum
+还可以用yum info 命令列出包信息,yum info 可用的参数与 yum list的相同
+yum 命令还可以使用 -y 参数 回答命令运行时所提出的问题。
+------------------------------------------------------------------------------------------------------------------
+yum update 升级时 排除升级内核
+yum update 排除升级内核，方法有两个:
+1.修改yum的配置文件 vi /etc/yum.conf，在[main]的最后添加exclude=kernel*
+2.直接在yum的命令行执行如下的命令： yum –exclude=kernel* update
+------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
+配置YUM客户的更新源
+yum使用reposdir /etc/yum.repos.d 目录下的一系列.repo 文件列出可获取软件包仓库的镜像站点地址.
+
+yum 目录结构
+/etc
+  |--yum/
+  |   |--/pluginconf.d    
+  |   |--/yum-updatesd.conf/
+  |            |--downloadonly.conf
+  |            |--fastestmirror.conf
+  |            |--priorities.conf
+  |--yum.conf
+  |--yum.repos.d/
+        |--CentOS-Base.repo  //用于设置远程仓库
+		|--CentOS-Media.repo //用于设置本地仓库
+
+在.repo 文件中，配置语法是分段的，每一段配置一个软件仓库
+------------------------------------------------------------------------------------------------------------------
+设置网络更新源
+
+[base]  \\用于指定仓库
+name=CentOS-$releasever - Base \\用于指定易读的仓库名称
+mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os \\用于指定本仓库的URL
+#baseurl=http://mirror.centos.org/centos/$releasever/os/$basearch/
+#        =ftp://  \\用于指定远程ftp协议的愿
+#        =file://  \\ 用于本地镜像或NFS挂载文件系统
+#nabled=0/1  \\用于指定是否使用本地仓库，默认为1，即可用。
+gpgcheck=1  \\用于指定是否检查软件包的GPG签名
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5  \\用于指定GPG签名文件的URL
+------------------------------------------------------------------------------------------------------------------
+设置本地更新源
+
+为了使用 [c5-media]仓库，需将Centos-Base
+
+[c5-media]
+name=CentOS-$releasever - Media
+baseurl=file:///media/CentOS/
+        file:///media/cdrom/
+        file:///media/cdrecorder/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
+------------------------------------------------------------------------------------------------------------------

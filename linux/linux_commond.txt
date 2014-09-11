@@ -1,0 +1,570 @@
+windows 分区格式FAT32 FAT NTFS等
+linux   分区格式ext2、ext3 等 ----->支持的分区格式有ext、ext2、ext3、hpfs、iso9660、msdos、nfs、ntfs等，
+
+设备
+	
+在Linux中的代号
+IDE硬盘     /dev/hd[a-d]----------------------->具体分区名称为/dev/hd[1-]---------->分区分为主分区和扩展分区<--->划分分区--->格式化分区
+SCSI硬盘    /dev/sd[a-p]----------------------->具体分区名称为/dev/sd[1-]---------->分区分为主分区和扩展分区<--->划分分区--->格式化分区
+USB设备     /dev/sd[a-p](与SCSI硬盘一样)------->具体分区名称为/dev/sd[1-]---------->分区分为主分区和扩展分区<--->划分分区--->格式化分区
+SATA硬盘    /dev/sd[a-p](与SCSI硬盘一样)------->具体分区名称为/dev/sd[1-]---------->分区分为主分区和扩展分区<--->划分分区--->格式化分区
+
+CD/DVD-ROM  /dev/cdrom[1-]
+打印机      /dev/lp[0-2]
+磁带        /dev/ht0(IDE)或/dev/st0(SCSI)
+
+
+
+
+
+挂接命令(mount)
+
+　　首先，介绍一下挂接(mount)命令的使用方法，mount命令参数非常多，这里主要讲一下今天我们要用到的。
+
+　　命令格式：
+
+　　mount [-t vfstype] [-o options] device dir
+
+　　其中：
+
+　　1.-t vfstype 指定文件系统的类型，通常不必指定。mount 会自动选择正确的类型。常用类型有：
+
+　　光盘或光盘镜像：iso9660
+
+　　DOS fat16文件系统：msdos
+
+　　Windows 9x fat32文件系统：vfat
+
+　　Windows NT ntfs文件系统：ntfs
+
+　　Mount Windows文件网络共享：smbfs
+
+　　UNIX(LINUX) 文件网络共享：nfs
+
+　　2.-o options 主要用来描述设备或档案的挂接方式。常用的参数有：
+
+　　loop：用来把一个文件当成硬盘分区挂接上系统
+
+　　ro：采用只读方式挂接设备
+
+　　rw：采用读写方式挂接设备
+
+　　iocharset：指定访问文件系统所用字符集////"iocharset=gb2312"  utf8、iso8859-1（西欧）、iso8859-2（中欧）、gb2312（简体中文）、iso8859-8（希伯来文）
+
+　　3.device 要挂接(mount)的设备。
+
+　　4.dir设备在系统上的挂接点(mount point)。
+
+挂接光盘镜像文件
+
+　　由于近年来磁盘技术的巨大进步，新的电脑系统都配备了大容量的磁盘系统，在Windows下许多人都习惯把软件和资料做成光盘镜像文件通过虚拟光驱来使用。这样做有许多好处：一、减轻了光驱的磨损;二、现在硬盘容量巨大存放几十个光盘镜像文件不成问题，随用随调十分方便;三、硬盘的读取速度要远远高于光盘的读取速度，CPU占用率大大降低。其实linux系统下制作和使用光盘镜像比Windows系统更方便，不必借用任何第三方软件包。
+
+　　1、从光盘制作光盘镜像文件。把光盘放入光驱，执行下面的命令。
+
+　　　#cp /dev/cdrom /home/sunky/mydisk.iso 或
+
+　　　#dd if=/dev/cdrom of=/home/sunky/mydisk.iso
+
+　　　注：执行上面的任何一条命令都可把当前光驱里的光盘制作成光盘镜像文件/home/sunky/mydisk.iso
+
+　　2、把文件和目录制作成光盘镜像文件，执行下面的命令。
+
+　　　#mkisofs -r -J -V mydisk -o /home/sunky/mydisk.iso /home/sunky/ mydir
+
+　　　注：这条命令把/home/sunky/mydir目录下所有的目录和文件制作成光盘镜像文件/home/sunky/mydisk.iso，光盘卷标为：mydisk
+
+　　3、光盘镜像文件的挂接(mount)
+
+　　　#mkdir /mnt/vcdrom
+
+　　　注：建立一个目录用来作挂接点(mount point)
+
+　　　#mount -o loop -t iso9660 /home/sunky/mydisk.iso /mnt/vcdrom
+
+　　　注：使用/mnt/vcdrom就可以访问盘镜像文件mydisk.iso里的所有文件了
+
+
+挂接移动硬盘
+
+　　对linux系统而言，USB接口的移动硬盘是当作SCSI设备对待的。插入移动硬盘之前，应先用fdisk –l 或 more /proc/partitions查看系统的硬盘和硬盘分区情况。
+
+　　[root at pldyrouter /]# fdisk -l
+
+　　Disk /dev/sda: 73 dot 4 GB, 73407820800 bytes
+
+　　255 heads, 63 sectors/track, 8924 cylinders
+
+　　Units = cylinders of 16065 * 512 = 8225280 bytes
+
+　　Device Boot Start End Blocks Id System
+
+　　/dev/sda1 1 4 32098+ de Dell Utility
+
+　　/dev/sda2 * 5 2554 20482875 7 HPFS/NTFS
+
+　　/dev/sda3 2555 7904 42973875 83 Linux
+
+　　/dev/sda4 7905 8924 8193150 f Win95 Ext'd (LBA)
+
+　　/dev/sda5 7905 8924 8193118+ 82 Linux swap
+
+　　在这里可以清楚地看到系统有一块SCSI硬盘/dev/sda和它的四个磁盘分区/dev/sda1 -- /dev/sda4, /dev/sda5是分区/dev/sda4的逻辑分区。接好移动硬盘后，再用fdisk –l 或 more /proc/partitions查看系统的硬盘和硬盘分区情况
+
+　　[root at pldyrouter /]# fdisk -l
+
+　　Disk /dev/sda: 73 dot 4 GB, 73407820800 bytes
+
+　　255 heads, 63 sectors/track, 8924 cylinders
+
+　　Units = cylinders of 16065 * 512 = 8225280 bytes
+
+　　Device Boot Start End Blocks Id System
+
+　　/dev/sda1 1 4 32098+ de Dell Utility
+
+　　/dev/sda2 * 5 2554 20482875 7 HPFS/NTFS
+
+　　/dev/sda3 2555 7904 42973875 83 Linux
+
+　　/dev/sda4 7905 8924 8193150 f Win95 Ext'd (LBA)
+
+　　/dev/sda5 7905 8924 8193118+ 82 Linux swap
+
+　　Disk /dev/sdc: 40.0 GB, 40007761920 bytes
+
+　　255 heads, 63 sectors/track, 4864 cylinders
+
+　　Units = cylinders of 16065 * 512 = 8225280 bytes
+
+　　Device Boot Start End Blocks Id System
+
+　　/dev/sdc1 1 510 4096543+ 7 HPFS/NTFS
+
+　　/dev/sdc2 511 4864 34973505 f Win95 Ext'd (LBA)
+
+　　/dev/sdc5 511 4864 34973473+ b Win95 FAT32
+
+　　大家应该可以发现多了一个SCSI硬盘/dev/sdc和它的两个磁盘分区/dev/sdc1?、/dev/sdc2,其中/dev/sdc5是/dev/sdc2分区的逻辑分区。我们可以使用下面的命令挂接/dev/sdc1和/dev/sdc5。
+
+　　　#mkdir -p /mnt/usbhd1
+
+　　　#mkdir -p /mnt/usbhd2
+
+　　　注：建立目录用来作挂接点(mount point)
+
+　　　#mount -t ntfs /dev/sdc1 /mnt/usbhd1
+
+　　　#mount -t vfat /dev/sdc5 /mnt/usbhd2
+
+　　　注：对ntfs格式的磁盘分区应使用-t ntfs 参数，对fat32格式的磁盘分区应使用-t vfat参数。若汉字文件名显示为乱码或不显示，可以使用下面的命令格式。
+
+　　　#mount -t ntfs -o iocharset=cp936 /dev/sdc1 /mnt/usbhd1
+
+　　　#mount -t vfat -o iocharset=cp936 /dev/sdc5 /mnt/usbhd2
+
+　　  linux系统下使用fdisk分区命令和mkfs文件系统创建命令可以把移动硬盘的分区制作成linux系统所特有的ext2、ext3格式。这样，在linux下使用就更方便了。使用下面的命令直接挂接即可。
+
+　　　#mount /dev/sdc1 /mnt/usbhd1　
+
+
+挂接U盘
+
+　　和USB接口的移动硬盘一样对linux系统而言U盘也是当作SCSI设备对待的。使用方法和移动硬盘完全一样。插入U盘之前，应先用fdisk –l 或 more /proc/partitions查看系统的硬盘和硬盘分区情况。
+
+　　[root at pldyrouter root]# fdisk -l
+
+　　Disk /dev/sda: 73 dot 4 GB, 73407820800 bytes
+
+　　255 heads, 63 sectors/track, 8924 cylinders
+
+　　Units = cylinders of 16065 * 512 = 8225280 bytes
+
+　　Device Boot Start End Blocks Id System
+
+　　/dev/sda1 1 4 32098+ de Dell Utility
+
+　　/dev/sda2 * 5 2554 20482875 7 HPFS/NTFS
+
+　　/dev/sda3 2555 7904 42973875 83 Linux
+
+　　/dev/sda4 7905 8924 8193150 f Win95 Ext'd (LBA)
+
+　　/dev/sda5 7905 8924 8193118+ 82 Linux swap
+
+　　插入U盘后，再用fdisk –l 或 more /proc/partitions查看系统的硬盘和硬盘分区情况。
+
+　　[root at pldyrouter root]# fdisk -l
+
+　　Disk /dev/sda: 73 dot 4 GB, 73407820800 bytes
+
+　　255 heads, 63 sectors/track, 8924 cylinders
+
+　　Units = cylinders of 16065 * 512 = 8225280 bytes
+
+　　Device Boot Start End Blocks Id System
+
+　　/dev/sda1 1 4 32098+ de Dell Utility
+
+　　/dev/sda2 * 5 2554 20482875 7 HPFS/NTFS
+
+　　/dev/sda3 2555 7904 42973875 83 Linux
+
+　　/dev/sda4 7905 8924 8193150 f Win95 Ext'd (LBA)
+
+　　/dev/sda5 7905 8924 8193118+ 82 Linux swap
+
+　　Disk /dev/sdd: 131 MB, 131072000 bytes
+
+　　9 heads, 32 sectors/track, 888 cylinders
+
+　　Units = cylinders of 288 * 512 = 147456 bytes
+
+　　Device Boot Start End Blocks Id System
+
+　　/dev/sdd1 * 1 889 127983+ b Win95 FAT32
+
+　　Partition 1 has different physical/logical endings:
+
+　　phys=(1000, 8, 32) logical=(888, 7, 31)
+
+　　系统多了一个SCSI硬盘/dev/sdd和一个磁盘分区/dev/sdd1,/dev/sdd1就是我们要挂接的U盘。
+
+　　#mkdir -p /mnt/usb
+
+　　注：建立一个目录用来作挂接点(mount point)
+
+　　#mount -t vfat /dev/sdd1 /mnt/usb
+
+　　注：现在可以通过/mnt/usb来访问U盘了, 若汉字文件名显示为乱码或不显示，可以使用下面的命令。
+
+　　#mount -t vfat -o iocharset=cp936 /dev/sdd1 /mnt/usb
+
+
+
+挂接Windows文件共享
+
+　　Windows网络共享的核心是SMB/CIFS，在linux下要挂接(mount)windows的磁盘共享，就必须安装和使用samba软件包。
+    现在流行的linux发行版绝大多数已经包含了samba软件包，如果安装linux系统时未安装samba请首先安装samba。当然也可以到www.samba.org网站下载......新的版本是3.0.10版。
+
+　　当windows系统共享设置好以后，就可以在linux客户端挂接(mount)了，具体操作如下：
+
+　　# mkdir –p /mnt/samba
+
+　　注：建立一个目录用来作挂接点(mount point)
+
+　　# mount -t smbfs -o username=administrator,password=pldy123 //10.140.133.23/c$ /mnt/samba
+
+　　注：administrator 和 pldy123 是ip地址为10.140.133.23 windows计算机的一个用户名和密码，c$是这台计算机的一个磁盘共享
+
+　　如此就可以在linux系统上通过/mnt/samba来访问windows系统磁盘上的文件了。以上操作在redhat as server 3、redflag server 4.1、suse server 9以及windows NT 4.0、windows 2000、windows xp、windows 2003环境下测试通过。
+
+　　挂接UNIX系统NFS文件共享
+
+　　类似于windows的网络共享，UNIX(Linux)系统也有自己的网络共享，那就是NFS(网络文件系统)，下面我们就以SUN Solaris2.8和REDHAT as server 3 为例简单介绍一下在linux下怎么样mount nfs网络共享。
+
+　　在linux客户端挂接(mount)NFS磁盘共享之前，必须先配置好NFS服务端。
+
+　　1、Solaris系统NFS服务端配置方法如下：
+
+　　　(1)修改 /etc/dfs/dfstab, 增加共享目录
+
+　　　　　　share -F nfs -o rw /export/home/sunky
+
+　　　(2)启动nfs服务
+
+　　　　　　# /etc/init.d/nfs.server start
+
+　　　(3)NFS服务启动以后，也可以使用下面的命令增加新的共享
+
+　　　　　　# share /export/home/sunky1
+
+　　　　　　# share /export/home/sunky2
+
+　　　注：/export/home/sunky和/export/home/sunky1是准备共享的目录
+
+　　2、linux系统NFS服务端配置方法如下：
+
+　　　(1)修改 /etc/exports,增加共享目录
+
+　　/export/home/sunky 10.140.133.23(rw)
+
+　　/export/home/sunky1 *(rw)
+
+　　/export/home/sunky2 linux-client(rw)
+
+　　　注：/export/home/目录下的sunky、sunky1、sunky2是准备共享的目录，10.140.133.23、*、linux- client是被允许挂接此共享linux客户机的IP地址或主机名。如果要使用主机名linux-client必须在服务端主机/etc/hosts文件里增加linux-client主机ip定义。格式如下：
+
+　　　10.140.133.23 linux-client
+
+　　　(2)启动与停止NFS服务
+
+　　　/etc/rc.d/init.d/portmap start (在REDHAT中PORTMAP是默认启动的)
+
+　　　/etc/rc.d/init.d/nfs start 启动NFS服务
+
+　　　/etc/rc.d/init.d/nfs stop 停止NFS服务
+
+　　　注：若修改/etc/export文件增加新的共享，应先停止NFS服务，再启动NFS服务方能使新增加的共享起作用。使用命令exportfs -rv也可以达到同样的效果。
+
+　　3、linux客户端挂接(mount)其他linux系统或UNIX系统的NFS共享
+
+　　　# mkdir –p /mnt/nfs
+
+　　　注：建立一个目录用来作挂接点(mount point)
+
+　　　#mount -t nfs -o rw 10.140.133.9:/export/home/sunky /mnt/nfs
+
+　　　注：这里我们假设10.140.133.9是NFS服务端的主机IP地址，当然这里也可以使用主机名，但必须在本机/etc/hosts文件里增加服务端ip定义。/export/home/sunky为服务端共享的目录。
+
+　　如此就可以在linux客户端通过/mnt/nfs来访问其它linux系统或UNIX系统以NFS方式共享出来的文件了。以上操作在redhat as server 3、redflag server4.1、suse server 9以及Solaris 7、Solaris 8、Solaris 9 for x86&sparc环境下测试通过。
+(e129)
+
+
+1、挂载点必须是一个目录。
+
+2、一个分区挂载在一个已存在的目录上，这个目录可以不为空，但挂载后这个目录下以前的内容将不可用。
+对于其他操作系统建立的文件系统的挂载也是这样。但是需要理解的是：光盘、软盘、其他操作系统使用的文件系统的格式与linux使用的文件系统格式是不一样的。光盘是ISO9660；软盘是fat16或ext2；windows NT是fat16、NTFS；windows98是fat16、fat32；windows2000和windowsXP是fat16、fat32、 NTFS。挂载前要了解linux是否支持所要挂载的文件系统格式。
+
+
+挂载时使用mount命令：
+格式：mount [-参数] [设备名称] [挂载点]
+
+其中常用的参数有
+-t<文件系统类型> 指定设备的文件系统类型，常见的有：
+minix linux最早使用的文件系统
+ext2 linux目前常用的文件系统
+msdos MS-DOS的fat，就是fat16
+vfat windows98常用的fat32
+nfs 网络文件系统
+iso9660 CD-ROM光盘标准文件系统
+ntfs windows NT 2000的文件系统
+hpfs OS/2文件系统
+auto 自动检测文件系统
+-o<选项> 指定挂载文件系统时的选项。有些也可用在/etc/fstab中。常用的有
+codepage=XXX 代码页
+iocharset=XXX 字符集
+ro 以只读方式挂载
+rw 以读写方式挂载
+nouser 使一般用户无法挂载
+user 可以让一般用户挂载设备
+
+提醒一下，mount命令没有建立挂载点的功能，因此你应该确保执行mount命令时，挂载点已经存在。（不懂？说白了点就是你要把文件系统挂载到哪，首先要先建上个目录。这样OK？）
+
+例子：windows98装在hda1分区，同时计算机上还有软盘和光盘需要挂载。
+# mk /mnt/winc
+# mk /mnt/floppy
+# mk /mnt/cdrom
+# mount -t vfat /dev/hda1 /mnt/winc
+# mount -t msdos /dev/fd0 /mnt/floppy
+# mount -t iso9660 /dev/cdrom /mnt/cdrom
+现在就可以进入/mnt/winc等目录读写这些文件系统了。
+
+要保证最后两行的命令不出错，要确保软驱和光驱里有盘。（要是硬盘的磁盘片也可以经常随时更换的话，我想就不会犯这样的错误了 :-> ）
+如果你的windows98目录里有中文文件名，使用上面的命令挂载后，显示的是一堆乱码。这就要用到 -o 参数里的codepage iocharset选项。codepage指定文件系统的代码页，简体中文中文代码是936；iocharset指定字符集，简体中文一般用cp936或 gb2312。
+
+
+当挂载的文件系统linux不支持时，mount一定报错，如windows2000的ntfs文件系统。可以重新编译linux内核以获得对该文件系统的支持。关于重新编译linux内核，就不在这里说了。
+
+四 、自动挂载
+每次开机访问windows分区都要运行mount命令显然太烦琐，为什么访问其他的linux分区不用使用mount命令呢？
+其实，每次开机时，linux自动将需要挂载的linux分区挂载上了。那么我们是不是可以设定让linux在启动的时候也挂载我们希望挂载的分区，如windows分区，以实现文件系统的自动挂载呢？
+这是完全可以的。在/etc目录下有个fstab文件，它里面列出了linux开机时自动挂载的文件系统的列表。我的/etc/fstab文件如下：
+
+/dev/hda2 / ext3 defaults 1 1
+/dev/hda1 /boot ext3 defaults 1 2
+none /dev/pts devpts gid=5,mode=620 0 0
+none /proc proc defaults 0 0
+none /dev/shm tmpfs defaults 0 0
+/dev/hda3 swap swap defaults 0 0
+/dev/cdrom /mnt/cdrom iso9660 noauto,codepage=936,iocharset=gb2312 0 0
+/dev/fd0 /mnt/floppy auto noauto,owner,kudzu 0 0
+/dev/hdb1 /mnt/winc vfat defaults,codepage=936,iocharset=cp936 0 0
+/dev/hda5 /mnt/wind vfat defaults,codepage=936,iocharset=cp936 0 0
+
+
+在/etc/fstab文件里，第一列是挂载的文件系统的设备名，第二列是挂载点，第三列是挂载的文件系统类型，第四列是挂载的选项，选项间用逗号分隔。第五六列不知道是什么意思，还望高手指点。
+
+在最后两行是我手工添加的windows下的C；D盘，加了codepage=936和iocharset=cp936参数以支持中文文件名。参数defaults实际上包含了一组默认参数：
+
+rw 以可读写模式挂载
+suid 开启用户ID和群组ID设置位
+dev 可解读文件系统上的字符或区块设备
+exec 可执行二进制文件
+auto 自动挂载
+nouser 使一般用户无法挂载
+async 以非同步方式执行文件系统的输入输出操作
+
+大家可以看到在这个列表里，光驱和软驱是不自动挂载的，参数设置为noauto。（如果你非要设成自动挂载，你要确保每次开机时你的光驱和软驱里都要有盘，呵呵。）
+
+
+作者: 5trnga  出自: http://www.linuxdiyf.com
+1、终端阿输入su,提示输入超级帐户密码，输入你的系统安装时的密码
+2、查看硬盘分区情况，输入fdisk -l，不过我的机器不知道为什么不行，在其他linux系统可以,不行也没关系，输入cat /proc/partitions查看到当前的硬盘数量及分区情况
+这是我的机器分区情况
+[wake@vpnx ~]$ cat /proc/partitions
+major minor #blocks name
+8 0 156290904 sda
+8 1 6297448 sda1
+8 2 1 sda2
+8 5 6297448 sda5
+8 6 20972826 sda6
+8 7 31463271 sda7
+8 8 69183891 sda8
+8 16 20010312 sdb
+8 17 5243080 sdb1
+8 18 1 sdb2
+8 21 4525888 sdb5
+8 22 514048 sdb6
+8 23 8675068 sdb7
+8 24 1044193 sdb8
+3、如果你不清楚各个分区是什么格式的就逐个挂载，挂载前先建立文件夹，输入mkdir xp这样建立一个名字为xp的文件夹，刚才用cat /proc/partitions命令查看的分区情况后，直接用mount挂载。
+例如我要挂载第一个硬盘的第一个分区即sda1到刚才建的xp文件夹，就输入mount /dev/sda1 /mnt/xp 如此类推，然后打开“系统嗯监视器”，在“文件系统”就可以查看已经挂载的分区，在“类型”
+那里就可以看到所挂载的分区是什么类型，如：ntfs就为 fuseblk,fat32为vfat，建立好相关文件夹并手动挂载完所有分区后进入下一步。
+4、编辑fstab文件，输入gedit /etc/fstab后弹出编辑对话框，在最下面加上/dev/sda1 /mnt/xp ntfs iocharset=utf8,umask=0 0 0 这样就可以自动开机挂载第一个分区为ntfs到/mnt/xp/文件夹下
+然后保存即可。
+这是我的设置情况
+/dev/sdb1 /mnt/maxtorXP ntfs iocharset=utf8,umask=0 0 0
+/dev/sdb5 /mnt/maxtorTEST vfat iocharset=utf8,umask=0 0 0
+/dev/sda1 /mnt/seagateXP/ ntfs iocharset=utf8,umask=0 0 0
+/dev/sda5 /mnt/seagate2003/ ntfs iocharset=utf8,umask=0 0 0
+/dev/sda6 /mnt/seagateSOFTWARE/ ntfs iocharset=utf8,umask=0 0 0
+/dev/sda7 /mnt/seagateDOWNLOAD/ vfat iocharset=utf8,umask=0 0 0
+/dev/sda8 /mnt/seagateDATA/ ntfs iocharset=utf8,umask=0 0 0
+如果是并口硬盘请将sda1，sda5，sda6...改为hda1，hda5，hda6.
+如果你的分区格式是fat的就把ntfs改为vfat。
+sda1为windows的C盘，sda5为windows的D盘。
+
+
+
+在PC机上安装了双系统，Linux有时候需要用到Windows的资源，所以选择D盘在Linux启动时自动挂载。方法比较简单，就是修改/etc/fstab文件。首先介绍一下/etc/fstab文件格式。
+
+/etc/fstab文件配置了所有文件系统和磁盘设备的挂载选项。每种文件系统和磁盘设备都对应独立的行，行中每个选项用空格或者TAB隔开。每行格式如下：
+
+fs_spec[tab]fs_file[tab]fs_type[tab]fs_option[tab]fs_dump[tab]fs_pass
+
+1 )fs_spec－－该字段定义希望加载的文件系统所在的设备或远程文件系统。
+
+2 )fs_file－－文件系统的加载点。对于swap设备，该字段为none；对于加载目录名中包含空格的情况，用40表示空格。
+
+3 )fs_type－－定义了文件系统类型
+
+4 )fs_option－－指定加载该设备的文件系统时需要使用的特定参数选项，多个参数时由逗号隔开。
+
+ro－－以只读模式来加载该文件系统
+
+sync－－不对该设备的写操作进行缓冲处理，可以防止在非正常关机的情况下破坏文件系统，但是却降低了计算机速度。
+
+user－－允许普通用户加载该文件系统
+
+quota－－强制在该文件系统上进行磁盘定额限制
+
+noauto－－不再使用mount -a（例如系统启动时）加载该文件系统
+
+5 fs_dump －－该选项被“dump”名令使用来检查一个文件系统应该以多快频率进行转储，若不需要转储就设置为0
+
+6 fs_pass－－该字段被fsck命令用来决定在启动时需要被扫描的文件系统的顺序，根文件系统"/"对应该字段的值应该为1，
+其他文件系统应该为2。若该文件系统无需在启动时扫描则设置该字段为0
+
+明确了格式就很容易了。确保以root权限进行如下操作：
+
+（1）创建挂载点
+
+#mkdir /mnt/windows
+
+（2）查找要挂载的文件系统分区
+
+#fdisk -l
+
+我的D盘在Linux下为/dev/hdc5。
+
+（3）修改/etc/fstab文件
+
+#vim /etc/fstab
+
+添加一行：
+
+/dev/hdc5[tab]/mnt/windows[tab]vfat[tab]auto,umask=0[tab]0[tab]0
+
+保存文件并退出vim。
+
+（4）重启测试
+
+#reboot
+
+...
+
+#ls /mnt/windows
+
+如果显示目录下内容，则自动挂载成功。
+
+如果挂载后无法显示中文,即以????来代替中文,那么应该更改为:
+
+/dev/hdc5[tab]/mnt/windows[tab]vfat[tab]auto,umask=0,iocharset=cp936,codepage=936 [tab]0[tab]0 
+
+
+
+
+
+uname -r
+uname -a显示详细的信息
+
+
+
+http://fr2.rpmfind.net/linux/rpm2html/search.php?query=kernel-ntfs   /////linux kernal for ntfs support
+
+
+linux下如何挂载NTFS分区
+1.实验看能否挂载ntfs分区，可以的话就不用说了，否则执行2;
+
+2.运行 rpm -qa | grep ntfs，如果没找到，转到3;
+
+3.运行uname -a查看内核版本，并下载对应于该版本的支持ntfs格式的rpm包──对我的9.0红帽子来说，我运行后2.4.20-8……然后下载kernel-ntfs-2.4.20-8.i686.rpm，下载的网站
+
+http://Linux-ntfs.sourceforge.net/
+http://sourceforge.net/project/downloading.php?group_id=13956&filename=
+
+安装。rpm -ivh kernel-ntfs-2.4.20-8.i686.rpm
+
+4.运行lsmod |grep ntfs还是未发现该模块已加载，运行modprobe ntfs(如果modprobe找不着就自己手动装，rpm -ql kernel-ntfs 看看 ntfs.o （或ntfs.ko）在哪里，然后用 insmod /路径/ntfs.o 装入模块。)
+
+5.运行lsmod发现ntfs已经存在了，呵呵，大功告成。
+
+下面加载ntfs格式的分区我开始只是运行了，mount /dev/hda6 /mnt/win(其中，hda6是我的ntfs格式的分区)，结果发现里面的原来存在的包含中文的名字的文件都没显示出来，于是，卸载，再运行
+
+mount -o iocharset=cp936 /dev/hda6 /mnt/win就ok了
+
+
+
+ftp://prep.ai.mit.edu/pub/gnu/glibc/             /GLIBC
+
+http://ftp.gnu.org/gnu                           /GLIBC
+
+编译安装glibc
+
+编译安装glibc
+下载glibc
+wget  http://ftp.gnu.org/gnu/glibc/glibc-2.3.2.tar.gz
+
+下载glibc-linuxthreads
+wget http://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-2.3.2.tar.gz
+
+解压
+tar -zxvf glibc-2.3.2.tar.gz
+cd glibc-2.3.2
+tar -zxvf ../glibc-linuxthreads-2.3.2.tar.gz
+cd ..
+./glibc-2.3.2/configure --prefix=/usr --disable-profile --enable-add-ons --libexecdir=/usr/lib --with-headers=/usr/include
+
+make
+make install
+
+注意点：
+1、要将glibc-linuxthreads解压到glibc目录下。
+2、不能在glibc当前目录下运行configure。
+
+
+
+
+
+
+

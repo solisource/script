@@ -1,0 +1,18 @@
+mkisofs
+------------------------------------------------------------------------------
+A,#mkisofs -r -J -V "mydisk" -o /home/sunky/mydisk.iso /home/sunky/mydir
+B,#mkisofs -r -J -R -V "mydisk" -o /home/sunky/mydisk.iso /home/sunky/mydir /home/sunky/mydir1 
+C,#mkisofs -r -o /home/sunky/mydisk.iso /home/sunky/mydir
+D,#mkisofs -r -v -o /home/sunky/mydisk.iso /home/sunky/mydir
+
+//-V "卷标"
+//-v Verbose Information //显示详细的信息
+//-o 设置输出文件
+//-J 生成Joliet 格式信息,Joliet是用于在 Windows 环境下使用的光盘
+//-R 生成Rock Ridge目录格式信息,Rock Ridge用于 UNIX/Linux 环境下的光盘
+     //文件名区分大小写，同时记录文件长度//
+
+//-r 使用Rock Ridge,
+     //并开放全部文件的读取权限
+
+//-l 允许长文件名

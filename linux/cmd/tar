@@ -1,0 +1,10 @@
+Bit by Bit about linux (Redhat,Ubuntu,CentOS)
+$tar
+***************************************************************************
+tar jcvf dir.tar.bz2 ./dir     //bzip2
+tar jxvf dir.tar.bz2 ./dir     //bzip2
+
+tar zcvf dir.tar.gz ./dir      //gzip
+tar zxvf dir.tar.gz ./dir      //gzip
+***************************************************************************
+-k //for keep *.tar.bz2 for when uncompress

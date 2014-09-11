@@ -1,0 +1,13 @@
+linux字符集设置
+
+locale 
+locale -a //查询系统支持的字符集
+
+export LANG=zh_CN.gbk //设定字符集
+
+echo $LANG //当前设置的字符集
+
+一般来说要设置 Linux 系统的环境变量只需要在 /etc/profile (全局) 或者 ~/.bashrc (单个用户) 即可。
+但是对于 LANG 变量来说，有时候你即使在所有这些初始化脚本里面 export 过了，
+LANG 的值还是纹丝不动。实际上，你需要去修改 /etc/sysconfig/i18n 文件里面的内容。
+
