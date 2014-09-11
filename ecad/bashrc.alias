@@ -48,3 +48,8 @@ alias icc_shell_vF-2011.09_x64='/ecad/synopsys/icc_vF-2011.09/amd64/syn/bin/icc_
 alias icc_shell_vG-2012.06-SP2_x64='/ecad/synopsys/icc_vG-2012.06-SP2/amd64/syn/bin/icc_shell'
 alias icc_shell_vH-2013.03_x64='/ecad/synopsys/icc_vH-2013.03/amd64/syn/bin/icc_shell'
 
+alias astro_shell_vY-2006.06-SP4='/ecad/synopsys/astro_vY-2006.06-SP4/bin/astro_shell'
+alias astro_shell_vZ-2007.03-SP10='/ecad/synopsys/astro_vZ-2007.03-SP10/bin/astro_shell'
+
+alias Milkyway_vC-2009.06-SP2='/ecad/synopsys/starrc_vC-2009.06-SP2/amd64_starrc/bin/Milkyway'
+

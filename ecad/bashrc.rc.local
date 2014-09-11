@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# This script will be executed *after* all the other init scripts.
+# You can put your own initialization stuff in here if you don't
+# want to do the full Sys V style init stuff.
+
+touch /var/lock/subsys/local
+
+## auto mount disk
+mount /dev/sdb1 /ecad
+
+## Start mentor calibre lic auto
+rm /ecad/mentor/.lic.log
+/ecad/mentor/ixl_cal_2011.2_34.26/bin/lmgrd -c /ecad/mentor/ixl_cal_2011.2_34.26/lic/license.dat > /ecad/mentor/.lic.log
+/ecad/mentor/ixl_cal_2011.2_34.26/bin/lmstat -c /ecad/mentor/ixl_cal_2011.2_34.26/lic/license.dat >> /ecad/mentor/.lic.log
+
+## Start synopsys calibre lic auto
+rm /ecad/synopsys/.lic.log
+/ecad/synopsys/scl_v10.9.3/linux/bin/lmgrd -c /ecad/synopsys/lic/synopsys.dat > /ecad/synopsys/lic/.lic.log
+/ecad/synopsys/scl_v10.9.3/linux/bin/lmstat -c /ecad/synopsys/lic/synopsys.dat >> /ecad/synopsys/lic/.lic.log
+
