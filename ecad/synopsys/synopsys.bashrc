@@ -44,9 +44,9 @@ export PATH=$SYNOPSYS/astro_vY-2006.06-SP4/bin:$PATH
 export PATH=$SYNOPSYS/astro_vZ-2007.03-SP10/bin:$PATH
 
 ## Set tools path for StartRC & Milkway
-export PATH=$SYNOPSYS/starrc_vC-2009.06-SP2/amd64_starrc/bin:$PATH ## Milkway OK, StartRC Fail
+export PATH=$SYNOPSYS/starrc_vC-2009.06-SP2/amd64_starrc/bin:$PATH
 
 ## Set tools path for VCS
 export VCS_HOME=$SYNOPSYS/vcs-mx_vD-2009.12
-export PATH=$SYNOPSYS/vcs-mx_vD-2009.12/bin:$PATH
+export PATH=$SYNOPSYS/vcs-mx_vD-2009.12/linux/bin:$PATH
 
