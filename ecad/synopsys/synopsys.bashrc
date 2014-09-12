@@ -4,6 +4,9 @@
 ## PASS rehl4.8/Linux serL1 2.6.9-89.EL 2009 x86_64 x86_64 x86_64 GNU/Linux ##
 ##############################################################################
 
+## set for icc_vG-2012.06-SP2 and icc_vH-2013.03 GUI start Problem
+export DISPLAY=unix:0
+
 ## Set Tool Source Path
 export SYNOPSYS=/ecad/synopsys
 
