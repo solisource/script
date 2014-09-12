@@ -1,0 +1,204 @@
+SERVER localhost.localdomain 000c29cee65f 28000
+DAEMON snpslmd /ecad/synopsys/scl_v10.9.3/linux/bin/snpslmd
+
+FEATURE SSS snpslmd 1.0 31-dec-2020 uncounted 8E051026A62D814C7B72 \
+	VENDOR_STRING="69656 d1d88 34cc3 38a6f 538ce df1f2 30f43 8258f \
+	ecc22 fcf" HOSTID=000c29cee65f ISSUER="Team ZWT 2006" \
+	NOTICE="Licensed to mammoth//ZWT 2006 [PLEASE DO NOT DELETE THIS \
+	SSS KEY]" SN=RK:1978-0:001224:0 START=1-jan-2006
+
+PACKAGE EFA_Synopsys_1 snpslmd 2019.12 D0509041F384D15BBF2C COMPONENTS="A3200DX A42MX A500K A54SX \
+	A54SXA A7 ACEX1K ACS ACT2-1200XL ACT3 ALTGEN1 ALTGEN2 APEX20K APEX20KC APEX20KE APEXII \
+	ARKOS-A ARKOS-B ARKOS-C ARKOS-D ARKOS-E ARKOS-Ice ARKOS-Mcomp ARKOS-Rtlcomp ARKOS-Scomp \
+	ARKOS-Simul ARM7TDMI ATMEL ATMWB_ATMLAYER ATMWB_UTOPIA" ck=241
+PACKAGE EFA_Synopsys_2 snpslmd 2019.12 4070C051ADEE0EE3F122 COMPONENTS="BC-FPGA-HDL BC-FPGA-VHDL \
+	BC-HDL BC-Schedule BC-VHDL BOA-BRT Behavioral-Analyzer Behavioral-Compiler CA-CP-Advanced \
+	CA-CP-Basic CA-CP-Standard CA-Chip-Edit CA-Foundation CA-Frame CA-Hier-Timer CA-Optimization \
+	CA-Timer CA-Utils CD-Compiled-Lib-Gen CD-Compiled-Sys-Gen CD-GDI CD-GDII-Link \
+	CD-MSSC-Cross-Probe CD-MSSC-Netlist CD-Model-Developer CD-Present-Builder \
+	CD-Present-Layer-Gen CD-REX CD-Vhdlgen-GUI CD-Vhdlgen-Gen" ck=29
+PACKAGE EFA_Synopsys_3 snpslmd 2019.12 E0F04071D5F9A07CB65A COMPONENTS="COOLRUNNER COOLRUNNER2 \
+	COSSAP_adpcm COSSAP_arm COSSAP_bde COSSAP_bde COSSAP_celp COSSAP_chart COSSAP_cw_filter_hdl \
+	COSSAP_cw_filter_sds COSSAP_dab COSSAP_dcg_ad21020 COSSAP_dcg_ansic COSSAP_dcg_ariel32c \
+	COSSAP_dcg_fe COSSAP_dcg_gc COSSAP_dcg_krc COSSAP_dcg_lsic30s COSSAP_dcg_m96000 \
+	COSSAP_dcg_mp COSSAP_ddk_arm COSSAP_ddk_devlp COSSAP_ddk_dsp1610 COSSAP_ddk_hawk \
+	COSSAP_ddk_nec COSSAP_ddk_oak COSSAP_ddk_pine COSSAP_ddk_ssp16xx COSSAP_ddk_tic5x \
+	COSSAP_ddk_tic5xx" ck=234
+PACKAGE EFA_Synopsys_4 snpslmd 2019.12 30807001DCBB88AFD4B9 COMPONENTS="COSSAP_dect COSSAP_dvb \
+	COSSAP_ecc COSSAP_gsmdve COSSAP_gsmdve_utils COSSAP_gsmefrsc COSSAP_gsmeq COSSAP_gsmfrcc \
+	COSSAP_gsmfrsc COSSAP_gsmhrcc COSSAP_gsmhrsc COSSAP_gsmphy COSSAP_is136 COSSAP_is95 \
+	COSSAP_matlab COSSAP_mfd COSSAP_mpeg2 COSSAP_pdc COSSAP_qed COSSAP_sds COSSAP_srcfd \
+	COSSAP_vcg_generic COSSAP_vcg_synopsys COSSAP_vcg_vantage COSSAP_vdefcg COSSAP_vdefcg_vlgxl \
+	COSSAP_vsiccg COSSAP_vsiccg_cyc COSSAP_vsiccg_mti COSSAP_vsiccg_mtivlg" ck=12
+PACKAGE EFA_Synopsys_5 snpslmd 2019.12 7050F0D1D1BDF2512B57 COMPONENTS="COSSAP_vsiccg_vcs \
+	COSSAP_vsiccg_vlgxl COSSAP_vsivcg COSSAP_vsivcg_vlgxl COSSAP_xdcg COSSAP_xvcg COSSAP_xvsi \
+	CTV-Interface CYPRESS CmView CoverMeter Cyclone-Code-Generator Cyclone-Core \
+	Cyclone-Elaborator Cyclone-GUI Cyclone-HDL-Analyzer Cyclone-Simulator Cyclone-VHDL-Analyzer \
+	Cyclone-cosim DATAIO DC-Beta DC-Cadence-Interface DC-Expert DC-Falcon-Interface \
+	DC-Layout-Interface DC-Min-Area-Retime DC-SDF-Interface DC-Ultra-Features DC-Ultra-Opt \
+	DCM-Delay-Calculation" ck=250
+PACKAGE EFA_Synopsys_6 snpslmd 2019.12 0090A0F1F3CD7144AD9A COMPONENTS="DEMO DIRECTMEM DS-Schem-Gen \
+	DS-Schem-Gen-Estimator-Pa DS-Schem-Gen-Estimator-Package DS-Schem-Gen-Package DS-Verinet \
+	DS-Verinet-Estimator-Pack DS-Verinet-Estimator-Package DS-Verinet-Package DS-Vhdlnet \
+	DS-Vhdlnet-Estimator-Pack DS-Vhdlnet-Estimator-Package DS-Vhdlnet-Package DW-Developer \
+	DW-IP-Consultant DW-IP-Developer Delta39k Design-Analyzer Design-Analyzer-DAP \
+	Design-Budgeting Design-Compiler Design-Estimator Design-Estimator-FPI Design-Vision \
+	DesignSource DesignSource-Estimator-Package DesignSource-Package DesignTime DesignWare" \
+	ck=12
+PACKAGE EFA_Synopsys_7 snpslmd 2019.12 B05060B12C277FBCD340 COMPONENTS="DesignWare-8051MCU \
+	DesignWare-Cardbus DesignWare-Developer-MGI DesignWare-Ethernet DesignWare-Foundation \
+	DesignWare-Foundation-Exp DesignWare-Foundation-Expert DesignWare-Foundation-Power \
+	DesignWare-Foundation-Ultra DesignWare-ISA-PnP DesignWare-MGI DesignWare-PCIbasic \
+	DesignWare-Package DesignWare-VERA Designware-Basic Designware-Developer \
+	Designware-FPGA-Basic E5 E502 E505 E520 ECL-Compiler ECO-Compiler EDIF-Netlist-Read-DC \
+	EDIF-Netlist-Write-DC EDIF-Netlist-Writer EDIF-Reader EDIF-Schematic-Writer EXCALIBUR_ARM \
+	EXCALIBUR_MIPS" ck=238
+PACKAGE EFA_Synopsys_8 snpslmd 2019.12 70E0D0B145DAA50ACE7E COMPONENTS="Early-Access-Technology \
+	Equation-Reader Equation-Writer Espresso-Reader Espresso-Writer Estm-HDL-Advisor \
+	Estm-HDL-Advisor-Package Eview FCII-Altera-Edition FLEX10K FLEX10KA FLEX10KB FLEX10KE \
+	FLEX6000 FLEX8000 FPGA-Compiler FPGA-Express FPGA-Express-32OODx-Optimizer \
+	FPGA-Express-A1200XL-Optimizer FPGA-Express-A1400-Optimizer FPGA-Express-A3200DX-Optimizer \
+	FPGA-Express-A42MX-Optimizer FPGA-Express-A54SX-Optimizer FPGA-Express-APEX2-Optimizer \
+	FPGA-Express-APROA-Optimizer FPGA-Express-Constraint-Mgr FPGA-Express-EP20k-Optimizer \
+	FPGA-Express-EPF10k-Optimizer FPGA-Express-EPF6k-Optimizer FPGA-Express-EPF8k-Optimizer" \
+	ck=9
+PACKAGE EFA_Synopsys_9 snpslmd 2019.12 E08030B180EF7B56D0B3 \
+	COMPONENTS="FPGA-Express-EPM7k-Optimizer FPGA-Express-EPM9k-Optimizer FPGA-Express-GAT \
+	FPGA-Express-ISP4000-Optimizer FPGA-Express-ISP5000-Optimizer FPGA-Express-MERCURY-Optimizer \
+	FPGA-Express-ORCA2-Optimizer FPGA-Express-ORCA3-Optimizer FPGA-Express-Open-Optimizer \
+	FPGA-Express-Synario-Optimizer FPGA-Express-VHDL-Base FPGA-Express-VHDL-Training \
+	FPGA-Express-VIRTEX-Optimizer FPGA-Express-VLOG-Base FPGA-Express-XC3k-Optimizer \
+	FPGA-Express-XC4k-Optimizer FPGA-Express-XC5k-Optimizer FPGA-Express-XC9k-Optimizer \
+	FPGA-Express-isp1K-Optimizer FPGA-Express-isp2K-Optimizer FPGA-Express-isp3K-Optimizer \
+	FPGA-Express-isp4K-Optimizer FPGA-Express-isp5K-Optimizer FPGA-Express-isp6K-Optimizer \
+	FPGA-Express-isp7K-Optimizer FPGA-Express-isp8K-Optimizer FPGA-HDL-Bundle \
+	FPGA-Library-Compiler FPGA-Option FPGA-VHDL-Bundle" ck=234
+PACKAGE EFA_Synopsys_10 snpslmd 2019.12 209020911E5201039D64 \
+	COMPONENTS="FPGA_Express-APROA-Optimizer FSM-Reader FSM-Writer Flash370i \
+	Floorplan-Management Formality Formality-E1 Fridge-GUI Fridge-Interpolator \
+	FusionVantageLmcInterface GENERICVSP HDL HDL-Advisor HDL-Advisor-Estimator \
+	HDL-Advisor-Estimator-Package HDL-Advisor-Package HDL-Advisor-Shell \
+	HDL-Advisor-Shell-Estimator HDL-Advisor-Shell-Estm-Package HDL-Advisor-Shell-Package \
+	HDL-Compiler HighLevel-Power-Analysis HighLevel-Power-Optimization Key-Generator \
+	LMCSwift_Net LSI-Interface LSS4E Leakage-Power" ck=150
+PACKAGE EFA_Synopsys_11 snpslmd 2019.12 20D0E081AEAC8D3164EB COMPONENTS="Library-Compiler MACH1 \
+	MACH2 MACH4 MACH5 MAX3000A MAX7000 MAX7000A MAX7000AE MAX7000B MAX7000E MAX7000S MAX9000 \
+	MAX9000 MC-Pro MC-Pro-RP MC-Retime MCD MCE MCE-Base MCE-Eval MCE-Lib-ALU MCE-Lib-Arith1 \
+	MCE-Lib-Arith2 MCE-Lib-Arith3 MCE-Lib-Logic MEMPRO MEMPRO-LIB MERCURY" ck=54
+PACKAGE EFA_Synopsys_12 snpslmd 2019.12 90D000C127443E59231E COMPONENTS="MIF-Reader MIF-Writer \
+	MOTIVE-PrimeTime Mentor-Interface Millennium-ATPG-EE Millennium-ATPG-STD Millennium-Beta \
+	Millennium-DRC Millennium-Eval Millennium-FS Mixed-Language Mixed-Paradigm ORCA2A ORCA2TB \
+	ORCA3C ORCA3FPSC ORCA3L ORCA4E Parse-Tree-Translator PhysOpt-GUI Power-Analysis \
+	Power-Optimization Power-Optimization-Upgrade PrimeTime PrimeTime-Plus \
+	Protocol-Compiler-Analysis Protocol-Compiler-COutput Protocol-Compiler-FML \
+	Protocol-Compiler-Synth Protocol-Compiler-UI" ck=149
+PACKAGE EFA_Synopsys_13 snpslmd 2019.12 E0C0E04139909ED95E9B COMPONENTS="QLOGIC Quantum38k RT54SXS \
+	RTL-Analyzer RTL-Analyzer-DAP RTL-Analyzer-Shell RTL-Analyzer-Shell-DAP RTL-Power-Analysis \
+	SGE-DC-Interface SGE-EDIF-Interface SGE-Tool SGE-VHDL-Interface SGE-Verilog-Interface \
+	SNPS-CSL SNPS-Keygen SNPS-MOTIVE SPARTAN SPARTAN2 SPARTAN2E SPARTANXL SYNARIO \
+	ShortCut-DC-Expert ShortCut-DC-Pro Shortcut-FPGA Stamp-Compiler Syn-Library-Compiler \
+	SynLib-ALU SynLib-AdvMath SynLib-Control SynLib-DSPFIR" ck=228
+PACKAGE EFA_Synopsys_14 snpslmd 2019.12 506090118F716A08B5C1 COMPONENTS="SynLib-Eval SynLib-FltTol \
+	SynLib-PCIbasic SynLib-Seq SynLib-VHDLSimMdl SynLib-VerilogSimMdl Synopsys Synopsys-Queue \
+	Synopsys-Release TBM-Manager-UI TBM-VSS-Check TBS TC-Beta TDL-Interface TDL-Reader \
+	TDL-Writer TRUE Test-ATPG Test-ATPG-30 Test-ATPG-Limited Test-ATPG-PRO Test-ATPG-Ultra \
+	Test-ATPG-XP Test-Accelerator Test-Analysis Test-Analysis-GUI Test-Analysis-RTL Test-BIST \
+	Test-BSDL Test-Beta" ck=156
+PACKAGE EFA_Synopsys_15 snpslmd 2019.12 80E010415407540F6563 COMPONENTS="Test-Beta-2 Test-CA \
+	Test-Compile Test-Compile-Remodel Test-Compile-Share Test-Compiler Test-Compiler-Plus \
+	Test-Compiler-Remodel Test-Custom-Protocols Test-DFT-Top Test-Delay Test-Diagnosis Test-Eval \
+	Test-Faultsim Test-Faultsim-8L Test-Format Test-IDDQ Test-IEEE-Std-1149-1 Test-Library \
+	Test-Map Test-Mbist Test-Mbist-Algorithm Test-Mbist-CAM Test-Mbist-DRAM Test-Mbist-Diagnosis \
+	Test-Mbist-FLASH Test-Mbist-Multiport Test-RTL-Check Test-ScanRoute" ck=101
+PACKAGE EFA_Synopsys_16 snpslmd 2019.12 B07050D1F774AE0BDF5C COMPONENTS="TestManager TestSim \
+	Ultra37000 VANTIS VCSCompiler_Net VCSDebugger_Net VCSPostProcDebugger_Net VCSRuntime_Net \
+	VCSTools_Net VDesktop-Debug VDesktop-GUI VDesktop-VCDTrans VDesktop-VHDL VDesktop-Verilog \
+	VHDL-Analyzer VHDL-Compiler VHDL-Cycle-Sim VHDL-Elaborator VHDL-Event-Sim \
+	VHDL-Netlist-Writer VHDL-To-BE VHDL-VirSim VHMC-Eval VHMC-GenUnlocked VHMC-Runtime VIRTEX \
+	VIRTEX2 VIRTEX2P VIRTEXE VIRTEXEA" ck=31
+PACKAGE EFA_Synopsys_17 snpslmd 2019.12 20F02081E4680FC718D3 COMPONENTS="VPC VSP_DRIVER \
+	VSS-Analyzer VSS-Backplane VSS-CLI VSS-Cadence-Interface VSS-CompiledSim VSS-Debugger \
+	VSS-Falcon-Interface VSS-GateSim VSS-LAI-Models VSS-LMSI VSS-Lib-Tools VSS-Model-Developer \
+	VSS-NEC-Tran VSS-SDF-Interface VSS-SGE-Tool VSS-SPC VSS-Simulator VSS-SmartModels VSS-Tran \
+	VSS-Utilities VSS-VIP-Interface VSS-Verilog-PLI VSS-Wave-Display VSS-XP-Accelerator \
+	Verification-Token Verilog Verilog-Netlist-Writer Verilog-Parser" ck=237
+PACKAGE EFA_Synopsys_18 snpslmd 2019.12 C0705091C91DD09EF69C COMPONENTS="Verilog-To-BE \
+	Vivace-Code-Generator Vivace-Core Vivace-Debug Vivace-Elaborator Vivace-Expert \
+	Vivace-Express Vivace-GUI Vivace-HDL-Analyzer Vivace-Model-Compiler Vivace-Pro \
+	Vivace-Simulator Vivace-VHDL-Analyzer WRITE XC3000 XC4000 XC4000E XC4000EX XC4000L XC4000XL \
+	XC4000XLA XC4000XV XC5200 XC9500 XC9500XL XC9500XV XVCSDebugger" ck=30
+PACKAGE EFA_Synopsys_19 snpslmd 2019.12 90F090D1788ADFC15EF0 COMPONENTS="acega amga amps arc \
+	arc/bcx arc/lefdef arcviewer arcviewer/raph arcxl c_exe_ax c_exe_cbx c_exe_gx cadence \
+	chipviewer cmod cmod/ax cmod/cbx cmod/gx cmod/gxadv coreConsultant eX edif2e gentech" ck=194
+PACKAGE EFA_Synopsys_20 snpslmd 2019.12 604080D1FFA49C66EDB8 COMPONENTS="ispLSI1K ispLSI2K \
+	ispLSI2KE ispLSI3K ispLSI5000S ispLSI5000SE ispLSI5K ispLSI6K ispLSI8K ispMACH4000 \
+	lsim_parser pathmill pathmill/dsx pathmill/pfx pathmill/sfx pmga powerarc powrmill powrmill \
+	powrmill/ace powrmill/av powrmill/msx primepower primepower_gui provhdl_checker pwga" ck=234
+PACKAGE EFA_Synopsys_21 snpslmd 2019.12 308020A1161703DBA336 COMPONENTS="railmill railmill/ace \
+	railmill/av railmill/spnx rslv3d rslv3dviewer simwave simwave_epic spice_parser techviewer \
+	timemill timemill/ace timemill/av timemill/bdc timemill/msx vera_comp vera_debug vera_rtime \
+	vhdl_compiler vlog2e vtran" ck=188
+FEATURE EFA_Synopsys_1 snpslmd 2019.12 31-dec-2019 uncounted 6E0530D60938819E8534 \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=164 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_2 snpslmd 2019.12 31-dec-2019 uncounted 6E85F0067476918DB39D \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=248 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_3 snpslmd 2019.12 31-dec-2019 uncounted BE45B0766D8A45AD5266 \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=211 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_4 snpslmd 2019.12 31-dec-2019 uncounted 7E05C0D6F8E9859DF0CC \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=29 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_5 snpslmd 2019.12 31-dec-2019 uncounted 6E8530B64980E10D085F \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=208 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_6 snpslmd 2019.12 31-dec-2019 uncounted 3E85E06684C7792CE7FB \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=58 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_7 snpslmd 2019.12 31-dec-2019 uncounted AE4530460536E52D974A \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=185 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_8 snpslmd 2019.12 31-dec-2019 uncounted 3E85E0F69050B50C74EF \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=33 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_9 snpslmd 2019.12 31-dec-2019 uncounted 7E059086B13D598E8D7D \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=244 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_10 snpslmd 2019.12 31-dec-2019 uncounted CE55A086485D894FB527 \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=31 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_11 snpslmd 2019.12 31-dec-2019 uncounted 8EA560C68E26ED23D8C7 \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=86 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_12 snpslmd 2019.12 31-dec-2019 uncounted 1E553066ED46F1D27E1F \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=216 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_13 snpslmd 2019.12 31-dec-2019 uncounted 0EE550265B9DBDB652F4 \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=32 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_14 snpslmd 2019.12 31-dec-2019 uncounted 4ED530E69C61D9C77141 \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=4 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_15 snpslmd 2019.12 31-dec-2019 uncounted 1E65D0A6121FE51994ED \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=246 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_16 snpslmd 2019.12 31-dec-2019 uncounted 8ED50006C96B29F8EB71 \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=14 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_17 snpslmd 2019.12 31-dec-2019 uncounted 9EE540562FA0FD8DDE91 \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=95 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_18 snpslmd 2019.12 31-dec-2019 uncounted 8E5510C6B0C0C9CCEC6E \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=254 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_19 snpslmd 2019.12 31-dec-2019 uncounted DEE5F0D666BAAD800088 \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=41 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_20 snpslmd 2019.12 31-dec-2019 uncounted EE75E0464DC8F5C71BE9 \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=79 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_21 snpslmd 2019.12 31-dec-2019 uncounted 2E2520B6E32AE101E959 \
+	VENDOR_STRING=^1Platform:ALL+S HOSTID=000c29cee65f SUPERSEDE ISSUER="Team EFA 2001" \
+	ISSUED=11-jul-2001 ck=218 SN=SL:2100-0:100000:0 START=11-jul-2001
+

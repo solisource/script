@@ -1,0 +1,996 @@
+SERVER Thomas 000C2937DF3A 27000
+DAEMON snpslmd !!!Path_to_snpslmd.exe
+PACKAGE EFA_Synopsys_1 snpslmd 2019.12 70D09021D4097528EC8B COMPONENTS="A3200DX A42MX A500K A54SX \
+	A54SXA A7 AARKOS-A ace_core acega acehdl acehdl/beta_status acehdl/internal_use acehdl_beta \
+	acehdl_gui ACEX1K ACS ACT2-1200XL ACT3 AdvanceCalibration_all AdvancedCalibration_all \
+	AIM_DEBUG AIM_DECRYPT AIM_DEVELOPER AIM_ENCRYPT aiu_foundation alien2lig_all ALTGEN1 ALTGEN2 \
+	amat-calib_all amga amps amps/cso amps/pfx amps/tr AN-Impl3D_all any_technology" ck=244
+PACKAGE EFA_Synopsys_2 snpslmd 2019.12 20309051BDBA0A95AB45 COMPONENTS="APACM APATD APCS APDP \
+	APEX20K APEX20KC APEX20KE APEXII APGA4AP APGACS APGADP APGAHPO APGApwr APGASolar APGASolarII \
+	APGATime APHPO Apollo ApolloGA APPower APpwr APRV APSolar APSolarII APTime APXtalk arc \
+	arc/bcx arc/c2x arc/c3x arc/cns arc/dnx arc/dpx arc/gds2 arc/giper arc/lefdef" ck=169
+PACKAGE EFA_Synopsys_3 snpslmd 2019.12 403060310B185B612D2E COMPONENTS="arc/ppx arc/pro arc/r3x \
+	arc1 arc2 arcexpert arcfc arcviewer arcviewer/raph arcxl ARKOS-A ARKOS-B ARKOS-C ARKOS-D \
+	ARKOS-E ARKOS-Ice ARKOS-Mcomp ARKOS-Rtlcomp ARKOS-Scomp ARKOS-Simul ARM7TDMI Astro AstroBeta \
+	AstroExp Astro-Express AstroGA AstroRail Astro-Rail AstroRailSA AstroSpecialBeta AstroXtalk \
+	Astro-Xtalk ATMEL ATMWB_ATMLAYER ATMWB_UTOPIA avanwaves" ck=170
+PACKAGE EFA_Synopsys_4 snpslmd 2019.12 A0C060A14EB9A1FE9AF0 COMPONENTS="avanwaveswin awe_rcr \
+	BC-FPGA BC-FPGA-HDL BC-FPGA-VHDL BC-HDL BC-Schedule BC-VHDL Behavioral-Analyzer \
+	Behavioral-Compiler BOA-BRT c_exe_ax c_exe_cbx c_exe_drc c_exe_gx c_exe_ipc c_exe_lvs \
+	CA-Chip-Edit CA-CP-Advanced CA-CP-Basic CA-CP-Standard cadence cadence_epic CA-Foundation \
+	CA-Frame CA-Hier-Timer CA-Optimization CA-Timer CA-Utils CBA-ApolloGA-Interface \
+	CBA-Blk-Export CBA-Blk-Import CBA-CadenceSE-Interface CBA-DS-Beta CBA-Frame CBA-Logical-DS" \
+	ck=11
+PACKAGE EFA_Synopsys_5 snpslmd 2019.12 A0E0B07123DAAE9F4BE1 COMPONENTS="CBA-Logical-MA \
+	CBA-Physical-DS CBA-Physical-MA CBA-Transport CD-Compiled-Lib-Gen CD-Compiled-Sys-Gen CD-GDI \
+	CD-GDII-Link CD-Model-Developer CD-MSSC-Cross-Probe CD-MSSC-Netlist CD-Present-Builder \
+	CD-Present-Layer-Gen CD-REX cdsaavmx cdsaawaves cdsmetalib cdsnet CD-Vhdlgen-Gen \
+	CD-Vhdlgen-GUI chipviewer cmod cmod/ax cmod/cbx cmod/drc cmod/gx cmod/gxadv cmod/hdrc \
+	cmod/hlvs cmod/ipc cmod/lvs cmod/viewer CmView CoCentric-FXD-GUI CoCentric-FXD-Interpolator \
+	CoCentric-FXD-Simulation" ck=7
+PACKAGE EFA_Synopsys_6 snpslmd 2019.12 005060A175AE03E1F99F COMPONENTS="CoCentric-SYS-Davis \
+	CoCentric-SYS-DesignCenter CoCentric-SYS-HWflow CoCentric-SYS-HWSimIF CoCentric-SYS-RDK-adsl \
+	CoCentric-SYS-RDK-cdma2000 CoCentric-SYS-RDK-docsis CoCentric-SYS-Simulator Columbia \
+	ColumbiaTE COMPONENT_LIBRARY Constraint_Translation Converter COOLRUNNER COOLRUNNER2 \
+	coreAssembler coreBuilder coreConsultant coremill coreSynthesis COSIM-LFG COSIM-MTI \
+	COSIM-NCV COSIM-SRO COSIM-VCS COSIM-VXL Cosmos_scope COSMOS_VO COSSAP_adpcm COSSAP_adsl \
+	COSSAP_amr COSSAP_arm COSSAP_bde COSSAP_celp COSSAP_chart COSSAP_cw_filter_hdl" ck=240
+PACKAGE EFA_Synopsys_7 snpslmd 2019.12 60E04031B40FCA054807 COMPONENTS="COSSAP_cw_filter_sds \
+	COSSAP_dab COSSAP_dcg_ad21020 COSSAP_dcg_ansic COSSAP_dcg_ariel32c COSSAP_dcg_fe \
+	COSSAP_dcg_gc COSSAP_dcg_krc COSSAP_dcg_lsic30s COSSAP_dcg_m96000 COSSAP_dcg_mp \
+	COSSAP_ddk_arm COSSAP_ddk_devlp COSSAP_ddk_dsp16000 COSSAP_ddk_dsp1610 COSSAP_ddk_hawk \
+	COSSAP_ddk_nec COSSAP_ddk_oak COSSAP_ddk_pine COSSAP_ddk_ssp16xx COSSAP_ddk_tic5x \
+	COSSAP_ddk_tic5xx COSSAP_dect COSSAP_dvb COSSAP_ecc COSSAP_gsmdve COSSAP_gsmdve_utils \
+	COSSAP_gsmefrsc COSSAP_gsmeq COSSAP_gsmfrcc COSSAP_gsmfrsc COSSAP_gsmhrcc COSSAP_gsmhrsc \
+	COSSAP_gsmphy COSSAP_is136 COSSAP_is95" ck=109
+PACKAGE EFA_Synopsys_8 snpslmd 2019.12 30A0B04114443D031FB0 COMPONENTS="COSSAP_matlab COSSAP_mfd \
+	COSSAP_mpeg2 COSSAP_pdc COSSAP_qed COSSAP_sds COSSAP_srcfd COSSAP_vcg_generic \
+	COSSAP_vcg_synopsys COSSAP_vcg_vantage COSSAP_vdefcg COSSAP_vdefcg_vlgxl COSSAP_vsiccg \
+	COSSAP_vsiccg_cyc COSSAP_vsiccg_mti COSSAP_vsiccg_mtivlg COSSAP_vsiccg_vcs \
+	COSSAP_vsiccg_vlgxl COSSAP_vsivcg COSSAP_vsivcg_vlgxl COSSAP_xdcg COSSAP_xvcg COSSAP_xvsi \
+	CoverMeter CoverMeterOBC CoverMeterOBCVCSAMSCompiler CPI-100 CRS_COVERMETER CRS_VCM CRS_VCS \
+	CRS_VCSi CTV-Interface CUSTOM_LIB Cyclone-Code-Generator Cyclone-Core Cyclone-cosim" ck=162
+PACKAGE EFA_Synopsys_9 snpslmd 2019.12 6030B0F1F7F95FAC159F COMPONENTS="Cyclone-Elaborator \
+	Cyclone-GUI Cyclone-HDL-Analyzer Cyclone-Simulator Cyclone-VHDL-Analyzer CYPRESS \
+	DataExpansion DataExpansionCoverage DataExpansionSim DATAIO DataReplay DataReplaySim DC64 \
+	DC-Beta DC-Cadence-Interface DC-Expert DCExpert-PrimeTime DC-Falcon-Interface \
+	DC-FPGA-Accelerator DC-FPGA-Add-On DC-FPGA-Features DC-Layout-Interface \
+	DCM-Delay-Calculation DC-Min-Area-Retime DC-SDF-Interface DC-Ultra DC-Ultra-Features \
+	DC-Ultra-Opt DC-XG Debussy Debussy_shared delaymill Delta39k DEMO Design-Analyzer \
+	Design-Analyzer-DAP" ck=6
+PACKAGE EFA_Synopsys_10 snpslmd 2019.12 E020E021E330C2B1FF2D COMPONENTS="Design-Budgeting \
+	Design-Compiler Design-Estimator Design-Estimator-FPI DesignSource \
+	DesignSource-Estimator-Package DesignSource-Package DesignTime Design-Vision DesignWare \
+	DesignWare-1394 DesignWare-1394-Source DesignWare-6811-Source DesignWare-8051 \
+	DesignWare-8051MCU DesignWare-8051-Source Designware-Basic DesignWare-BIST \
+	DesignWare-BIST-Source DesignWare-Cardbus Designware-Developer DesignWare-Developer-MGI \
+	DesignWare-Ethernet DesignWare-ETHERNET-Source DesignWare-FloatingPoint \
+	DesignWare-Foundation DesignWare-Foundation-Exp DesignWare-Foundation-Expert \
+	DesignWare-Foundation-Power DesignWare-Foundation-Ultra Designware-FPGA-Basic \
+	DesignWare-ISA-PnP DesignWare-MemoryBist DesignWare-MemoryBist-Source DesignWare-MGI \
+	DesignWare-MPEG" ck=217
+PACKAGE EFA_Synopsys_11 snpslmd 2019.12 70C09051B9F2436C9788 COMPONENTS="DesignWare-MPEG2 \
+	DesignWare-MPEG2-Source DesignWare-MPEG2-VDEC DesignWare-MPEG2-VDEC-Source \
+	DesignWare-MPEG-Source DesignWare-Package DesignWare-PCI DesignWare-PCIbasic \
+	DesignWare-PCI-Source DesignWare-PCI-X DesignWare-PCI-X-Source DesignWare-SystemIO \
+	DesignWare-SystemIO-Source DesignWare-TCA DesignWare-TCA-Source DesignWare-USB \
+	DesignWare-USB2 DesignWare-USB2-Source DesignWare-USB-Source DesignWare-VERA Dessis_all \
+	Dessis-3D_all Dessis-BONSIM_all Dessis-DensityGrad_all Dessis-Ferro_all \
+	Dessis-FloatingGate_all Dessis-GateLeakage_all Dessis-Hetero_all Dessis-Hydro_all \
+	Dessis-kpGain_all Dessis-Laser_all Dessis-LED_all Dessis-MixedMode_all \
+	Dessis-Mono-Semicond_all Dessis-MonteCarlo_all Dessis-Noise_all" ck=203
+PACKAGE EFA_Synopsys_12 snpslmd 2019.12 507090E1E374EE6D1FE0 COMPONENTS="Dessis-Optic_all \
+	Dessis-Parallel_all Dessis-Parallel4_all Dessis-PMI_all Dessis-Radiation_all \
+	Dessis-Reliability_all Dessis-Schroedinger_all Dessis-SiGe_all Dessis-Thermo_all \
+	Dessis-Traps_all Dessis-VectorOptic_all Devise_all Devise-3D_all Dfisetools_all \
+	Dfisetools-Topo_all Dios_all Dios-3D_all Dios-MC_all Dios-PDEF_all Dios-SDO_all \
+	DiosSmall_all Dip_all DIRECTMEM DS-Schem-Gen DS-Schem-Gen-Estimator-Pa \
+	DS-Schem-Gen-Estimator-Package DS-Schem-Gen-Package DS-Verinet DS-Verinet-Estimator-Pack \
+	DS-Verinet-Estimator-Package DS-Verinet-Package DS-Vhdlnet DS-Vhdlnet-Estimator-Pack \
+	DS-Vhdlnet-Estimator-Package DS-Vhdlnet-Package DW-Developer" ck=246
+PACKAGE EFA_Synopsys_13 snpslmd 2019.12 B02030F1DCA3A6F538BF COMPONENTS="DW-IP-Consultant \
+	DW-IP-DEBUG DW-IP-Developer E5 E502 E505 E520 Early-Access-Technology ECL-Compiler \
+	ECO-Compiler edif2e EDIF-Netlist-Read-DC EDIF-Netlist-Write-DC EDIF-Netlist-Writer \
+	EDIF-Reader EDIF-Schematic-Writer electromigration_drc ELGRECO_Davis ELGRECO_DesignCenter \
+	ELGRECO_Simulator Emlab_all Emlab-Dessis_all Emlab-Farfield_all Emlab-Nonuniform-2D_all \
+	Emlab-Nonuniform-3D_all Emlab-Static_all Emlab-Thermal_all Emlab-Uniform-2D_all \
+	Emlab-Uniform-3D_all emw_all emw-farfield_all emw-nonuniform-2d_all emw-nonuniform-3d_all \
+	emw-sdevice_all emw-static_all emw-thermal_all" ck=241
+PACKAGE EFA_Synopsys_14 snpslmd 2019.12 302090519DF4741CA728 COMPONENTS="emw-uniform-2d_all \
+	emw-uniform-3d_all ENACE ENACS encore encrypt Enterprise Enterprise_VO Equation-Reader \
+	Equation-Writer Espresso-Reader Espresso-Writer EssentialSignalAnalysis Estm-HDL-Advisor \
+	Estm-HDL-Advisor-Package etran EV-ACCESS EV-ACCESS_UTIL Eview eX example_feature \
+	EXCALIBUR_ARM EXCALIBUR_MIPS Extraction FCII-Altera-Edition FCO features ficdr_test \
+	ficdr_test/gds ficdr_test/goa ficdr_test/io ficdr_test/nc ficdr_test/poly ficdr_test/size \
+	ficdr_test/sizeOr ficdr_test/stmp" ck=229
+PACKAGE EFA_Synopsys_15 snpslmd 2019.12 90F060910D4358EC0A5D COMPONENTS="ficdr_test/tio \
+	FL_cosim_run FL_ice_run FL_multichip_partition FL_recalc Flash370i FLE_main FLEX10K FLEX10KA \
+	FLEX10KB FLEX10KE FLEX6000 FLEX8000 Floops-1D_all Floops-1D-MC_all Floops-2D_all \
+	Floops-2D-MC_all Floops-3D_all Floops-3D-MC_all Floops-Parallel_all Floops-Parallel4_all \
+	Floorplan-Management Formality Formality-DV Formality-E1 Formality-TransForm \
+	Formality-Transit FPABP FPDP FPGA_Express-APROA-Optimizer FPGA-Compiler FPGA-Express \
+	FPGA-Express-32OODx-Optimizer FPGA-Express-A1200XL-Optimizer FPGA-Express-A1400-Optimizer \
+	FPGA-Express-A3200DX-Optimizer" ck=138
+PACKAGE EFA_Synopsys_16 snpslmd 2019.12 6010F081F24B9F8B9B24 \
+	COMPONENTS="FPGA-Express-A42MX-Optimizer FPGA-Express-A54SX-Optimizer \
+	FPGA-Express-APEX2-Optimizer FPGA-Express-APROA-Optimizer FPGA-Express-Constraint-Mgr \
+	FPGA-Express-EP20k-Optimizer FPGA-Express-EPF10k-Optimizer FPGA-Express-EPF6k-Optimizer \
+	FPGA-Express-EPF8k-Optimizer FPGA-Express-EPM7k-Optimizer FPGA-Express-EPM9k-Optimizer \
+	FPGA-Express-GAT FPGA-Express-isp1K-Optimizer FPGA-Express-isp2K-Optimizer \
+	FPGA-Express-isp3K-Optimizer FPGA-Express-ISP4000-Optimizer FPGA-Express-isp4K-Optimizer \
+	FPGA-Express-ISP5000-Optimizer FPGA-Express-isp5K-Optimizer FPGA-Express-isp6K-Optimizer \
+	FPGA-Express-isp7K-Optimizer FPGA-Express-isp8K-Optimizer FPGA-Express-MERCURY-Optimizer \
+	FPGA-Express-Open-Optimizer FPGA-Express-ORCA2-Optimizer FPGA-Express-ORCA3-Optimizer \
+	FPGA-Express-Synario-Optimizer FPGA-Express-VHDL-Base FPGA-Express-VHDL-Training \
+	FPGA-Express-VIRTEX-Optimizer FPGA-Express-VLOG-Base FPGA-Express-XC3k-Optimizer \
+	FPGA-Express-XC4k-Optimizer FPGA-Express-XC5k-Optimizer FPGA-Express-XC9k-Optimizer \
+	FPGA-HDL-Bundle" ck=205
+PACKAGE EFA_Synopsys_17 snpslmd 2019.12 B0B0A001DA59A50C5C3C COMPONENTS="FPGA-Library-Compiler \
+	FPGA-Option FPGA-VHDL-Bundle FPPRT FPTA FPTime Fridge-GUI Fridge-Interpolator \
+	Fridge-Simulation FSM-Reader FSM-Writer FusionVantageLmcInterface Gaia Galaxy-AdvCTS \
+	Galaxy-AdvTech Galaxy-Common Galaxy-DFT Galaxy-DFY Galaxy-FP Galaxy-ICC Galaxy-IU Galaxy-MV \
+	Galaxy-PNR Galaxy-Power Galaxy-Prototype Galaxy-PSYN Gate2LayoutCorrelation \
+	Gate2RTLCorrelation gemini_hspice GENERICVSP GENESISe_all gentech GRAPHICS_INTERFACE \
+	Gsim_dump_advance Gsim_dump_basic Gsim_framework_advance" ck=215
+PACKAGE EFA_Synopsys_18 snpslmd 2019.12 30C0A0A1AA34CADB11AD COMPONENTS="Gsim_framework_basic \
+	Gsim_snapshot Gsim_wave GuidedTraceAnalysis hd_foundation hd_pna hd_special1 hd_special2 \
+	hd_special3 hd_utils HDL HDL2SC_mixed HDL2SC_verilog HDL2SC_vhdl HDL-Advisor \
+	HDL-Advisor-Estimator HDL-Advisor-Estimator-Package HDL-Advisor-Package HDL-Advisor-Shell \
+	HDL-Advisor-Shell-Estimator HDL-Advisor-Shell-Estm-Package HDL-Advisor-Shell-Package \
+	HDL-Compiler hdlin hdlin_mixed hdlin_verilog hdlin_vhdl HERCULES_DEBUGGER HERCULES_DEVICE \
+	HERCULES_DRC HERCULES_ERC HERCULES_HDRC HERCULES_HDRC-HTML HERCULES_HERC-ADV \
+	HERCULES_HERC-BASIC HERCULES_HLPE" ck=35
+PACKAGE EFA_Synopsys_19 snpslmd 2019.12 A0C050A19CF9A44EA818 COMPONENTS="HERCULES_HLVS \
+	HERCULES_HLVS-DEBUG HERCULES_HLVS-HTML HERCULES_LVS HERCULES_MANAGER HERCULES_MASK \
+	HERCULES_RCE HERCULES_VUE HERCULES-CRYPT_XREF_DATA HERCULES-DISTRIBUTED \
+	HERCULES-DISTRIBUTED-2 HERCULES-DISTRIBUTED-24 HERCULES-DISTRIBUTED-24/2000.4 \
+	HERCULES-DISTRIBUTED-4 HERCULES-DP_MT HERCULES-EXPLORER_DRC HERCULES-EXPLORER_FILTERS \
+	HERCULES-EXPLORER_LVS HERCULES-FINDSHORT HERCULES-NETLIST HERCULES-RUN_TRAN hicdr_test \
+	hicdr_test/test1 hicdr_test/test2 hicdr_test/test3 hicdr_test/test4 hicdr_test/test5 \
+	hicdr_test/test6 hicdr_test/test7 hicdr_test/test8 HighLevel-Power-Analysis \
+	HighLevel-Power-Optimization him_mb him_mb_dsml him_mod him_sml" ck=247
+PACKAGE EFA_Synopsys_20 snpslmd 2019.12 C09080A17A5481CC0952 COMPONENTS="HLS-FPGA-SystemC \
+	HLS-SystemC hsim hsim-cosim hsim-xl hspice hspice_adv hspice_cosim hspice_gui \
+	HSPICE_MODEL_LIBRARY hspice_mt hspice_rf hspice_rf_char hspice3des hspicecmidev hspicecmirt \
+	hspicemt hspicerf hspiceva hspicewin hspice-XO hspicext hsptest hspui Hsp-vacomp \
+	ICInteractive Inspect_all Interface-Shell Interfise_all IQBUS_AUTHOR IQBUS_LIB IROI \
+	ISExtract_all ispLSI1K ispLSI2K ispLSI2KE ispLSI3K ispLSI5000S ispLSI5000SE" ck=214
+PACKAGE EFA_Synopsys_21 snpslmd 2019.12 5020F0112A528596D64A COMPONENTS="ispLSI5K ispLSI6K ispLSI8K \
+	ispMACH4000 JUAdvOptA JUAdvOptB JUAOPAS JUAPlan JUATime JUAUD JUClock JUDP JUOPAS Jupiter \
+	JupiterXT JUPlan JUTime JUUD JUVS Key-Generator Laker_AMS Laker_iDRC Laker_iLVS Laker_L1 \
+	Laker_L2 Laker_L3 Laker_T1 Laker_T1_LE Laker_Viewer Leakage-Power leda_checker leda_mx \
+	leda-mx libarc Library-Compiler Ligament_all" ck=88
+PACKAGE EFA_Synopsys_22 snpslmd 2019.12 D060A091E797CFEC8821 COMPONENTS="LigamentFE_all LINYE \
+	LMCSwift LMCSwift_Net LSI-Interface lsim_parser LSS4E LTL-100 LTL-100_CIF LTL-100_GDS \
+	LTL-100_NDW MACH1 MACH2 MACH4 MACH5 MAdv Mars MAX3000A MAX7000 MAX7000A MAX7000AE MAX7000B \
+	MAX7000E MAX7000S MAX9000 MCD MCE MCE-Base MCE-Eval MCE-Lib-ALU MCE-Lib-Arith1 \
+	MCE-Lib-Arith2 MCE-Lib-Arith3 MCE-Lib-Logic MC-Pro" ck=232
+PACKAGE EFA_Synopsys_23 snpslmd 2019.12 80002081D2289BBE4C83 COMPONENTS="MC-Pro-RP MC-Retime \
+	MDataCheck MDataPrep MDynLink MEMPRO MEMPRO-LIB mentor/f Mentor-Interface MERCURY Mesh1D_all \
+	Mesh2D_all Mesh3D_all metaencrypt3des metawaves metawaveswin mg_falcon_epic MIF-Reader \
+	MIF-Writer Milkyway Milkyway-Interface Millennium-ATPG-EE Millennium-ATPG-STD \
+	Millennium-Beta Millennium-DRC Millennium-Eval Millennium-FS milltools misc Mixed-Language \
+	Mixed-Paradigm MODEL_ENCRYPTION MODEL_SYNTHESIS MOTIVE-PrimeTime mti_epic MV-Astro-Opt" \
+	ck=204
+PACKAGE EFA_Synopsys_24 snpslmd 2019.12 30E05011901C0A3A5D4D COMPONENTS="MVerilog MWAPIaccess \
+	MWAPIdev nAnalyzer nanosim nanosim/ace nanosim/ace_cosim nanosim/av nanosim/bcx nanosim/bdc \
+	nanosim/beta_status nanosim/btm nanosim/gui nanosim/internal_use nanosim/msx \
+	nanosim/postlayout_har nanosim/power nanosim/vlog_a nBench nClock nCompare nECO nESL \
+	NET-TRAN nlcc nLint nLint_either nLint_mixed nLint_sv nLint_verilog nLint_vhdl nMonitor \
+	Noffset-2D_all Noffset-3D_all Nova-ExploreRTL-Verilog npi" ck=206
+PACKAGE EFA_Synopsys_25 snpslmd 2019.12 3030F0D1D0274A0FE784 COMPONENTS="nProp nSC nSchema \
+	nSchemaOnly nState nTE nTiming nTrace nTree nTX nWave OPT_TEMPLATE_LIB OptimISE-DOE_all \
+	OptimISE-Iterative_all OptimISE-RSMOpt_all OptimISE-Statistical_all ORCA2A ORCA2TB ORCA3C \
+	ORCA3FPSC ORCA3L ORCA4E ParDiSo_all Parse-Tree-Translator pathfinder pathmill pathmill/cso \
+	pathmill/ctx pathmill/dsx pathmill/pfx pathmill/sfx pathmill_plus PC-Expert PhysOpt \
+	PhysOpt-Beta PhysOpt-ClockTree" ck=1
+PACKAGE EFA_Synopsys_26 snpslmd 2019.12 20E0E05180EFE0F71ACC COMPONENTS="PhysOpt-Extraction \
+	PhysOpt-GUI PhysOpt-Hierarchy PhysOpt-Onroute PhysOpt-Parallel PhysOpt-Route \
+	PhysOpt-Route-TD PhysOpt-Routing PhysOpt-SI PhysOpt-Ultra PlanetPL PlanetRTL pmga \
+	polaris-cbs polaris-com polaris-int polaris-mt polaris-signalscan Power-Analysis powerarc \
+	powergate Power-Optimization Power-Optimization-Upgrade primerail_hsim powrmill powrmill/ace \
+	powrmill/av powrmill/bcx powrmill/beta_status powrmill/btm powrmill/csx \
+	powrmill/internal_use powrmill/msx powrmill/nsaddon powrmill/power powrmill/svcz \
+	powrmill/vlog_a" ck=255
+PACKAGE EFA_Synopsys_27 snpslmd 2019.12 303000019F468C2FD21A COMPONENTS="PPPRT primepower \
+	primepower_gui PrimeTime PrimeTime_gui PrimeTime-Plus PrimeTime-SI prmspx_visual_all \
+	Prolyt_all ProMA-L1 ProMA-L2 ProMA-LD ProMA-P1 ProMA-P2 ProMA-PD Protocol-Compiler-Analysis \
+	Protocol-Compiler-COutput Protocol-Compiler-FML Protocol-Compiler-Synth Protocol-Compiler-UI \
+	provhdl_checker PS_CTS PS_Extraction PS_Noise_Optimization psf PSG-SDE pwga QLOGIC \
+	Quantum38k rad RailMacro railmill railmill/ace railmill/av railmill/bcx \
+	railmill/beta_status" ck=172
+PACKAGE EFA_Synopsys_28 snpslmd 2019.12 104030B15C0ECBBD69E5 COMPONENTS="railmill/gbx \
+	railmill/internal_use railmill/msx railmill/power railmill/rvfp railmill/snx railmill/spnx \
+	railmill/ssnx RCXTEO Reusner rm_eee route66 RouteCompiler rslv3d rslv3dviewer RT54SXS \
+	RTL-Analyzer RTL-Analyzer-DAP RTL-Analyzer-Shell RTL-Analyzer-Shell-DAP RtlGateCorrelation \
+	RTL-Power-Analysis SABER_BUNDLE SABER_DEV_MMP SABER_HARNESS SABER_HARNESS_NETLISTER SABER_IF \
+	SABER_INTERFACE SABER_SCOPE SABER_SCOPE_NETLIST SABER_SIMULATOR SABER_SKETCH \
+	SABER_SKETCH_NETLIST SC-BC SC-COSIM SC-FPGA" ck=227
+PACKAGE EFA_Synopsys_29 snpslmd 2019.12 D0706071A92B256EAB45 COMPONENTS="SC-HLS scratch SC-RTL sda \
+	sde_all sde3d_all sdevcie-laser_all sdevice_all sdevice-3d_all sdevice-densitygrad_all \
+	sdevice-ferro_all sdevice-floatinggate_all sdevice-gateleakage_all sdevice-hetero_all \
+	sdevice-hydro_all sdevice-kpgain_all sdevice-laser_all sdevice-led_all sdevice-mixedmode_all \
+	sdevicemonosemicond_all sdevice-montecarlo_all sdevice-noise_all sdevice-optic_all \
+	sdevice-parallel_all sdevice-parallel4_all sdevice-pmi_all sdevice-radiation_all \
+	sdevice-reliability_all sdevice-schroedinger_all sdevice-sige_all sdevice-thermo_all \
+	sdevice-traps_all sdevice-vectoroptic_all SEU SGE-DC-Interface SGE-EDIF-Interface" ck=130
+PACKAGE EFA_Synopsys_30 snpslmd 2019.12 80C0E051F67AEEB68EFA COMPONENTS="SGE-Tool \
+	SGE-Verilog-Interface SGE-VHDL-Interface ShortCut-DC-Expert ShortCut-DC-Pro Shortcut-FPGA \
+	Siloti Siloti_fe Siloti_o2 SilVE SimVE simwave simwave_epic SKDB_Import SNPS-CSL SNPS-Keygen \
+	SNPS-MOTIVE SolarGAII SolarII sparallel_all SPARTAN SPARTAN2 SPARTAN2E SPARTANXL \
+	spcmcalib_all spcmstd_all spice_explorer spice_parser sprocess_all sprocess2d_all \
+	sprocess2dmc_all sprocess3d_all sprocess3dmc_all sprocess-an-imp3d_all sprocesskmc_all \
+	sprocessmc_all" ck=52
+PACKAGE EFA_Synopsys_31 snpslmd 2019.12 1000E0519BA560E14F76 COMPONENTS="sprocessmpp_all \
+	sprocess-parallel_all sprocess-parallel4_all sptopography2d_all ST_LIBRARY Stamp-Compiler \
+	STAR-ASCII STAR-CR STAR-DC STAR-EX STAR-EX_ERC STAR-FILTER STAR-GAZER STAR-LD2LTL STAR-R \
+	STAR-RC STAR-RC2 STAR-RC2_MANAGER STAR-RC2-AEO STAR-RC2-ANAL STAR-RC2-ASCII STAR-RC2-CLOCK \
+	STAR-RC2-DB STAR-RC2-DISTRIB10 STAR-RC2-GUI STAR-RC2-NETLIST STAR-RC2-PROBER STAR-RC2-TCAD \
+	STAR-RC2-VIEWER STAR-RC2-XSTOR1 STAR-RC2-XSTOR2 STAR-RC2-XTRACT STAR-RC2-XTR-AEO STAR-RC-GUI \
+	STAR-R-GUI stars_analog" ck=210
+PACKAGE EFA_Synopsys_32 snpslmd 2019.12 A000D011A6BDD0CC58C7 COMPONENTS="stars_aryred stars_cmi \
+	stars_csdf stars_hsplnk stars_ish stars_linred stars_mr stars_wsf starsim starsimxt \
+	STAR-SYN2STAR start_aed start_analysis start_bin STAR-TCAD startime STAR-XREF StarXtract \
+	sup2lig_all swb_all swb-advanced_all sx_cdslink sx_chip sx_daiclink sx_drc sx_wva \
+	Sxtract_all SYNARIO SynLib-AdvMath SynLib-ALU SynLib-Control SynLib-DSPFIR SynLib-Eval \
+	SynLib-FltTol SynLib-PCIbasic Syn-Library-Compiler" ck=212
+PACKAGE EFA_Synopsys_33 snpslmd 2019.12 D01060A197404DE1D8B3 COMPONENTS="SynLib-Seq \
+	SynLib-VerilogSimMdl SynLib-VHDLSimMdl Synopsys Synopsys-Queue Synopsys-Release \
+	TBM-Manager-UI TBM-VSS-Check TBS TC-Beta TDL-Interface TDL-Reader TDL-Writer Tdx_all \
+	techviewer Tecplot_all TecplotSmall_all Ted_all TedSmall_all Test-Accelerator Test-Analysis \
+	Test-Analysis-GUI Test-Analysis-RTL Test-ATPG Test-ATPG-30 Test-ATPG-Limited Test-ATPG-Max \
+	Test-ATPG-PRO Test-ATPG-Ultra Test-ATPG-XP Test-Beta Test-Beta-2 Test-Beta-3 Test-Beta-4 \
+	Test-Beta-5 Test-Beta-6" ck=222
+PACKAGE EFA_Synopsys_34 snpslmd 2019.12 B02050D1852132ED3374 COMPONENTS="Test-BIST Test-BSDL \
+	Test-CA Test-CA-2 Test-CA-3 Test-CA-4 Test-Compile Test-Compile-Max Test-Compiler \
+	Test-Compile-Remodel Test-Compiler-Plus Test-Compiler-Remodel Test-Compile-Share \
+	Test-Core-Integration Test-Core-Wrapper Test-CTL-Model Test-Custom-Protocols Test-Delay \
+	TestDesignCorrelation Test-DFTC-TMAX Test-DFT-Top Test-Diagnosis Test-Eval Test-Faultsim \
+	Test-Faultsim-8L Test-Format Test-IDDQ Test-IEEE-Std-1149-1 TESTIFY_NETLISTER testing \
+	Test-LBIST-ATPG Test-LBIST-Synthesis Test-Library TestManager Test-Map Test-Mbist" ck=253
+PACKAGE EFA_Synopsys_35 snpslmd 2019.12 D010C0A15BA6C718248C COMPONENTS="Test-Mbist-Algorithm \
+	Test-Mbist-CAM Test-Mbist-Diagnosis Test-Mbist-DRAM Test-Mbist-FLASH Test-Mbist-Multiport \
+	Test-PR-1 Test-PR-2 Test-PR-3 Test-PR-4 Test-RTL-Check Test-RTL-Tristate Test-ScanRoute \
+	TestSim TestVE tfm timemill timemill/ace timemill/av timemill/bcx timemill/bdc \
+	timemill/beta_status timemill/btm timemill/csx timemill/internal_use timemill/msx \
+	timemill/nsaddon TimingAnalysis TLM_Synthesis TRUE tSchema turboSchema turboState \
+	turboTracer TurboWave turboWave turbowave_epic" ck=200
+PACKAGE EFA_Synopsys_36 snpslmd 2019.12 102030C158B225A04B8B COMPONENTS="Ultra37000 VANTIS vcd2e \
+	vcsace VCSAMSCompiler VCSAMSCompiler_Net VCSAMSRuntime VCSAMSRuntime_Net VCSCompile \
+	VCSCompile_Net VCSCompile_Node VCSCompiler VCSCompiler_Net VCSCompiler_Node VCSDebugger \
+	VCSDebugger_Net VCSDebugger_Node VCS-Express-Compile VCS-Express-Runtime VCSiCompile \
+	VCSiCompile_Net VCSiCompile_Node VCSiCompiler VCSiCompiler_Net VCSiCompiler_Node \
+	VCSiDebugger VCSiDebugger_Net VCSiDebugger_Node VCSiRuntime VCSiRuntime_Net \
+	VCSiRuntime_Net(3) VCSiRuntime_Node VCSiRuntimeLimited VCSlm_Hm VCSlm_Hm_Net VCSlm_Hm_Node" \
+	ck=151
+PACKAGE EFA_Synopsys_37 snpslmd 2019.12 104020C11A0FD30118C5 COMPONENTS="VCSNativeCode \
+	VCSNativeCode_Net VCSNativeCode_Node VCSOldPostProcDebugger_Net VCSOldPostProcDebugger_Node \
+	VCSParallelCompiler VCSParallelCompiler_Net VCSParallelCompiler_Node VCSParallelRuntime \
+	VCSParallelRuntime_Net VCSParallelRuntime_Node VCSParallelThread VCSParallelThread_Net \
+	VCSParallelThread_Node VCSPostProcDebugger VCSPostProcDebugger_Net VCSPostProcDebugger_Node \
+	VCSRuntime VCSRuntime_Net VCSRuntime_Node VCSRuntimeLimited VCSRuntimeLimited_Net \
+	VCSRuntimeLimited_Node VCSStd VCSStd_Net VCSStd_Node VCSTools VCSTools_Net VCSTools_Node \
+	VDesktop-Debug VDesktop-GUI VDesktop-VCDTrans VDesktop-Verilog VDesktop-VHDL \
+	VEHICLE_ELECTRIC_LIB Vera" ck=157
+PACKAGE EFA_Synopsys_38 snpslmd 2019.12 10D0908101CFDAB19A84 COMPONENTS="vera_comp vera_debug \
+	vera_ip vera_rtime Verdi Verification-Token Verilog verilog_writer Verilog-Netlist-Writer \
+	Verilog-Parser Verilog-To-BE Verilog-VirSim vertue vhdl_compiler VHDL-Analyzer VHDL-Compiler \
+	VHDL-Cycle-Sim VHDL-Elaborator VHDL-Event-Sim VHDLi-Elaborator VHDLi-Event-Sim \
+	VHDL-Netlist-Writer VHDL-ScSim VHDL-To-BE VHDL-Tools VHDL-VirSim VHMC-Eval VHMC-GenUnlocked \
+	VHMC-Runtime viewlogic viewlogic_epic VIEWLOGIC_NET VirSim VIRTEX VIRTEX2 VIRTEX2P" ck=239
+PACKAGE EFA_Synopsys_39 snpslmd 2019.12 40E0900162BC8A50FB94 COMPONENTS="VIRTEXE VIRTEXEA \
+	Vivace-Code-Generator Vivace-Core Vivace-Debug Vivace-Elaborator Vivace-Expert \
+	Vivace-Express Vivace-GUI Vivace-HDL-Analyzer Vivace-Model-Compiler Vivace-Pro \
+	Vivace-Simulator Vivace-VHDL-Analyzer vlog_epic_pif vlog2e vlsi2000 vlsi500 VMCCompiler \
+	VMCCore VMCEvaluation VMCExpress_Compiler VMCGeneratorUnlocked VMCRuntime VPC vsea-calib_all \
+	VSP_DRIVER VSS-Analyzer VSS-Backplane VSS-Cadence-Interface VSS-CLI" ck=193
+PACKAGE EFA_Synopsys_40 snpslmd 2019.12 B05070D117BA0C22BDF8 COMPONENTS="VSS-CompiledSim \
+	VSS-Debugger VSS-Falcon-Interface VSS-GateSim VSS-LAI-Models VSS-Lib-Tools VSS-LMSI \
+	VSS-Model-Developer VSS-NEC-Tran VSS-SDF-Interface VSS-SGE-Tool VSS-Simulator \
+	VSS-SmartModels VSS-SPC VSS-Tran VSS-Utilities VSS-Verilog-PLI VSS-VIP-Interface \
+	VSS-Wave-Display VSS-XP-Accelerator VT_AssertionIP VT_Assertions VT_AssertionsRuntime \
+	VT_Coverage VT_CoverageRuntime VT_CoverageURG VT_Testbench VT_TestbenchRuntime \
+	VT_VCS_BETA_Features VT_VCS_LCA_Features VT_Visual vtran WhatIfAnalysis WRITE XC3000 XC4000" \
+	ck=238
+PACKAGE EFA_Synopsys_41 snpslmd 2019.12 A0603041FA44FE292B50 COMPONENTS="XC4000E XC4000EX XC4000L \
+	XC4000XL XC4000XLA XC4000XV XC5200 XC9500 XC9500XL XC9500XV xp XVCSDebugger XVCSiDebugger" \
+	ck=201
+PACKAGE EFA_Synopsys_42 snpslmd 2019.12 B0D0F0F1DC8D856E6BBA COMPONENTS="DC-FPGA-Add-On-to-DC \
+	DESIGNWARE-AMBA-VIP DESIGNWARE-I2C-VIP DESIGNWARE-REGRESSION DESIGNWARE-SIO-VIP \
+	DESIGNWARE-VERIFICATION DWC-AHB-ICTL-Source DWC-AHB-Source DWC-AMBA-Fabric-Source \
+	DWC-APB-Advanced-Source DWC-APB-ICTL-Source DWC-APB-Periph-Source DWC-DMA-Controller-Source \
+	DWC-DMAC-Source DWC-GPIO-Source DWC-I2C-Source DWC-INTC-CNTL-Source DWC-MEMCTL-Source \
+	DWC-RAP-Source DWC-RTC-Source DWC-SSI-Source DWC-TIMERS-Source DWC-UART-SRC DWC-UART-Source \
+	DWC-WDT-Source DesignWare-MEMCTL-Source" ck=87
+PACKAGE EFA_Synopsys_43 snpslmd 2019.12 206000C1A1C61421AD68 COMPONENTS="JupiterXT_VF SABER_GUIDE \
+	VT_LCA_Language VT_NTB VT_SVDesign aPrv sharp simif ABB_CHCRC_LIBRARY AIM_DEBUG_MEMSSE \
+	AIM_DEVELOPER_MEMSSE AUT_NUMBER_MAJOR_PACKAGES BASIC_ANALYSES BASIC_ANALYSES_MEMSSE \
+	BATCH_MEASURE BATCH_MEASURE_MEMSSE BATT_TOOL BATT_TOOL_MEMSSE BETA_LIBRARY BUILD_DATE \
+	BUILD_NUMBER BUNDLE_MCAD_PROJECTION CADENCE_DIVA_NETLISTER CADENCE_FRAMEWAY \
+	CADENCE_FRAMEWAY_MEMSSE CADENCE_NETLISTER CADENCE_NETLISTER_MEMSSE COMPONENT_LIBRARY_MEMSSE \
+	CONCEPT_FRAMEWAY CONCEPT_NETLISTER CORENL_CHAR CORENL_CHAR_MEMSSE COSMOS_GUIDE COSMOS_SKETCH \
+	COSMOS_SKETCH_BACK_ANN COSMOS_SKETCH_NETLISTER EXPT_EDITOR_MEMSSE EXPT_EDITOR_PLUS \
+	EXPT_EDITOR_PLUS_MEMSSE FAILURE_MODE FAILURE_MODE_MEMSSE FASTPARTS FUSE_CHAR \
+	FUSE_CHAR_MEMSSE" ck=156
+PACKAGE EFA_Synopsys_44 snpslmd 2019.12 809050D14CE173667915 COMPONENTS="HARNESS_CATIA \
+	HARNESS_MCADREAD HARNESS_PROCABLE HARNESS_UNIGRAPHICS HSPICE_MODEL_LIBRARY_MEMSSE \
+	IC_DESIGN_LIB IMECH_LIBRARY IQBUS_AUTHOR_MEMSSE IQBUS_DESIGNER IQBUS_LIB_MEMSSE LINK_MATLAB \
+	LINK_MATLAB_MEMSSE LINK_XMATH LOAD_TOOL LOAD_TOOL_MEMSSE LSA_MEMSSE LSA LTX_LIBRARY \
+	COVENTOR_LIB10 COVENTOR_LIB10_MEMSSE COVENTOR_LIB11 COVENTOR_LIB11_MEMSSE COVENTOR_LIB12 \
+	COVENTOR_LIB12_MEMSSE COVENTOR_LIB13 COVENTOR_LIB13_MEMSSE COVENTOR_LIB14 \
+	COVENTOR_LIB14_MEMSSE COVENTOR_LIB15 COVENTOR_LIB15_MEMSSE COVENTOR_LIB8 \
+	COVENTOR_LIB8_MEMSSE COVENTOR_LIB9 COVENTOR_LIB9_MEMSSE DESIGNSTAR DESIGNSTAR_NET DIODE_TOOL \
+	DIODE_TOOL_MEMSSE DRCYCLE_TOOL DRCYCLE_TOOL_MEMSSE" ck=192
+PACKAGE EFA_Synopsys_45 snpslmd 2019.12 B050A021CA0536F52B28 COMPONENTS="EDIF_NETLISTER \
+	EDIF_NETLISTER_MEMSSE EXPT_EDITOR MAST_COMPILER MEASURE MEASURE_MEMSSE MEMS MENTOR_FRAMEWAY \
+	MENTOR_FRAMEWAY_MEMSSE MENTOR_NETLISTER MENTOR_NETLISTER_MEMSSE MICROCOSM_LIB MICROCOSM_LIB2 \
+	MICROCOSM_LIB2_MEMSSE MICROCOSM_LIB3 MICROCOSM_LIB3_MEMSSE MICROCOSM_LIB4 \
+	MICROCOSM_LIB4_MEMSSE MICROCOSM_LIB5 MICROCOSM_LIB5_MEMSSE MICROCOSM_LIB6 \
+	MICROCOSM_LIB6_MEMSSE MICROCOSM_LIB7 MICROCOSM_LIB7_MEMSSE MICROCOSM_LIB_MEMSSE \
+	MODEL_ARCHITECT MODEL_ENCRYPTION_MEMSSE MODEL_SYNTHESIS_MEMSSE MODPEX MODPEX_AQUEDUCT \
+	MODPEX_ASIM MODPEX_ATFT" ck=196
+PACKAGE EFA_Synopsys_46 snpslmd 2019.12 4090D0219746F5AE7FF9 COMPONENTS="SABERRT_ADI \
+	SABERRT_ADI_MEMSSE SABERRT_AP2633 SABERRT_FE SABERRT_FE_MEMSSE SABERRT_HIL \
+	SABERRT_HIL_MEMSSE SABER_DEV_MM SABER_GUIDE_MEMSSE SABER_INTERFACE_MEMSSE SABER_LEAPFROG_MM \
+	SABER_MODELSIM_MM SABER_MODELSIM_MM_MEMSSE SABER_MODELSIM_PLUS_MM \
+	SABER_MODELSIM_PLUS_MM_MEMSSE SABER_MODELSIM_VHDL_MM SABER_MODELSIM_VHDL_MM_MEMSSE \
+	SABER_MODELSIM_VLOG_MM SABER_PLUGNSIM_MM SABER_QSIM_MM SABER_QVSPRO_MM SABER_RT_MM \
+	SABER_RT_MM_MEMSSE SABER_RUNTIME SABER_SCOPE_MEMSSE SABER_SIMMATRIX_MM \
+	SABER_SIMULATOR_MEMSSE SABER_SKETCH_MEMSSE SYMLIB_POWER SYMLIB_POWER_MEMSSE TESTIFY \
+	TESTIFY_MEMSSE TESTIFY_NETLISTER_MEMSSE THERM_TOOL THERM_TOOL_MEMSSE TLU_TOOL \
+	TLU_TOOL_MEMSSE TR_ANALYSIS TR_ANALYSIS_MEMSSE VEHICLE_ELECTRIC_LIB_MEMSSE VENDOR_LIBRARY \
+	VENDOR_LIBRARY_MEMSSE VERIAS_HSPICE_COMPILER VERIAS_SIMULATOR VIEWLOGIC_FRAMEWAY \
+	VIEWLOGIC_FRAMEWAY_MEMSSE VIEWLOGIC_NET_MEMSSE WF_API_HSPICE WF_API_HSPICE_MEMSSE \
+	WF_API_MEMSSE WF_API_STARSIM WF_API_STARSIM_MEMSSE" ck=209
+PACKAGE EFA_Synopsys_47 snpslmd 2019.12 E02000619314792097C4 COMPONENTS="VHDLAMS_TAURILI \
+	VHDLAMS_TAURI MODPEX_AWB MODPEX_CTC MODPEX_ELDO MODPEX_MARELLI MODPEX_NOPOWER MODPEX_PTFT \
+	MODPEX_SABER MODPEX_STATIS MODPEX_TVS MONTE_CARLO MONTE_CARLO_MEMSSE MOS_TOOL \
+	MOS_TOOL_MEMSSE MOTOR_DCPM_TOOL MOTOR_DCPM_TOOL_MEMSSE OPT_TEMPLATE_LIB_MEMSSE PLACEHOLDER \
+	PNET_LIBRARY PNEUM_HYD_PRG1 PNEU_HYD_LIBRARY POLARIS_SCOPE POLARIS_X POWER_EXPRESS \
+	SABER_SKETCH_NETLISTER SABER_SKETCH_NETLISTER_MEMSSE SABER_TSP SABER_VERILOG_MM \
+	SABER_VERILOG_MM_MEMSSE SABER_VHDLAMS SABER_VHDLAMS_MEMSSE SABER_VIEWSIM_MM \
+	SABER_VIEWSIM_MM_MEMSSE SCAN_TOOL SCAN_TOOL_MEMSSE SENSITIVITY SENSITIVITY_MEMSSE \
+	SJCL_LIBRARY SPECTRAL SPECTRAL_MEMSSE STATEBENCH STRESS STRESS_MEMSSE SYMLIB SYMLIB_JAPANESE \
+	SYMLIB_JAPANESE_MEMSSE SYMLIB_MEMSSE SYMLIB_PLUS SYMLIB_PLUS_MEMSSE" ck=214
+PACKAGE EFA_Synopsys_48 snpslmd 2019.12 00006041402FCD68B71E COMPONENTS="DC-FPGA-Add-On-to-DC \
+	DESIGNWARE-AMBA-VIP DESIGNWARE-I2C-VIP DESIGNWARE-REGRESSION DESIGNWARE-SIO-VIP \
+	DESIGNWARE-VERIFICATION DWC-AHB-ICTL-Source DWC-AHB-Source DWC-AMBA-Fabric-Source \
+	DWC-APB-Advanced-Source DWC-APB-ICTL-Source DWC-APB-Periph-Source DWC-DMA-Controller-Source \
+	DWC-DMAC-Source DWC-GPIO-Source DWC-I2C-Source DWC-INTC-CNTL-Source DWC-INTC-CNTL-Source \
+	DWC-MEMCTL-Source DWC-RAP-Source DWC-RTC-Source DWC-SSI-Source DWC-TIMERS-Source \
+	DWC-UART-SRC DWC-UART-Source DWC-WDT-Source DesignWare-MEMCTL-Source JupiterXT_VF \
+	SABER_GUIDE VT_LCA_Language VT_NTB VT_SVDesign aPrv sharp simif" ck=174
+FEATURE EFA_Synopsys_1 snpslmd 2019.12 31-dec-2019 9999 4E91705EA5E3C750B66A \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=23 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_2 snpslmd 2019.12 31-dec-2019 9999 6EA1500E3AAED2FF5102 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=56 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_3 snpslmd 2019.12 31-dec-2019 9999 8E61502E44609F5A6448 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=5 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_4 snpslmd 2019.12 31-dec-2019 9999 FE31F06E1FA1BAC5D769 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=45 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_5 snpslmd 2019.12 31-dec-2019 9999 4EB1E01E09434FE32361 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=195 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_6 snpslmd 2019.12 31-dec-2019 9999 AE41F00E768E124C8D0F \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=14 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_7 snpslmd 2019.12 31-dec-2019 9999 1EC1D02E58D097CB7004 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=218 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_8 snpslmd 2019.12 31-dec-2019 9999 2E11407EBB883A658321 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=15 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_9 snpslmd 2019.12 31-dec-2019 9999 8ED1400ED5779741BF2F \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=78 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_10 snpslmd 2019.12 31-dec-2019 9999 AE21A09EBA4B179616D2 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=9 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_11 snpslmd 2019.12 31-dec-2019 9999 AE81F0EEDE19F8937AD7 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=64 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_12 snpslmd 2019.12 31-dec-2019 9999 3E81906E0664D6AD50F2 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=27 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_13 snpslmd 2019.12 31-dec-2019 9999 EE61401E6A865598F5BC \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=33 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_14 snpslmd 2019.12 31-dec-2019 9999 2E6130BE6A6F131683D0 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=230 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_15 snpslmd 2019.12 31-dec-2019 9999 6EC1C08E3E2D4C33E797 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=255 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_16 snpslmd 2019.12 31-dec-2019 9999 BE41904EEE44520F4CF5 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=36 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_17 snpslmd 2019.12 31-dec-2019 9999 7E21F07E82238138B1BC \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=38 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_18 snpslmd 2019.12 31-dec-2019 9999 EE21209EAA576FB74E91 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=104 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_19 snpslmd 2019.12 31-dec-2019 9999 FE8150AECE8D5092A293 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=6 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_20 snpslmd 2019.12 31-dec-2019 9999 5EC130AE98AB9319F5DC \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=38 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_21 snpslmd 2019.12 31-dec-2019 9999 5E81C08EFCD2F48ECBB9 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=115 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_22 snpslmd 2019.12 31-dec-2019 9999 4EE1105E2C107A927EF8 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=6 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_23 snpslmd 2019.12 31-dec-2019 9999 9E61C06EA8ED99065C96 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=37 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_24 snpslmd 2019.12 31-dec-2019 9999 CE4130DE6812379BE1DD \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=253 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_25 snpslmd 2019.12 31-dec-2019 9999 9E0150AE2C6E382C46BF \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=252 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_26 snpslmd 2019.12 31-dec-2019 9999 8EE1B03EEC2C1E30ABBA \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=58 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_27 snpslmd 2019.12 31-dec-2019 9999 0EE1C05E58D5FDA70891 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=27 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_28 snpslmd 2019.12 31-dec-2019 9999 0EC1B0FEA0B76318BC9C \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=51 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_29 snpslmd 2019.12 31-dec-2019 9999 0E81508EC44FD4AF53F8 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=94 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_30 snpslmd 2019.12 31-dec-2019 9999 AE51A0FE57401B249D99 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=37 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_31 snpslmd 2019.12 31-dec-2019 9999 6EF1D0DE7BAA3C8338DC \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=51 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_32 snpslmd 2019.12 31-dec-2019 9999 6E71A05E43CF5A1E8EB5 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=31 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_33 snpslmd 2019.12 31-dec-2019 9999 7E11403EE700619B3ABF \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=3 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_34 snpslmd 2019.12 31-dec-2019 9999 6E1180CEBFFC77A498DD \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=47 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_35 snpslmd 2019.12 31-dec-2019 9999 BEB150BE830B3032B4D9 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=37 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_36 snpslmd 2019.12 31-dec-2019 9999 EE31202E8B6A7EAC1BF0 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=46 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_37 snpslmd 2019.12 31-dec-2019 9999 BE51700E0F2D450BA6FE \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=234 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_38 snpslmd 2019.12 31-dec-2019 9999 FE1100BECF54631514DE \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=64 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_39 snpslmd 2019.12 31-dec-2019 9999 2EF150DE4BB79C82F19A \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=2 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_40 snpslmd 2019.12 31-dec-2019 9999 5EB1B08EFD24DF183B90 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=251 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_41 snpslmd 2019.12 31-dec-2019 9999 CEF1C0BE8141E81F80FE \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=17 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_42 snpslmd 2019.12 31-dec-2019 9999 1E91902E61BAF6A26CF8 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=58 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_43 snpslmd 2019.12 31-dec-2019 9999 1E51D00EFD4E2D871A9D \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=9 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_44 snpslmd 2019.12 31-dec-2019 9999 8EF120FE951DDB8B3794 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=69 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_45 snpslmd 2019.12 31-dec-2019 9999 4E71D08EE1F454ADCCFE \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=51 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_46 snpslmd 2019.12 31-dec-2019 9999 CED1905E01836A1069BA \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=0 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_47 snpslmd 2019.12 31-dec-2019 9999 9E51706E85E3E927C69C \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=42 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE EFA_Synopsys_48 snpslmd 2019.12 31-dec-2019 9999 0E31008ECD282F18B3D5 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=248 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE nanochar snpslmd 2019.12 31-dec-2019 9999 4E21506E018750996D8A \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=200 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE hspice_pack snpslmd 2019.12 31-dec-2019 9999 DE11903EF95399D69C9F \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=88 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE cosmos_other snpslmd 2019.12 31-dec-2019 9999 3EA1606E60F2789BE6F0 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=250 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE cxp snpslmd 2019.12 31-dec-2019 9999 6EF1405EB0EFC30D88AF VENDOR_STRING=^1Platform:ALL+S \
+	SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=92 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Synopsys_VCS_cmv snpslmd 2019.12 31-dec-2019 9999 2E91E0AE9977607151F2 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=250 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Design-Expert snpslmd 2019.12 31-dec-2019 9999 3E61E0FE81403F3D16FC \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=100 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE him_mm_pi snpslmd 2019.12 31-dec-2019 9999 CE1150BE360736060B13 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=181 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE CXp_GUI snpslmd 2019.12 31-dec-2019 9999 7EE1B0DE6ED38DAB8763 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=110 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE CXp_Analysis snpslmd 2019.12 31-dec-2019 9999 EED1E0EEACFCF6734866 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=174 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE CXp_CircuitEnvironment snpslmd 2019.12 31-dec-2019 9999 BE81E0AE282AA6034824 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=15 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE COSMOS_SCOPE snpslmd 2019.12 31-dec-2019 9999 0E11501E761E61CBE490 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=170 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE CmMonitor snpslmd 2019.12 31-dec-2019 9999 8EB1707EA38AF9AFC697 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=42 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VCSiRuntimeLimited_Node snpslmd 2019.12 31-dec-2019 9999 5EC1005EBBBFC4713841 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=13 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VCSiRuntimeLimited_Net snpslmd 2019.12 31-dec-2019 9999 AEF180CEACF36328EFE1 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=78 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VMCCompiler_Node snpslmd 2019.12 31-dec-2019 9999 BEF1F0FEBBC1F5C0FEA7 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=223 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VMCRuntime_Node snpslmd 2019.12 31-dec-2019 9999 2E01F07E671E2F36E656 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=25 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VMCEvaluation_Node snpslmd 2019.12 31-dec-2019 9999 1E61C0CE6E54BA9DED20 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=51 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VMCGeneratorUnlocked_Node snpslmd 2019.12 31-dec-2019 9999 9E41405E449807EE845A \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=6 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VMCExpress_Compiler_Node snpslmd 2019.12 31-dec-2019 9999 6ED1802E0FA4BA5AC0D2 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=39 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VMCCompiler_Net snpslmd 2019.12 31-dec-2019 9999 AE61704E80B7491359F3 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=35 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VMCRuntime_Net snpslmd 2019.12 31-dec-2019 9999 0E5170EE3DC559553AAB \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=219 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VMCEvaluation_Net snpslmd 2019.12 31-dec-2019 9999 0EC1408E65A1614D1CE1 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=4 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VMCGeneratorUnlocked_Net snpslmd 2019.12 31-dec-2019 9999 EEB1009E74811F8F1894 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=74 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VMCExpress_Compiler_Net snpslmd 2019.12 31-dec-2019 9999 AEE130CE58475B06EDF2 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=65 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE LMCSwift_Node snpslmd 2019.12 31-dec-2019 9999 8EE1E08E2897E8542C51 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=242 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE SNPS-Assertions snpslmd 2019.12 31-dec-2019 9999 7E31704E003AF8E2A4A5 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=15 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_SystemVerilog snpslmd 2019.12 31-dec-2019 9999 0E01409E303514DBD0B3 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=175 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VCSMXRunTime_Net snpslmd 2019.12 31-dec-2019 9999 BE81200EE0A16EE33EFA \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=52 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VCSMXiRunTime_Net snpslmd 2019.12 31-dec-2019 9999 AEF1C04E5746C05CB7A6 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=81 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Magellan-Sim snpslmd 2019.12 31-dec-2019 9999 4E31E03E88931F112420 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=163 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_SVAssertions snpslmd 2019.12 31-dec-2019 9999 FE61B09E506062684D80 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=18 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_SVTestbench snpslmd 2019.12 31-dec-2019 9999 FE11303E0B5FD7FA6383 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=42 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_NativeTestbench snpslmd 2019.12 31-dec-2019 9999 AEA190EE54E84D1DB866 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=93 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_DVE snpslmd 2019.12 31-dec-2019 9999 AE21203E46FD0577F34C VENDOR_STRING=^1Platform:ALL+S \
+	SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=4 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_UCLI snpslmd 2019.12 31-dec-2019 9999 EE61E00E508F0C1E5BE0 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=77 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_LCA_Testbench snpslmd 2019.12 31-dec-2019 9999 4E81C0AE8FB7281C849E \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=6 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PVCSCompiler_Net snpslmd 2019.12 31-dec-2019 9999 6E61E01E85DFD0ED95ED \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=108 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PVCSRuntime_Net snpslmd 2019.12 31-dec-2019 9999 CE3130CE0CA101282729 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=177 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_VCS_Power_Management snpslmd 2019.12 31-dec-2019 9999 DE61C05E18F498204AC4 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=236 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_VCS_Checker snpslmd 2019.12 31-dec-2019 9999 4E4140BEB6FCDC0C62A9 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=27 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_VCS_Echo snpslmd 2019.12 31-dec-2019 9999 4EC1709EA287D66503B9 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=49 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE RMAN_RUN snpslmd 2019.12 31-dec-2019 9999 FEC1005E40255276BCF8 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=235 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_VCS_NTBE snpslmd 2019.12 31-dec-2019 9999 CE6130EE0A6605543DE0 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=241 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE XVVCDebugger snpslmd 2019.12 31-dec-2019 9999 BE0110EEA23B73461CDD \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=23 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_UnifiedCoverage snpslmd 2019.12 31-dec-2019 9999 DE1170EE447B5C6FE8EB \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=125 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_64Bit snpslmd 2019.12 31-dec-2019 9999 7E71801EE98C9910844D \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=74 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_OtherTechnology snpslmd 2019.12 31-dec-2019 9999 0EA1001E1121D4B1232F \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=234 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_NativeTBDebuggerGui snpslmd 2019.12 31-dec-2019 9999 9EE1005E4401A2651BC0 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=190 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_CBUG snpslmd 2019.12 31-dec-2019 9999 5E5130CE8B8151B68147 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=211 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_SVAssertionCompiler snpslmd 2019.12 31-dec-2019 9999 6EB1D08E87B7815F91DE \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=69 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_SDebug snpslmd 2019.12 31-dec-2019 9999 BE41305E7C99DA9C5BBD \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=95 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_DVENTB snpslmd 2019.12 31-dec-2019 9999 FE21506E68452666D136 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=39 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_Pioneer snpslmd 2019.12 31-dec-2019 9999 5EC1009EC607156C2C00 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=239 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_SYSTEMC21 snpslmd 2019.12 31-dec-2019 9999 CEE1704E31054206B412 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=203 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_LCA_Coverage snpslmd 2019.12 31-dec-2019 9999 5EF1204E2399A65AF3D5 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=6 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_LCA_DEBUG snpslmd 2019.12 31-dec-2019 9999 DE51608E4BBBD59655F7 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=69 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_LCA_Assertions snpslmd 2019.12 31-dec-2019 9999 4E9180DE94401156A460 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=218 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_LCA_MixedSignal snpslmd 2019.12 31-dec-2019 9999 CE9110FEADA0BA38AA88 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=60 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_DVE_COV snpslmd 2019.12 31-dec-2019 9999 5E8130DEA1A5E575D710 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=46 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_VCS_Advanced_Features snpslmd 2019.12 31-dec-2019 9999 AE31E07E6F5EFD9113D6 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=85 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_VCS_BETA_Program snpslmd 2019.12 31-dec-2019 9999 3E11201E64833679DE44 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=188 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VT_PVCSCompiler_Net snpslmd 2019.12 31-dec-2019 9999 EE8100DE6689803517C0 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=233 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE DesignWare-ETHERNET snpslmd 2019.12 31-dec-2019 9999 AE4100CEF03236D89171 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=17 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Primepower snpslmd 2019.12 31-dec-2019 9999 AE51A0AE5FF39FF42891 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=57 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Primepower_gui snpslmd 2019.12 31-dec-2019 9999 7E11706E188E901485EE \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=218 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE fpc_foundation snpslmd 2019.12 31-dec-2019 9999 4E41009E62ABAC476A2A \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=48 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE fpc_pna snpslmd 2019.12 31-dec-2019 9999 3EC1B08EA9C73098FE16 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=96 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE fpc_utils snpslmd 2019.12 31-dec-2019 9999 2E11A0AE2F141432AD69 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=253 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE fpc_special1 snpslmd 2019.12 31-dec-2019 9999 BE3160CE25FD4ACD9005 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=54 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE fpc_special2 snpslmd 2019.12 31-dec-2019 9999 7EE1E0FE97E4104578E4 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=37 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE fpc_special3 snpslmd 2019.12 31-dec-2019 9999 2E51D0CEFC74A7640B7B \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=44 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-Validate snpslmd 2019.12 31-dec-2019 9999 EE81506E08F2C7CAAC93 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=74 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-Accelerate-Max snpslmd 2019.12 31-dec-2019 9999 5E81108E5D7DFB9CA938 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=98 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE chiparch_migrate snpslmd 2019.12 31-dec-2019 9999 4E11203E9565F2FDBDF9 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=64 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE planet_migrate snpslmd 2019.12 31-dec-2019 9999 8E21A02E2FB19945BA20 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=44 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE DesignWare-ARMCORES-tlm snpslmd 2019.12 31-dec-2019 9999 BE8170BE96181B1AA149 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=229 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE DesignWare-AMBA-tlm snpslmd 2019.12 31-dec-2019 9999 EE3190BEEC372A996F55 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=66 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-LBIST-Integration snpslmd 2019.12 31-dec-2019 9999 EE31B0CE18EBC8AFB916 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=119 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VHDL-Compiler-Presto snpslmd 2019.12 31-dec-2019 9999 BEC1D09E977068F02FA4 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=89 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE primepower_vcd snpslmd 2019.12 31-dec-2019 9999 CE71402EF564A785884C \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=54 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-Beta-7 snpslmd 2019.12 31-dec-2019 9999 2E41006E1181144D9FB5 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=28 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-Beta-8 snpslmd 2019.12 31-dec-2019 9999 5EF160CEFB8F60AEBF56 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=54 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-Beta-9 snpslmd 2019.12 31-dec-2019 9999 2E91309E6435B05245A7 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=255 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-STDVR snpslmd 2019.12 31-dec-2019 9999 3E11D03E6D1FD52D17BB \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=39 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-MBIST-Integration snpslmd 2019.12 31-dec-2019 9999 0EB130DE979ACD1F191D \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=55 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE HDL-Compiler-SystemVerilog snpslmd 2019.12 31-dec-2019 9999 5E71F09E9CDB09D233D6 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=53 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE primepower_beta snpslmd 2019.12 31-dec-2019 9999 BE61408E56B618FA44B0 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=249 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE MV-Opt snpslmd 2019.12 31-dec-2019 9999 5EE1A00EA88682B3AEEC VENDOR_STRING=^1Platform:ALL+S \
+	SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=40 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PhysOpt-VH snpslmd 2019.12 31-dec-2019 9999 1ED1604E96594BB9B949 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=46 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Formality-TX snpslmd 2019.12 31-dec-2019 9999 3EC1607E61F486DA9058 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=46 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Formality-Distributed snpslmd 2019.12 31-dec-2019 9999 CE11A0CE677704330993 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=230 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PhysOpt-Integration snpslmd 2019.12 31-dec-2019 9999 EE01D05E3BDD01893D0D \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=71 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PhysOpt-Beta-Milkyway snpslmd 2019.12 31-dec-2019 9999 7E01307E300F212A6FF6 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=2 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PhysOpt-Beta-SI snpslmd 2019.12 31-dec-2019 9999 5E31003EE1220992E254 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=34 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PhysOpt-Beta-CTS snpslmd 2019.12 31-dec-2019 9999 5E21D05E9B33B7CC632B \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=45 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PhysOpt-Beta-Route snpslmd 2019.12 31-dec-2019 9999 9EA1005E5AA25F2ACD94 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=89 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-Fault-Max snpslmd 2019.12 31-dec-2019 9999 6E4150BE6B2040F31EED \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=12 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PAW snpslmd 2019.12 31-dec-2019 9999 8E41C0AEF92AA4C83055 VENDOR_STRING=^1Platform:ALL+S \
+	SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=52 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PsynGui-ChipMap snpslmd 2019.12 31-dec-2019 9999 3E81C00EF8069308C63A \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=2 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Formality-ESP snpslmd 2019.12 31-dec-2019 9999 8E51306E6458B27F1F60 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=48 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PhysOpt-XG snpslmd 2019.12 31-dec-2019 9999 DEB1302ED61FB5FFA314 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=10 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PsynGui-AARender snpslmd 2019.12 31-dec-2019 9999 FE11C00E8556F2B9A013 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=43 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-Compression-ATPG snpslmd 2019.12 31-dec-2019 9999 0E51409E5A919225F1E4 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=233 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-Compression-Synthesis snpslmd 2019.12 31-dec-2019 9999 8E31F0BEB35054C91ABF \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=28 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE HDL-Compiler-Old snpslmd 2019.12 31-dec-2019 9999 BED140DE0CFAF1C883E4 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=87 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE VHDL-Compiler-Old snpslmd 2019.12 31-dec-2019 9999 5EA1B02EA36F4C23A249 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=5 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-Mbist-Program snpslmd 2019.12 31-dec-2019 9999 5E7110FE76BF278B438D \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=82 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-Mbist-Bitstream snpslmd 2019.12 31-dec-2019 9999 1E21D08E7331D4A906E6 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=231 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galileo snpslmd 2019.12 31-dec-2019 9999 BE31A05E82F16B56F1C4 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=35 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galileo-PSYN snpslmd 2019.12 31-dec-2019 9999 6EE1B0BEF7B771F41E12 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=61 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galileo-PnR snpslmd 2019.12 31-dec-2019 9999 9EB150CED9A5B846AA35 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=243 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galileo-GUI snpslmd 2019.12 31-dec-2019 9999 3EC1D08EF0CE72BD52EA \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=65 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE NanoTime snpslmd 2019.12 31-dec-2019 9999 AE8100DE62391A7C9A8F \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=39 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE NanoTime-PathMill-Shared snpslmd 2019.12 31-dec-2019 9999 6E61903E671E3BA939E5 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=44 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galileo-Internal-Only snpslmd 2019.12 31-dec-2019 9999 FEE1E09E787DD21C598A \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=75 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PhysOpt-MV snpslmd 2019.12 31-dec-2019 9999 CEB1E00EB0540B72A24D \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=57 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Astro-MV snpslmd 2019.12 31-dec-2019 9999 AE81407E4E7EB7E6AB6E \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=37 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy-GUI-PSYN snpslmd 2019.12 31-dec-2019 9999 FEC1703E04028186D2FA \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=12 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy-GUI-PNR snpslmd 2019.12 31-dec-2019 9999 EE9140DED5A378FF64FB \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=81 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy-Beta snpslmd 2019.12 31-dec-2019 9999 BE6160FEB2F216AFAAA3 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=81 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy-Internal-Only snpslmd 2019.12 31-dec-2019 9999 7E41B0DEB5BD6244A8F1 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=38 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PrimeTime-New-Technology snpslmd 2019.12 31-dec-2019 9999 8EC1500E50A6E5903A92 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=19 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PrimeRail snpslmd 2019.12 31-dec-2019 9999 6E71406E2EF84B268C01 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=12 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Power-Optimization-Beta1 snpslmd 2019.12 31-dec-2019 9999 AE41A0AEBC0CA5EC2514 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=74 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Power-Optimization-Beta2 snpslmd 2019.12 31-dec-2019 9999 2E4110DE15874F22C5D8 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=40 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Formality-Beta1 snpslmd 2019.12 31-dec-2019 9999 AE91101E22D017E7E1AE \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=42 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Formality-Beta2 snpslmd 2019.12 31-dec-2019 9999 AE11706E5203DC701AC5 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=243 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy-MCMM snpslmd 2019.12 31-dec-2019 9999 AED1F02E7DF6D23E07FC \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=47 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PrimeTime-PX snpslmd 2019.12 31-dec-2019 9999 7EF1C0FE9656A9FAF1B3 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=52 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE DB-Mode snpslmd 2019.12 31-dec-2019 9999 BED1605EE420158BC1D5 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=11 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE DC-Topographical snpslmd 2019.12 31-dec-2019 9999 8EA1405EC487988DA0E4 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=12 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE snps_fs_nwave snpslmd 2019.12 31-dec-2019 9999 EE51E04E1FD1983B6B13 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=23 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Pathmill-migrate snpslmd 2019.12 31-dec-2019 9999 7E11B04E0F191EEF02FD \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=38 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Pathmill-plus-migrate snpslmd 2019.12 31-dec-2019 9999 7EE130CEB5B994C75A86 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=55 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE NanoTime-ultra snpslmd 2019.12 31-dec-2019 9999 6E91E09EB7AC70AAE4EE \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=128 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy-CCS snpslmd 2019.12 31-dec-2019 9999 9EF160DE064BD406F2EF \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=4 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy_FP_Beta snpslmd 2019.12 31-dec-2019 9999 BEE1D00E8290C0A16DF5 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=53 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy_MultiRoute4 snpslmd 2019.12 31-dec-2019 9999 AE0100CE9E6BA78142A2 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=15 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy_MultiRoute8 snpslmd 2019.12 31-dec-2019 9999 BE0110AE5E46F32AD2E3 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=31 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PrimeTime-VX snpslmd 2019.12 31-dec-2019 9999 2EA1F02EEBC281447EC1 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=224 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy-AdvRules snpslmd 2019.12 31-dec-2019 9999 0E51506E3ECC3775D57C \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=28 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy-FlipChip snpslmd 2019.12 31-dec-2019 9999 CE91109E010B3D4D992D \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=243 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy-FP-Hier snpslmd 2019.12 31-dec-2019 9999 9E51807E01B98996A634 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=15 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-SDD-Timing snpslmd 2019.12 31-dec-2019 9999 AEB1109EA15B3DF65702 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=245 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy-AdvOpt snpslmd 2019.12 31-dec-2019 9999 3E91E0FE77574D7F4C60 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=14 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy-CTMesh snpslmd 2019.12 31-dec-2019 9999 BEB1806E3C29311E71B7 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=95 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy-Zroute snpslmd 2019.12 31-dec-2019 9999 AE21907E700B3D665ECC \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=16 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-Power snpslmd 2019.12 31-dec-2019 9999 DE3130FEC832D7EEC68A \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=161 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-Physical snpslmd 2019.12 31-dec-2019 9999 CEA1C0CE063F81531066 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=16 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE DCT-Congestion snpslmd 2019.12 31-dec-2019 9999 4E11305E05B5C38772D0 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=220 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE DCT-GUI snpslmd 2019.12 31-dec-2019 9999 6E91C0AE81A7FF0C1843 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=58 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE DC-Extension snpslmd 2019.12 31-dec-2019 9999 4E51B0AE0D7190BE5D74 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=14 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy-FP-MV snpslmd 2019.12 31-dec-2019 9999 2EF1F01E18D47EAAEB00 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=67 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy-FP-AdvCTS snpslmd 2019.12 31-dec-2019 9999 AE71C06E3BF0F749F26F \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=53 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy-FP-AdvTech snpslmd 2019.12 31-dec-2019 9999 DE71D09E90B44260C55A \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=86 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE NCX snpslmd 2019.12 31-dec-2019 9999 3E31A09EB327F51F85B8 VENDOR_STRING=^1Platform:ALL+S \
+	SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=34 SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Galaxy-SPG snpslmd 2019.12 31-dec-2019 9999 1E71E03E447585F1A888 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=14 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PrimeTime-PX-Statistical snpslmd 2019.12 31-dec-2019 9999 BE71200EDF3B71CB8B65 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=40 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PrimeTime-PX-New-Technology snpslmd 2019.12 31-dec-2019 9999 7E71C05E27F6078C33E5 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=41 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PrimeRail-New-Technology snpslmd 2019.12 31-dec-2019 9999 1E6120DECEC1EC95F744 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=100 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PrimeRail-static snpslmd 2019.12 31-dec-2019 9999 BE11303E97A53F8C72AB \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=15 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE PrimeRail-adv snpslmd 2019.12 31-dec-2019 9999 8E21A0EEBFE9F62AC506 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=85 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-CompressionPlus-Syn snpslmd 2019.12 31-dec-2019 9999 6EF1B0BED31474AC374D \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=45 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE Test-CompressionPlus-ATPG snpslmd 2019.12 31-dec-2019 9999 3E71205EAE3E1C29FD71 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=246 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
+FEATURE NCX-addon snpslmd 2019.12 31-dec-2019 9999 CE51D0EE70093F55DF44 \
+	VENDOR_STRING=^1Platform:ALL+S SUPERSEDE ISSUER=SYNOPSYS ISSUED=11-jul-2001 ck=59 \
+	SN=SL:2100-0:100000:0 START=11-jul-2001
