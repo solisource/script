@@ -53,13 +53,13 @@ alias icc_shell_vG-2012.06-SP2_x64='/ecad/synopsys/icc_vG-2012.06-SP2/amd64/syn/
 alias icc_shell_vH-2013.03_x64='/ecad/synopsys/icc_vH-2013.03/amd64/syn/bin/icc_shell'
 
 ## Synopsys:astro ##
-alias astro_shell_vY-2006.06-SP4='/ecad/synopsys/astro_vY-2006.06-SP4/bin/astro_shell'
-alias astro_shell_vZ-2007.03-SP10='/ecad/synopsys/astro_vZ-2007.03-SP10/bin/astro_shell'
+alias astro_shell_vY-2006.06-SP4_x86='/ecad/synopsys/astro_vY-2006.06-SP4/bin/astro_shell'
+alias astro_shell_vZ-2007.03-SP10_x86='/ecad/synopsys/astro_vZ-2007.03-SP10/bin/astro_shell'
 
 ## Synopsys:milkyway & StarXtract ##
-alias Milkyway_vC-2009.06-SP2='/ecad/synopsys/starrc_vC-2009.06-SP2/amd64_starrc/bin/Milkyway'
-alias StarXtract_vC-2009.06-SP2='/ecad/synopsys/starrc_vC-2009.06-SP2/amd64_starrc/bin/StarXtract'
+alias Milkyway_vC-2009.06-SP2_x64='/ecad/synopsys/starrc_vC-2009.06-SP2/amd64_starrc/bin/Milkyway'
+alias StarXtract_vC-2009.06-SP2_x64='/ecad/synopsys/starrc_vC-2009.06-SP2/amd64_starrc/bin/StarXtract'
 
 ## Synopsys:vcs ##
-alias vcs-mx_vD-2009.12='/ecad/synopsys/vcs-mx_vD-2009.12/linux/bin/vcs'
+alias vcs-mx_vD-2009.12_x86='/ecad/synopsys/vcs-mx_vD-2009.12/linux/bin/vcs'
 
