@@ -136,3 +136,6 @@ case `id -u` in
   *) export PS1="$bldpur\u$bldcyn@$bldgrn\h$bldcyn:$bldblu\w$bldcyn->$txtrst($bldpur\$branch$txtrst$txtrst)>";;
 esac
 
+## Set xz tools
+export PATH=/usr/local/xz/bin:$PATH
+
