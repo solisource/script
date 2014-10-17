@@ -5,6 +5,7 @@ alias ls='ls --show-control-chars --color=auto'
 alias ll='ls -la'
 alias g='/c/Vim/vim*/gvim.exe'
 alias qgit='/c/QGit/qgit.exe'
+alias make='/d/house/script/makefile/make'
 
 set output-meta on
 set convert-meta off
