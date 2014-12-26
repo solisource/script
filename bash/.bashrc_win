@@ -1,13 +1,18 @@
 #############################################################
 #config tools and alias
 alias ll="ls -lart"
-#alias vim="/c/Program\ Files/Vim/vim72/vim.exe"
-alias gvim="/c/Program\ Files/Vim/vim72/gvim.exe"
-alias g="gvim"
-#############################################################
 alias ls='ls --show-control-chars --color=auto'
+alias ll='ls -la'
+alias g='/c/Vim/vim*/gvim.exe'
+alias qgit='/c/QGit/qgit.exe'
+
 set output-meta on
 set convert-meta off
 export LESSCHARSET=iso8859
-#############################################################
+
+# Some good standards, which are not used if the user
+# creates his/her own .bashrc/.bash_profile
+
+# -- log show for ch commit
+export LESSCHARSET=utf-8
 
